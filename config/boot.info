@@ -1,0 +1,13 @@
+# da65 metadata for the source-exact 256-byte boot page loaded at $0800.
+# The first byte is the Disk II boot-sector count; execution begins at $0801.
+GLOBAL { COMMENTS 4; };
+LABEL { NAME "boot_entry"; ADDR $0801; COMMENT "Boot entry after sector-count byte"; };
+LABEL { NAME "dos_sector_translate"; ADDR $08A0; COMMENT "DOS-order sector translation prefix"; };
+LABEL { NAME "loader_state_lo"; ADDR $08AC; COMMENT "Self-modified loader state"; };
+LABEL { NAME "loader_state_hi"; ADDR $08AD; COMMENT "Self-modified loader state / sector index"; };
+RANGE { START $0800; END $0800; TYPE ByteTable; };
+RANGE { START $0801; END $0890; TYPE Code; };
+RANGE { START $0891; END $089F; TYPE ByteTable; };
+RANGE { START $08A0; END $08AF; TYPE ByteTable; };
+RANGE { START $08B0; END $08F5; TYPE Code; };
+RANGE { START $08F6; END $08FF; TYPE ByteTable; };

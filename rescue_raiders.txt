@@ -1,0 +1,59 @@
+Rescue Raiders Help File :			by Moose
+--------------------------
+
+I have tested this game on Apple Win and it works fine.
+
+This game is the Apple ][ version of Armour Alley (on the PC and
+MAC).  This game (for the Apple ][) came out in the early 80's,
+while the PC / MAC version came out in the early 90's.
+
+The controls are :
+  	A		Send out a Mobile Missile Launcher (truck)
+	T		Send out a Tank
+	D		Send out a Command Vehicle (van)
+	M		Send out 4 Soldiers
+	E		Send out 2 Engineers
+	H		Buy another helicopter (i.e. a life)
+	Fire Button 1	Shoot bullets (from helicopter)
+	Fire Button 2	Drop bombss (from helicopter)
+	Fire Button 1&2	Launch long range missile.
+			Usually works best when you are moving vertically
+			down.  Firing these is awkward at best !!
+	<ESC>		Pause game and display current score.
+	C		Display money left, bombs on helicopter,
+			long range missiles on helicopter,
+			number of helicopters (lives).
+	1-9		How fast to display the stats when "c" is pressed.
+			1 = slowly, 9 = fast.  7 is a good speed.
+
+(When using the keypad to emulate an Apple Joytick on the PC, press
+both ALT keys to release a long range missile !).
+
+Mobile Missile Launcher trucks are great, but be careful - the computer
+starts using them against you from Round / level 3.
+
+Basically, you control a helicopter, and use it to attack the enemy's
+ground troops and helicopter, and provide air cover for the troops,
+tanks, etc that you send out.
+
+You control the helicopter and the release of your tanks, men, etc.
+However, once they are released, the tanks, men, etc act on their own.
+
+Each unit has their strengths and weaknesses.  eg. tanks are big and tough,
+but only men can take over barracks / bunkers of the enemy, repair
+groung buildings / anti aircraft guns, etc
+
+Your objective is to get a Command Vehicle (van) to the enemies base at
+the far end.
+
+There are many levels to the game.  Later on, the odds are really
+stacked in your favour.
+
+I completed the whole game (on my Old Apple ][) in 1984, on a rainy
+afternoon, and it took about 4 or 5 hours if I remember rightly -
+11 years ago !!
+
+It is a classic Apple ][ game !
+
+Moose
+October 10, 1995.

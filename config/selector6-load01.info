@@ -1,0 +1,4 @@
+# Selector-6 bitmap/font companion at $A100-$A4FF.
+GLOBAL { COMMENTS 4; };
+LABEL { NAME "selector6_bitmap_font"; ADDR $A100; COMMENT "Eight-byte glyph/bitmap rows consumed by the $A001 renderer"; };
+RANGE { START $A100; END $A4FF; TYPE ByteTable; };

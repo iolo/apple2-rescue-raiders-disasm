@@ -1,0 +1,7 @@
+# Selector-6 disk/graphics companion at $7800-$7AFF.
+GLOBAL { COMMENTS 4; };
+LABEL { NAME "selector6_disk_graphics_entry"; ADDR $7800; COMMENT "Configure RWTS and unpack stage-indexed graphics"; };
+LABEL { NAME "selector6_rwts_retry"; ADDR $7914; COMMENT "Issue the configured RWTS request until carry clears"; };
+LABEL { NAME "selector6_graphics_tables"; ADDR $7923; COMMENT "Stage offsets, HGR addresses, packed records, and residual source text"; };
+RANGE { START $7800; END $7922; TYPE Code; };
+RANGE { START $7923; END $7AFF; TYPE ByteTable; };

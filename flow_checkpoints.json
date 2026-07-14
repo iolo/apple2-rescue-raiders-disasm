@@ -1,0 +1,13 @@
+{
+  "checkpoints": [
+    {"id": "FLOW-00", "status": "confirmed", "evidence": ["E-BOOT-001"], "summary": "Cold boot loads the first sector at $0800 and enters $0801."},
+    {"id": "FLOW-10", "status": "confirmed", "evidence": ["E-FLOW-010"], "summary": "Boot code fills text page 1 with zero bytes (inverted @ glyphs) and writes high-bit R1.2 at $07D3."},
+    {"id": "FLOW-20", "status": "unresolved-out-of-scope-wrapper", "evidence": [], "summary": "The user-observed cracked-image prompt has no exact static text anchor; copy-protection and crack-wrapper reconstruction are out of scope."},
+    {"id": "FLOW-30", "status": "confirmed", "evidence": ["E-FLOW-030", "E-FLOW-SOURCE-008"], "summary": "Selector 0 entry $6000 directly calls the $0800 graphics/title animator; its timed event table streams and renders the copyright notice at $11A7, exits the opening, and then requests selector 1."},
+    {"id": "FLOW-40", "status": "confirmed", "evidence": ["E-FLOW-040"], "summary": "Selector 5 directly passes BATTLE OVER, HIGH SCORES, and PROUDLY PRESENTS inline records to its text renderer."},
+    {"id": "FLOW-50", "status": "confirmed", "evidence": ["E-FLOW-050", "E-FLOW-START-001"], "summary": "High-bit S ends the demo pass, toggles into interactive mode, assigns campaign index 1, and admits the selector-6 briefing call."},
+    {"id": "FLOW-60", "status": "confirmed", "evidence": ["E-FLOW-060"], "summary": "Selector 6 directly consumes the briefing strings after an inline-message call."},
+    {"id": "FLOW-70", "status": "confirmed", "evidence": ["E-FLOW-070", "E-FLOW-START-001"], "summary": "Selector 6 indexes an eight-entry city pointer table, centers the selected name, displays it after briefing, and waits for continue input."},
+    {"id": "FLOW-80", "status": "confirmed", "evidence": ["E-FLOW-080", "E-FLOW-START-001"], "summary": "At campaign index 1 selector 6 dispatches selector 5, whose battlefield input path reads joystick buttons and analog paddles."}
+  ]
+}

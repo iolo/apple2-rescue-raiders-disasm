@@ -1,0 +1,25 @@
+# Static code/data boundaries for selector 6's $8000-$87FF briefing/map load.
+GLOBAL { COMMENTS 4; };
+
+LABEL { NAME "selector6_entry"; ADDR $8000; COMMENT "Public jump to briefing/map coordinator"; };
+LABEL { NAME "render_inline_message"; ADDR $801C; COMMENT "Consumes metadata and high-bit text following its JSR return address"; };
+LABEL { NAME "selector6_coordinator"; ADDR $8086; COMMENT "Briefing, city/map, and selector dispatch coordinator"; };
+LABEL { NAME "dispatch_next_selector"; ADDR $809B; COMMENT "Campaign-index-dependent selector handoff through INTER"; };
+LABEL { NAME "present_emergency_briefing"; ADDR $80C4; COMMENT "FLOW-60 presentation path"; };
+LABEL { NAME "prepare_later_stage_map"; ADDR $8190; COMMENT "Later-stage map/progression preparation"; };
+LABEL { NAME "present_campaign_city"; ADDR $81E0; COMMENT "FLOW-70 city selection, rendering, and continue gate"; };
+LABEL { NAME "city_record_renderer"; ADDR $8270; COMMENT "Indexes stage city pointer and renders its length-prefixed record"; };
+LABEL { NAME "campaign_city_pointers"; ADDR $86A8; COMMENT "Eight little-endian pointers"; };
+LABEL { NAME "campaign_city_records"; ADDR $86B8; COMMENT "Eight length-prefixed high-bit city names"; };
+LABEL { NAME "selector6_tables"; ADDR $86F5; COMMENT "Consumer-backed tables and initialized workspace"; };
+LABEL { NAME "selector6_workspace"; ADDR $8753; COMMENT "Mutable initialized bytes"; };
+LABEL { NAME "embedded_source_tail"; ADDR $8760; COMMENT "Tokenized/source-text fragment, not runtime code"; };
+
+RANGE { START $8000; END $80E7; TYPE Code; };
+RANGE { START $80E8; END $8123; TYPE ByteTable; };
+RANGE { START $8124; END $812D; TYPE Code; };
+RANGE { START $812E; END $8143; TYPE ByteTable; };
+RANGE { START $8144; END $86A7; TYPE Code; };
+RANGE { START $86A8; END $8752; TYPE ByteTable; };
+RANGE { START $8753; END $875F; TYPE ByteTable; };
+RANGE { START $8760; END $87FF; TYPE ByteTable; };

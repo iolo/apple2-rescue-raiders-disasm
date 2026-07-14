@@ -1,0 +1,10 @@
+# Selector-6 HGR glyph renderer and prompt at $A000-$A0FF.
+GLOBAL { COMMENTS 4; };
+LABEL { NAME "selector6_render_state"; ADDR $A000; COMMENT "Mutable high address/page byte used by the renderer"; };
+LABEL { NAME "selector6_glyph_renderer"; ADDR $A001; COMMENT "Render one eight-row glyph from the $A100 bitmap/font load"; };
+LABEL { NAME "selector6_hgr_low_rows"; ADDR $A061; COMMENT "Low HGR row-address bytes"; };
+LABEL { NAME "selector6_hgr_high_rows"; ADDR $A079; COMMENT "High HGR row-address offsets"; };
+LABEL { NAME "selector6_prompt"; ADDR $A091; COMMENT "High-bit drive/input prompt"; };
+RANGE { START $A000; END $A000; TYPE ByteTable; };
+RANGE { START $A001; END $A060; TYPE Code; };
+RANGE { START $A061; END $A0FF; TYPE ByteTable; };

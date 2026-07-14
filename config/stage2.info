@@ -1,0 +1,15 @@
+# Static code/data boundaries for the stage-2 $6000-$70FF presentation load.
+GLOBAL { COMMENTS 4; };
+
+LABEL { NAME "presentation_transform"; ADDR $6000; COMMENT "Self-modifying HGR transform and presentation routine"; };
+LABEL { NAME "hgr_address_tables"; ADDR $6110; COMMENT "HGR scanline address lookup bytes"; };
+LABEL { NAME "compressed_hgr_stream"; ADDR $6500; COMMENT "Run-length encoded presentation graphics consumed from $6500"; };
+LABEL { NAME "decode_hgr_stream"; ADDR $7000; COMMENT "Decode literal/run records into an HGR page"; };
+LABEL { NAME "calculate_hgr_address"; ADDR $705A; COMMENT "Map output index to Apple II HGR address"; };
+LABEL { NAME "stage2_entry"; ADDR $707C; COMMENT "Initialize two HGR pages, decode, present, and dispatch selector 0"; };
+LABEL { NAME "stage2_padding"; ADDR $70AA; COMMENT "Unused zero-filled tail"; };
+
+RANGE { START $6000; END $610A; TYPE Code; };
+RANGE { START $610B; END $6FFF; TYPE ByteTable; };
+RANGE { START $7000; END $70A9; TYPE Code; };
+RANGE { START $70AA; END $70FF; TYPE ByteTable; };
