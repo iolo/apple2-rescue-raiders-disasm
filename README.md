@@ -96,6 +96,11 @@ loop selects interactive mode and campaign index 1, selector 6 presents the
 briefing and stage-indexed city, and its index-1 continuation dispatches
 selector 5 back into the joystick/paddle-driven battlefield. The city pointer
 table resolves all eight stages from Cherbourg through Antwerp.
+The emulator transcription in `original/brief.txt` further identifies the
+briefing's four positioned lines and confirms that packed-HGR selector 2 is the
+campaign-map base.  `original/map.hgr` differs from that decoded base only in
+the runtime-rendered `Cherbourg` row; see
+[`disk/briefing-presentation.md`](disk/briefing-presentation.md).
 `config/selector6.info` bounds the main load's executable ranges, two inline
 high-bit message records, city pointer/name tables, workspace, and embedded
 source-text tail. Three companion type maps cover the `$7800` disk/graphics
@@ -176,6 +181,12 @@ The final tail adds animated fuel bars/HGR gauge patterns, inline-text decoding,
 camera and visible-object rendering, HGR page copying/filling, high-score and
 presentation phases, battle/score output, explicit self-modifying operands,
 overlapping callback tables, and trailing workspace.
+The emulator transcription in `original/demo.txt` identifies compact sprites
+`$96` and `$3F/$40` as the Sir-Tech and two-part Rescue Raiders logos and maps
+all seven presentation callbacks; see
+[`disk/demo-presentation.md`](disk/demo-presentation.md).  The same recovery
+identifies selector 1's track-0/sector-15 `$0400` load as five fixed-width
+default names followed by five packed-BCD scores.
 The source preserves the overlap
 between the final list-insertion JMP operand and the constructor pointer table
 beginning at `$7875`.

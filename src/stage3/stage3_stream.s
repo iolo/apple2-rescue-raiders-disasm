@@ -364,9 +364,16 @@ selector0_stream:
     .byte $01,$04,$03,$1d,$07,$1f,$18,$03,$11,$0d,$7a,$03,$03,$0b,$0c,$67
     .byte $08,$00,$00,$60
 selector1_stream:
-    .byte $03,$11,$0f,$45,$02,$03,$0b,$00,$04,$01,$04,$03,$0b,$04,$03,$02
-    .byte $03,$0b,$02,$06,$02,$03,$0c,$09,$69,$01,$03,$21,$01,$18,$12,$03
-    .byte $00,$0f,$04,$01,$00,$00,$69
+    .byte $03,$11,$0f,$45,$02     ; T17/S15 -> $4400-$45FF
+    .byte $03,$0b,$00,$04,$01     ; T11/S0  -> $0400
+    .byte $04                     ; relocate/install the $4400 load
+    .byte $03,$0b,$04,$03,$02     ; T11/S4..3 -> $0200-$03FF
+    .byte $03,$0b,$02,$06,$02     ; T11/S2..1 -> $0500-$06FF
+    .byte $03,$0c,$09,$69,$01     ; T12/S9 -> $6900
+    .byte $03,$21,$01,$18,$12     ; T33/S1 descending -> $0700-$18FF
+    ; Default high-score names, packed-BCD values, and the hidden warning text.
+    .byte $03,$00,$0f,$04,$01     ; T0/S15 -> $0400-$04FF
+    .byte $00,$00,$69             ; terminate and enter $6900
 selector2_stream:
     .byte $03,$1e,$03,$83,$04,$00,$00,$80
 selector3_stream:

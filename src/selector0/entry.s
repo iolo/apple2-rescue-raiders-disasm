@@ -5,6 +5,17 @@
 rwts0 = $bb00
 iob   = $bfe8
 
+; The shared selector-0/6 overlay at $7800 loads one pointer-selected packed
+; picture into $A000+ and expands all 7,680 visible bytes into HGR page 2.
+; Selectors 0 and 1 resolve through the track-1/sector-0 pointer table to the
+; two opening frames proven against emulator captures:
+;   0: file $0100A, 5,519 packed bytes -> opening1
+;   1: file $0259A, 5,657 packed bytes -> opening2
+packed_hgr_overlay       = $7800
+opening_multiband_reveal = $d800
+opening_picture_1        = $00
+opening_picture_2        = $01
+
 protection_point_x_velocity = $670f
 protection_point_y_velocity = $6717
 protection_point_x_position = $671f
@@ -61,8 +72,8 @@ run_protection_animation:
     adc $e000,x
     sta $6732
     jsr advance_protection_hgr_page
-    lda #$00
-    jsr call_protection_overlay
+    lda #opening_picture_1
+    jsr call_packed_hgr_overlay
     bit $c010
     lda $6732
     and #$03
@@ -551,15 +562,17 @@ draw_protection_box:
     jsr draw_protection_line
     rts
 
-; Invoke the external $7800 overlay routine with A saved in $01 while forcing
-; its page selector to $40, then restore the caller's page byte.
-call_protection_overlay:
+; Invoke the shared packed-HGR loader/decoder with A saved as its picture
+; selector in $01. Force output to HGR page 2 ($4000-$5FFF), then restore the
+; caller's active-page byte. After writing the 7,680 display bytes, the overlay
+; clears page 2's 512 non-display HGR hole bytes.
+call_packed_hgr_overlay:
     sta $01
     lda $00
     pha
     lda #$40
     sta $00
-    jsr $7800
+    jsr packed_hgr_overlay
     pla
     sta $00
     rts
@@ -573,9 +586,13 @@ finish_protection_animation:
     rts
 
 restore_after_title:
-    lda #$01
-    jsr call_protection_overlay
-    jsr $d800
+    lda #opening_picture_2
+    jsr call_packed_hgr_overlay
+    ; Copy page 2 to page 1 as an animated reveal. The resident language-card
+    ; routine advances $4000/$4800/$5000/$5800 bands and both 20-byte screen
+    ; halves together; Apple II HGR interleaving makes the pieces appear in
+    ; parallel even though opening2 is independently packed, not a delta.
+    jsr opening_multiband_reveal
     rts
 
 ; Clear the final eight bytes of both halves of every HGR page block. The high
@@ -604,7 +621,7 @@ protection_paths_and_cleanup_end:
 .assert run_protection_path_three - selector0_entry_start = $02f0, error, "protection path three origin drift"
 .assert draw_protection_box_pair - selector0_entry_start = $030d, error, "protection box-pair origin drift"
 .assert draw_protection_box - selector0_entry_start = $0344, error, "protection box origin drift"
-.assert call_protection_overlay - selector0_entry_start = $03a5, error, "protection overlay call origin drift"
+.assert call_packed_hgr_overlay - selector0_entry_start = $03a5, error, "packed-HGR overlay call origin drift"
 .assert finish_protection_animation - selector0_entry_start = $03b5, error, "protection cleanup origin drift"
 .assert restore_after_title - selector0_entry_start = $03c3, error, "post-title restore origin drift"
 .assert clear_title_hgr_margins - selector0_entry_start = $03cc, error, "title HGR margin clear origin drift"

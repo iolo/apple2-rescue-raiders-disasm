@@ -1,0 +1,20 @@
+; Press `S` while DEMO screen
+; blank screen
+
+```
+Emergency transmission>
+
+Terrorists have been found at
+
+Cherbourg
+
+Prepare for action
+```
+
+; map screen: map.hgr
+; animation of 9 dots around the stage location over map
+; stage location name on the bottom of the map screen
+
+```
+Cherbourg
+```

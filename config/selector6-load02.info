@@ -1,7 +1,20 @@
-# Selector-6 disk/graphics companion at $7800-$7AFF.
+# Shared selector-0/6 packed-HGR loader/decoder at $7800-$7AFF.
 GLOBAL { COMMENTS 4; };
-LABEL { NAME "selector6_disk_graphics_entry"; ADDR $7800; COMMENT "Configure RWTS and unpack stage-indexed graphics"; };
-LABEL { NAME "selector6_rwts_retry"; ADDR $7914; COMMENT "Issue the configured RWTS request until carry clears"; };
-LABEL { NAME "selector6_graphics_tables"; ADDR $7923; COMMENT "Stage offsets, HGR addresses, packed records, and residual source text"; };
+LABEL { NAME "packed_hgr_entry"; ADDR $7800; COMMENT "Load and decode picture selector $01; selectors 0/1 are opening1/opening2"; };
+LABEL { NAME "load_packed_hgr"; ADDR $7803; COMMENT "Load pointer sector and selected descending packed-image span into $A000+"; };
+LABEL { NAME "load_packed_hgr_page"; ADDR $784C; COMMENT "Read selected disk pages backward into ascending packed-data memory"; };
+LABEL { NAME "clear_hgr_screen_holes"; ADDR $7889; COMMENT "Clear the 512 non-display bytes in HGR page 2"; };
+LABEL { NAME "decode_hgr_parity_pass"; ADDR $789E; COMMENT "Decode one even/odd scanline pass, columns 39 down to 0"; };
+LABEL { NAME "decode_hgr_start_row"; ADDR $78A2; COMMENT "Self-modified row start: $C0 even, then $C1 odd"; };
+LABEL { NAME "decode_hgr_command"; ADDR $78A4; COMMENT "Read signed literal/run command from packed stream"; };
+LABEL { NAME "decode_hgr_literal_loop"; ADDR $78B6; COMMENT "Negative command: copy command&$7F literal bytes"; };
+LABEL { NAME "decode_hgr_run"; ADDR $78E2; COMMENT "Nonnegative command: repeat following byte (zero means 256)"; };
+LABEL { NAME "decode_hgr_run_loop"; ADDR $78EE; COMMENT "Store one repeated byte at the next HGR scanline"; };
+LABEL { NAME "packed_hgr_rwts_retry"; ADDR $7914; COMMENT "Issue the configured RWTS request until carry clears"; };
+LABEL { NAME "packed_hgr_load_base_pages"; ADDR $7923; COMMENT "Selectors 0..4 packed-data base pages: $A0,$A0,$A5,$A5,$A5"; };
+LABEL { NAME "packed_hgr_load_counts_minus_one"; ADDR $7928; COMMENT "Selectors 0..4 descending load counts minus one"; };
+LABEL { NAME "packed_hgr_row_high"; ADDR $792D; COMMENT "Relative HGR scanline high bytes indexed by decoded row"; };
+LABEL { NAME "packed_hgr_row_low"; ADDR $79ED; COMMENT "HGR scanline low bytes indexed by decoded row"; };
+LABEL { NAME "packed_hgr_residual"; ADDR $7AAD; COMMENT "Residual table/source-text bytes after the HGR row tables"; };
 RANGE { START $7800; END $7922; TYPE Code; };
 RANGE { START $7923; END $7AFF; TYPE ByteTable; };

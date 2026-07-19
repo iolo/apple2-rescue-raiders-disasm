@@ -217,6 +217,14 @@ class GeometryTests(unittest.TestCase):
         self.assertIn("render_inline_display_record:", source)
         self.assertIn("copy_alternate_display_page:", source)
         self.assertIn("display_high_scores:", source)
+        self.assertIn("display_rescue_raiders_logo:", source)
+        self.assertIn("display_hello_herrb:", source)
+        self.assertIn("display_presentation_message:", source)
+        self.assertIn("display_creator_names:", source)
+        self.assertIn("display_last_score:", source)
+        self.assertIn("display_proudly_presents:", source)
+        self.assertIn("default_high_score_names", source)
+        self.assertIn("default_high_score_values", source)
         self.assertIn("draw_fuel_gauge_pattern:", source)
         self.assertIn("display_battle_score_prompt:", source)
         self.assertIn("presentation_callback_low:", source)
@@ -258,6 +266,10 @@ class GeometryTests(unittest.TestCase):
         emergency = [r for r in records if r["text"] == "Emergency transmission>" and r["encoding"] == "apple-high-bit"]
         self.assertEqual(1, len(emergency))
         self.assertIn({"selector": 6, "address": 0x80EC}, emergency[0]["mappings"])
+        terrorists = [r for r in records if r["text"] == "Terrorists have been found at" and r["encoding"] == "apple-high-bit"]
+        action = [r for r in records if r["text"] == "Prepare for action" and r["encoding"] == "apple-high-bit"]
+        self.assertEqual([0x8106], [r["mappings"][0]["address"] for r in terrorists])
+        self.assertEqual([0x8131], [r["mappings"][0]["address"] for r in action])
 
     def test_demo_start_reaches_campaign_city_and_battlefield(self):
         image = ROOT.parent / "rescue_raiders.dsk"
@@ -375,7 +387,10 @@ class GeometryTests(unittest.TestCase):
         self.assertIn("run_protection_path_two:", entry)
         self.assertIn("run_protection_path_three:", entry)
         self.assertIn("draw_protection_box:", entry)
-        self.assertIn("call_protection_overlay:", entry)
+        self.assertIn("call_packed_hgr_overlay:", entry)
+        self.assertIn("opening_picture_1", entry)
+        self.assertIn("opening_picture_2", entry)
+        self.assertIn("opening_multiband_reveal", entry)
         self.assertIn("finish_protection_animation:", entry)
         self.assertIn("restore_after_title:", entry)
         self.assertIn("clear_title_hgr_margins:", entry)

@@ -6,6 +6,12 @@ paddle_trigger = $c070
 paddle_0       = $c064
 paddle_1       = $c065
 
+last_score_digits         = $01fc
+default_high_score_names  = $0400 ; five 16-byte high-bit names, loaded from T0/S15
+default_high_score_values = $0450 ; five two-byte packed-BCD scores
+high_score_cutoff_bcd_hi  = default_high_score_values+8 ; $12 from fifth-place 1245
+high_score_cutoff_bcd_lo  = default_high_score_values+9 ; $45
+
 horizontal_target = $604d
 vertical_target   = $604e
 current_object    = $60c3
@@ -104,11 +110,11 @@ initialize_shared_state:
     sta $60a9
     sta $60aa
     lda #$a0
-    sta $01fc
-    sta $01fd
-    sta $01fe
+    sta last_score_digits
+    sta last_score_digits+1
+    sta last_score_digits+2
     lda #$b0
-    sta $01ff
+    sta last_score_digits+3
     lda #$ff
     sta $6002
     rts
@@ -435,23 +441,23 @@ decrement_disk_sector:
     rts
 
 ; Publish the four display digits and request selector 3 when the packed-BCD
-; campaign counter has crossed the comparison value at $0458/$0459.
+; campaign counter has crossed the fifth-place default score (1245).
 check_campaign_threshold:
     jsr format_bcd_counter
     ldy #$03
 copy_formatted_counter:
     lda $60,y
-    sta $01fc,y
+    sta last_score_digits,y
     dey
     bpl copy_formatted_counter
     lda $0f
     cmp #$90
     bcs campaign_threshold_not_reached
-    cmp $0458
+    cmp high_score_cutoff_bcd_hi
     bcc campaign_threshold_not_reached
     bne campaign_threshold_reached
     lda $0e
-    cmp $0459
+    cmp high_score_cutoff_bcd_lo
     bcc campaign_threshold_not_reached
     bne campaign_threshold_reached
 campaign_threshold_not_reached:
@@ -11103,10 +11109,14 @@ presentation_call_operand:
 presentation_phase_done:
     rts
 
-; Draw five high-score records from $0400 and their packed score values from
-; $0450 beneath the inline heading.
+; Draw the five default high-score records loaded by selector 1 from track 0,
+; sector 15. Names occupy five 16-byte slots at $0400; their corresponding
+; two-byte packed-BCD values at $0450 are 8727, 8689, 7447, 1523, and 1245.
+; Records are visited 4..0 but placed on rows 12..8, so the screen reads in
+; descending score order from top to bottom.
 display_high_scores:
     jsr render_inline_display_record
+    ; (14,6) "HIGH SCORES"
     .byte $01,$0e,$06,$c8,$c9,$c7,$c8,$a0,$d3,$c3,$cf,$d2,$c5,$d3,$00
     lda #$04
 display_next_high_score:
@@ -11126,15 +11136,15 @@ display_next_high_score:
     tay
     ldx #$10
 display_next_high_score_name_byte:
-    lda $0400,y
+    lda default_high_score_names,y
     jsr output_display_byte_or_advance_column
     iny
     dex
     bne display_next_high_score_name_byte
     ldy $60
-    lda $0450,y
+    lda default_high_score_values,y
     sta $61
-    lda $0451,y
+    lda default_high_score_values+1,y
     sta $60
     inc $01
     ldx #$03
@@ -11173,7 +11183,9 @@ advance_high_score_nibble:
     bpl display_next_high_score
     rts
 
-draw_presentation_brackets:
+; Draw compact sprites $3F and $40 side by side. The emulator capture confirms
+; that these are the left/right halves of the graphical RESCUE RAIDERS logo.
+display_rescue_raiders_logo:
     lda #$64
     sta $11
     pha
@@ -11193,12 +11205,14 @@ draw_presentation_brackets:
 
 display_hello_herrb:
     jsr render_inline_display_record
+    ; (12,2) "  HELLO HERRB   " ($E0 is a visible blank in this renderer)
     .byte $01,$0c,$02,$e0,$e0,$c8,$c5,$cc,$cc,$cf,$e0,$c8,$c5,$d2,$d2,$c2
     .byte $e0,$e0,$e0,$00
     rts
 
 display_presentation_message:
     jsr render_inline_display_record
+    ; (3,2) " THIS MESSAGE BROUGHT TO YOU BY  "
     .byte $01,$03,$02,$e0,$d4,$c8,$c9,$d3,$e0,$cd,$c5,$d3,$d3,$c1,$c7,$c5
     .byte $e0,$c2,$d2,$cf,$d5,$c7,$c8,$d4,$e0,$d4,$cf,$a0,$d9,$cf,$d5,$a0
     .byte $c2,$d9,$e0,$e0,$00
@@ -11206,16 +11220,18 @@ display_presentation_message:
 
 display_creator_names:
     jsr render_inline_display_record
+    ; (10,2) " DARRELL AND JON   "
     .byte $01,$0a,$02,$e0,$c4,$c1,$d2,$d2,$c5,$cc,$cc,$e0,$c1,$ce,$c4,$e0
     .byte $ca,$cf,$ce,$e0,$e0,$e0,$00
     rts
 
 display_last_score:
     jsr render_inline_display_record
+    ; (11,2) "LAST SCORE ", followed by last_score_digits (initially "   0")
     .byte $01,$0b,$02,$cc,$c1,$d3,$d4,$a0,$d3,$c3,$cf,$d2,$c5,$a0,$00
     ldy #$00
 display_next_last_score_byte:
-    lda $01fc,y
+    lda last_score_digits,y
     jsr $0080
     iny
     cpy #$04
@@ -11223,6 +11239,8 @@ display_next_last_score_byte:
     rts
 
 display_proudly_presents:
+    ; Compact sprite $96 is the graphical SIR-TECH logo; the inline record
+    ; places "PROUDLY PRESENTS" beneath it at column 16, row 3.
     lda #$61
     sta $11
     lda #$30
@@ -11242,7 +11260,7 @@ presentation_source_end:
 .assert render_compact_display_sprite - selector5_start = $4f6e, error, "compact sprite renderer origin drift"
 .assert update_presentation_phase - selector5_start = $4f93, error, "presentation phase origin drift"
 .assert display_high_scores - selector5_start = $4fba, error, "high-score display origin drift"
-.assert draw_presentation_brackets - selector5_start = $5034, error, "presentation brackets origin drift"
+.assert display_rescue_raiders_logo - selector5_start = $5034, error, "RESCUE RAIDERS logo origin drift"
 .assert display_hello_herrb - selector5_start = $5051, error, "HELLO HERRB record origin drift"
 .assert display_presentation_message - selector5_start = $5069, error, "presentation message origin drift"
 .assert display_creator_names - selector5_start = $5092, error, "creator names origin drift"
@@ -11358,7 +11376,11 @@ fuel_indicator_count_address_high:
     .byte $17,$60,$60,$61,$61,$60
 
 ; Low/high presentation callback bases overlap by one byte. Index zero is
-; unused; indices 1..7 select $B9CD,$B8BA,$B9AD,$B992,$B969,$B951,$B934.
+; unused. Indices 1..7 select Sir-Tech/presents, high scores, last score,
+; creator names, message, greeting, and the two-part RESCUE RAIDERS logo.
+; The phase counter runs downward and wraps, matching the captured display
+; sequence when observed from phase 1: publisher, game logo, greeting, message,
+; creators, last score, then high scores.
 presentation_callback_low:
     .byte $61,$cd,$ba,$ad,$92,$69,$51
 presentation_callback_high:

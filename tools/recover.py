@@ -266,6 +266,9 @@ def campaign_flow_mechanics(data: bytes) -> dict[str, object]:
     expect(payload5, 0x6900, 0x90B8, bytes.fromhex("88c9d3d00620878f4cf690"), "high-bit S dispatch")
     expect(payload6, 0x8000, 0x8086, bytes.fromhex("a505c909f00c20908120c48020e0814c9b80"), "selector-6 presentation dispatch")
     expect(payload6, 0x8000, 0x80A0, bytes.fromhex("c901f007ada1808501a9fe1869044cc8bf"), "selector-6 continuation dispatch")
+    expect(payload6, 0x8000, 0x80EC, bytes(value | 0x80 for value in b"Emergency transmission>"), "briefing heading")
+    expect(payload6, 0x8000, 0x8106, bytes(value | 0x80 for value in b"Terrorists have been found at"), "briefing body")
+    expect(payload6, 0x8000, 0x8131, bytes(value | 0x80 for value in b"Prepare for action"), "briefing action prompt")
     expect(payload6, 0x8000, 0x81E0, bytes.fromhex("20a0822000d8a9008d53878d5987a9178502207082"), "map city presentation")
     expect(payload6, 0x8000, 0x8270, bytes.fromhex("a405b9a7868570b9af868571"), "city pointer consumer")
 
@@ -295,9 +298,16 @@ def campaign_flow_mechanics(data: bytes) -> dict[str, object]:
         ],
         "selector6_sequence": [
             "$8190 prepares later-stage map progression when campaign index is at least 2.",
-            "$80C4 presents the Emergency transmission briefing.",
-            "$81E0 selects and displays the campaign city and waits for continue input.",
+            "$80C4 composes Emergency transmission> at row 0 and Terrorists have been found at at row 6.",
+            "$8124 centers the stage-indexed city at row 9 and adds Prepare for action at row 12.",
+            "$81E0 decodes packed-HGR selector 2, renders the same city at row 23, animates the stage-location ring, and waits for continue input.",
             "At campaign index 1, $80A0-$80B0 calls INTER selector 5, returning to battlefield setup.",
+        ],
+        "briefing_text": [
+            {"address_hex": "80EC", "column": 0, "row": 0, "text": "Emergency transmission>"},
+            {"address_hex": "8106", "column": 6, "row": 6, "text": "Terrorists have been found at"},
+            {"address_hex": "86B8-86EE", "column": "centered", "row": 9, "text": "stage city record"},
+            {"address_hex": "8131", "column": 11, "row": 12, "text": "Prepare for action"},
         ],
         "campaign_cities": city_records,
         "battlefield_input": {
@@ -1738,6 +1748,9 @@ def do_analyze(args: argparse.Namespace) -> None:
     flow_report.extend(f"- {item}" for item in campaign_flow["start_transition"])
     flow_report.extend(["", "## Briefing, map, and battle", ""])
     flow_report.extend(f"- {item}" for item in campaign_flow["selector6_sequence"])
+    flow_report.extend(["", "### Briefing text composition", "", "| Address | Column | Row | Text |", "| --- | ---: | ---: | --- |"])
+    for record in campaign_flow["briefing_text"]:
+        flow_report.append(f"| `${record['address_hex']}` | {record['column']} | {record['row']} | {record['text']} |")
     flow_report.extend(["", "| Campaign index | City | Record address | Encoded bytes |", "| ---: | --- | --- | --- |"])
     for city in campaign_flow["campaign_cities"]:
         flow_report.append(f"| {city['campaign_index']} | {city['name']} | `${city['address_hex']}` | `{city['encoded_hex']}` |")
