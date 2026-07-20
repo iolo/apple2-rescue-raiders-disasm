@@ -13,7 +13,7 @@ src/
   loader/       sequential boot and loader stages
   overlays/     stage-3 selector load sets
   assets/       lossless source representations of recovered assets
-  platform/     shared Apple II symbols when they are factored out
+  platform/     [planned] shared Apple II symbols when factored out
 ```
 
 `loader/stageN` means bootstrapping phase, not campaign battlefield number.

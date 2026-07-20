@@ -7,7 +7,7 @@ modified. Generated files live under `build/`.
 ## Quick start
 
 ```sh
-make -C disasm verify
+make verify
 ```
 
 Useful narrower targets are `doctor`, `fingerprint`, `extract`, `analyze`,
@@ -30,6 +30,11 @@ the boot and three loader stages, promoted selector-0/1/2/5 loads, and all four
 selector-6 loads. It writes `build/rebuild/rescue-raiders-rebuilt.dsk`. Its
 manifest records every replacement and requires the candidate to be byte-for-
 byte identical to the pinned canonical image.
+
+The current verified rebuild contains 13 source-exact replacements covering
+161 stored sectors (41,216 disk bytes). The promoted runtime loads account for
+38,912 bytes; selectors 1, 3, and 4 still include extracted loads that have not
+been promoted to human-maintained source.
 
 `assets` exports the selector-0 `$1500-$16FF` font and all 38 pointer-defined
 title bitmaps as raw fixtures and PGM previews under `build/assets/`. It also
@@ -176,7 +181,8 @@ eight-point perimeter motion, signed two-axis rasterizer, symmetric box paths,
 page-copy logic, coordinate/mask/seed tables, workspace, and residual tail all
 rebuild exactly without `INCBIN`.
 The high-bit-`S` dispatch at `$90B8-$90C2` and its state-changing routine at
-`$8F87-$8F92` are also promoted to labeled source in `selector5/flight.s`.
+`$8F87-$8F92` are also promoted to labeled source in
+`src/overlays/selector5-battlefield/flight.s`.
 The adjacent `$697D-$6B5D` main-flow slice is now labeled as well: it covers
 the alternating demo/interactive passes, update and exit gates, module
 initialization, campaign-stage reset/setup, and the selector-6 briefing call.

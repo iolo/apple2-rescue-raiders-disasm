@@ -1,10 +1,11 @@
 # Recovered asset pipeline
 
-Run `make -C disasm assets` to regenerate the currently classified assets
-under `build/assets/`.
+Run `make assets` from the repository root to regenerate the currently
+classified assets under `build/assets/`.
 
-The source artifact is the byte-exact selector-0 `$0800-$1FFF` opening load.
-The pipeline exports:
+Authoritative lossless definitions live under `src/assets/`; their owning
+selector sources and extracted battlefield banks provide the remaining native
+inputs. The pipeline exports:
 
 - the 512-byte font at `$1500-$16FF`, split into 64 eight-row glyph previews;
 - the complete 2,304-byte title-bitmap region at `$1700-$1FFF`;

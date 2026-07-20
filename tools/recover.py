@@ -2996,7 +2996,7 @@ def do_report(args: argparse.Namespace) -> None:
         ("Selector 5", "complete", "20,992 source-exact bytes, zero INCBIN"),
         ("Stage 2", "complete", "4,352 typed source-exact bytes, zero INCBIN"),
         ("Selector 6", "complete", "4,096 typed source-exact bytes across four loads, zero INCBIN"),
-        ("Remaining runtime source", "complete", "All runtime overlays named by the recovery plan have authoritative source-exact representations under src/"),
+        ("Remaining runtime source", "partial", "Promoted loads under src/ contain zero INCBIN; selector-1 supporting loads and selector-3/4 load sets remain to promote"),
         ("Static asset encodings", "complete", "All known decoded-selector assets have raw fixtures and round-trip checks"),
         ("Screenshot placement", "approval-gated", "Requires qualified, user-authorized apple2ts run"),
         ("Demake exports", "partial", "Versioned original-unit export exists; cadence and auxiliary tactical semantics remain unresolved"),
@@ -3016,20 +3016,20 @@ def do_report(args: argparse.Namespace) -> None:
     def producing_target(path: pathlib.Path) -> str:
         relative = path.relative_to(build)
         if relative == pathlib.Path("toolchain.json"):
-            return "make -C disasm doctor"
+            return "make doctor"
         if relative == pathlib.Path("fingerprint.json"):
-            return "make -C disasm fingerprint"
+            return "make fingerprint"
         if relative.parts[0] == "extract":
-            return "make -C disasm extract"
+            return "make extract"
         if relative.parts[0] == "data" or relative.parts[0] == "reports" and relative.name not in {"baseline.md", "coverage.json", "completion-audit.md", "release-manifest.json"}:
-            return "make -C disasm analyze"
+            return "make analyze"
         if relative.parts[0] == "disassembly":
-            return "make -C disasm disassemble"
+            return "make disassemble"
         if relative.parts[0] == "assets":
-            return "make -C disasm assets"
+            return "make assets"
         if relative.parts[0] == "rebuild":
-            return "make -C disasm rebuild"
-        return "make -C disasm report"
+            return "make rebuild"
+        return "make report"
 
     manifest_path = args.output.parent / "release-manifest.json"
     artifacts = []

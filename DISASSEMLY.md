@@ -75,9 +75,9 @@ Current baseline observation:
 - The first bytes decode plausibly as 6502 code, but that alone does not prove
   image sector order, filesystem type, load address, or entry point.
 
-Current reproducible recovery status (2026-07-14):
+Current reproducible recovery status (2026-07-20):
 
-- `make -C disasm verify` pins the canonical hash, extracts all 560 raw file
+- `make verify` pins the canonical hash, extracts all 560 raw file
   sectors, and reconstructs the input byte-for-byte.
 - Internal operands and a source-exact ca65 rebuild confirm the first raw sector
   at `$0800-$08FF`, with boot entry `$0801`.
@@ -157,13 +157,14 @@ Current reproducible recovery status (2026-07-14):
   visible-object rendering, HGR page copying/filling, high-score and presentation
   phases, battle/score output, self-modifying operands, overlapping callback
   tables, and trailing workspace are all explicit ca65 source/data.
-- `make -C disasm rebuild` now reconstructs all 560 stored sectors, reinserts
-  the independently assembled boot, stage 1, stage 3, selector-0, and selector-5
-  artifacts through explicit disk/page mappings, and emits
+- `make rebuild` now reconstructs all 560 stored sectors and reinserts 13
+  independently assembled artifacts: boot, stages 1-3, selector-0 loads 3/5,
+  selector-1 load 4, selector-2 load 0, selector-5 load 0, and selector-6 loads
+  0-3. Explicit disk/page mappings emit
   `build/rebuild/rescue-raiders-rebuilt.dsk`. The result is 143,360 bytes and
   byte-identical to the pinned canonical image; its generated manifest records
   every source-exact replacement (`E-REBUILD-001`).
-- `make -C disasm assets` now exports the `$1500-$16FF` 64×8 title font and all
+- `make assets` now exports the `$1500-$16FF` 64×8 title font and all
   38 pointer-defined `$1700-$1FFF` title bitmap descriptors as hashed raw fixtures
   and decoded PGM previews. Every glyph and descriptor round-trips through the
   documented seven-pixel, LSB-first encoding (`E-ASSET-SOURCE-001`).
@@ -537,30 +538,27 @@ slot/drive configuration, reset mode, mounted-image hash, and repeatability.
 ```text
 README.md
 Makefile
-original/                 # immutable inputs and checksums
-config/                   # tool versions, da65 info, linker configs
+rescue_raiders.dsk        # canonical external input
+original/                 # input checksums and retained research material
+config/                   # da65 info and linker configurations
 disk/                     # authored geometry and loader notes
 evidence/                 # claims, hypotheses, experiments, run manifests
+assets/                   # authored asset-pipeline documentation
+modules.json              # authored module atlas
 src/
   README.md               # source ownership and promotion status
   loader/                 # boot plus sequential loader stages 1-3
   overlays/               # selector-numbered runtime load sets
   assets/                 # lossless native asset definitions
-build/
-  extract/                # regenerated raw sectors and selector loads
-  disassembly/            # regenerated mechanical comparison listings
-  assets/                 # regenerated raw slices and visual previews
-data/
-  raw/
-  decoded/
-  mechanics/
-  exports/
-traces/
-  boot/
-  gameplay/
 tools/
 tests/
-build/                    # generated, disposable artifacts and reports
+build/                    # generated and disposable
+  extract/                # raw sectors and selector loads
+  disassembly/            # assembled binaries and comparison listings
+  assets/                 # raw slices and visual previews
+  data/                   # decoded mechanics and export JSON
+  rebuild/                # reconstructed image and replacement manifest
+  reports/                # maps, coverage, completion, and release manifests
 ```
 
 Hand-authored source, configuration, notes, manifests, and evidence are retained
@@ -581,18 +579,18 @@ static address map is coherent enough to support it.
 The Makefile should expose narrow, composable targets:
 
 ```text
-make -C disasm doctor       # verify tools and record versions
-make -C disasm emulator-doctor   # read-only API consistency preflight
-make -C disasm emulator-practice # disposable breakpoint/input qualification
-make -C disasm fingerprint  # hash and characterize canonical inputs
-make -C disasm extract      # lossless image/logical extraction
-make -C disasm analyze      # regenerate manifests and static reports
-make -C disasm disassemble  # regenerate da65/ca65 sources
-make -C disasm assets       # decode and round-trip assets/data
-make -C disasm rebuild      # assemble and construct candidate image
-make -C disasm verify       # deterministic, emulator-free checks
-make -C disasm smoke        # conditional user-approved emulator checkpoints
-make -C disasm report       # coverage, evidence, and mechanics summaries
+make doctor       # verify tools and record versions
+make emulator-doctor   # read-only API consistency preflight
+make emulator-practice # disposable breakpoint/input qualification
+make fingerprint  # hash and characterize canonical inputs
+make extract      # lossless image/logical extraction
+make analyze      # regenerate manifests and static reports
+make disassemble  # regenerate da65/ca65 sources
+make assets       # decode and round-trip assets/data
+make rebuild      # assemble and construct candidate image
+make verify       # deterministic, emulator-free checks
+make smoke        # conditional user-approved emulator checkpoints
+make report       # coverage, evidence, and mechanics summaries
 ```
 
 `verify` must fail on stale generated files, input hash drift, extraction
@@ -963,30 +961,30 @@ unique-content coverage; do not omit duplicates in a way that inflates progress.
   with confirmed evidence.
 - **M6: Functional game rebuild.** Cold boot, title, battle start, active play,
   death/restart, and battle completion checkpoints pass.
-- **M7: Recovery release.** The zero-opaque runtime-source status and remaining
-  uncertainties are documented, reports regenerate cleanly, and contributor
+- **M7: Recovery release.** The authoritative-source coverage, remaining opaque
+  loads, and uncertainties are documented, reports regenerate cleanly, and contributor
   documentation is complete.
 
 ### Current Completion Audit
 
 | Gate | Status | Authoritative evidence / remaining requirement |
 | --- | --- | --- |
-| M0 baseline | Complete | `make -C disasm verify`; pinned hash, toolchain report, deterministic generated artifacts |
+| M0 baseline | Complete | `make verify`; pinned hash, toolchain report, deterministic generated artifacts |
 | M1 disk model | Complete | 560-sector manifest and three exact mapping round trips |
-| M2 loader model | Complete | Source-exact boot/stages 1/3, selector manifests, and verified load/page mappings |
-| M3 static atlas | Complete for all decoded selector loads | `modules.json`, flow map, memory-map reports, and evidence-linked entry points |
-| M4 source-exact slice | Complete | Complete selector-0/5/6 loads and stage 2 exceed the original one-slice gate |
+| M2 loader model | Complete | Source-exact boot/stages 1/2/3, selector manifests, and verified load/page mappings |
+| M3 static atlas | Complete for the current nine-module atlas | `modules.json`, flow map, memory-map reports, and evidence-linked entry points; selector-3/4 semantic module promotion remains pending |
+| M4 source-exact slice | Complete | Selector-0 and selector-5, all selector-6 loads, stage 2, the selector-1 transition entry, and the selector-2 map exceed the original one-slice gate |
 | M5 flight/weapon exports | Complete in original representation units | Generated flight, service, combat, timing, and scoring JSON; real-time cadence intentionally remains `null` |
-| Byte-exact disk rebuild | Complete | `make -C disasm rebuild`; `E-REBUILD-001`; rebuilt candidate equals the canonical image |
-| Release regeneration | Complete | `make -C disasm fresh-verify` passes from an absent `build/`; two fresh runs produced identical release-manifest hash `acef92817b6c5b24ed941fc05d01342ce1fe36be6017b59583f130adc9999ed5` and canonical rebuilt-disk hash |
+| Byte-exact disk rebuild | Complete | `make rebuild`; `E-REBUILD-001`; rebuilt candidate equals the canonical image |
+| Release regeneration | Complete | `make fresh-verify` passes from an absent `build/`; two fresh runs produced identical release-manifest hash `456f3b9efc010fe88bcba88974a8055977a3149cb364914b51cdd9c9a0e23cfb` and canonical rebuilt-disk hash |
 | Artifact lineage/coverage | Complete | Generated `release-manifest.json` hashes every non-manifest artifact with producer/toolchain/lineage; `coverage.json` reports raw and deduplicated disk/source metrics separately |
 | Module manifest schema | Complete for current atlas entries | Every module records disk/memory ranges, transform chain, overlays, entry points, callers, outgoing references, unresolved regions, verification level, and evidence |
 | Phase 6 static asset package | Complete | Title font, 38 title bitmaps, 165 gameplay sprites, procedural HGR palettes/raster/title/gauge recipes, all synthesized audio accesses, and all eight battlefield layouts are manifested and round-trip checked |
 | Phase 6 screenshot placement | Approval-gated, not executed | Requires the apple2ts qualification gate and user authorization; static asset completion is not a screenshot-placement observation |
 | Phase 8 demake integration | Partial | Versioned `demake-export.json` covers exact scoring/economy, the complete 30-type catalog, battlefield layouts/formations, structure roles and durability behavior, stage transitions, movement/parachute behavior, combat profiles, and strategy scripts. Real-time cadence, entropy distribution, machine-gun representation, complete joined combat profiles, and auxiliary tactical-field semantics remain explicit gaps |
 | M6 runtime checkpoints | Approval-gated, not executed | Requires the apple2ts qualification gate and user authorization; static flow evidence is not a runtime smoke result |
-| Remaining runtime source | Complete for the recovery-plan overlay set | Stage 2 (`$6000-$70FF`) and all four selector-6 loads (`$7800`, `$8000`, `$A000`, `$A100`) now have authoritative bounded, typed source under `src/` with zero `INCBIN`; generated `da65` files are comparison artifacts only |
-| M7 recovery release | In progress | Exact disk construction, clean regeneration, coverage, artifact lineage, module schema, static assets, and planned runtime-source recovery are complete; remaining mechanics fields and approval-gated runtime checks remain |
+| Remaining runtime source | Partial | Promoted loads under `src/` contain zero `INCBIN`; selector-1 supporting loads and selector-3/4 load sets remain extracted comparison artifacts pending semantic promotion |
+| M7 recovery release | In progress | Exact disk construction, clean regeneration, coverage, artifact lineage, module schema, and static assets are complete; remaining runtime-source promotion, mechanics fields, and approval-gated runtime checks remain |
 
 ### Unconfirmed Original Metrics
 
