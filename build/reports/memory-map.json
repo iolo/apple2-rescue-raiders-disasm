@@ -1,0 +1,733 @@
+{
+  "image_sha256": "e87a3807667347f4434a78260e7e2791a7e6e45c4193e90f63dcb6d7a94059e8",
+  "modules": [
+    {
+      "callers": [
+        "Disk II boot firmware",
+        "stage-1 six-sector reload"
+      ],
+      "disk_ranges": [
+        {
+          "offset_end": 255,
+          "offset_start": 0,
+          "stored_sector": 0,
+          "track": 0
+        }
+      ],
+      "entry_points": [
+        {
+          "address": 2049,
+          "confidence": "confirmed",
+          "name": "boot_entry"
+        },
+        {
+          "address": 47792,
+          "confidence": "confirmed",
+          "name": "stage1_entry_bab0"
+        }
+      ],
+      "evidence": [
+        "E-BOOT-001",
+        "E-BOOT-002",
+        "E-BOOT-003"
+      ],
+      "id": "boot-page",
+      "memory_ranges": [
+        {
+          "confidence": "confirmed",
+          "end": 2303,
+          "start": 2048
+        },
+        {
+          "confidence": "confirmed",
+          "end": 47871,
+          "note": "reloaded as logical sector 0",
+          "start": 47616
+        }
+      ],
+      "outgoing_references": [
+        "stage1:$BAB0",
+        "Disk II slot-6 soft switches"
+      ],
+      "overlay_hypotheses": [
+        "$0800 boot copy is overwritten before selector-0 title code later occupies $0800-$1FFF"
+      ],
+      "transform_chain": [
+        "raw track-0 stored sector 0",
+        "direct 256-byte load at $0800",
+        "later direct reload at $BA00"
+      ],
+      "unresolved_regions": [],
+      "verification": "source-exact"
+    },
+    {
+      "callers": [
+        "boot-page:$BAB0"
+      ],
+      "disk_ranges": [
+        {
+          "controller_sector": 0,
+          "file_sector": 0,
+          "logical_sector": 0,
+          "track": 0
+        },
+        {
+          "controller_sector": 13,
+          "file_sector": 1,
+          "logical_sector": 1,
+          "track": 0
+        },
+        {
+          "controller_sector": 11,
+          "file_sector": 2,
+          "logical_sector": 2,
+          "track": 0
+        },
+        {
+          "controller_sector": 9,
+          "file_sector": 3,
+          "logical_sector": 3,
+          "track": 0
+        },
+        {
+          "controller_sector": 7,
+          "file_sector": 4,
+          "logical_sector": 4,
+          "track": 0
+        },
+        {
+          "controller_sector": 5,
+          "file_sector": 5,
+          "logical_sector": 5,
+          "track": 0
+        }
+      ],
+      "entry_points": [
+        {
+          "address": 47792,
+          "confidence": "confirmed",
+          "name": "stage1_handoff_bab0"
+        }
+      ],
+      "evidence": [
+        "E-BOOT-003",
+        "E-ORDER-001",
+        "E-STAGE1-SOURCE-001",
+        "E-STAGE1-SOURCE-002",
+        "E-STAGE1-SOURCE-003",
+        "E-STAGE1-SOURCE-004",
+        "E-STAGE1-SOURCE-005",
+        "E-SOUND-002"
+      ],
+      "id": "stage1",
+      "memory_ranges": [
+        {
+          "confidence": "confirmed",
+          "end": 49151,
+          "start": 47616
+        }
+      ],
+      "outgoing_references": [
+        "stage2-main:$707C",
+        "stage3-4000:$4000",
+        "shared RWTS entry $BFC8"
+      ],
+      "overlay_hypotheses": [
+        "$BA00 boot page is the relocated copy of raw sector 0"
+      ],
+      "transform_chain": [
+        "track-0 logical sectors 0-5",
+        "DOS logical-to-controller sector translation",
+        "direct pages at $BA00-$BFFF"
+      ],
+      "unresolved_regions": [
+        "$BFEE-$BFFF is preserved residual data with no recovered control-flow entry"
+      ],
+      "verification": "source-exact"
+    },
+    {
+      "callers": [
+        "gameplay-overlay-selector5 stage loader $6B94-$6BC3"
+      ],
+      "disk_ranges": [
+        {
+          "file_sector_end": 14,
+          "file_sector_start": 7,
+          "logical_sector_end": 14,
+          "logical_sector_start": 7,
+          "track": 0
+        }
+      ],
+      "entry_points": [],
+      "evidence": [
+        "E-BATTLEFIELD-001",
+        "E-STAGE-PARAM-001"
+      ],
+      "id": "battlefield-stage-records",
+      "memory_ranges": [
+        {
+          "confidence": "confirmed",
+          "end": 16639,
+          "overlay": "one stage sector at a time",
+          "start": 16384
+        }
+      ],
+      "outgoing_references": [
+        "gameplay-overlay-selector5 constructors and stage-mode consumers"
+      ],
+      "overlay_hypotheses": [
+        "one selected stage record occupies $4000-$40FF at a time"
+      ],
+      "transform_chain": [
+        "track-0 sector stage+6",
+        "direct load at $4000-$40FF",
+        "selector-5 field/bitfield consumers"
+      ],
+      "unresolved_regions": [
+        "$4064-$4067/$406A-$406B are dead copied stores",
+        "$406C/$406E-$40FF have no selector-5 consumer"
+      ],
+      "verification": "opaque-exact"
+    },
+    {
+      "callers": [
+        "stage1 relocated loader"
+      ],
+      "disk_ranges": [
+        {
+          "file_sector_end": 15,
+          "file_sector_start": 0,
+          "logical_sector_end": 15,
+          "logical_sector_start": 0,
+          "track": 19
+        },
+        {
+          "file_sector": 12,
+          "logical_sector": 12,
+          "track": 20
+        }
+      ],
+      "entry_points": [
+        {
+          "address": 28796,
+          "confidence": "confirmed",
+          "name": "stage2_entry_707c"
+        }
+      ],
+      "evidence": [
+        "E-LOAD-001",
+        "E-SOUND-002",
+        "E-STAGE2-SOURCE-001"
+      ],
+      "id": "stage2-main",
+      "memory_ranges": [
+        {
+          "confidence": "confirmed",
+          "end": 28927,
+          "start": 24576
+        }
+      ],
+      "outgoing_references": [
+        "stage3-4000:$4000",
+        "shared RWTS entry $BFC8"
+      ],
+      "overlay_hypotheses": [
+        "bootstrap/presentation code is replaced by later selector loads"
+      ],
+      "transform_chain": [
+        "track 19 sectors 0-15 plus track 20 sector 12",
+        "direct contiguous load at $6000-$70FF",
+        "stage2.info code/data typing",
+        "authoritative src/loader/stage2/bootstrap.s",
+        "byte-exact relink"
+      ],
+      "unresolved_regions": [
+        "all bytes are bounded and source-exact; higher-level names inside compressed presentation graphics remain deliberately neutral"
+      ],
+      "verification": "source-exact"
+    },
+    {
+      "callers": [
+        "stage2-main:$707C"
+      ],
+      "disk_ranges": [
+        {
+          "file_sector_end": 3,
+          "file_sector_start": 0,
+          "logical_sector_end": 3,
+          "logical_sector_start": 0,
+          "track": 21
+        }
+      ],
+      "entry_points": [
+        {
+          "address": 16384,
+          "confidence": "confirmed",
+          "name": "stage3_entry_4000"
+        }
+      ],
+      "evidence": [
+        "E-LOAD-002",
+        "E-LOAD-003",
+        "E-STAGE3-SOURCE-001",
+        "E-STAGE3-SOURCE-002",
+        "E-SOUND-002"
+      ],
+      "id": "stage3-4000",
+      "memory_ranges": [
+        {
+          "confidence": "confirmed",
+          "end": 17407,
+          "start": 16384
+        }
+      ],
+      "outgoing_references": [
+        "selector0-loadset",
+        "briefing-overlay-selector6",
+        "gameplay-overlay-selector5",
+        "selectors 1-4 decoded loadsets"
+      ],
+      "overlay_hypotheses": [
+        "selector dispatch replaces address ranges according to each decoded stream"
+      ],
+      "transform_chain": [
+        "track 21 logical sectors 0-3",
+        "direct load at $4000-$43FF",
+        "table-driven selector stream decoder"
+      ],
+      "unresolved_regions": [],
+      "verification": "source-exact"
+    },
+    {
+      "callers": [
+        "stage3 selector-0 dispatcher"
+      ],
+      "disk_ranges": [
+        {
+          "logical_sector_end": 15,
+          "logical_sector_start": 0,
+          "track_end": 20,
+          "track_start": 18
+        },
+        {
+          "logical_sector_end": 15,
+          "logical_sector_start": 14,
+          "track": 17
+        },
+        {
+          "logical_sector": 0,
+          "track": 11
+        },
+        {
+          "logical_sector_end": 15,
+          "logical_sector_start": 0,
+          "track": 28
+        },
+        {
+          "logical_sector_end": 7,
+          "logical_sector_start": 0,
+          "track": 29
+        },
+        {
+          "logical_sector_end": 13,
+          "logical_sector_start": 11,
+          "track": 17
+        },
+        {
+          "logical_sector_end": 12,
+          "logical_sector_start": 5,
+          "track": 11
+        }
+      ],
+      "entry_points": [
+        {
+          "address": 24576,
+          "confidence": "confirmed",
+          "name": "selector0_entry_6000"
+        }
+      ],
+      "evidence": [
+        "E-LOAD-004",
+        "E-FLOW-030",
+        "E-FLOW-SOURCE-003",
+        "E-FLOW-SOURCE-004",
+        "E-FLOW-SOURCE-005",
+        "E-FLOW-SOURCE-006",
+        "E-FLOW-SOURCE-007",
+        "E-FLOW-SOURCE-008",
+        "E-FLOW-SOURCE-009",
+        "E-FLOW-SOURCE-010",
+        "E-FLOW-SOURCE-011",
+        "E-FLOW-SOURCE-012",
+        "E-FLOW-SOURCE-013",
+        "E-FLOW-SOURCE-014",
+        "E-FLOW-SOURCE-015",
+        "E-FLOW-SOURCE-016",
+        "E-ASSET-SOURCE-001",
+        "E-ASSET-SOURCE-003",
+        "E-SOUND-002"
+      ],
+      "id": "selector0-loadset",
+      "memory_ranges": [
+        {
+          "confidence": "confirmed",
+          "end": 65535,
+          "start": 53248
+        },
+        {
+          "confidence": "confirmed",
+          "end": 17919,
+          "start": 17408
+        },
+        {
+          "confidence": "confirmed",
+          "end": 1279,
+          "start": 1024
+        },
+        {
+          "confidence": "confirmed",
+          "end": 8191,
+          "start": 2048
+        },
+        {
+          "confidence": "confirmed",
+          "end": 31487,
+          "start": 30720
+        },
+        {
+          "confidence": "confirmed",
+          "end": 26623,
+          "start": 24576
+        }
+      ],
+      "outgoing_references": [
+        "selector-1 request after opening",
+        "HGR pages and Apple II graphics soft switches"
+      ],
+      "overlay_hypotheses": [
+        "the $E000-$E1FF read is overwritten by the final $D000-$EAFF asset read",
+        "title code later yields to gameplay/briefing overlays"
+      ],
+      "transform_chain": [
+        "selector-0 stream records",
+        "reverse page-order direct disk reads",
+        "six effective memory ranges",
+        "entry at $6000"
+      ],
+      "unresolved_regions": [
+        "$66F1-$67BD residual tail is explicit unclassified data, not opaque bytes"
+      ],
+      "verification": "source-exact"
+    },
+    {
+      "callers": [
+        "stage3 selector-5 dispatcher"
+      ],
+      "disk_ranges": [
+        {
+          "file_sector": 9,
+          "logical_sector": 9,
+          "track": 12
+        }
+      ],
+      "entry_points": [
+        {
+          "address": 26880,
+          "confidence": "observed",
+          "name": "main_jump_table"
+        },
+        {
+          "address": 27005,
+          "confidence": "confirmed",
+          "name": "main_entry_697d"
+        },
+        {
+          "address": 27025,
+          "confidence": "confirmed",
+          "name": "main_loop_6991"
+        }
+      ],
+      "evidence": [
+        "E-MAIN-001",
+        "E-SOUND-002"
+      ],
+      "id": "main-loop-6900",
+      "memory_ranges": [
+        {
+          "confidence": "confirmed",
+          "end": 27135,
+          "start": 26880
+        }
+      ],
+      "outgoing_references": [
+        "gameplay-overlay-selector5 update/render and loader entries"
+      ],
+      "overlay_hypotheses": [
+        "fully contained by gameplay-overlay-selector5; retained as a historical atlas submodule"
+      ],
+      "transform_chain": [
+        "selector-5 first disk page",
+        "direct load at $6900-$69FF",
+        "subrange of complete selector-5 source-exact overlay"
+      ],
+      "unresolved_regions": [],
+      "verification": "source-exact"
+    },
+    {
+      "callers": [
+        "selector-5 start transition via selector dispatcher",
+        "stage3 selector-6 dispatcher"
+      ],
+      "disk_ranges": [
+        {
+          "logical_sector_end": 15,
+          "logical_sector_start": 8,
+          "track": 21
+        },
+        {
+          "logical_sector_end": 3,
+          "logical_sector_start": 0,
+          "track": 18
+        },
+        {
+          "logical_sector_end": 13,
+          "logical_sector_start": 11,
+          "track": 17
+        },
+        {
+          "logical_sector": 13,
+          "track": 11
+        }
+      ],
+      "entry_points": [
+        {
+          "address": 32768,
+          "confidence": "confirmed",
+          "name": "briefing_entry_8000"
+        },
+        {
+          "address": 32964,
+          "confidence": "confirmed",
+          "name": "present_emergency_briefing_80c4"
+        },
+        {
+          "address": 33248,
+          "confidence": "confirmed",
+          "name": "present_campaign_city_81e0"
+        }
+      ],
+      "evidence": [
+        "E-LOAD-005",
+        "E-FLOW-060",
+        "E-FLOW-070",
+        "E-FLOW-START-001",
+        "E-SELECTOR6-SOURCE-001"
+      ],
+      "id": "briefing-overlay-selector6",
+      "memory_ranges": [
+        {
+          "confidence": "confirmed",
+          "end": 34815,
+          "start": 32768
+        },
+        {
+          "confidence": "confirmed",
+          "end": 42239,
+          "start": 41216
+        },
+        {
+          "confidence": "confirmed",
+          "end": 31487,
+          "start": 30720
+        },
+        {
+          "confidence": "confirmed",
+          "end": 41215,
+          "start": 40960
+        }
+      ],
+      "outgoing_references": [
+        "gameplay-overlay-selector5 after briefing/map",
+        "HGR/text firmware and shared graphics ranges"
+      ],
+      "overlay_hypotheses": [
+        "shares/replaces $7800/$A000/$A100 regions used by other selectors"
+      ],
+      "transform_chain": [
+        "selector-6 stream records",
+        "reverse page-order direct disk reads",
+        "four memory ranges",
+        "per-load code/data type maps",
+        "authoritative src/overlays/selector6-briefing sources",
+        "four byte-exact relinks"
+      ],
+      "unresolved_regions": [
+        "all four loads are bounded and source-exact; residual embedded/source-text bytes and bitmap semantics retain neutral labels where no consumer proves more"
+      ],
+      "verification": "source-exact"
+    },
+    {
+      "callers": [
+        "stage3 selector-5 dispatcher",
+        "selector-6 battle handoff"
+      ],
+      "disk_ranges": [
+        {
+          "logical_sector_end": 15,
+          "logical_sector_start": 9,
+          "track": 11
+        },
+        {
+          "logical_sector_end": 15,
+          "logical_sector_start": 0,
+          "track_end": 16,
+          "track_start": 12
+        },
+        {
+          "logical_sector_end": 10,
+          "logical_sector_start": 0,
+          "track": 17
+        }
+      ],
+      "entry_points": [
+        {
+          "address": 27025,
+          "confidence": "confirmed",
+          "name": "main_loop_6991"
+        },
+        {
+          "address": 36620,
+          "confidence": "confirmed",
+          "name": "input_dispatch_jump_8f0c"
+        },
+        {
+          "address": 36884,
+          "confidence": "confirmed",
+          "name": "input_dispatch_9014"
+        }
+      ],
+      "evidence": [
+        "E-LOAD-005",
+        "E-FLOW-040",
+        "E-FLOW-050",
+        "E-FLOW-080",
+        "E-FLOW-START-001",
+        "E-FLOW-SOURCE-001",
+        "E-FLOW-SOURCE-002",
+        "E-CORE-SOURCE-001",
+        "E-CORE-SOURCE-002",
+        "E-CORE-SOURCE-003",
+        "E-CORE-SOURCE-004",
+        "E-CORE-SOURCE-005",
+        "E-CORE-SOURCE-006",
+        "E-CORE-SOURCE-007",
+        "E-CORE-SOURCE-008",
+        "E-CORE-SOURCE-009",
+        "E-CORE-SOURCE-010",
+        "E-CORE-SOURCE-011",
+        "E-CORE-SOURCE-012",
+        "E-CORE-SOURCE-013",
+        "E-CORE-SOURCE-014",
+        "E-CORE-SOURCE-015",
+        "E-CORE-SOURCE-016",
+        "E-CORE-SOURCE-017",
+        "E-CORE-SOURCE-018",
+        "E-CORE-SOURCE-019",
+        "E-CORE-SOURCE-020",
+        "E-CORE-SOURCE-021",
+        "E-CORE-SOURCE-022",
+        "E-CORE-SOURCE-023",
+        "E-CORE-SOURCE-024",
+        "E-CORE-SOURCE-025",
+        "E-CORE-SOURCE-026",
+        "E-ASSET-SOURCE-002",
+        "E-ASSET-SOURCE-003",
+        "E-SOUND-001",
+        "E-SCORE-001",
+        "E-FLIGHT-001",
+        "E-FLIGHT-002",
+        "E-FLIGHT-SOURCE-001",
+        "E-FLIGHT-SOURCE-002",
+        "E-SERVICE-001",
+        "E-SERVICE-002",
+        "E-SERVICE-003",
+        "E-SERVICE-SOURCE-001",
+        "E-SERVICE-SOURCE-002",
+        "E-SERVICE-SOURCE-003",
+        "E-SERVICE-SOURCE-004",
+        "E-SERVICE-SOURCE-005",
+        "E-TIMING-001",
+        "E-COMBAT-001",
+        "E-COMBAT-002",
+        "E-COMBAT-003",
+        "E-COMBAT-004",
+        "E-COMBAT-005",
+        "E-COMBAT-006",
+        "E-COMBAT-007",
+        "E-COMBAT-008",
+        "E-COMBAT-009",
+        "E-COMBAT-010",
+        "E-COMBAT-011",
+        "E-COMBAT-012",
+        "E-UNIT-PROFILE-001",
+        "E-MOBILITY-001",
+        "E-PARACHUTE-001",
+        "E-STAGE-WEAPON-001",
+        "E-STAGE-BOMB-001",
+        "E-STRUCTURE-001",
+        "E-STRUCTURE-ROLE-001",
+        "E-OBJECT-CATALOG-001",
+        "E-STRATEGY-001",
+        "E-STAGE-PARAM-001",
+        "E-UNIT-SOURCE-001",
+        "E-COMBAT-SOURCE-001",
+        "E-COMBAT-SOURCE-002",
+        "E-COMBAT-SOURCE-003",
+        "E-COMBAT-SOURCE-004",
+        "E-COMBAT-SOURCE-005",
+        "E-COMBAT-SOURCE-006",
+        "E-COMBAT-SOURCE-007",
+        "E-COMBAT-SOURCE-008",
+        "E-COMBAT-SOURCE-009",
+        "E-COMBAT-SOURCE-010",
+        "E-COMBAT-SOURCE-011",
+        "E-COMBAT-SOURCE-012",
+        "E-COMBAT-SOURCE-013",
+        "E-COMBAT-SOURCE-014",
+        "E-COMBAT-SOURCE-015",
+        "E-COMBAT-SOURCE-016",
+        "E-COMBAT-SOURCE-017",
+        "E-COMBAT-SOURCE-018",
+        "E-COMBAT-SOURCE-019"
+      ],
+      "id": "gameplay-overlay-selector5",
+      "memory_ranges": [
+        {
+          "confidence": "confirmed",
+          "end": 47871,
+          "start": 26880
+        }
+      ],
+      "outgoing_references": [
+        "battlefield-stage-records",
+        "selector-6 transition",
+        "shared RWTS $BFC8",
+        "Apple II input/video/speaker soft switches"
+      ],
+      "overlay_hypotheses": [
+        "replaces prior code/data across $6900-$BAFF; stage records independently overlay $4000-$40FF"
+      ],
+      "transform_chain": [
+        "selector-5 stream records",
+        "reverse page-order direct disk reads",
+        "contiguous $6900-$BAFF load",
+        "entry through selector-5 jump table"
+      ],
+      "unresolved_regions": [
+        "real-time cadence requires an approval-gated dynamic measurement",
+        "nine strategy progression rows and 37 auxiliary flags retain raw tactical names"
+      ],
+      "verification": "source-exact"
+    }
+  ]
+}

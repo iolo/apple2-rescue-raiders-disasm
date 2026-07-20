@@ -1,0 +1,32 @@
+{
+  "a2kit": {
+    "available": true,
+    "path": "/home/iolo/.cargo/bin/a2kit",
+    "version": "a2kit 4.4.2"
+  },
+  "ca65": {
+    "available": true,
+    "path": "/home/iolo/.local/bin/ca65",
+    "version": "ca65 V2.19 - Git a028ac414"
+  },
+  "da65": {
+    "available": true,
+    "path": "/home/iolo/.local/bin/da65",
+    "version": "da65 V2.19 - Git a028ac414"
+  },
+  "ld65": {
+    "available": true,
+    "path": "/home/iolo/.local/bin/ld65",
+    "version": "ld65 V2.19 - Git a028ac414"
+  },
+  "make": {
+    "available": true,
+    "path": "/usr/bin/make",
+    "version": "GNU Make 4.4.1"
+  },
+  "python": {
+    "available": true,
+    "path": "/usr/bin/python3",
+    "version": "3.14.4"
+  }
+}

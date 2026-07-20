@@ -1,0 +1,200 @@
+{
+  "anchors": [
+    {
+      "encoding": "apple-high-bit",
+      "file_sector": 9,
+      "flow_id": "FLOW-30",
+      "mappings": [
+        {
+          "address": 4519,
+          "selector": 0
+        }
+      ],
+      "offset": 117159,
+      "text": "COPYRIGHT (C) 1984 ALL RIGHTS RESERVED",
+      "track": 28,
+      "within_sector": 167
+    },
+    {
+      "encoding": "apple-high-bit",
+      "file_sector": 15,
+      "flow_id": "FLOW-40",
+      "mappings": [
+        {
+          "address": 1136,
+          "selector": 1
+        }
+      ],
+      "offset": 3952,
+      "text": "HIGH SCORES",
+      "track": 0,
+      "within_sector": 112
+    },
+    {
+      "encoding": "apple-high-bit",
+      "file_sector": 8,
+      "flow_id": "FLOW-40",
+      "mappings": [
+        {
+          "address": 47296,
+          "selector": 5
+        }
+      ],
+      "offset": 71872,
+      "text": "HIGH SCORES",
+      "track": 17,
+      "within_sector": 192
+    },
+    {
+      "encoding": "apple-high-bit",
+      "file_sector": 9,
+      "flow_id": "FLOW-40",
+      "mappings": [
+        {
+          "address": 47584,
+          "selector": 5
+        }
+      ],
+      "offset": 72160,
+      "text": "PROUDLY PRESENTS",
+      "track": 17,
+      "within_sector": 224
+    },
+    {
+      "encoding": "apple-high-bit",
+      "file_sector": 4,
+      "flow_id": "FLOW-40",
+      "mappings": [
+        {
+          "address": 46147,
+          "selector": 5
+        }
+      ],
+      "offset": 70723,
+      "text": "BATTLE OVER",
+      "track": 17,
+      "within_sector": 67
+    },
+    {
+      "encoding": "ascii",
+      "file_sector": 14,
+      "flow_id": "FLOW-60",
+      "mappings": [
+        {
+          "address": 65145,
+          "selector": 0
+        }
+      ],
+      "offset": 85625,
+      "text": "Emergency transmission>",
+      "track": 20,
+      "within_sector": 121
+    },
+    {
+      "encoding": "apple-high-bit",
+      "file_sector": 8,
+      "flow_id": "FLOW-60",
+      "mappings": [
+        {
+          "address": 33004,
+          "selector": 6
+        }
+      ],
+      "offset": 88300,
+      "text": "Emergency transmission>",
+      "track": 21,
+      "within_sector": 236
+    },
+    {
+      "encoding": "ascii",
+      "file_sector": 14,
+      "flow_id": "FLOW-60",
+      "mappings": [
+        {
+          "address": 65182,
+          "selector": 0
+        }
+      ],
+      "offset": 85662,
+      "text": "Terrorists have been found at",
+      "track": 20,
+      "within_sector": 158
+    },
+    {
+      "encoding": "apple-high-bit",
+      "file_sector": 9,
+      "flow_id": "FLOW-60",
+      "mappings": [
+        {
+          "address": 33030,
+          "selector": 6
+        }
+      ],
+      "offset": 88326,
+      "text": "Terrorists have been found at",
+      "track": 21,
+      "within_sector": 6
+    },
+    {
+      "encoding": "apple-high-bit",
+      "file_sector": 9,
+      "flow_id": "FLOW-60",
+      "mappings": [
+        {
+          "address": 33073,
+          "selector": 6
+        }
+      ],
+      "offset": 88369,
+      "text": "Prepare for action",
+      "track": 21,
+      "within_sector": 49
+    },
+    {
+      "encoding": "apple-high-bit",
+      "file_sector": 14,
+      "flow_id": "FLOW-70",
+      "mappings": [
+        {
+          "address": 34489,
+          "selector": 6
+        }
+      ],
+      "offset": 89785,
+      "text": "Cherbourg",
+      "track": 21,
+      "within_sector": 185
+    },
+    {
+      "encoding": "apple-high-bit",
+      "file_sector": 14,
+      "flow_id": "FLOW-70",
+      "mappings": [
+        {
+          "address": 34534,
+          "selector": 6
+        }
+      ],
+      "offset": 89830,
+      "text": "Brussels",
+      "track": 21,
+      "within_sector": 230
+    },
+    {
+      "encoding": "apple-high-bit",
+      "file_sector": 14,
+      "flow_id": "FLOW-70",
+      "mappings": [
+        {
+          "address": 34543,
+          "selector": 6
+        }
+      ],
+      "offset": 89839,
+      "text": "Antwerp",
+      "track": 21,
+      "within_sector": 239
+    }
+  ],
+  "image_sha256": "e87a3807667347f4434a78260e7e2791a7e6e45c4193e90f63dcb6d7a94059e8"
+}

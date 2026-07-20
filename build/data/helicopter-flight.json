@@ -1,0 +1,63 @@
+{
+  "evidence": [
+    "E-FLIGHT-001",
+    "E-FLIGHT-002"
+  ],
+  "horizontal": {
+    "acceleration_per_movement_update": 1,
+    "index_shift": 2,
+    "lower_position_bound_hex": "0230",
+    "position_high_array": "632C,Y",
+    "position_low_array": "6394,Y",
+    "sample_address": "C064",
+    "table_address": "998E",
+    "target_velocity_signed": [
+      -7,
+      -7,
+      -6,
+      -5,
+      -4,
+      -3,
+      -2,
+      -2,
+      -1,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      2,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      7,
+      7
+    ],
+    "upper_position_bound_hex": "0DD0",
+    "velocity_array": "64CC,Y"
+  },
+  "image_sha256": "e87a3807667347f4434a78260e7e2791a7e6e45c4193e90f63dcb6d7a94059e8",
+  "machine_assumption": "standard 6502-era Apple II game I/O: C064/C065 analog paddles, C070 timer reset",
+  "raw_sample_cap": 100,
+  "update_cadence": null,
+  "vertical": {
+    "base": 56,
+    "delta_array": "6534,Y",
+    "position_array": "63FC,Y",
+    "response": "signed arithmetic shift-right of (target-current) by 3; positive sub-8 differences force +1",
+    "sample_address": "C065",
+    "scale_hex": "01BF",
+    "target_formula": "56 + floor(447 * raw_sample / 256)",
+    "target_range_for_capped_sample": [
+      56,
+      230
+    ],
+    "upper_clamp": 221
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "assets": {
+    "battlefield_records": 8,
+    "gameplay_sprite_descriptors": 165,
+    "title_bitmap_descriptors": 38,
+    "title_font_glyphs": 64
+  },
+  "disk": {
+    "deduplicated_unique_content_bytes": 127488,
+    "opaque_exact_disk_bytes": 102144,
+    "source_exact_deduplicated_content_bytes": 41216,
+    "source_exact_disk_bytes": 41216,
+    "source_exact_sector_count": 161,
+    "source_exact_unique_sector_payload_count": 161,
+    "stored_bytes_losslessly_mapped": 143360,
+    "stored_sector_count": 560,
+    "unique_sector_payload_count": 498
+  },
+  "dynamic": {
+    "answered_questions": 0,
+    "approved_questions": 0,
+    "runtime_checkpoint_runs": 0
+  },
+  "image_sha256": "e87a3807667347f4434a78260e7e2791a7e6e45c4193e90f63dcb6d7a94059e8",
+  "modules": {
+    "count": 9,
+    "verification_counts": {
+      "opaque-exact": 1,
+      "source-exact": 8
+    }
+  },
+  "runtime_loads": {
+    "incbin_bytes_in_source_exact_loads": 0,
+    "selector0_source_exact_bytes": 8192,
+    "selector1_source_exact_bytes": 256,
+    "selector2_asset_source_exact_bytes": 1024,
+    "selector5_source_exact_bytes": 20992,
+    "selector6_source_exact_bytes": 4096,
+    "source_exact_bytes_total": 38912,
+    "stage2_source_exact_bytes": 4352
+  }
+}

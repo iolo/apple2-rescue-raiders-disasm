@@ -1,0 +1,1046 @@
+{
+  "base_sector_count": 560,
+  "byte_identical_to_canonical": true,
+  "candidate_path": "rescue-raiders-rebuilt.dsk",
+  "candidate_sha256": "e87a3807667347f4434a78260e7e2791a7e6e45c4193e90f63dcb6d7a94059e8",
+  "candidate_size": 143360,
+  "source_exact_replacements": [
+    {
+      "artifact": "disassembly/stage1-ba00-bfff.rebuilt.bin",
+      "id": "stage1",
+      "image_offset_end": 1535,
+      "image_offset_start": 0,
+      "sha256": "dc400f7c736182fb03a7c50d62c8ffc05c32c09586a3e735abcc8db8b594ceb5",
+      "size": 1536
+    },
+    {
+      "artifact": "disassembly/boot-sector.rebuilt.bin",
+      "id": "boot-sector",
+      "image_offset_end": 255,
+      "image_offset_start": 0,
+      "sha256": "3aa2e4b102955e8c18e192885d8e95b56b748b46033afa899523b62a531c2eea",
+      "size": 256
+    },
+    {
+      "artifact": "disassembly/stage2-6000-70ff.rebuilt.bin",
+      "id": "stage2",
+      "memory_end": 28927,
+      "memory_start": 24576,
+      "sectors": [
+        {
+          "file_sector": 0,
+          "image_offset": 77824,
+          "page": 96,
+          "track": 19
+        },
+        {
+          "file_sector": 1,
+          "image_offset": 78080,
+          "page": 97,
+          "track": 19
+        },
+        {
+          "file_sector": 2,
+          "image_offset": 78336,
+          "page": 98,
+          "track": 19
+        },
+        {
+          "file_sector": 3,
+          "image_offset": 78592,
+          "page": 99,
+          "track": 19
+        },
+        {
+          "file_sector": 4,
+          "image_offset": 78848,
+          "page": 100,
+          "track": 19
+        },
+        {
+          "file_sector": 5,
+          "image_offset": 79104,
+          "page": 101,
+          "track": 19
+        },
+        {
+          "file_sector": 6,
+          "image_offset": 79360,
+          "page": 102,
+          "track": 19
+        },
+        {
+          "file_sector": 7,
+          "image_offset": 79616,
+          "page": 103,
+          "track": 19
+        },
+        {
+          "file_sector": 8,
+          "image_offset": 79872,
+          "page": 104,
+          "track": 19
+        },
+        {
+          "file_sector": 9,
+          "image_offset": 80128,
+          "page": 105,
+          "track": 19
+        },
+        {
+          "file_sector": 10,
+          "image_offset": 80384,
+          "page": 106,
+          "track": 19
+        },
+        {
+          "file_sector": 11,
+          "image_offset": 80640,
+          "page": 107,
+          "track": 19
+        },
+        {
+          "file_sector": 12,
+          "image_offset": 80896,
+          "page": 108,
+          "track": 19
+        },
+        {
+          "file_sector": 13,
+          "image_offset": 81152,
+          "page": 109,
+          "track": 19
+        },
+        {
+          "file_sector": 14,
+          "image_offset": 81408,
+          "page": 110,
+          "track": 19
+        },
+        {
+          "file_sector": 15,
+          "image_offset": 81664,
+          "page": 111,
+          "track": 19
+        },
+        {
+          "file_sector": 12,
+          "image_offset": 84992,
+          "page": 112,
+          "track": 20
+        }
+      ],
+      "sha256": "87982fdfbb4505480d088252fb63f561ec04d7bdd081169a2372f72cc6e56ed0",
+      "size": 4352
+    },
+    {
+      "artifact": "disassembly/stage3-4000-43ff.rebuilt.bin",
+      "id": "stage3",
+      "image_offset_end": 87039,
+      "image_offset_start": 86016,
+      "sha256": "7e9106602b66faf7c00a2a11518b310c710a0169b6078e1f2c7653241f03ddeb",
+      "size": 1024
+    },
+    {
+      "artifact": "disassembly/selector0-load03-0800-1fff.rebuilt.bin",
+      "id": "selector0-load03",
+      "memory_end": 8191,
+      "memory_start": 2048,
+      "sectors": [
+        {
+          "file_sector": 7,
+          "image_offset": 120576,
+          "page": 31,
+          "track": 29
+        },
+        {
+          "file_sector": 6,
+          "image_offset": 120320,
+          "page": 30,
+          "track": 29
+        },
+        {
+          "file_sector": 5,
+          "image_offset": 120064,
+          "page": 29,
+          "track": 29
+        },
+        {
+          "file_sector": 4,
+          "image_offset": 119808,
+          "page": 28,
+          "track": 29
+        },
+        {
+          "file_sector": 3,
+          "image_offset": 119552,
+          "page": 27,
+          "track": 29
+        },
+        {
+          "file_sector": 2,
+          "image_offset": 119296,
+          "page": 26,
+          "track": 29
+        },
+        {
+          "file_sector": 1,
+          "image_offset": 119040,
+          "page": 25,
+          "track": 29
+        },
+        {
+          "file_sector": 0,
+          "image_offset": 118784,
+          "page": 24,
+          "track": 29
+        },
+        {
+          "file_sector": 15,
+          "image_offset": 118528,
+          "page": 23,
+          "track": 28
+        },
+        {
+          "file_sector": 14,
+          "image_offset": 118272,
+          "page": 22,
+          "track": 28
+        },
+        {
+          "file_sector": 13,
+          "image_offset": 118016,
+          "page": 21,
+          "track": 28
+        },
+        {
+          "file_sector": 12,
+          "image_offset": 117760,
+          "page": 20,
+          "track": 28
+        },
+        {
+          "file_sector": 11,
+          "image_offset": 117504,
+          "page": 19,
+          "track": 28
+        },
+        {
+          "file_sector": 10,
+          "image_offset": 117248,
+          "page": 18,
+          "track": 28
+        },
+        {
+          "file_sector": 9,
+          "image_offset": 116992,
+          "page": 17,
+          "track": 28
+        },
+        {
+          "file_sector": 8,
+          "image_offset": 116736,
+          "page": 16,
+          "track": 28
+        },
+        {
+          "file_sector": 7,
+          "image_offset": 116480,
+          "page": 15,
+          "track": 28
+        },
+        {
+          "file_sector": 6,
+          "image_offset": 116224,
+          "page": 14,
+          "track": 28
+        },
+        {
+          "file_sector": 5,
+          "image_offset": 115968,
+          "page": 13,
+          "track": 28
+        },
+        {
+          "file_sector": 4,
+          "image_offset": 115712,
+          "page": 12,
+          "track": 28
+        },
+        {
+          "file_sector": 3,
+          "image_offset": 115456,
+          "page": 11,
+          "track": 28
+        },
+        {
+          "file_sector": 2,
+          "image_offset": 115200,
+          "page": 10,
+          "track": 28
+        },
+        {
+          "file_sector": 1,
+          "image_offset": 114944,
+          "page": 9,
+          "track": 28
+        },
+        {
+          "file_sector": 0,
+          "image_offset": 114688,
+          "page": 8,
+          "track": 28
+        }
+      ],
+      "sha256": "dbf1e51d6aaa03f03d2656a97cc92a706ead84c1c77899b3df8fe5720f7ab023",
+      "size": 6144
+    },
+    {
+      "artifact": "disassembly/selector0-load05-6000-67ff.rebuilt.bin",
+      "id": "selector0-load05",
+      "memory_end": 26623,
+      "memory_start": 24576,
+      "sectors": [
+        {
+          "file_sector": 12,
+          "image_offset": 48128,
+          "page": 103,
+          "track": 11
+        },
+        {
+          "file_sector": 11,
+          "image_offset": 47872,
+          "page": 102,
+          "track": 11
+        },
+        {
+          "file_sector": 10,
+          "image_offset": 47616,
+          "page": 101,
+          "track": 11
+        },
+        {
+          "file_sector": 9,
+          "image_offset": 47360,
+          "page": 100,
+          "track": 11
+        },
+        {
+          "file_sector": 8,
+          "image_offset": 47104,
+          "page": 99,
+          "track": 11
+        },
+        {
+          "file_sector": 7,
+          "image_offset": 46848,
+          "page": 98,
+          "track": 11
+        },
+        {
+          "file_sector": 6,
+          "image_offset": 46592,
+          "page": 97,
+          "track": 11
+        },
+        {
+          "file_sector": 5,
+          "image_offset": 46336,
+          "page": 96,
+          "track": 11
+        }
+      ],
+      "sha256": "59a8c4bf0123ef7e2855346f5b6f7cb61848c316d67bff5ce4a5505ab5fa13c9",
+      "size": 2048
+    },
+    {
+      "artifact": "disassembly/selector1-load04-6900-69ff.rebuilt.bin",
+      "id": "selector1-load04",
+      "memory_end": 27135,
+      "memory_start": 26880,
+      "sectors": [
+        {
+          "file_sector": 9,
+          "image_offset": 51456,
+          "page": 105,
+          "track": 12
+        }
+      ],
+      "sha256": "eb85fb647b0af0f7beff246ba558cdad84f0baaa5488288113125d168f5d4919",
+      "size": 256
+    },
+    {
+      "artifact": "disassembly/selector2-load00-8000-83ff.rebuilt.bin",
+      "id": "selector2-load00",
+      "memory_end": 33791,
+      "memory_start": 32768,
+      "sectors": [
+        {
+          "file_sector": 3,
+          "image_offset": 123648,
+          "page": 131,
+          "track": 30
+        },
+        {
+          "file_sector": 2,
+          "image_offset": 123392,
+          "page": 130,
+          "track": 30
+        },
+        {
+          "file_sector": 1,
+          "image_offset": 123136,
+          "page": 129,
+          "track": 30
+        },
+        {
+          "file_sector": 0,
+          "image_offset": 122880,
+          "page": 128,
+          "track": 30
+        }
+      ],
+      "sha256": "14e89a5fde2e791ecd54bed6a4864aa4dc6947eb6e6e5629c585abf3e87d13fe",
+      "size": 1024
+    },
+    {
+      "artifact": "disassembly/selector5-load00-6900-baff.rebuilt.bin",
+      "id": "selector5-load00",
+      "memory_end": 47871,
+      "memory_start": 26880,
+      "sectors": [
+        {
+          "file_sector": 10,
+          "image_offset": 72192,
+          "page": 186,
+          "track": 17
+        },
+        {
+          "file_sector": 9,
+          "image_offset": 71936,
+          "page": 185,
+          "track": 17
+        },
+        {
+          "file_sector": 8,
+          "image_offset": 71680,
+          "page": 184,
+          "track": 17
+        },
+        {
+          "file_sector": 7,
+          "image_offset": 71424,
+          "page": 183,
+          "track": 17
+        },
+        {
+          "file_sector": 6,
+          "image_offset": 71168,
+          "page": 182,
+          "track": 17
+        },
+        {
+          "file_sector": 5,
+          "image_offset": 70912,
+          "page": 181,
+          "track": 17
+        },
+        {
+          "file_sector": 4,
+          "image_offset": 70656,
+          "page": 180,
+          "track": 17
+        },
+        {
+          "file_sector": 3,
+          "image_offset": 70400,
+          "page": 179,
+          "track": 17
+        },
+        {
+          "file_sector": 2,
+          "image_offset": 70144,
+          "page": 178,
+          "track": 17
+        },
+        {
+          "file_sector": 1,
+          "image_offset": 69888,
+          "page": 177,
+          "track": 17
+        },
+        {
+          "file_sector": 0,
+          "image_offset": 69632,
+          "page": 176,
+          "track": 17
+        },
+        {
+          "file_sector": 15,
+          "image_offset": 69376,
+          "page": 175,
+          "track": 16
+        },
+        {
+          "file_sector": 14,
+          "image_offset": 69120,
+          "page": 174,
+          "track": 16
+        },
+        {
+          "file_sector": 13,
+          "image_offset": 68864,
+          "page": 173,
+          "track": 16
+        },
+        {
+          "file_sector": 12,
+          "image_offset": 68608,
+          "page": 172,
+          "track": 16
+        },
+        {
+          "file_sector": 11,
+          "image_offset": 68352,
+          "page": 171,
+          "track": 16
+        },
+        {
+          "file_sector": 10,
+          "image_offset": 68096,
+          "page": 170,
+          "track": 16
+        },
+        {
+          "file_sector": 9,
+          "image_offset": 67840,
+          "page": 169,
+          "track": 16
+        },
+        {
+          "file_sector": 8,
+          "image_offset": 67584,
+          "page": 168,
+          "track": 16
+        },
+        {
+          "file_sector": 7,
+          "image_offset": 67328,
+          "page": 167,
+          "track": 16
+        },
+        {
+          "file_sector": 6,
+          "image_offset": 67072,
+          "page": 166,
+          "track": 16
+        },
+        {
+          "file_sector": 5,
+          "image_offset": 66816,
+          "page": 165,
+          "track": 16
+        },
+        {
+          "file_sector": 4,
+          "image_offset": 66560,
+          "page": 164,
+          "track": 16
+        },
+        {
+          "file_sector": 3,
+          "image_offset": 66304,
+          "page": 163,
+          "track": 16
+        },
+        {
+          "file_sector": 2,
+          "image_offset": 66048,
+          "page": 162,
+          "track": 16
+        },
+        {
+          "file_sector": 1,
+          "image_offset": 65792,
+          "page": 161,
+          "track": 16
+        },
+        {
+          "file_sector": 0,
+          "image_offset": 65536,
+          "page": 160,
+          "track": 16
+        },
+        {
+          "file_sector": 15,
+          "image_offset": 65280,
+          "page": 159,
+          "track": 15
+        },
+        {
+          "file_sector": 14,
+          "image_offset": 65024,
+          "page": 158,
+          "track": 15
+        },
+        {
+          "file_sector": 13,
+          "image_offset": 64768,
+          "page": 157,
+          "track": 15
+        },
+        {
+          "file_sector": 12,
+          "image_offset": 64512,
+          "page": 156,
+          "track": 15
+        },
+        {
+          "file_sector": 11,
+          "image_offset": 64256,
+          "page": 155,
+          "track": 15
+        },
+        {
+          "file_sector": 10,
+          "image_offset": 64000,
+          "page": 154,
+          "track": 15
+        },
+        {
+          "file_sector": 9,
+          "image_offset": 63744,
+          "page": 153,
+          "track": 15
+        },
+        {
+          "file_sector": 8,
+          "image_offset": 63488,
+          "page": 152,
+          "track": 15
+        },
+        {
+          "file_sector": 7,
+          "image_offset": 63232,
+          "page": 151,
+          "track": 15
+        },
+        {
+          "file_sector": 6,
+          "image_offset": 62976,
+          "page": 150,
+          "track": 15
+        },
+        {
+          "file_sector": 5,
+          "image_offset": 62720,
+          "page": 149,
+          "track": 15
+        },
+        {
+          "file_sector": 4,
+          "image_offset": 62464,
+          "page": 148,
+          "track": 15
+        },
+        {
+          "file_sector": 3,
+          "image_offset": 62208,
+          "page": 147,
+          "track": 15
+        },
+        {
+          "file_sector": 2,
+          "image_offset": 61952,
+          "page": 146,
+          "track": 15
+        },
+        {
+          "file_sector": 1,
+          "image_offset": 61696,
+          "page": 145,
+          "track": 15
+        },
+        {
+          "file_sector": 0,
+          "image_offset": 61440,
+          "page": 144,
+          "track": 15
+        },
+        {
+          "file_sector": 15,
+          "image_offset": 61184,
+          "page": 143,
+          "track": 14
+        },
+        {
+          "file_sector": 14,
+          "image_offset": 60928,
+          "page": 142,
+          "track": 14
+        },
+        {
+          "file_sector": 13,
+          "image_offset": 60672,
+          "page": 141,
+          "track": 14
+        },
+        {
+          "file_sector": 12,
+          "image_offset": 60416,
+          "page": 140,
+          "track": 14
+        },
+        {
+          "file_sector": 11,
+          "image_offset": 60160,
+          "page": 139,
+          "track": 14
+        },
+        {
+          "file_sector": 10,
+          "image_offset": 59904,
+          "page": 138,
+          "track": 14
+        },
+        {
+          "file_sector": 9,
+          "image_offset": 59648,
+          "page": 137,
+          "track": 14
+        },
+        {
+          "file_sector": 8,
+          "image_offset": 59392,
+          "page": 136,
+          "track": 14
+        },
+        {
+          "file_sector": 7,
+          "image_offset": 59136,
+          "page": 135,
+          "track": 14
+        },
+        {
+          "file_sector": 6,
+          "image_offset": 58880,
+          "page": 134,
+          "track": 14
+        },
+        {
+          "file_sector": 5,
+          "image_offset": 58624,
+          "page": 133,
+          "track": 14
+        },
+        {
+          "file_sector": 4,
+          "image_offset": 58368,
+          "page": 132,
+          "track": 14
+        },
+        {
+          "file_sector": 3,
+          "image_offset": 58112,
+          "page": 131,
+          "track": 14
+        },
+        {
+          "file_sector": 2,
+          "image_offset": 57856,
+          "page": 130,
+          "track": 14
+        },
+        {
+          "file_sector": 1,
+          "image_offset": 57600,
+          "page": 129,
+          "track": 14
+        },
+        {
+          "file_sector": 0,
+          "image_offset": 57344,
+          "page": 128,
+          "track": 14
+        },
+        {
+          "file_sector": 15,
+          "image_offset": 57088,
+          "page": 127,
+          "track": 13
+        },
+        {
+          "file_sector": 14,
+          "image_offset": 56832,
+          "page": 126,
+          "track": 13
+        },
+        {
+          "file_sector": 13,
+          "image_offset": 56576,
+          "page": 125,
+          "track": 13
+        },
+        {
+          "file_sector": 12,
+          "image_offset": 56320,
+          "page": 124,
+          "track": 13
+        },
+        {
+          "file_sector": 11,
+          "image_offset": 56064,
+          "page": 123,
+          "track": 13
+        },
+        {
+          "file_sector": 10,
+          "image_offset": 55808,
+          "page": 122,
+          "track": 13
+        },
+        {
+          "file_sector": 9,
+          "image_offset": 55552,
+          "page": 121,
+          "track": 13
+        },
+        {
+          "file_sector": 8,
+          "image_offset": 55296,
+          "page": 120,
+          "track": 13
+        },
+        {
+          "file_sector": 7,
+          "image_offset": 55040,
+          "page": 119,
+          "track": 13
+        },
+        {
+          "file_sector": 6,
+          "image_offset": 54784,
+          "page": 118,
+          "track": 13
+        },
+        {
+          "file_sector": 5,
+          "image_offset": 54528,
+          "page": 117,
+          "track": 13
+        },
+        {
+          "file_sector": 4,
+          "image_offset": 54272,
+          "page": 116,
+          "track": 13
+        },
+        {
+          "file_sector": 3,
+          "image_offset": 54016,
+          "page": 115,
+          "track": 13
+        },
+        {
+          "file_sector": 2,
+          "image_offset": 53760,
+          "page": 114,
+          "track": 13
+        },
+        {
+          "file_sector": 1,
+          "image_offset": 53504,
+          "page": 113,
+          "track": 13
+        },
+        {
+          "file_sector": 0,
+          "image_offset": 53248,
+          "page": 112,
+          "track": 13
+        },
+        {
+          "file_sector": 15,
+          "image_offset": 52992,
+          "page": 111,
+          "track": 12
+        },
+        {
+          "file_sector": 14,
+          "image_offset": 52736,
+          "page": 110,
+          "track": 12
+        },
+        {
+          "file_sector": 13,
+          "image_offset": 52480,
+          "page": 109,
+          "track": 12
+        },
+        {
+          "file_sector": 12,
+          "image_offset": 52224,
+          "page": 108,
+          "track": 12
+        },
+        {
+          "file_sector": 11,
+          "image_offset": 51968,
+          "page": 107,
+          "track": 12
+        },
+        {
+          "file_sector": 10,
+          "image_offset": 51712,
+          "page": 106,
+          "track": 12
+        },
+        {
+          "file_sector": 9,
+          "image_offset": 51456,
+          "page": 105,
+          "track": 12
+        }
+      ],
+      "sha256": "c4acfd5eed6748b4e1707640172fd9daa6c311bbaf6b3ccbd30bbe1c984cf73d",
+      "size": 20992
+    },
+    {
+      "artifact": "disassembly/selector6-load00-8000-87ff.rebuilt.bin",
+      "id": "selector6-load00",
+      "memory_end": 34815,
+      "memory_start": 32768,
+      "sectors": [
+        {
+          "file_sector": 15,
+          "image_offset": 89856,
+          "page": 135,
+          "track": 21
+        },
+        {
+          "file_sector": 14,
+          "image_offset": 89600,
+          "page": 134,
+          "track": 21
+        },
+        {
+          "file_sector": 13,
+          "image_offset": 89344,
+          "page": 133,
+          "track": 21
+        },
+        {
+          "file_sector": 12,
+          "image_offset": 89088,
+          "page": 132,
+          "track": 21
+        },
+        {
+          "file_sector": 11,
+          "image_offset": 88832,
+          "page": 131,
+          "track": 21
+        },
+        {
+          "file_sector": 10,
+          "image_offset": 88576,
+          "page": 130,
+          "track": 21
+        },
+        {
+          "file_sector": 9,
+          "image_offset": 88320,
+          "page": 129,
+          "track": 21
+        },
+        {
+          "file_sector": 8,
+          "image_offset": 88064,
+          "page": 128,
+          "track": 21
+        }
+      ],
+      "sha256": "4741c2f4f8eef634a7f2eb17c520f5380cdbd19f9aea5dd7e98e264daea2bac8",
+      "size": 2048
+    },
+    {
+      "artifact": "disassembly/selector6-load01-a100-a4ff.rebuilt.bin",
+      "id": "selector6-load01",
+      "memory_end": 42239,
+      "memory_start": 41216,
+      "sectors": [
+        {
+          "file_sector": 3,
+          "image_offset": 74496,
+          "page": 164,
+          "track": 18
+        },
+        {
+          "file_sector": 2,
+          "image_offset": 74240,
+          "page": 163,
+          "track": 18
+        },
+        {
+          "file_sector": 1,
+          "image_offset": 73984,
+          "page": 162,
+          "track": 18
+        },
+        {
+          "file_sector": 0,
+          "image_offset": 73728,
+          "page": 161,
+          "track": 18
+        }
+      ],
+      "sha256": "6d609822a1e7d36783be7f12bd803b8b879f47025bf3628ee6d36fbfdc0b464f",
+      "size": 1024
+    },
+    {
+      "artifact": "disassembly/selector6-load02-7800-7aff.rebuilt.bin",
+      "id": "selector6-load02",
+      "memory_end": 31487,
+      "memory_start": 30720,
+      "sectors": [
+        {
+          "file_sector": 13,
+          "image_offset": 72960,
+          "page": 122,
+          "track": 17
+        },
+        {
+          "file_sector": 12,
+          "image_offset": 72704,
+          "page": 121,
+          "track": 17
+        },
+        {
+          "file_sector": 11,
+          "image_offset": 72448,
+          "page": 120,
+          "track": 17
+        }
+      ],
+      "sha256": "9ea1ab42ff37dac4d75ec44abb3b30720314bcee5ba71c8d7cf688521250e99e",
+      "size": 768
+    },
+    {
+      "artifact": "disassembly/selector6-load03-a000-a0ff.rebuilt.bin",
+      "id": "selector6-load03",
+      "memory_end": 41215,
+      "memory_start": 40960,
+      "sectors": [
+        {
+          "file_sector": 13,
+          "image_offset": 48384,
+          "page": 160,
+          "track": 11
+        }
+      ],
+      "sha256": "02b23764daf496eb72d46d0e8ed059dd6ae8bb88988de07be7181e2166d9687f",
+      "size": 256
+    }
+  ],
+  "source_image_sha256": "e87a3807667347f4434a78260e7e2791a7e6e45c4193e90f63dcb6d7a94059e8"
+}

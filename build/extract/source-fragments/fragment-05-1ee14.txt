@@ -1,0 +1,41 @@
+# raw offsets $1EE14-$1EFFA
+# Token bytes are preserved as {HH}; confirmed hints use {HH:NAME}.
+
+1EE14: *********************
+1EE2B: * Rescue Raiders // *
+1EE42: * PROTECTION        *
+1EE59: *********************
+1EE70: ORG     {D9:EQU} $8000
+1EE81: OBJ     {D9:EQU} $800
+1EE91: {E3} 
+1EE95: {DA:ORG} ORG
+1EE9C: {DB:OBJ} OBJ
+1EEA3: ;
+1EEA6: {CA:JMP}{01}START
+1EEAF: {D8} SEEK-ORG
+1EEBB: ;
+1EEBE: BUFFER  {D9:EQU} ORG+$1000
+1EED3: ;
+1EED6: DRVSPD  {DC} 6
+1EEE3: PROFLG  {DC} 7
+1EEF0: CH      {DC} 1
+1EEFD: ;
+1EF00: INTER   {D9:EQU} $BFC8
+1EF11: ;
+1EF14: IOB     {D9:EQU} $BFE8
+1EF25: SLT     {D9:EQU} IOB+1
+1EF36: TRK     {D9:EQU} SLT+1
+1EF47: SEC     {D9:EQU} TRK+1
+1EF58: BUFP    {D9:EQU} SEC+1
+1EF69: CMD     {D9:EQU} BUFP+1
+1EF7B: RWTS0   {D9:EQU} $BB00
+1EF8C: ;
+1EF8F: T0      {DC} $70
+1EF9E: T1      {DC} T0+1
+1EFAE: T2      {DC} T1+1
+1EFBE: T3      {DC} T2+1
+1EFCE: T4      {DC} T3+1
+1EFDE: ;
+1EFE1: START   :
+1EFEC: {CE}{02}#4
+1EFF2: {CD:LDA}{02}#SEEK

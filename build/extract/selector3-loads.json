@@ -1,0 +1,220 @@
+{
+  "commands": [
+    {
+      "kind": "backward_load",
+      "load_index": 0,
+      "opcode": 3
+    },
+    {
+      "kind": "backward_load",
+      "load_index": 1,
+      "opcode": 3
+    },
+    {
+      "kind": "backward_load",
+      "load_index": 2,
+      "opcode": 3
+    },
+    {
+      "kind": "backward_load",
+      "load_index": 3,
+      "opcode": 3
+    },
+    {
+      "kind": "backward_load",
+      "load_index": 4,
+      "opcode": 3
+    }
+  ],
+  "end_address": 17067,
+  "entry_point": 32768,
+  "loads": [
+    {
+      "count": 7,
+      "index": 0,
+      "memory_end": 34559,
+      "memory_start": 32768,
+      "page": 134,
+      "path": "selector3-load00-8000-86ff.bin",
+      "reads": [
+        {
+          "file_sector": 6,
+          "logical_sector": 6,
+          "page": 134,
+          "track": 31
+        },
+        {
+          "file_sector": 5,
+          "logical_sector": 5,
+          "page": 133,
+          "track": 31
+        },
+        {
+          "file_sector": 4,
+          "logical_sector": 4,
+          "page": 132,
+          "track": 31
+        },
+        {
+          "file_sector": 3,
+          "logical_sector": 3,
+          "page": 131,
+          "track": 31
+        },
+        {
+          "file_sector": 2,
+          "logical_sector": 2,
+          "page": 130,
+          "track": 31
+        },
+        {
+          "file_sector": 1,
+          "logical_sector": 1,
+          "page": 129,
+          "track": 31
+        },
+        {
+          "file_sector": 0,
+          "logical_sector": 0,
+          "page": 128,
+          "track": 31
+        }
+      ],
+      "sector": 6,
+      "sha256": "2efa439dbbb7332c17ae3c8429a1d49ba404f93454e2b2cdda9dcee56fbbf334",
+      "track": 31
+    },
+    {
+      "count": 4,
+      "index": 1,
+      "memory_end": 42239,
+      "memory_start": 41216,
+      "page": 164,
+      "path": "selector3-load01-a100-a4ff.bin",
+      "reads": [
+        {
+          "file_sector": 3,
+          "logical_sector": 3,
+          "page": 164,
+          "track": 18
+        },
+        {
+          "file_sector": 2,
+          "logical_sector": 2,
+          "page": 163,
+          "track": 18
+        },
+        {
+          "file_sector": 1,
+          "logical_sector": 1,
+          "page": 162,
+          "track": 18
+        },
+        {
+          "file_sector": 0,
+          "logical_sector": 0,
+          "page": 161,
+          "track": 18
+        }
+      ],
+      "sector": 3,
+      "sha256": "6d609822a1e7d36783be7f12bd803b8b879f47025bf3628ee6d36fbfdc0b464f",
+      "track": 18
+    },
+    {
+      "count": 1,
+      "index": 2,
+      "memory_end": 41215,
+      "memory_start": 40960,
+      "page": 160,
+      "path": "selector3-load02-a000-a0ff.bin",
+      "reads": [
+        {
+          "file_sector": 13,
+          "logical_sector": 13,
+          "page": 160,
+          "track": 11
+        }
+      ],
+      "sector": 13,
+      "sha256": "02b23764daf496eb72d46d0e8ed059dd6ae8bb88988de07be7181e2166d9687f",
+      "track": 11
+    },
+    {
+      "count": 4,
+      "index": 3,
+      "memory_end": 40959,
+      "memory_start": 39936,
+      "page": 159,
+      "path": "selector3-load03-9c00-9fff.bin",
+      "reads": [
+        {
+          "file_sector": 15,
+          "logical_sector": 15,
+          "page": 159,
+          "track": 7
+        },
+        {
+          "file_sector": 14,
+          "logical_sector": 14,
+          "page": 158,
+          "track": 7
+        },
+        {
+          "file_sector": 13,
+          "logical_sector": 13,
+          "page": 157,
+          "track": 7
+        },
+        {
+          "file_sector": 12,
+          "logical_sector": 12,
+          "page": 156,
+          "track": 7
+        }
+      ],
+      "sector": 15,
+      "sha256": "dda1d28c156833fddb0939f7b8c36dfd6b30529db9809f670a49533b2de285e4",
+      "track": 7
+    },
+    {
+      "count": 4,
+      "index": 4,
+      "memory_end": 32767,
+      "memory_start": 31744,
+      "page": 127,
+      "path": "selector3-load04-7c00-7fff.bin",
+      "reads": [
+        {
+          "file_sector": 3,
+          "logical_sector": 3,
+          "page": 127,
+          "track": 7
+        },
+        {
+          "file_sector": 2,
+          "logical_sector": 2,
+          "page": 126,
+          "track": 7
+        },
+        {
+          "file_sector": 1,
+          "logical_sector": 1,
+          "page": 125,
+          "track": 7
+        },
+        {
+          "file_sector": 0,
+          "logical_sector": 0,
+          "page": 124,
+          "track": 7
+        }
+      ],
+      "sector": 3,
+      "sha256": "9f3d8f144fc19e798d8db16570a0b7f4a320dde3f77e49263797b6cb54c4010d",
+      "track": 7
+    }
+  ],
+  "selector": 3,
+  "stream_address": 17039
+}

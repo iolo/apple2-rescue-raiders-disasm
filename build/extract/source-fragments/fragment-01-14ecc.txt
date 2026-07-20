@@ -1,0 +1,6 @@
+# raw offsets $14ECC-$14EFE
+# Token bytes are preserved as {HH}; confirmed hints use {HH:NAME}.
+
+14ECC: PARTSVN {D9:EQU} $AC00
+14EDD: PARTEGT {D9:EQU} $B300
+14EEE: INTER   {D9:EQU} $BFC8

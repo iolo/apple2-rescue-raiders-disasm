@@ -98,7 +98,26 @@ class GeometryTests(unittest.TestCase):
             self.assertNotIn(".incbin", source.lower())
 
     def test_selector5_flight_source_anchors(self):
-        source = (ROOT / "src" / "overlays" / "selector5-battlefield" / "flight.s").read_text()
+        selector5_dir = ROOT / "src" / "overlays" / "selector5-battlefield"
+        entry_source = (selector5_dir / "flight.s").read_text()
+        module_names = (
+            "battlefield_flow.inc",
+            "object_construction.inc",
+            "object_updates.inc",
+            "secondary_behaviors.inc",
+            "input_and_player.inc",
+            "strategy_core.inc",
+            "strategy_actions.inc",
+            "strategy_data.inc",
+            "damage_and_collisions.inc",
+            "display.inc",
+        )
+        for name in module_names:
+            self.assertIn(f'.include "modules/{name}"', entry_source)
+        source = entry_source + "".join(
+            (selector5_dir / "modules" / name).read_text()
+            for name in module_names
+        )
         self.assertIn("initialize_player_helicopters:", source)
         self.assertIn("sample_player_paddles:", source)
         self.assertIn("scale_vertical:", source)

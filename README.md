@@ -182,7 +182,7 @@ page-copy logic, coordinate/mask/seed tables, workspace, and residual tail all
 rebuild exactly without `INCBIN`.
 The high-bit-`S` dispatch at `$90B8-$90C2` and its state-changing routine at
 `$8F87-$8F92` are also promoted to labeled source in
-`src/overlays/selector5-battlefield/flight.s`.
+`src/overlays/selector5-battlefield/modules/input_and_player.inc`.
 The adjacent `$697D-$6B5D` main-flow slice is now labeled as well: it covers
 the alternating demo/interactive passes, update and exit gates, module
 initialization, campaign-stage reset/setup, and the selector-6 briefing call.
@@ -229,7 +229,7 @@ The source preserves the overlap
 between the final list-insertion JMP operand and the constructor pointer table
 beginning at `$7875`.
 
-`src/overlays/selector5-battlefield/flight.s` promotes player initialization at `$6FC4-$70B3`, the
+The modules under `src/overlays/selector5-battlefield/` promote player initialization at `$6FC4-$70B3`, the
 analog flight input at `$914C-$91C1`, signed-step limiter at `$94CA-$94D5`,
 player-helicopter motion at
 `$97AC-$9866`, field repair at `$925D-$9292`, pad service at `$96D0-$97AB`,

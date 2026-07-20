@@ -1,0 +1,4056 @@
+{
+  "bunker_durability": {
+    "evidence": [
+      "E-STRUCTURE-001",
+      "E-STRUCTURE-ROLE-001",
+      "E-OBJECT-CATALOG-001"
+    ],
+    "manual_scope_note": "The manual's informal durability categories are represented here by exact binary behavior rather than forced one-to-one names.",
+    "types": {
+      "06": {
+        "common_weapon_damage": "accepted while integrity is positive",
+        "initial_integrity": 47,
+        "role": "barrage_balloon_bunker",
+        "special_type_1C_destruction_path": false
+      },
+      "16": {
+        "common_weapon_damage": "ignored because the signed integrity byte is negative",
+        "initial_integrity": 128,
+        "role": "optional_bunker",
+        "special_type_1C_destruction_path": true
+      },
+      "17": {
+        "common_weapon_damage": "ignored because the signed integrity byte is negative",
+        "initial_integrity": 128,
+        "role": "fixed_armed_bunker",
+        "special_type_1C_destruction_path": true
+      }
+    }
+  },
+  "evidence": [
+    "E-BATTLEFIELD-001",
+    "E-STAGE-WEAPON-001",
+    "E-STAGE-BOMB-001",
+    "E-STAGE-PARAM-001",
+    "E-STRUCTURE-001",
+    "E-STRUCTURE-ROLE-001",
+    "E-OBJECT-CATALOG-001"
+  ],
+  "fixed_objects": [
+    {
+      "horizontal_position": 560,
+      "object_type_hex": "17",
+      "owner_code": 0
+    },
+    {
+      "horizontal_position": 3536,
+      "object_type_hex": "17",
+      "owner_code": 1
+    },
+    {
+      "horizontal_position": 632,
+      "object_type_hex": "05",
+      "owner_code": 0
+    },
+    {
+      "horizontal_position": 3464,
+      "object_type_hex": "05",
+      "owner_code": 1
+    },
+    {
+      "horizontal_position": 656,
+      "object_type_hex": "04",
+      "owner_code": 0
+    },
+    {
+      "horizontal_position": 3440,
+      "object_type_hex": "04",
+      "owner_code": 1
+    }
+  ],
+  "formation_stream": {
+    "address": "792D-79F1",
+    "offset_table_address": "79F2-79FA",
+    "position_formula": "$0200 + 12 * position_code; four-unit infantry records add 0/3/6/9",
+    "record_codes": {
+      "C1": {
+        "object_type_hex": "0F",
+        "role": "aa_missile_carrier",
+        "unit_count": 1
+      },
+      "CD": {
+        "object_type_hex": "0D",
+        "role": "infantry",
+        "unit_count": 4
+      },
+      "D4": {
+        "object_type_hex": "0E",
+        "role": "tank",
+        "unit_count": 1
+      },
+      "D6": {
+        "object_type_hex": "10",
+        "role": "demolition_vehicle",
+        "unit_count": 1
+      }
+    }
+  },
+  "horizontal_coordinates": {
+    "conversion_to_demade_pixels": null,
+    "domain_max": 4095,
+    "domain_min": 0,
+    "layout_grid_last": 3572,
+    "layout_grid_slots": 256,
+    "layout_grid_start": 512,
+    "layout_grid_stride": 12,
+    "representation": "12-bit original object coordinate, modulo 4096"
+  },
+  "image_sha256": "e87a3807667347f4434a78260e7e2791a7e6e45c4193e90f63dcb6d7a94059e8",
+  "record_layout": {
+    "4000_401F": "32 bytes of type-$06 capturable-linked-structure bits",
+    "4020_403F": "32 bytes of type-$09 stationary-gun bits",
+    "4040_405F": "32 parallel ownership-bit bytes",
+    "4060": "optional type-$04 flag at horizontal $07F2",
+    "4061_4063": "three optional type-$16 flags at $04A8/$07F8/$0B68",
+    "4064_4067": "four invariant bytes 30/5/5/5 copied to $60E9-$60EC; no static consumer in decoded selector loads",
+    "4068": "copied to $60ED; stages 4-8 replace the bomb's ordinary ground type-$11 effect with a type-$1D to type-$18 aftermath transition",
+    "4069": "copied to $60EE; zero selects the 64-unit machine-gun model, nonzero selects the six-shot type-$1A alternate weapon model",
+    "406A_406B": "copied to $60EF-$60F0; no static consumer in decoded selector loads",
+    "406C": "not copied and has no selector-5 static consumer; retained as non-consumed stage metadata/padding",
+    "406D": "initial type-$06 stored-infantry count",
+    "406E_40FF": "no selector-5 static consumer; retained verbatim as non-consumed sector tail"
+  },
+  "stage_loader": {
+    "destination": "4000-40FF",
+    "disk_track": 0,
+    "routine": "6B94-6BC3",
+    "sector_formula": "stage + 6"
+  },
+  "stages": [
+    {
+      "copied_parameters_4064_406B": [
+        30,
+        5,
+        5,
+        5,
+        0,
+        0,
+        0,
+        0
+      ],
+      "disk": {
+        "file_sector": 7,
+        "memory_start": 16384,
+        "track": 0
+      },
+      "fixed_objects": [
+        {
+          "horizontal_position": 560,
+          "object_type_hex": "17",
+          "owner_code": 0
+        },
+        {
+          "horizontal_position": 3536,
+          "object_type_hex": "17",
+          "owner_code": 1
+        },
+        {
+          "horizontal_position": 632,
+          "object_type_hex": "05",
+          "owner_code": 0
+        },
+        {
+          "horizontal_position": 3464,
+          "object_type_hex": "05",
+          "owner_code": 1
+        },
+        {
+          "horizontal_position": 656,
+          "object_type_hex": "04",
+          "owner_code": 0
+        },
+        {
+          "horizontal_position": 3440,
+          "object_type_hex": "04",
+          "owner_code": 1
+        }
+      ],
+      "formation_object_count": 0,
+      "formation_objects": [],
+      "formation_offset_hex": "00",
+      "formation_record_count": 0,
+      "formation_records": [],
+      "known_parameter_effects": {
+        "4068_to_60ED_alternate_bomb_aftermath_enabled": false,
+        "4069_player_weapon_profile": "type_0B_machine_gun_64_internal_shot_units",
+        "4069_to_60EE_alternate_weapon_ammo_mode": false
+      },
+      "layout_count_by_type": {
+        "06": 8,
+        "09": 4
+      },
+      "layout_object_count": 12,
+      "layout_objects": [
+        {
+          "grid_index": 31,
+          "horizontal_position": 884,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 47,
+          "horizontal_position": 1076,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 63,
+          "horizontal_position": 1268,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 83,
+          "horizontal_position": 1508,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 99,
+          "horizontal_position": 1700,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 119,
+          "horizontal_position": 1940,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 143,
+          "horizontal_position": 2228,
+          "object_type_hex": "06",
+          "owner_code": 1,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 159,
+          "horizontal_position": 2420,
+          "object_type_hex": "06",
+          "owner_code": 1,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 175,
+          "horizontal_position": 2612,
+          "object_type_hex": "09",
+          "owner_code": 1,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 191,
+          "horizontal_position": 2804,
+          "object_type_hex": "06",
+          "owner_code": 1,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 211,
+          "horizontal_position": 3044,
+          "object_type_hex": "09",
+          "owner_code": 1,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 227,
+          "horizontal_position": 3236,
+          "object_type_hex": "06",
+          "owner_code": 1,
+          "role": "barrage_balloon_bunker"
+        }
+      ],
+      "optional_objects": [],
+      "raw_sector_hex": "0000000100000001000000001000010000010001000000010000000010000000000000000001000000001000000000000000000000010000000010000000000000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000001E05050500000000000046187019F759F95FFB67FD6127965C0265046B066B30A0650B7831881B752EBA376F2DE72F5D3DC433ED3563AA8DBCF59ABF2389AEB0C4C5F2E802EEFCCBFF060103F5FED906C1D5D600060DFF0DFD0012081606CFE3E4181F140A1816140FDAEEEF112425182117221C2AE6E7031F06FE10191913033026402C3A093D443F41333C43FE121314154C3C4A4C434A4A1D302D",
+      "raw_sector_sha256": "e5364422f28f142cacfb45eb74146ce70b88e7ac170787b5cf2e293a21762550",
+      "stage": 1,
+      "type06_initial_stored_infantry_406D": 0,
+      "unconsumed_406C": {
+        "classification": "not copied and no selector-5 static consumer",
+        "raw_value": 0
+      }
+    },
+    {
+      "copied_parameters_4064_406B": [
+        30,
+        5,
+        5,
+        5,
+        0,
+        0,
+        0,
+        1
+      ],
+      "disk": {
+        "file_sector": 8,
+        "memory_start": 16384,
+        "track": 0
+      },
+      "fixed_objects": [
+        {
+          "horizontal_position": 560,
+          "object_type_hex": "17",
+          "owner_code": 0
+        },
+        {
+          "horizontal_position": 3536,
+          "object_type_hex": "17",
+          "owner_code": 1
+        },
+        {
+          "horizontal_position": 632,
+          "object_type_hex": "05",
+          "owner_code": 0
+        },
+        {
+          "horizontal_position": 3464,
+          "object_type_hex": "05",
+          "owner_code": 1
+        },
+        {
+          "horizontal_position": 656,
+          "object_type_hex": "04",
+          "owner_code": 0
+        },
+        {
+          "horizontal_position": 3440,
+          "object_type_hex": "04",
+          "owner_code": 1
+        }
+      ],
+      "formation_object_count": 0,
+      "formation_objects": [],
+      "formation_offset_hex": "00",
+      "formation_record_count": 0,
+      "formation_records": [],
+      "known_parameter_effects": {
+        "4068_to_60ED_alternate_bomb_aftermath_enabled": false,
+        "4069_player_weapon_profile": "type_0B_machine_gun_64_internal_shot_units",
+        "4069_to_60EE_alternate_weapon_ammo_mode": false
+      },
+      "layout_count_by_type": {
+        "06": 8,
+        "09": 4
+      },
+      "layout_object_count": 12,
+      "layout_objects": [
+        {
+          "grid_index": 31,
+          "horizontal_position": 884,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 47,
+          "horizontal_position": 1076,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 59,
+          "horizontal_position": 1220,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 79,
+          "horizontal_position": 1460,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 83,
+          "horizontal_position": 1508,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 87,
+          "horizontal_position": 1556,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 171,
+          "horizontal_position": 2564,
+          "object_type_hex": "06",
+          "owner_code": 1,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 175,
+          "horizontal_position": 2612,
+          "object_type_hex": "09",
+          "owner_code": 1,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 179,
+          "horizontal_position": 2660,
+          "object_type_hex": "06",
+          "owner_code": 1,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 199,
+          "horizontal_position": 2900,
+          "object_type_hex": "06",
+          "owner_code": 1,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 211,
+          "horizontal_position": 3044,
+          "object_type_hex": "09",
+          "owner_code": 1,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 227,
+          "horizontal_position": 3236,
+          "object_type_hex": "06",
+          "owner_code": 1,
+          "role": "barrage_balloon_bunker"
+        }
+      ],
+      "optional_objects": [
+        {
+          "flag_offset_hex": "62",
+          "horizontal_position": 2040,
+          "object_type_hex": "16",
+          "owner_code": 0
+        }
+      ],
+      "raw_sector_hex": "0000000100000010000101000000000000000000001010000100000010000000000000000001000000001000000000000000000000010000000010000000000000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000001001E05050500000001010156F456165BF85B95865EE0FE61E30163CAB7622AC210C228A6226952977B45AD6B76B0147AA098D7E9D8EEDE9A3B9CBD2380C0248ACFE5C9A6C70290CA2E94D9FAD3B0D16F9AD4389EC43C4647BB1CDDF6A1F866AAA8AA4AB06CB1AEB150B7EDFFB1F002B478BFF5B0D47DC326B5D97FDE98E076ABF0D4EC83E77DD1B2BBDE96EE8CF0863E14D4303004073A3D3E491D1E1F",
+      "raw_sector_sha256": "3f9c2e9f4511afe6885082cbb83e37ab5d88f624d5d46b86d10d023d7f1eb32e",
+      "stage": 2,
+      "type06_initial_stored_infantry_406D": 1,
+      "unconsumed_406C": {
+        "classification": "not copied and no selector-5 static consumer",
+        "raw_value": 1
+      }
+    },
+    {
+      "copied_parameters_4064_406B": [
+        30,
+        5,
+        5,
+        5,
+        0,
+        0,
+        0,
+        1
+      ],
+      "disk": {
+        "file_sector": 9,
+        "memory_start": 16384,
+        "track": 0
+      },
+      "fixed_objects": [
+        {
+          "horizontal_position": 560,
+          "object_type_hex": "17",
+          "owner_code": 0
+        },
+        {
+          "horizontal_position": 3536,
+          "object_type_hex": "17",
+          "owner_code": 1
+        },
+        {
+          "horizontal_position": 632,
+          "object_type_hex": "05",
+          "owner_code": 0
+        },
+        {
+          "horizontal_position": 3464,
+          "object_type_hex": "05",
+          "owner_code": 1
+        },
+        {
+          "horizontal_position": 656,
+          "object_type_hex": "04",
+          "owner_code": 0
+        },
+        {
+          "horizontal_position": 3440,
+          "object_type_hex": "04",
+          "owner_code": 1
+        }
+      ],
+      "formation_object_count": 24,
+      "formation_objects": [
+        {
+          "formation_record": 0,
+          "horizontal_position": 692,
+          "object_type_hex": "10",
+          "owner_code": 0,
+          "role": "demolition_vehicle"
+        },
+        {
+          "formation_record": 1,
+          "horizontal_position": 704,
+          "object_type_hex": "10",
+          "owner_code": 0,
+          "role": "demolition_vehicle"
+        },
+        {
+          "formation_record": 2,
+          "horizontal_position": 980,
+          "object_type_hex": "0E",
+          "owner_code": 0,
+          "role": "tank"
+        },
+        {
+          "formation_record": 3,
+          "horizontal_position": 992,
+          "object_type_hex": "0E",
+          "owner_code": 0,
+          "role": "tank"
+        },
+        {
+          "formation_record": 4,
+          "horizontal_position": 1004,
+          "object_type_hex": "0E",
+          "owner_code": 0,
+          "role": "tank"
+        },
+        {
+          "formation_record": 5,
+          "horizontal_position": 1016,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 5,
+          "horizontal_position": 1019,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 5,
+          "horizontal_position": 1022,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 5,
+          "horizontal_position": 1025,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 6,
+          "horizontal_position": 1028,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 6,
+          "horizontal_position": 1031,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 6,
+          "horizontal_position": 1034,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 6,
+          "horizontal_position": 1037,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 7,
+          "horizontal_position": 1736,
+          "object_type_hex": "0F",
+          "owner_code": 0,
+          "role": "aa_missile_carrier"
+        },
+        {
+          "formation_record": 8,
+          "horizontal_position": 1748,
+          "object_type_hex": "0E",
+          "owner_code": 0,
+          "role": "tank"
+        },
+        {
+          "formation_record": 9,
+          "horizontal_position": 1760,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 9,
+          "horizontal_position": 1763,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 9,
+          "horizontal_position": 1766,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 9,
+          "horizontal_position": 1769,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 10,
+          "horizontal_position": 1772,
+          "object_type_hex": "0E",
+          "owner_code": 0,
+          "role": "tank"
+        },
+        {
+          "formation_record": 11,
+          "horizontal_position": 1784,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 11,
+          "horizontal_position": 1787,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 11,
+          "horizontal_position": 1790,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 11,
+          "horizontal_position": 1793,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        }
+      ],
+      "formation_offset_hex": "01",
+      "formation_record_count": 12,
+      "formation_records": [
+        {
+          "horizontal_positions": [
+            692
+          ],
+          "index": 0,
+          "object_type_hex": "10",
+          "position_code_hex": "0F",
+          "record_code_hex": "D6",
+          "role": "demolition_vehicle",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            704
+          ],
+          "index": 1,
+          "object_type_hex": "10",
+          "position_code_hex": "10",
+          "record_code_hex": "D6",
+          "role": "demolition_vehicle",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            980
+          ],
+          "index": 2,
+          "object_type_hex": "0E",
+          "position_code_hex": "27",
+          "record_code_hex": "D4",
+          "role": "tank",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            992
+          ],
+          "index": 3,
+          "object_type_hex": "0E",
+          "position_code_hex": "28",
+          "record_code_hex": "D4",
+          "role": "tank",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            1004
+          ],
+          "index": 4,
+          "object_type_hex": "0E",
+          "position_code_hex": "29",
+          "record_code_hex": "D4",
+          "role": "tank",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            1016,
+            1019,
+            1022,
+            1025
+          ],
+          "index": 5,
+          "object_type_hex": "0D",
+          "position_code_hex": "2A",
+          "record_code_hex": "CD",
+          "role": "infantry",
+          "unit_count": 4
+        },
+        {
+          "horizontal_positions": [
+            1028,
+            1031,
+            1034,
+            1037
+          ],
+          "index": 6,
+          "object_type_hex": "0D",
+          "position_code_hex": "2B",
+          "record_code_hex": "CD",
+          "role": "infantry",
+          "unit_count": 4
+        },
+        {
+          "horizontal_positions": [
+            1736
+          ],
+          "index": 7,
+          "object_type_hex": "0F",
+          "position_code_hex": "66",
+          "record_code_hex": "C1",
+          "role": "aa_missile_carrier",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            1748
+          ],
+          "index": 8,
+          "object_type_hex": "0E",
+          "position_code_hex": "67",
+          "record_code_hex": "D4",
+          "role": "tank",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            1760,
+            1763,
+            1766,
+            1769
+          ],
+          "index": 9,
+          "object_type_hex": "0D",
+          "position_code_hex": "68",
+          "record_code_hex": "CD",
+          "role": "infantry",
+          "unit_count": 4
+        },
+        {
+          "horizontal_positions": [
+            1772
+          ],
+          "index": 10,
+          "object_type_hex": "0E",
+          "position_code_hex": "69",
+          "record_code_hex": "D4",
+          "role": "tank",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            1784,
+            1787,
+            1790,
+            1793
+          ],
+          "index": 11,
+          "object_type_hex": "0D",
+          "position_code_hex": "6A",
+          "record_code_hex": "CD",
+          "role": "infantry",
+          "unit_count": 4
+        }
+      ],
+      "known_parameter_effects": {
+        "4068_to_60ED_alternate_bomb_aftermath_enabled": false,
+        "4069_player_weapon_profile": "type_0B_machine_gun_64_internal_shot_units",
+        "4069_to_60EE_alternate_weapon_ammo_mode": false
+      },
+      "layout_count_by_type": {
+        "06": 9,
+        "09": 7
+      },
+      "layout_object_count": 16,
+      "layout_objects": [
+        {
+          "grid_index": 35,
+          "horizontal_position": 932,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 54,
+          "horizontal_position": 1160,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 55,
+          "horizontal_position": 1172,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 61,
+          "horizontal_position": 1244,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 63,
+          "horizontal_position": 1268,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 123,
+          "horizontal_position": 1988,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 126,
+          "horizontal_position": 2024,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 127,
+          "horizontal_position": 2036,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 129,
+          "horizontal_position": 2060,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 131,
+          "horizontal_position": 2084,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 198,
+          "horizontal_position": 2888,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 199,
+          "horizontal_position": 2900,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 215,
+          "horizontal_position": 3092,
+          "object_type_hex": "06",
+          "owner_code": 1,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 219,
+          "horizontal_position": 3140,
+          "object_type_hex": "06",
+          "owner_code": 1,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 235,
+          "horizontal_position": 3332,
+          "object_type_hex": "06",
+          "owner_code": 1,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 239,
+          "horizontal_position": 3380,
+          "object_type_hex": "09",
+          "owner_code": 1,
+          "role": "type_09_structure"
+        }
+      ],
+      "optional_objects": [
+        {
+          "flag_offset_hex": "61",
+          "horizontal_position": 1192,
+          "object_type_hex": "16",
+          "owner_code": 0
+        },
+        {
+          "flag_offset_hex": "63",
+          "horizontal_position": 2920,
+          "object_type_hex": "16",
+          "owner_code": 0
+        }
+      ],
+      "raw_sector_hex": "000000001000000500000000000000105000000000000000000001100010000000000000000003000000000000000003000000000000000003000000000100000000000000000000000000000000000000000000000000000000FFFFFFFFFFFF000100011E050505000000010201B7C7C9A77F7A3E76BFCFD1AA877EB7B78B8CCCF86CCFF96ED2EE73D5B676D8CF78DB9B7CDE057EE17A80E4FF84E7E787EA3989ED268CF0008FF311922E3036F55437D0AA9AD3CCB27F4A88C85F43E5BE07C04549674A55ED1275B092659BD5EDE6CCF0E0BB1FADBDF6BFC0217F626D0546085F894A8D7C896B478E71BAF7352E983831BBD20DA4F7FF17589D1EAC248285C8",
+      "raw_sector_sha256": "c056f44c5f60b46594367deab8ae8a745030488a4e975e005f5e5420b72a5829",
+      "stage": 3,
+      "type06_initial_stored_infantry_406D": 1,
+      "unconsumed_406C": {
+        "classification": "not copied and no selector-5 static consumer",
+        "raw_value": 2
+      }
+    },
+    {
+      "copied_parameters_4064_406B": [
+        30,
+        5,
+        5,
+        5,
+        1,
+        0,
+        1,
+        0
+      ],
+      "disk": {
+        "file_sector": 10,
+        "memory_start": 16384,
+        "track": 0
+      },
+      "fixed_objects": [
+        {
+          "horizontal_position": 560,
+          "object_type_hex": "17",
+          "owner_code": 0
+        },
+        {
+          "horizontal_position": 3536,
+          "object_type_hex": "17",
+          "owner_code": 1
+        },
+        {
+          "horizontal_position": 632,
+          "object_type_hex": "05",
+          "owner_code": 0
+        },
+        {
+          "horizontal_position": 3464,
+          "object_type_hex": "05",
+          "owner_code": 1
+        },
+        {
+          "horizontal_position": 656,
+          "object_type_hex": "04",
+          "owner_code": 0
+        },
+        {
+          "horizontal_position": 3440,
+          "object_type_hex": "04",
+          "owner_code": 1
+        }
+      ],
+      "formation_object_count": 27,
+      "formation_objects": [
+        {
+          "formation_record": 0,
+          "horizontal_position": 692,
+          "object_type_hex": "10",
+          "owner_code": 0,
+          "role": "demolition_vehicle"
+        },
+        {
+          "formation_record": 1,
+          "horizontal_position": 704,
+          "object_type_hex": "10",
+          "owner_code": 0,
+          "role": "demolition_vehicle"
+        },
+        {
+          "formation_record": 2,
+          "horizontal_position": 968,
+          "object_type_hex": "0F",
+          "owner_code": 0,
+          "role": "aa_missile_carrier"
+        },
+        {
+          "formation_record": 3,
+          "horizontal_position": 980,
+          "object_type_hex": "0E",
+          "owner_code": 0,
+          "role": "tank"
+        },
+        {
+          "formation_record": 4,
+          "horizontal_position": 992,
+          "object_type_hex": "0E",
+          "owner_code": 0,
+          "role": "tank"
+        },
+        {
+          "formation_record": 5,
+          "horizontal_position": 1004,
+          "object_type_hex": "0E",
+          "owner_code": 0,
+          "role": "tank"
+        },
+        {
+          "formation_record": 6,
+          "horizontal_position": 1016,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 6,
+          "horizontal_position": 1019,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 6,
+          "horizontal_position": 1022,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 6,
+          "horizontal_position": 1025,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 7,
+          "horizontal_position": 1028,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 7,
+          "horizontal_position": 1031,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 7,
+          "horizontal_position": 1034,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 7,
+          "horizontal_position": 1037,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 8,
+          "horizontal_position": 2624,
+          "object_type_hex": "0F",
+          "owner_code": 0,
+          "role": "aa_missile_carrier"
+        },
+        {
+          "formation_record": 9,
+          "horizontal_position": 2636,
+          "object_type_hex": "0F",
+          "owner_code": 0,
+          "role": "aa_missile_carrier"
+        },
+        {
+          "formation_record": 10,
+          "horizontal_position": 2648,
+          "object_type_hex": "0E",
+          "owner_code": 0,
+          "role": "tank"
+        },
+        {
+          "formation_record": 11,
+          "horizontal_position": 2660,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 11,
+          "horizontal_position": 2663,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 11,
+          "horizontal_position": 2666,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 11,
+          "horizontal_position": 2669,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 12,
+          "horizontal_position": 2672,
+          "object_type_hex": "0E",
+          "owner_code": 0,
+          "role": "tank"
+        },
+        {
+          "formation_record": 13,
+          "horizontal_position": 2684,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 13,
+          "horizontal_position": 2687,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 13,
+          "horizontal_position": 2690,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 13,
+          "horizontal_position": 2693,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 14,
+          "horizontal_position": 2696,
+          "object_type_hex": "0F",
+          "owner_code": 0,
+          "role": "aa_missile_carrier"
+        }
+      ],
+      "formation_offset_hex": "1A",
+      "formation_record_count": 15,
+      "formation_records": [
+        {
+          "horizontal_positions": [
+            692
+          ],
+          "index": 0,
+          "object_type_hex": "10",
+          "position_code_hex": "0F",
+          "record_code_hex": "D6",
+          "role": "demolition_vehicle",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            704
+          ],
+          "index": 1,
+          "object_type_hex": "10",
+          "position_code_hex": "10",
+          "record_code_hex": "D6",
+          "role": "demolition_vehicle",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            968
+          ],
+          "index": 2,
+          "object_type_hex": "0F",
+          "position_code_hex": "26",
+          "record_code_hex": "C1",
+          "role": "aa_missile_carrier",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            980
+          ],
+          "index": 3,
+          "object_type_hex": "0E",
+          "position_code_hex": "27",
+          "record_code_hex": "D4",
+          "role": "tank",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            992
+          ],
+          "index": 4,
+          "object_type_hex": "0E",
+          "position_code_hex": "28",
+          "record_code_hex": "D4",
+          "role": "tank",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            1004
+          ],
+          "index": 5,
+          "object_type_hex": "0E",
+          "position_code_hex": "29",
+          "record_code_hex": "D4",
+          "role": "tank",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            1016,
+            1019,
+            1022,
+            1025
+          ],
+          "index": 6,
+          "object_type_hex": "0D",
+          "position_code_hex": "2A",
+          "record_code_hex": "CD",
+          "role": "infantry",
+          "unit_count": 4
+        },
+        {
+          "horizontal_positions": [
+            1028,
+            1031,
+            1034,
+            1037
+          ],
+          "index": 7,
+          "object_type_hex": "0D",
+          "position_code_hex": "2B",
+          "record_code_hex": "CD",
+          "role": "infantry",
+          "unit_count": 4
+        },
+        {
+          "horizontal_positions": [
+            2624
+          ],
+          "index": 8,
+          "object_type_hex": "0F",
+          "position_code_hex": "B0",
+          "record_code_hex": "C1",
+          "role": "aa_missile_carrier",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            2636
+          ],
+          "index": 9,
+          "object_type_hex": "0F",
+          "position_code_hex": "B1",
+          "record_code_hex": "C1",
+          "role": "aa_missile_carrier",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            2648
+          ],
+          "index": 10,
+          "object_type_hex": "0E",
+          "position_code_hex": "B2",
+          "record_code_hex": "D4",
+          "role": "tank",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            2660,
+            2663,
+            2666,
+            2669
+          ],
+          "index": 11,
+          "object_type_hex": "0D",
+          "position_code_hex": "B3",
+          "record_code_hex": "CD",
+          "role": "infantry",
+          "unit_count": 4
+        },
+        {
+          "horizontal_positions": [
+            2672
+          ],
+          "index": 12,
+          "object_type_hex": "0E",
+          "position_code_hex": "B4",
+          "record_code_hex": "D4",
+          "role": "tank",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            2684,
+            2687,
+            2690,
+            2693
+          ],
+          "index": 13,
+          "object_type_hex": "0D",
+          "position_code_hex": "B5",
+          "record_code_hex": "CD",
+          "role": "infantry",
+          "unit_count": 4
+        },
+        {
+          "horizontal_positions": [
+            2696
+          ],
+          "index": 14,
+          "object_type_hex": "0F",
+          "position_code_hex": "B6",
+          "record_code_hex": "C1",
+          "role": "aa_missile_carrier",
+          "unit_count": 1
+        }
+      ],
+      "known_parameter_effects": {
+        "4068_to_60ED_alternate_bomb_aftermath_enabled": true,
+        "4069_player_weapon_profile": "type_0B_machine_gun_64_internal_shot_units",
+        "4069_to_60EE_alternate_weapon_ammo_mode": false
+      },
+      "layout_count_by_type": {
+        "06": 5,
+        "09": 8
+      },
+      "layout_object_count": 13,
+      "layout_objects": [
+        {
+          "grid_index": 31,
+          "horizontal_position": 884,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 54,
+          "horizontal_position": 1160,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 55,
+          "horizontal_position": 1172,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 58,
+          "horizontal_position": 1208,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 59,
+          "horizontal_position": 1220,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 123,
+          "horizontal_position": 1988,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 127,
+          "horizontal_position": 2036,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 131,
+          "horizontal_position": 2084,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 198,
+          "horizontal_position": 2888,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 199,
+          "horizontal_position": 2900,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 202,
+          "horizontal_position": 2936,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 203,
+          "horizontal_position": 2948,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 227,
+          "horizontal_position": 3236,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        }
+      ],
+      "optional_objects": [
+        {
+          "flag_offset_hex": "61",
+          "horizontal_position": 1192,
+          "object_type_hex": "16",
+          "owner_code": 0
+        },
+        {
+          "flag_offset_hex": "63",
+          "horizontal_position": 2920,
+          "object_type_hex": "16",
+          "owner_code": 0
+        }
+      ],
+      "raw_sector_hex": "000000010000000000000000000000111000000000000000000000001000000000000000000003300000000000000000000000000000000003300000000000000000000000000000000000000000000000000000000000000000000000000000000100011E0505050100010002016F14510E7674D495BD6098D4639B00669EE869CDD36C248537677898AAF176AD2178DC177B797465987D79F9BAE285BDF988C0348BC30D8EC65991C96594CC3197FB019A579384B77C987E991A5BBC6E9E078872A248A52D4BA728E911B4EC28B7EF63BAF23CBDF588C0F894C3FB97C6FE63C92D33CC042CCF910833E3373DD636793893F681F7F69FA785FDFB33A1DDFB31",
+      "raw_sector_sha256": "a2fe9834ad281f88df0b1aa4a3654bc7bbdce3cd055edd2e5f0da4316ffe1f0f",
+      "stage": 4,
+      "type06_initial_stored_infantry_406D": 1,
+      "unconsumed_406C": {
+        "classification": "not copied and no selector-5 static consumer",
+        "raw_value": 2
+      }
+    },
+    {
+      "copied_parameters_4064_406B": [
+        30,
+        5,
+        5,
+        5,
+        1,
+        1,
+        1,
+        1
+      ],
+      "disk": {
+        "file_sector": 11,
+        "memory_start": 16384,
+        "track": 0
+      },
+      "fixed_objects": [
+        {
+          "horizontal_position": 560,
+          "object_type_hex": "17",
+          "owner_code": 0
+        },
+        {
+          "horizontal_position": 3536,
+          "object_type_hex": "17",
+          "owner_code": 1
+        },
+        {
+          "horizontal_position": 632,
+          "object_type_hex": "05",
+          "owner_code": 0
+        },
+        {
+          "horizontal_position": 3464,
+          "object_type_hex": "05",
+          "owner_code": 1
+        },
+        {
+          "horizontal_position": 656,
+          "object_type_hex": "04",
+          "owner_code": 0
+        },
+        {
+          "horizontal_position": 3440,
+          "object_type_hex": "04",
+          "owner_code": 1
+        }
+      ],
+      "formation_object_count": 31,
+      "formation_objects": [
+        {
+          "formation_record": 0,
+          "horizontal_position": 692,
+          "object_type_hex": "10",
+          "owner_code": 0,
+          "role": "demolition_vehicle"
+        },
+        {
+          "formation_record": 1,
+          "horizontal_position": 704,
+          "object_type_hex": "10",
+          "owner_code": 0,
+          "role": "demolition_vehicle"
+        },
+        {
+          "formation_record": 2,
+          "horizontal_position": 968,
+          "object_type_hex": "0F",
+          "owner_code": 0,
+          "role": "aa_missile_carrier"
+        },
+        {
+          "formation_record": 3,
+          "horizontal_position": 980,
+          "object_type_hex": "0E",
+          "owner_code": 0,
+          "role": "tank"
+        },
+        {
+          "formation_record": 4,
+          "horizontal_position": 992,
+          "object_type_hex": "0E",
+          "owner_code": 0,
+          "role": "tank"
+        },
+        {
+          "formation_record": 5,
+          "horizontal_position": 1004,
+          "object_type_hex": "0E",
+          "owner_code": 0,
+          "role": "tank"
+        },
+        {
+          "formation_record": 6,
+          "horizontal_position": 1856,
+          "object_type_hex": "0F",
+          "owner_code": 0,
+          "role": "aa_missile_carrier"
+        },
+        {
+          "formation_record": 7,
+          "horizontal_position": 1868,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 7,
+          "horizontal_position": 1871,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 7,
+          "horizontal_position": 1874,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 7,
+          "horizontal_position": 1877,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 8,
+          "horizontal_position": 1880,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 8,
+          "horizontal_position": 1883,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 8,
+          "horizontal_position": 1886,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 8,
+          "horizontal_position": 1889,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 9,
+          "horizontal_position": 2432,
+          "object_type_hex": "0F",
+          "owner_code": 0,
+          "role": "aa_missile_carrier"
+        },
+        {
+          "formation_record": 10,
+          "horizontal_position": 2444,
+          "object_type_hex": "0E",
+          "owner_code": 0,
+          "role": "tank"
+        },
+        {
+          "formation_record": 11,
+          "horizontal_position": 2456,
+          "object_type_hex": "0E",
+          "owner_code": 0,
+          "role": "tank"
+        },
+        {
+          "formation_record": 12,
+          "horizontal_position": 2468,
+          "object_type_hex": "0E",
+          "owner_code": 0,
+          "role": "tank"
+        },
+        {
+          "formation_record": 13,
+          "horizontal_position": 2480,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 13,
+          "horizontal_position": 2483,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 13,
+          "horizontal_position": 2486,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 13,
+          "horizontal_position": 2489,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 14,
+          "horizontal_position": 2492,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 14,
+          "horizontal_position": 2495,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 14,
+          "horizontal_position": 2498,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 14,
+          "horizontal_position": 2501,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 15,
+          "horizontal_position": 2504,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 15,
+          "horizontal_position": 2507,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 15,
+          "horizontal_position": 2510,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 15,
+          "horizontal_position": 2513,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        }
+      ],
+      "formation_offset_hex": "39",
+      "formation_record_count": 16,
+      "formation_records": [
+        {
+          "horizontal_positions": [
+            692
+          ],
+          "index": 0,
+          "object_type_hex": "10",
+          "position_code_hex": "0F",
+          "record_code_hex": "D6",
+          "role": "demolition_vehicle",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            704
+          ],
+          "index": 1,
+          "object_type_hex": "10",
+          "position_code_hex": "10",
+          "record_code_hex": "D6",
+          "role": "demolition_vehicle",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            968
+          ],
+          "index": 2,
+          "object_type_hex": "0F",
+          "position_code_hex": "26",
+          "record_code_hex": "C1",
+          "role": "aa_missile_carrier",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            980
+          ],
+          "index": 3,
+          "object_type_hex": "0E",
+          "position_code_hex": "27",
+          "record_code_hex": "D4",
+          "role": "tank",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            992
+          ],
+          "index": 4,
+          "object_type_hex": "0E",
+          "position_code_hex": "28",
+          "record_code_hex": "D4",
+          "role": "tank",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            1004
+          ],
+          "index": 5,
+          "object_type_hex": "0E",
+          "position_code_hex": "29",
+          "record_code_hex": "D4",
+          "role": "tank",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            1856
+          ],
+          "index": 6,
+          "object_type_hex": "0F",
+          "position_code_hex": "70",
+          "record_code_hex": "C1",
+          "role": "aa_missile_carrier",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            1868,
+            1871,
+            1874,
+            1877
+          ],
+          "index": 7,
+          "object_type_hex": "0D",
+          "position_code_hex": "71",
+          "record_code_hex": "CD",
+          "role": "infantry",
+          "unit_count": 4
+        },
+        {
+          "horizontal_positions": [
+            1880,
+            1883,
+            1886,
+            1889
+          ],
+          "index": 8,
+          "object_type_hex": "0D",
+          "position_code_hex": "72",
+          "record_code_hex": "CD",
+          "role": "infantry",
+          "unit_count": 4
+        },
+        {
+          "horizontal_positions": [
+            2432
+          ],
+          "index": 9,
+          "object_type_hex": "0F",
+          "position_code_hex": "A0",
+          "record_code_hex": "C1",
+          "role": "aa_missile_carrier",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            2444
+          ],
+          "index": 10,
+          "object_type_hex": "0E",
+          "position_code_hex": "A1",
+          "record_code_hex": "D4",
+          "role": "tank",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            2456
+          ],
+          "index": 11,
+          "object_type_hex": "0E",
+          "position_code_hex": "A2",
+          "record_code_hex": "D4",
+          "role": "tank",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            2468
+          ],
+          "index": 12,
+          "object_type_hex": "0E",
+          "position_code_hex": "A3",
+          "record_code_hex": "D4",
+          "role": "tank",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            2480,
+            2483,
+            2486,
+            2489
+          ],
+          "index": 13,
+          "object_type_hex": "0D",
+          "position_code_hex": "A4",
+          "record_code_hex": "CD",
+          "role": "infantry",
+          "unit_count": 4
+        },
+        {
+          "horizontal_positions": [
+            2492,
+            2495,
+            2498,
+            2501
+          ],
+          "index": 14,
+          "object_type_hex": "0D",
+          "position_code_hex": "A5",
+          "record_code_hex": "CD",
+          "role": "infantry",
+          "unit_count": 4
+        },
+        {
+          "horizontal_positions": [
+            2504,
+            2507,
+            2510,
+            2513
+          ],
+          "index": 15,
+          "object_type_hex": "0D",
+          "position_code_hex": "A6",
+          "record_code_hex": "CD",
+          "role": "infantry",
+          "unit_count": 4
+        }
+      ],
+      "known_parameter_effects": {
+        "4068_to_60ED_alternate_bomb_aftermath_enabled": true,
+        "4069_player_weapon_profile": "type_1A_alternate_6_shots",
+        "4069_to_60EE_alternate_weapon_ammo_mode": true
+      },
+      "layout_count_by_type": {
+        "06": 9,
+        "09": 4
+      },
+      "layout_object_count": 13,
+      "layout_objects": [
+        {
+          "grid_index": 35,
+          "horizontal_position": 932,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 54,
+          "horizontal_position": 1160,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 55,
+          "horizontal_position": 1172,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 63,
+          "horizontal_position": 1268,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 99,
+          "horizontal_position": 1700,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 127,
+          "horizontal_position": 2036,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 131,
+          "horizontal_position": 2084,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 159,
+          "horizontal_position": 2420,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 191,
+          "horizontal_position": 2804,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 198,
+          "horizontal_position": 2888,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 199,
+          "horizontal_position": 2900,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 211,
+          "horizontal_position": 3044,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 227,
+          "horizontal_position": 3236,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        }
+      ],
+      "optional_objects": [
+        {
+          "flag_offset_hex": "61",
+          "horizontal_position": 1192,
+          "object_type_hex": "16",
+          "owner_code": 0
+        },
+        {
+          "flag_offset_hex": "63",
+          "horizontal_position": 2920,
+          "object_type_hex": "16",
+          "owner_code": 0
+        }
+      ],
+      "raw_sector_hex": "000000001000000100000000100000011000000100000001000010001000000000000000000003000000000000000000000000000000000003000000000000000000000000000000000000000000000000000000000000000000000000000000000100011E0505050101010102011B7471D11B74F9FDD6BF02C112C31E7E489F2A694B8B548F6687787EAAF176D90C7959A66297391CBF1635992F64A98DE068AA91D46CB095DA70B399CC74BB9DC678C8A1B8D31A9F9EC77E62E9DB22A7DE21BCE19FBE1041B0E7E2C5164AB67255EF36BB1E52BEF5E6D32458C4FB42D92A5ECA017EDF0447E24F905194534C35F4CF16D297D43C9AD6FDD81FDB01DC23DF17",
+      "raw_sector_sha256": "44bbca4de37832252626e10b0bd1d20856d49236d64fe7f2b7a66e100a0e5e72",
+      "stage": 5,
+      "type06_initial_stored_infantry_406D": 1,
+      "unconsumed_406C": {
+        "classification": "not copied and no selector-5 static consumer",
+        "raw_value": 2
+      }
+    },
+    {
+      "copied_parameters_4064_406B": [
+        30,
+        5,
+        5,
+        5,
+        1,
+        1,
+        1,
+        1
+      ],
+      "disk": {
+        "file_sector": 12,
+        "memory_start": 16384,
+        "track": 0
+      },
+      "fixed_objects": [
+        {
+          "horizontal_position": 560,
+          "object_type_hex": "17",
+          "owner_code": 0
+        },
+        {
+          "horizontal_position": 3536,
+          "object_type_hex": "17",
+          "owner_code": 1
+        },
+        {
+          "horizontal_position": 632,
+          "object_type_hex": "05",
+          "owner_code": 0
+        },
+        {
+          "horizontal_position": 3464,
+          "object_type_hex": "05",
+          "owner_code": 1
+        },
+        {
+          "horizontal_position": 656,
+          "object_type_hex": "04",
+          "owner_code": 0
+        },
+        {
+          "horizontal_position": 3440,
+          "object_type_hex": "04",
+          "owner_code": 1
+        }
+      ],
+      "formation_object_count": 29,
+      "formation_objects": [
+        {
+          "formation_record": 0,
+          "horizontal_position": 692,
+          "object_type_hex": "10",
+          "owner_code": 0,
+          "role": "demolition_vehicle"
+        },
+        {
+          "formation_record": 1,
+          "horizontal_position": 704,
+          "object_type_hex": "10",
+          "owner_code": 0,
+          "role": "demolition_vehicle"
+        },
+        {
+          "formation_record": 2,
+          "horizontal_position": 968,
+          "object_type_hex": "0F",
+          "owner_code": 0,
+          "role": "aa_missile_carrier"
+        },
+        {
+          "formation_record": 3,
+          "horizontal_position": 980,
+          "object_type_hex": "0E",
+          "owner_code": 0,
+          "role": "tank"
+        },
+        {
+          "formation_record": 4,
+          "horizontal_position": 992,
+          "object_type_hex": "0E",
+          "owner_code": 0,
+          "role": "tank"
+        },
+        {
+          "formation_record": 5,
+          "horizontal_position": 1004,
+          "object_type_hex": "0E",
+          "owner_code": 0,
+          "role": "tank"
+        },
+        {
+          "formation_record": 6,
+          "horizontal_position": 1856,
+          "object_type_hex": "0F",
+          "owner_code": 0,
+          "role": "aa_missile_carrier"
+        },
+        {
+          "formation_record": 7,
+          "horizontal_position": 1868,
+          "object_type_hex": "0E",
+          "owner_code": 0,
+          "role": "tank"
+        },
+        {
+          "formation_record": 8,
+          "horizontal_position": 1880,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 8,
+          "horizontal_position": 1883,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 8,
+          "horizontal_position": 1886,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 8,
+          "horizontal_position": 1889,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 9,
+          "horizontal_position": 1892,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 9,
+          "horizontal_position": 1895,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 9,
+          "horizontal_position": 1898,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 9,
+          "horizontal_position": 1901,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 10,
+          "horizontal_position": 2696,
+          "object_type_hex": "0F",
+          "owner_code": 0,
+          "role": "aa_missile_carrier"
+        },
+        {
+          "formation_record": 11,
+          "horizontal_position": 2708,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 11,
+          "horizontal_position": 2711,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 11,
+          "horizontal_position": 2714,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 11,
+          "horizontal_position": 2717,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 12,
+          "horizontal_position": 2720,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 12,
+          "horizontal_position": 2723,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 12,
+          "horizontal_position": 2726,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 12,
+          "horizontal_position": 2729,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 13,
+          "horizontal_position": 2732,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 13,
+          "horizontal_position": 2735,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 13,
+          "horizontal_position": 2738,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 13,
+          "horizontal_position": 2741,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        }
+      ],
+      "formation_offset_hex": "5A",
+      "formation_record_count": 14,
+      "formation_records": [
+        {
+          "horizontal_positions": [
+            692
+          ],
+          "index": 0,
+          "object_type_hex": "10",
+          "position_code_hex": "0F",
+          "record_code_hex": "D6",
+          "role": "demolition_vehicle",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            704
+          ],
+          "index": 1,
+          "object_type_hex": "10",
+          "position_code_hex": "10",
+          "record_code_hex": "D6",
+          "role": "demolition_vehicle",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            968
+          ],
+          "index": 2,
+          "object_type_hex": "0F",
+          "position_code_hex": "26",
+          "record_code_hex": "C1",
+          "role": "aa_missile_carrier",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            980
+          ],
+          "index": 3,
+          "object_type_hex": "0E",
+          "position_code_hex": "27",
+          "record_code_hex": "D4",
+          "role": "tank",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            992
+          ],
+          "index": 4,
+          "object_type_hex": "0E",
+          "position_code_hex": "28",
+          "record_code_hex": "D4",
+          "role": "tank",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            1004
+          ],
+          "index": 5,
+          "object_type_hex": "0E",
+          "position_code_hex": "29",
+          "record_code_hex": "D4",
+          "role": "tank",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            1856
+          ],
+          "index": 6,
+          "object_type_hex": "0F",
+          "position_code_hex": "70",
+          "record_code_hex": "C1",
+          "role": "aa_missile_carrier",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            1868
+          ],
+          "index": 7,
+          "object_type_hex": "0E",
+          "position_code_hex": "71",
+          "record_code_hex": "D4",
+          "role": "tank",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            1880,
+            1883,
+            1886,
+            1889
+          ],
+          "index": 8,
+          "object_type_hex": "0D",
+          "position_code_hex": "72",
+          "record_code_hex": "CD",
+          "role": "infantry",
+          "unit_count": 4
+        },
+        {
+          "horizontal_positions": [
+            1892,
+            1895,
+            1898,
+            1901
+          ],
+          "index": 9,
+          "object_type_hex": "0D",
+          "position_code_hex": "73",
+          "record_code_hex": "CD",
+          "role": "infantry",
+          "unit_count": 4
+        },
+        {
+          "horizontal_positions": [
+            2696
+          ],
+          "index": 10,
+          "object_type_hex": "0F",
+          "position_code_hex": "B6",
+          "record_code_hex": "C1",
+          "role": "aa_missile_carrier",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            2708,
+            2711,
+            2714,
+            2717
+          ],
+          "index": 11,
+          "object_type_hex": "0D",
+          "position_code_hex": "B7",
+          "record_code_hex": "CD",
+          "role": "infantry",
+          "unit_count": 4
+        },
+        {
+          "horizontal_positions": [
+            2720,
+            2723,
+            2726,
+            2729
+          ],
+          "index": 12,
+          "object_type_hex": "0D",
+          "position_code_hex": "B8",
+          "record_code_hex": "CD",
+          "role": "infantry",
+          "unit_count": 4
+        },
+        {
+          "horizontal_positions": [
+            2732,
+            2735,
+            2738,
+            2741
+          ],
+          "index": 13,
+          "object_type_hex": "0D",
+          "position_code_hex": "B9",
+          "record_code_hex": "CD",
+          "role": "infantry",
+          "unit_count": 4
+        }
+      ],
+      "known_parameter_effects": {
+        "4068_to_60ED_alternate_bomb_aftermath_enabled": true,
+        "4069_player_weapon_profile": "type_1A_alternate_6_shots",
+        "4069_to_60EE_alternate_weapon_ammo_mode": true
+      },
+      "layout_count_by_type": {
+        "06": 6,
+        "09": 10
+      },
+      "layout_object_count": 16,
+      "layout_objects": [
+        {
+          "grid_index": 46,
+          "horizontal_position": 1064,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 47,
+          "horizontal_position": 1076,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 51,
+          "horizontal_position": 1124,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 54,
+          "horizontal_position": 1160,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 55,
+          "horizontal_position": 1172,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 81,
+          "horizontal_position": 1484,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 83,
+          "horizontal_position": 1508,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 86,
+          "horizontal_position": 1544,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 87,
+          "horizontal_position": 1556,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 91,
+          "horizontal_position": 1604,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 119,
+          "horizontal_position": 1940,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 142,
+          "horizontal_position": 2216,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 143,
+          "horizontal_position": 2228,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 147,
+          "horizontal_position": 2276,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 198,
+          "horizontal_position": 2888,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 199,
+          "horizontal_position": 2900,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        }
+      ],
+      "optional_objects": [
+        {
+          "flag_offset_hex": "61",
+          "horizontal_position": 1192,
+          "object_type_hex": "16",
+          "owner_code": 0
+        },
+        {
+          "flag_offset_hex": "63",
+          "horizontal_position": 2920,
+          "object_type_hex": "16",
+          "owner_code": 0
+        }
+      ],
+      "raw_sector_hex": "000000000000100000005010000001000000100000000000000000000000000000000000000303000000030000000000000300000000000003000000000000000000000000000000000000000000000000000000000000000000000000000000000100011E050505010101010301145058555523862658085C01405E42622F6111650A537D756D386A1A6E306C52703471767543A73A7A679A5F7F618042806FA267856986F12D9210531253140DAEAFB06A70B34DB5B610B8B9BABB2486908FE26A56E3C09F8EE7B1B4EE6A3CD01A23A27669C3D7216FA97D6AFAD7B6FD75202CF1CE2F83D23263DF35E0D638EAD99C70B112FCC45516C9ECA67ABB5C1D67F6",
+      "raw_sector_sha256": "f634c29fcf09b62b1e5664b02a7ec0b5b6d9ca68d13bd02e03cdd2934cc7bedc",
+      "stage": 6,
+      "type06_initial_stored_infantry_406D": 1,
+      "unconsumed_406C": {
+        "classification": "not copied and no selector-5 static consumer",
+        "raw_value": 3
+      }
+    },
+    {
+      "copied_parameters_4064_406B": [
+        30,
+        5,
+        5,
+        5,
+        1,
+        1,
+        1,
+        1
+      ],
+      "disk": {
+        "file_sector": 13,
+        "memory_start": 16384,
+        "track": 0
+      },
+      "fixed_objects": [
+        {
+          "horizontal_position": 560,
+          "object_type_hex": "17",
+          "owner_code": 0
+        },
+        {
+          "horizontal_position": 3536,
+          "object_type_hex": "17",
+          "owner_code": 1
+        },
+        {
+          "horizontal_position": 632,
+          "object_type_hex": "05",
+          "owner_code": 0
+        },
+        {
+          "horizontal_position": 3464,
+          "object_type_hex": "05",
+          "owner_code": 1
+        },
+        {
+          "horizontal_position": 656,
+          "object_type_hex": "04",
+          "owner_code": 0
+        },
+        {
+          "horizontal_position": 3440,
+          "object_type_hex": "04",
+          "owner_code": 1
+        }
+      ],
+      "formation_object_count": 35,
+      "formation_objects": [
+        {
+          "formation_record": 0,
+          "horizontal_position": 1088,
+          "object_type_hex": "10",
+          "owner_code": 0,
+          "role": "demolition_vehicle"
+        },
+        {
+          "formation_record": 1,
+          "horizontal_position": 1100,
+          "object_type_hex": "10",
+          "owner_code": 0,
+          "role": "demolition_vehicle"
+        },
+        {
+          "formation_record": 2,
+          "horizontal_position": 1184,
+          "object_type_hex": "0F",
+          "owner_code": 0,
+          "role": "aa_missile_carrier"
+        },
+        {
+          "formation_record": 3,
+          "horizontal_position": 1196,
+          "object_type_hex": "0E",
+          "owner_code": 0,
+          "role": "tank"
+        },
+        {
+          "formation_record": 4,
+          "horizontal_position": 1208,
+          "object_type_hex": "0E",
+          "owner_code": 0,
+          "role": "tank"
+        },
+        {
+          "formation_record": 5,
+          "horizontal_position": 1220,
+          "object_type_hex": "0E",
+          "owner_code": 0,
+          "role": "tank"
+        },
+        {
+          "formation_record": 6,
+          "horizontal_position": 1232,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 6,
+          "horizontal_position": 1235,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 6,
+          "horizontal_position": 1238,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 6,
+          "horizontal_position": 1241,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 7,
+          "horizontal_position": 1244,
+          "object_type_hex": "0F",
+          "owner_code": 0,
+          "role": "aa_missile_carrier"
+        },
+        {
+          "formation_record": 8,
+          "horizontal_position": 1664,
+          "object_type_hex": "0F",
+          "owner_code": 0,
+          "role": "aa_missile_carrier"
+        },
+        {
+          "formation_record": 9,
+          "horizontal_position": 1736,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 9,
+          "horizontal_position": 1739,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 9,
+          "horizontal_position": 1742,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 9,
+          "horizontal_position": 1745,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 10,
+          "horizontal_position": 1856,
+          "object_type_hex": "0E",
+          "owner_code": 0,
+          "role": "tank"
+        },
+        {
+          "formation_record": 11,
+          "horizontal_position": 1868,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 11,
+          "horizontal_position": 1871,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 11,
+          "horizontal_position": 1874,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 11,
+          "horizontal_position": 1877,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 12,
+          "horizontal_position": 1880,
+          "object_type_hex": "0F",
+          "owner_code": 0,
+          "role": "aa_missile_carrier"
+        },
+        {
+          "formation_record": 13,
+          "horizontal_position": 1892,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 13,
+          "horizontal_position": 1895,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 13,
+          "horizontal_position": 1898,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 13,
+          "horizontal_position": 1901,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 14,
+          "horizontal_position": 2756,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 14,
+          "horizontal_position": 2759,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 14,
+          "horizontal_position": 2762,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 14,
+          "horizontal_position": 2765,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 15,
+          "horizontal_position": 2768,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 15,
+          "horizontal_position": 2771,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 15,
+          "horizontal_position": 2774,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 15,
+          "horizontal_position": 2777,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 16,
+          "horizontal_position": 2780,
+          "object_type_hex": "0F",
+          "owner_code": 0,
+          "role": "aa_missile_carrier"
+        }
+      ],
+      "formation_offset_hex": "78",
+      "formation_record_count": 17,
+      "formation_records": [
+        {
+          "horizontal_positions": [
+            1088
+          ],
+          "index": 0,
+          "object_type_hex": "10",
+          "position_code_hex": "30",
+          "record_code_hex": "D6",
+          "role": "demolition_vehicle",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            1100
+          ],
+          "index": 1,
+          "object_type_hex": "10",
+          "position_code_hex": "31",
+          "record_code_hex": "D6",
+          "role": "demolition_vehicle",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            1184
+          ],
+          "index": 2,
+          "object_type_hex": "0F",
+          "position_code_hex": "38",
+          "record_code_hex": "C1",
+          "role": "aa_missile_carrier",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            1196
+          ],
+          "index": 3,
+          "object_type_hex": "0E",
+          "position_code_hex": "39",
+          "record_code_hex": "D4",
+          "role": "tank",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            1208
+          ],
+          "index": 4,
+          "object_type_hex": "0E",
+          "position_code_hex": "3A",
+          "record_code_hex": "D4",
+          "role": "tank",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            1220
+          ],
+          "index": 5,
+          "object_type_hex": "0E",
+          "position_code_hex": "3B",
+          "record_code_hex": "D4",
+          "role": "tank",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            1232,
+            1235,
+            1238,
+            1241
+          ],
+          "index": 6,
+          "object_type_hex": "0D",
+          "position_code_hex": "3C",
+          "record_code_hex": "CD",
+          "role": "infantry",
+          "unit_count": 4
+        },
+        {
+          "horizontal_positions": [
+            1244
+          ],
+          "index": 7,
+          "object_type_hex": "0F",
+          "position_code_hex": "3D",
+          "record_code_hex": "C1",
+          "role": "aa_missile_carrier",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            1664
+          ],
+          "index": 8,
+          "object_type_hex": "0F",
+          "position_code_hex": "60",
+          "record_code_hex": "C1",
+          "role": "aa_missile_carrier",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            1736,
+            1739,
+            1742,
+            1745
+          ],
+          "index": 9,
+          "object_type_hex": "0D",
+          "position_code_hex": "66",
+          "record_code_hex": "CD",
+          "role": "infantry",
+          "unit_count": 4
+        },
+        {
+          "horizontal_positions": [
+            1856
+          ],
+          "index": 10,
+          "object_type_hex": "0E",
+          "position_code_hex": "70",
+          "record_code_hex": "D4",
+          "role": "tank",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            1868,
+            1871,
+            1874,
+            1877
+          ],
+          "index": 11,
+          "object_type_hex": "0D",
+          "position_code_hex": "71",
+          "record_code_hex": "CD",
+          "role": "infantry",
+          "unit_count": 4
+        },
+        {
+          "horizontal_positions": [
+            1880
+          ],
+          "index": 12,
+          "object_type_hex": "0F",
+          "position_code_hex": "72",
+          "record_code_hex": "C1",
+          "role": "aa_missile_carrier",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            1892,
+            1895,
+            1898,
+            1901
+          ],
+          "index": 13,
+          "object_type_hex": "0D",
+          "position_code_hex": "73",
+          "record_code_hex": "CD",
+          "role": "infantry",
+          "unit_count": 4
+        },
+        {
+          "horizontal_positions": [
+            2756,
+            2759,
+            2762,
+            2765
+          ],
+          "index": 14,
+          "object_type_hex": "0D",
+          "position_code_hex": "BB",
+          "record_code_hex": "CD",
+          "role": "infantry",
+          "unit_count": 4
+        },
+        {
+          "horizontal_positions": [
+            2768,
+            2771,
+            2774,
+            2777
+          ],
+          "index": 15,
+          "object_type_hex": "0D",
+          "position_code_hex": "BC",
+          "record_code_hex": "CD",
+          "role": "infantry",
+          "unit_count": 4
+        },
+        {
+          "horizontal_positions": [
+            2780
+          ],
+          "index": 16,
+          "object_type_hex": "0F",
+          "position_code_hex": "BD",
+          "record_code_hex": "C1",
+          "role": "aa_missile_carrier",
+          "unit_count": 1
+        }
+      ],
+      "known_parameter_effects": {
+        "4068_to_60ED_alternate_bomb_aftermath_enabled": true,
+        "4069_player_weapon_profile": "type_1A_alternate_6_shots",
+        "4069_to_60EE_alternate_weapon_ammo_mode": true
+      },
+      "layout_count_by_type": {
+        "06": 9,
+        "09": 9
+      },
+      "layout_object_count": 18,
+      "layout_objects": [
+        {
+          "grid_index": 27,
+          "horizontal_position": 836,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 43,
+          "horizontal_position": 1028,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 47,
+          "horizontal_position": 1076,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 54,
+          "horizontal_position": 1160,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 55,
+          "horizontal_position": 1172,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 67,
+          "horizontal_position": 1316,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 91,
+          "horizontal_position": 1604,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 126,
+          "horizontal_position": 2024,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 129,
+          "horizontal_position": 2060,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 150,
+          "horizontal_position": 2312,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 151,
+          "horizontal_position": 2324,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 155,
+          "horizontal_position": 2372,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 198,
+          "horizontal_position": 2888,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 199,
+          "horizontal_position": 2900,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 219,
+          "horizontal_position": 3140,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 226,
+          "horizontal_position": 3224,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 227,
+          "horizontal_position": 3236,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 235,
+          "horizontal_position": 3332,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        }
+      ],
+      "optional_objects": [
+        {
+          "flag_offset_hex": "60",
+          "horizontal_position": 2034,
+          "object_type_hex": "04",
+          "owner_code": 0
+        },
+        {
+          "flag_offset_hex": "61",
+          "horizontal_position": 1192,
+          "object_type_hex": "16",
+          "owner_code": 0
+        },
+        {
+          "flag_offset_hex": "63",
+          "horizontal_position": 2920,
+          "object_type_hex": "16",
+          "owner_code": 0
+        }
+      ],
+      "raw_sector_hex": "000000000011000010000010000000024000001000000000000000100010000000000010000003000000000000000000000003000000000003000000300000000000000000000000000000000000000000000000000000000000000000000000010100011E050505010101010401CE8FF3597F9D9EBAC4BB98C8C09BCCBED1D2A081E225C42E8624488B549B86369B1C5093F23C941A261C8B1E49449D22903FA04688288E4A8D2C93F569974CAD94A180B398A6659FEE1CA23EA44BBEA3A970AA8AC193D8E542BE15121D1E151B15EFF7162017FBD522DAB8A18BC5ECE02A00CDAA1DD3ABAE10D7AB89F39CD6B6CADFF33D13E0BCBD167CE6C207EB00C6B9CF",
+      "raw_sector_sha256": "bad99b9f79d3d752744e73aafd8bed71d3b5263bf9131d6dd29e23bd8c117ca7",
+      "stage": 7,
+      "type06_initial_stored_infantry_406D": 1,
+      "unconsumed_406C": {
+        "classification": "not copied and no selector-5 static consumer",
+        "raw_value": 4
+      }
+    },
+    {
+      "copied_parameters_4064_406B": [
+        30,
+        5,
+        5,
+        5,
+        1,
+        1,
+        1,
+        1
+      ],
+      "disk": {
+        "file_sector": 14,
+        "memory_start": 16384,
+        "track": 0
+      },
+      "fixed_objects": [
+        {
+          "horizontal_position": 560,
+          "object_type_hex": "17",
+          "owner_code": 0
+        },
+        {
+          "horizontal_position": 3536,
+          "object_type_hex": "17",
+          "owner_code": 1
+        },
+        {
+          "horizontal_position": 632,
+          "object_type_hex": "05",
+          "owner_code": 0
+        },
+        {
+          "horizontal_position": 3464,
+          "object_type_hex": "05",
+          "owner_code": 1
+        },
+        {
+          "horizontal_position": 656,
+          "object_type_hex": "04",
+          "owner_code": 0
+        },
+        {
+          "horizontal_position": 3440,
+          "object_type_hex": "04",
+          "owner_code": 1
+        }
+      ],
+      "formation_object_count": 36,
+      "formation_objects": [
+        {
+          "formation_record": 0,
+          "horizontal_position": 1664,
+          "object_type_hex": "10",
+          "owner_code": 0,
+          "role": "demolition_vehicle"
+        },
+        {
+          "formation_record": 1,
+          "horizontal_position": 1676,
+          "object_type_hex": "10",
+          "owner_code": 0,
+          "role": "demolition_vehicle"
+        },
+        {
+          "formation_record": 2,
+          "horizontal_position": 1928,
+          "object_type_hex": "0F",
+          "owner_code": 0,
+          "role": "aa_missile_carrier"
+        },
+        {
+          "formation_record": 3,
+          "horizontal_position": 1940,
+          "object_type_hex": "0E",
+          "owner_code": 0,
+          "role": "tank"
+        },
+        {
+          "formation_record": 4,
+          "horizontal_position": 1952,
+          "object_type_hex": "0E",
+          "owner_code": 0,
+          "role": "tank"
+        },
+        {
+          "formation_record": 5,
+          "horizontal_position": 1964,
+          "object_type_hex": "0E",
+          "owner_code": 0,
+          "role": "tank"
+        },
+        {
+          "formation_record": 6,
+          "horizontal_position": 1976,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 6,
+          "horizontal_position": 1979,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 6,
+          "horizontal_position": 1982,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 6,
+          "horizontal_position": 1985,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 7,
+          "horizontal_position": 2468,
+          "object_type_hex": "0F",
+          "owner_code": 0,
+          "role": "aa_missile_carrier"
+        },
+        {
+          "formation_record": 8,
+          "horizontal_position": 2540,
+          "object_type_hex": "0F",
+          "owner_code": 0,
+          "role": "aa_missile_carrier"
+        },
+        {
+          "formation_record": 9,
+          "horizontal_position": 2696,
+          "object_type_hex": "0F",
+          "owner_code": 0,
+          "role": "aa_missile_carrier"
+        },
+        {
+          "formation_record": 10,
+          "horizontal_position": 2708,
+          "object_type_hex": "0E",
+          "owner_code": 0,
+          "role": "tank"
+        },
+        {
+          "formation_record": 11,
+          "horizontal_position": 2720,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 11,
+          "horizontal_position": 2723,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 11,
+          "horizontal_position": 2726,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 11,
+          "horizontal_position": 2729,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 12,
+          "horizontal_position": 2732,
+          "object_type_hex": "0E",
+          "owner_code": 0,
+          "role": "tank"
+        },
+        {
+          "formation_record": 13,
+          "horizontal_position": 2744,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 13,
+          "horizontal_position": 2747,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 13,
+          "horizontal_position": 2750,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 13,
+          "horizontal_position": 2753,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 14,
+          "horizontal_position": 3104,
+          "object_type_hex": "0F",
+          "owner_code": 0,
+          "role": "aa_missile_carrier"
+        },
+        {
+          "formation_record": 15,
+          "horizontal_position": 3188,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 15,
+          "horizontal_position": 3191,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 15,
+          "horizontal_position": 3194,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 15,
+          "horizontal_position": 3197,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 16,
+          "horizontal_position": 3200,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 16,
+          "horizontal_position": 3203,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 16,
+          "horizontal_position": 3206,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 16,
+          "horizontal_position": 3209,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 17,
+          "horizontal_position": 3212,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 17,
+          "horizontal_position": 3215,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 17,
+          "horizontal_position": 3218,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        },
+        {
+          "formation_record": 17,
+          "horizontal_position": 3221,
+          "object_type_hex": "0D",
+          "owner_code": 0,
+          "role": "infantry"
+        }
+      ],
+      "formation_offset_hex": "9E",
+      "formation_record_count": 18,
+      "formation_records": [
+        {
+          "horizontal_positions": [
+            1664
+          ],
+          "index": 0,
+          "object_type_hex": "10",
+          "position_code_hex": "60",
+          "record_code_hex": "D6",
+          "role": "demolition_vehicle",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            1676
+          ],
+          "index": 1,
+          "object_type_hex": "10",
+          "position_code_hex": "61",
+          "record_code_hex": "D6",
+          "role": "demolition_vehicle",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            1928
+          ],
+          "index": 2,
+          "object_type_hex": "0F",
+          "position_code_hex": "76",
+          "record_code_hex": "C1",
+          "role": "aa_missile_carrier",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            1940
+          ],
+          "index": 3,
+          "object_type_hex": "0E",
+          "position_code_hex": "77",
+          "record_code_hex": "D4",
+          "role": "tank",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            1952
+          ],
+          "index": 4,
+          "object_type_hex": "0E",
+          "position_code_hex": "78",
+          "record_code_hex": "D4",
+          "role": "tank",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            1964
+          ],
+          "index": 5,
+          "object_type_hex": "0E",
+          "position_code_hex": "79",
+          "record_code_hex": "D4",
+          "role": "tank",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            1976,
+            1979,
+            1982,
+            1985
+          ],
+          "index": 6,
+          "object_type_hex": "0D",
+          "position_code_hex": "7A",
+          "record_code_hex": "CD",
+          "role": "infantry",
+          "unit_count": 4
+        },
+        {
+          "horizontal_positions": [
+            2468
+          ],
+          "index": 7,
+          "object_type_hex": "0F",
+          "position_code_hex": "A3",
+          "record_code_hex": "C1",
+          "role": "aa_missile_carrier",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            2540
+          ],
+          "index": 8,
+          "object_type_hex": "0F",
+          "position_code_hex": "A9",
+          "record_code_hex": "C1",
+          "role": "aa_missile_carrier",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            2696
+          ],
+          "index": 9,
+          "object_type_hex": "0F",
+          "position_code_hex": "B6",
+          "record_code_hex": "C1",
+          "role": "aa_missile_carrier",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            2708
+          ],
+          "index": 10,
+          "object_type_hex": "0E",
+          "position_code_hex": "B7",
+          "record_code_hex": "D4",
+          "role": "tank",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            2720,
+            2723,
+            2726,
+            2729
+          ],
+          "index": 11,
+          "object_type_hex": "0D",
+          "position_code_hex": "B8",
+          "record_code_hex": "CD",
+          "role": "infantry",
+          "unit_count": 4
+        },
+        {
+          "horizontal_positions": [
+            2732
+          ],
+          "index": 12,
+          "object_type_hex": "0E",
+          "position_code_hex": "B9",
+          "record_code_hex": "D4",
+          "role": "tank",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            2744,
+            2747,
+            2750,
+            2753
+          ],
+          "index": 13,
+          "object_type_hex": "0D",
+          "position_code_hex": "BA",
+          "record_code_hex": "CD",
+          "role": "infantry",
+          "unit_count": 4
+        },
+        {
+          "horizontal_positions": [
+            3104
+          ],
+          "index": 14,
+          "object_type_hex": "0F",
+          "position_code_hex": "D8",
+          "record_code_hex": "C1",
+          "role": "aa_missile_carrier",
+          "unit_count": 1
+        },
+        {
+          "horizontal_positions": [
+            3188,
+            3191,
+            3194,
+            3197
+          ],
+          "index": 15,
+          "object_type_hex": "0D",
+          "position_code_hex": "DF",
+          "record_code_hex": "CD",
+          "role": "infantry",
+          "unit_count": 4
+        },
+        {
+          "horizontal_positions": [
+            3200,
+            3203,
+            3206,
+            3209
+          ],
+          "index": 16,
+          "object_type_hex": "0D",
+          "position_code_hex": "E0",
+          "record_code_hex": "CD",
+          "role": "infantry",
+          "unit_count": 4
+        },
+        {
+          "horizontal_positions": [
+            3212,
+            3215,
+            3218,
+            3221
+          ],
+          "index": 17,
+          "object_type_hex": "0D",
+          "position_code_hex": "E1",
+          "record_code_hex": "CD",
+          "role": "infantry",
+          "unit_count": 4
+        }
+      ],
+      "known_parameter_effects": {
+        "4068_to_60ED_alternate_bomb_aftermath_enabled": true,
+        "4069_player_weapon_profile": "type_1A_alternate_6_shots",
+        "4069_to_60EE_alternate_weapon_ammo_mode": true
+      },
+      "layout_count_by_type": {
+        "06": 5,
+        "09": 15
+      },
+      "layout_object_count": 20,
+      "layout_objects": [
+        {
+          "grid_index": 53,
+          "horizontal_position": 1148,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 54,
+          "horizontal_position": 1160,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 55,
+          "horizontal_position": 1172,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 77,
+          "horizontal_position": 1436,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 78,
+          "horizontal_position": 1448,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 79,
+          "horizontal_position": 1460,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 85,
+          "horizontal_position": 1532,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 89,
+          "horizontal_position": 1580,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 90,
+          "horizontal_position": 1592,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 91,
+          "horizontal_position": 1604,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 95,
+          "horizontal_position": 1652,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 121,
+          "horizontal_position": 1964,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 122,
+          "horizontal_position": 1976,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 123,
+          "horizontal_position": 1988,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 129,
+          "horizontal_position": 2060,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 151,
+          "horizontal_position": 2324,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 171,
+          "horizontal_position": 2564,
+          "object_type_hex": "06",
+          "owner_code": 0,
+          "role": "barrage_balloon_bunker"
+        },
+        {
+          "grid_index": 197,
+          "horizontal_position": 2876,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 198,
+          "horizontal_position": 2888,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        },
+        {
+          "grid_index": 199,
+          "horizontal_position": 2900,
+          "object_type_hex": "09",
+          "owner_code": 0,
+          "role": "type_09_structure"
+        }
+      ],
+      "optional_objects": [
+        {
+          "flag_offset_hex": "60",
+          "horizontal_position": 2034,
+          "object_type_hex": "04",
+          "owner_code": 0
+        },
+        {
+          "flag_offset_hex": "61",
+          "horizontal_position": 1192,
+          "object_type_hex": "16",
+          "owner_code": 0
+        },
+        {
+          "flag_offset_hex": "63",
+          "horizontal_position": 2920,
+          "object_type_hex": "16",
+          "owner_code": 0
+        }
+      ],
+      "raw_sector_hex": "000000000000000000000401000000004000010000100000000000000000000000000000000007000007007000000070000000000000000007000000000000000000000000000000000000000000000000000000000000000000000000000000010100011E050505010101010401725B15014274D495607A98F2689BFF658B83C2CDD1C4C8A5DACCD5D9B8988C2FCE38902E52955EA59040A5265A9DE80A8C2333465193AAC54099F4AC8ACB259B57AF35A45BB439A75B47881663BC414DDEA9C3E145ABD1C9081A091F0FEB20121B1FFEFD13F7D47ABDF7E4B97FC1FCE9BEFF63C90E2F08E58BD1308ED5330CFFCE5775DC5A78DE2D9BDFDDDF7FE7A1E6E3E6",
+      "raw_sector_sha256": "6865f9c285dcc3968cebcea2abb45e4d51ddd40a71ff80b2c2abfc0c727476f9",
+      "stage": 8,
+      "type06_initial_stored_infantry_406D": 1,
+      "unconsumed_406C": {
+        "classification": "not copied and no selector-5 static consumer",
+        "raw_value": 4
+      }
+    }
+  ]
+}

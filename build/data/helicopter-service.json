@@ -1,0 +1,82 @@
+{
+  "counter_source": "60C1",
+  "evidence": [
+    "E-SERVICE-001",
+    "E-SERVICE-002",
+    "E-SERVICE-003"
+  ],
+  "fuel": {
+    "airborne_drain": {
+      "amount": 1,
+      "counter_mask_hex": "0F",
+      "period_counter_values": 16
+    },
+    "array": "6108,X",
+    "capacity": 128,
+    "critical_audio_soft_switch": "C030",
+    "critical_warning_below": 16,
+    "empty_value": 0,
+    "grounded_drain": {
+      "amount": 1,
+      "counter_mask_hex": "1F",
+      "period_counter_values": 32
+    },
+    "low_warning_below": 34,
+    "pad_service_suppresses_drain": true
+  },
+  "image_sha256": "e87a3807667347f4434a78260e7e2791a7e6e45c4193e90f63dcb6d7a94059e8",
+  "integrity": {
+    "array": "659C,Y",
+    "field_repair": {
+      "amount": 1,
+      "counter_mask_hex": "07",
+      "minimum_carried_men": 4,
+      "period_counter_values": 8,
+      "requires_ground_coordinate_hex": "DD"
+    },
+    "maximum": 15,
+    "pad_repair": {
+      "amount": 1,
+      "counter_mask_hex": "03",
+      "period_counter_values": 4
+    }
+  },
+  "pad_service": {
+    "active_flag": "60FC,X",
+    "alternate_mode_note": "When 60EE is nonzero, 60F6,X caps at 6 and increments only when (60C1 & 7) == 0.",
+    "ready_condition": "a service pass changed none of integrity, fuel, gun ammunition, bombs, or missiles",
+    "ready_flag": "610C,X",
+    "standard_mode": "60EE = 0"
+  },
+  "update_cadence": null,
+  "weapons": {
+    "bombs": {
+      "array": "60F4,X",
+      "capacity": 10,
+      "pad_rearm": {
+        "amount": 1,
+        "counter_mask_hex": "03",
+        "period_counter_values": 4
+      }
+    },
+    "machine_gun_internal": {
+      "array": "60F6,X",
+      "capacity": 64,
+      "discrepancy": "The original binary initializes 64 internal shot units; the manual says 50 rounds.",
+      "manual_claimed_rounds": 50,
+      "pad_rearm": {
+        "amount": 1,
+        "period_counter_values": 1
+      }
+    },
+    "smart_missiles": {
+      "array": "6102,X",
+      "capacity": 2,
+      "pad_rearm": {
+        "amount": 1,
+        "counter_mask_hex": "0F",
+        "period_counter_values": 16
+      }
+    }
+  }
+}

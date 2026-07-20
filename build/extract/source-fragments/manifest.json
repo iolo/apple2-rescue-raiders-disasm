@@ -1,0 +1,54 @@
+{
+  "blocks": [
+    {
+      "index": 0,
+      "offset_end": 85706,
+      "offset_start": 85346,
+      "path": "source-fragments/fragment-00-14d62.txt",
+      "record_count": 30
+    },
+    {
+      "index": 1,
+      "offset_end": 85758,
+      "offset_start": 85708,
+      "path": "source-fragments/fragment-01-14ecc.txt",
+      "record_count": 3
+    },
+    {
+      "index": 2,
+      "offset_end": 88049,
+      "offset_start": 87041,
+      "path": "source-fragments/fragment-02-15401.txt",
+      "record_count": 50
+    },
+    {
+      "index": 3,
+      "offset_end": 90110,
+      "offset_start": 89957,
+      "path": "source-fragments/fragment-03-15f65.txt",
+      "record_count": 20
+    },
+    {
+      "index": 4,
+      "offset_end": 126475,
+      "offset_start": 125952,
+      "path": "source-fragments/fragment-04-1ec00.txt",
+      "record_count": 69
+    },
+    {
+      "index": 5,
+      "offset_end": 126970,
+      "offset_start": 126484,
+      "path": "source-fragments/fragment-05-1ee14.txt",
+      "record_count": 38
+    },
+    {
+      "index": 6,
+      "offset_end": 137201,
+      "offset_start": 137039,
+      "path": "source-fragments/fragment-06-2174f.txt",
+      "record_count": 20
+    }
+  ],
+  "image_sha256": "e87a3807667347f4434a78260e7e2791a7e6e45c4193e90f63dcb6d7a94059e8"
+}

@@ -1,0 +1,520 @@
+{
+  "commands": [
+    {
+      "kind": "backward_load",
+      "load_index": 0,
+      "opcode": 3
+    }
+  ],
+  "end_address": 17093,
+  "entry_point": 0,
+  "loads": [
+    {
+      "count": 82,
+      "index": 0,
+      "memory_end": 47871,
+      "memory_start": 26880,
+      "page": 186,
+      "path": "selector5-load00-6900-baff.bin",
+      "reads": [
+        {
+          "file_sector": 10,
+          "logical_sector": 10,
+          "page": 186,
+          "track": 17
+        },
+        {
+          "file_sector": 9,
+          "logical_sector": 9,
+          "page": 185,
+          "track": 17
+        },
+        {
+          "file_sector": 8,
+          "logical_sector": 8,
+          "page": 184,
+          "track": 17
+        },
+        {
+          "file_sector": 7,
+          "logical_sector": 7,
+          "page": 183,
+          "track": 17
+        },
+        {
+          "file_sector": 6,
+          "logical_sector": 6,
+          "page": 182,
+          "track": 17
+        },
+        {
+          "file_sector": 5,
+          "logical_sector": 5,
+          "page": 181,
+          "track": 17
+        },
+        {
+          "file_sector": 4,
+          "logical_sector": 4,
+          "page": 180,
+          "track": 17
+        },
+        {
+          "file_sector": 3,
+          "logical_sector": 3,
+          "page": 179,
+          "track": 17
+        },
+        {
+          "file_sector": 2,
+          "logical_sector": 2,
+          "page": 178,
+          "track": 17
+        },
+        {
+          "file_sector": 1,
+          "logical_sector": 1,
+          "page": 177,
+          "track": 17
+        },
+        {
+          "file_sector": 0,
+          "logical_sector": 0,
+          "page": 176,
+          "track": 17
+        },
+        {
+          "file_sector": 15,
+          "logical_sector": 15,
+          "page": 175,
+          "track": 16
+        },
+        {
+          "file_sector": 14,
+          "logical_sector": 14,
+          "page": 174,
+          "track": 16
+        },
+        {
+          "file_sector": 13,
+          "logical_sector": 13,
+          "page": 173,
+          "track": 16
+        },
+        {
+          "file_sector": 12,
+          "logical_sector": 12,
+          "page": 172,
+          "track": 16
+        },
+        {
+          "file_sector": 11,
+          "logical_sector": 11,
+          "page": 171,
+          "track": 16
+        },
+        {
+          "file_sector": 10,
+          "logical_sector": 10,
+          "page": 170,
+          "track": 16
+        },
+        {
+          "file_sector": 9,
+          "logical_sector": 9,
+          "page": 169,
+          "track": 16
+        },
+        {
+          "file_sector": 8,
+          "logical_sector": 8,
+          "page": 168,
+          "track": 16
+        },
+        {
+          "file_sector": 7,
+          "logical_sector": 7,
+          "page": 167,
+          "track": 16
+        },
+        {
+          "file_sector": 6,
+          "logical_sector": 6,
+          "page": 166,
+          "track": 16
+        },
+        {
+          "file_sector": 5,
+          "logical_sector": 5,
+          "page": 165,
+          "track": 16
+        },
+        {
+          "file_sector": 4,
+          "logical_sector": 4,
+          "page": 164,
+          "track": 16
+        },
+        {
+          "file_sector": 3,
+          "logical_sector": 3,
+          "page": 163,
+          "track": 16
+        },
+        {
+          "file_sector": 2,
+          "logical_sector": 2,
+          "page": 162,
+          "track": 16
+        },
+        {
+          "file_sector": 1,
+          "logical_sector": 1,
+          "page": 161,
+          "track": 16
+        },
+        {
+          "file_sector": 0,
+          "logical_sector": 0,
+          "page": 160,
+          "track": 16
+        },
+        {
+          "file_sector": 15,
+          "logical_sector": 15,
+          "page": 159,
+          "track": 15
+        },
+        {
+          "file_sector": 14,
+          "logical_sector": 14,
+          "page": 158,
+          "track": 15
+        },
+        {
+          "file_sector": 13,
+          "logical_sector": 13,
+          "page": 157,
+          "track": 15
+        },
+        {
+          "file_sector": 12,
+          "logical_sector": 12,
+          "page": 156,
+          "track": 15
+        },
+        {
+          "file_sector": 11,
+          "logical_sector": 11,
+          "page": 155,
+          "track": 15
+        },
+        {
+          "file_sector": 10,
+          "logical_sector": 10,
+          "page": 154,
+          "track": 15
+        },
+        {
+          "file_sector": 9,
+          "logical_sector": 9,
+          "page": 153,
+          "track": 15
+        },
+        {
+          "file_sector": 8,
+          "logical_sector": 8,
+          "page": 152,
+          "track": 15
+        },
+        {
+          "file_sector": 7,
+          "logical_sector": 7,
+          "page": 151,
+          "track": 15
+        },
+        {
+          "file_sector": 6,
+          "logical_sector": 6,
+          "page": 150,
+          "track": 15
+        },
+        {
+          "file_sector": 5,
+          "logical_sector": 5,
+          "page": 149,
+          "track": 15
+        },
+        {
+          "file_sector": 4,
+          "logical_sector": 4,
+          "page": 148,
+          "track": 15
+        },
+        {
+          "file_sector": 3,
+          "logical_sector": 3,
+          "page": 147,
+          "track": 15
+        },
+        {
+          "file_sector": 2,
+          "logical_sector": 2,
+          "page": 146,
+          "track": 15
+        },
+        {
+          "file_sector": 1,
+          "logical_sector": 1,
+          "page": 145,
+          "track": 15
+        },
+        {
+          "file_sector": 0,
+          "logical_sector": 0,
+          "page": 144,
+          "track": 15
+        },
+        {
+          "file_sector": 15,
+          "logical_sector": 15,
+          "page": 143,
+          "track": 14
+        },
+        {
+          "file_sector": 14,
+          "logical_sector": 14,
+          "page": 142,
+          "track": 14
+        },
+        {
+          "file_sector": 13,
+          "logical_sector": 13,
+          "page": 141,
+          "track": 14
+        },
+        {
+          "file_sector": 12,
+          "logical_sector": 12,
+          "page": 140,
+          "track": 14
+        },
+        {
+          "file_sector": 11,
+          "logical_sector": 11,
+          "page": 139,
+          "track": 14
+        },
+        {
+          "file_sector": 10,
+          "logical_sector": 10,
+          "page": 138,
+          "track": 14
+        },
+        {
+          "file_sector": 9,
+          "logical_sector": 9,
+          "page": 137,
+          "track": 14
+        },
+        {
+          "file_sector": 8,
+          "logical_sector": 8,
+          "page": 136,
+          "track": 14
+        },
+        {
+          "file_sector": 7,
+          "logical_sector": 7,
+          "page": 135,
+          "track": 14
+        },
+        {
+          "file_sector": 6,
+          "logical_sector": 6,
+          "page": 134,
+          "track": 14
+        },
+        {
+          "file_sector": 5,
+          "logical_sector": 5,
+          "page": 133,
+          "track": 14
+        },
+        {
+          "file_sector": 4,
+          "logical_sector": 4,
+          "page": 132,
+          "track": 14
+        },
+        {
+          "file_sector": 3,
+          "logical_sector": 3,
+          "page": 131,
+          "track": 14
+        },
+        {
+          "file_sector": 2,
+          "logical_sector": 2,
+          "page": 130,
+          "track": 14
+        },
+        {
+          "file_sector": 1,
+          "logical_sector": 1,
+          "page": 129,
+          "track": 14
+        },
+        {
+          "file_sector": 0,
+          "logical_sector": 0,
+          "page": 128,
+          "track": 14
+        },
+        {
+          "file_sector": 15,
+          "logical_sector": 15,
+          "page": 127,
+          "track": 13
+        },
+        {
+          "file_sector": 14,
+          "logical_sector": 14,
+          "page": 126,
+          "track": 13
+        },
+        {
+          "file_sector": 13,
+          "logical_sector": 13,
+          "page": 125,
+          "track": 13
+        },
+        {
+          "file_sector": 12,
+          "logical_sector": 12,
+          "page": 124,
+          "track": 13
+        },
+        {
+          "file_sector": 11,
+          "logical_sector": 11,
+          "page": 123,
+          "track": 13
+        },
+        {
+          "file_sector": 10,
+          "logical_sector": 10,
+          "page": 122,
+          "track": 13
+        },
+        {
+          "file_sector": 9,
+          "logical_sector": 9,
+          "page": 121,
+          "track": 13
+        },
+        {
+          "file_sector": 8,
+          "logical_sector": 8,
+          "page": 120,
+          "track": 13
+        },
+        {
+          "file_sector": 7,
+          "logical_sector": 7,
+          "page": 119,
+          "track": 13
+        },
+        {
+          "file_sector": 6,
+          "logical_sector": 6,
+          "page": 118,
+          "track": 13
+        },
+        {
+          "file_sector": 5,
+          "logical_sector": 5,
+          "page": 117,
+          "track": 13
+        },
+        {
+          "file_sector": 4,
+          "logical_sector": 4,
+          "page": 116,
+          "track": 13
+        },
+        {
+          "file_sector": 3,
+          "logical_sector": 3,
+          "page": 115,
+          "track": 13
+        },
+        {
+          "file_sector": 2,
+          "logical_sector": 2,
+          "page": 114,
+          "track": 13
+        },
+        {
+          "file_sector": 1,
+          "logical_sector": 1,
+          "page": 113,
+          "track": 13
+        },
+        {
+          "file_sector": 0,
+          "logical_sector": 0,
+          "page": 112,
+          "track": 13
+        },
+        {
+          "file_sector": 15,
+          "logical_sector": 15,
+          "page": 111,
+          "track": 12
+        },
+        {
+          "file_sector": 14,
+          "logical_sector": 14,
+          "page": 110,
+          "track": 12
+        },
+        {
+          "file_sector": 13,
+          "logical_sector": 13,
+          "page": 109,
+          "track": 12
+        },
+        {
+          "file_sector": 12,
+          "logical_sector": 12,
+          "page": 108,
+          "track": 12
+        },
+        {
+          "file_sector": 11,
+          "logical_sector": 11,
+          "page": 107,
+          "track": 12
+        },
+        {
+          "file_sector": 10,
+          "logical_sector": 10,
+          "page": 106,
+          "track": 12
+        },
+        {
+          "file_sector": 9,
+          "logical_sector": 9,
+          "page": 105,
+          "track": 12
+        }
+      ],
+      "sector": 10,
+      "sha256": "c4acfd5eed6748b4e1707640172fd9daa6c311bbaf6b3ccbd30bbe1c984cf73d",
+      "track": 17
+    }
+  ],
+  "selector": 5,
+  "stream_address": 17085
+}

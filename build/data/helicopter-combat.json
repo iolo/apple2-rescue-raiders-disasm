@@ -1,0 +1,871 @@
+{
+  "capturable_structure_mechanics": {
+    "full_integrity_infantry_selection": {
+      "damaged_infantry": "integrity other than 5 bypasses the full-integrity capacity gates",
+      "integrity_value": 5,
+      "opposing_owner": "selected subject to the type-specific state checks above",
+      "type06_friendly": "selected only when infantry state $67A4 is zero and stored infantry is zero",
+      "type16_friendly": "selected only when infantry state $67A4 is zero and stored infantry is below 5",
+      "type17_friendly": "selected only when stored infantry is zero"
+    },
+    "ground_infantry_object_type_hex": "0D",
+    "ground_infantry_primary_handler": "7DF9-7F19",
+    "old_owner_strategy_delay_by_campaign_stage_1_8": [
+      255,
+      180,
+      120,
+      84,
+      72,
+      60,
+      48,
+      24
+    ],
+    "resolver": {
+      "friendly_selected_structure": "increment stored infantry",
+      "infantry_result_after_deposit_or_capture": "consume the infantry in destroyed state $FF",
+      "non_type17_deposit_counts": "increment the infantry owner's $6118/$611E counts",
+      "opposing_empty_structure": "change owner, decrement old-owner $6118/$611C, increment new-owner $6118/$611C, load the old owner's strategy delay, then increment stored infantry",
+      "opposing_populated_structure": "decrement stored infantry and the old owner's $6118/$611E counts; consume the attacking infantry in destroyed state $00",
+      "routine": "80D6-8145"
+    },
+    "strategy_delay_field": "60AD,old owner",
+    "strategy_delay_units": "raw strategy countdown values; seconds conversion unresolved",
+    "structure_profiles": {
+      "06_barrage_balloon_bunker": {
+        "infantry_production": {
+          "eligibility": "(($60C1 XOR object slot) & 7) == 0",
+          "minimum_stored_before_production": 2,
+          "spawn_horizontal_offset": 6,
+          "spawned_object_type_hex": "0D",
+          "stored_infantry_consumed": 1
+        },
+        "initial_integrity": 47,
+        "initial_stored_infantry_by_campaign_stage_1_8": [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "integrity_restore": "when stored infantry is nonzero, add 1 per type-$06 secondary-handler call up to 47",
+        "linked_component_profiles": [
+          {
+            "initial_integrity": 6,
+            "object_type_hex": "07",
+            "role": "barrage_balloon"
+          },
+          {
+            "initial_integrity": 128,
+            "object_type_hex": "08",
+            "role": "balloon_mooring_line"
+          }
+        ],
+        "stored_infantry_field": "67A4"
+      },
+      "09_stationary_gun": {
+        "capturable_by_this_path": false,
+        "initial_integrity": 22,
+        "object_update_handler": "7D5F-7DF8"
+      },
+      "16_optional_bunker": {
+        "initial_integrity": 128,
+        "initial_stored_infantry": 0,
+        "primary_update": "no operation"
+      },
+      "17_fixed_armed_bunker": {
+        "initial_integrity": 128,
+        "initial_stored_infantry": 0,
+        "primary_update": "four-damage type-$0B machine-gun fire when occupied and target clearance is nonzero"
+      }
+    },
+    "structure_search": {
+      "alignment_gate": "interaction search is eligible when ((infantry horizontal low byte - 1) & 3) == 0",
+      "horizontal_relation": "structure coordinate equals infantry coordinate minus 5",
+      "routine": "80A2-80D5",
+      "slot_scan_order": "103 down to 0; first exact match",
+      "target_object_types_hex": [
+        "06",
+        "16",
+        "17"
+      ],
+      "type09_stationary_gun_is_not_searched": true
+    },
+    "updates_per_second": null
+  },
+  "damage_feedback": {
+    "counter": "60C1",
+    "smoke_counter_period": {
+      "integrity_7_or_more": 8,
+      "integrity_below_7": 4
+    },
+    "smoke_size_tiers": [
+      {
+        "integrity_max": 15,
+        "integrity_min": 10,
+        "tier": 1
+      },
+      {
+        "integrity_max": 9,
+        "integrity_min": 5,
+        "tier": 2
+      },
+      {
+        "integrity_max": 4,
+        "integrity_min": 1,
+        "tier": 3
+      }
+    ]
+  },
+  "destruction_aftermath": {
+    "damage_model_note": "the aftermath dispatcher creates visual/type-$0C objects and cleanup effects; weapon damage itself is resolved by direct collision handlers",
+    "dispatcher": "AC5B-AC84",
+    "immediate_damage_write": false,
+    "immediate_radial_damage_scan": false,
+    "type_0C_spawn_batches": [
+      {
+        "control_hex": "14",
+        "first_batch_count": 20,
+        "object_type_hex": "02",
+        "second_batch_count": 5,
+        "second_batch_mode_bit_7": true
+      },
+      {
+        "control_hex": "28",
+        "first_batch_count": 40,
+        "object_type_hex": "05",
+        "second_batch_count": 10,
+        "second_batch_mode_bit_7": true
+      },
+      {
+        "control_hex": "0A",
+        "first_batch_count": 10,
+        "object_type_hex": "06",
+        "second_batch_count": 2,
+        "second_batch_mode_bit_7": true
+      },
+      {
+        "control_hex": "05",
+        "first_batch_count": 5,
+        "object_type_hex": "07",
+        "second_batch_count": 1,
+        "second_batch_mode_bit_7": true
+      },
+      {
+        "control_hex": "04",
+        "first_batch_count": 4,
+        "object_type_hex": "09",
+        "second_batch_count": 1,
+        "second_batch_mode_bit_7": true
+      },
+      {
+        "control_hex": "84",
+        "first_batch_count": 4,
+        "object_type_hex": "0D",
+        "second_batch_count": 0,
+        "second_batch_mode_bit_7": false
+      },
+      {
+        "control_hex": "0A",
+        "first_batch_count": 10,
+        "object_type_hex": "0E",
+        "second_batch_count": 2,
+        "second_batch_mode_bit_7": true
+      },
+      {
+        "control_hex": "0A",
+        "first_batch_count": 10,
+        "object_type_hex": "0F",
+        "second_batch_count": 2,
+        "second_batch_mode_bit_7": true
+      },
+      {
+        "control_hex": "0A",
+        "first_batch_count": 10,
+        "object_type_hex": "10",
+        "second_batch_count": 2,
+        "second_batch_mode_bit_7": true
+      },
+      {
+        "control_hex": "06",
+        "first_batch_count": 6,
+        "object_type_hex": "12",
+        "second_batch_count": 1,
+        "second_batch_mode_bit_7": true
+      },
+      {
+        "control_hex": "84",
+        "first_batch_count": 4,
+        "object_type_hex": "19",
+        "second_batch_count": 0,
+        "second_batch_mode_bit_7": false
+      },
+      {
+        "control_hex": "0A",
+        "first_batch_count": 10,
+        "object_type_hex": "1A",
+        "second_batch_count": 2,
+        "second_batch_mode_bit_7": true
+      }
+    ],
+    "visual_effect_codes_hex_by_object_type_00_1C": [
+      "00",
+      "00",
+      "4B",
+      "00",
+      "00",
+      "4B",
+      "4D",
+      "4E",
+      "00",
+      "4A",
+      "49",
+      "49",
+      "00",
+      "49",
+      "A0",
+      "4B",
+      "4C",
+      "00",
+      "00",
+      "00",
+      "00",
+      "00",
+      "00",
+      "00",
+      "00",
+      "49",
+      "00",
+      "00",
+      "00"
+    ],
+    "visual_lifetime_updates": [
+      2,
+      3
+    ],
+    "visual_object_type_hex": "11"
+  },
+  "economy": {
+    "cash_array": "6116-6117",
+    "income_bags_per_side": 1,
+    "income_interval_completed_update_handler_calls": 56,
+    "income_interval_seconds": null,
+    "income_timer": "6022",
+    "income_timer_initial_and_reload_hex": "37",
+    "initial_cash_bags_by_side": [
+      15,
+      15
+    ],
+    "initialization": "6ADA-6AE2 during reset_battlefield_state for a new battlefield pass",
+    "maximum_cash_bags": 255,
+    "overflow_behavior": "an increment from 255 to 0 is immediately decremented back to 255",
+    "replacement_helicopter_cost_bags": 20,
+    "replacement_purchase_resource": "side-1 cash byte $6117 on the interactive replacement path",
+    "side_order": [
+      0,
+      1
+    ],
+    "stage_transition_behavior": "initialize_battle_stage does not reset $6116/$6117, so balances carry across stage transitions within the pass"
+  },
+  "evidence": [
+    "E-COMBAT-001",
+    "E-COMBAT-002",
+    "E-COMBAT-003",
+    "E-COMBAT-007",
+    "E-COMBAT-008",
+    "E-COMBAT-009",
+    "E-COMBAT-010",
+    "E-ECONOMY-001",
+    "E-UNIT-PROFILE-001",
+    "E-MOBILITY-001",
+    "E-PARACHUTE-001",
+    "E-STAGE-WEAPON-001",
+    "E-STAGE-BOMB-001",
+    "E-STRUCTURE-001",
+    "E-STRUCTURE-ROLE-001",
+    "E-OBJECT-CATALOG-001"
+  ],
+  "falling_infantry_parachute": {
+    "actual_entropy_distribution": null,
+    "constructor": "7644-768F",
+    "countdown": {
+      "initial_height_at_or_above_AB": {
+        "formula": "($60E7 & 3) + 4",
+        "range_inclusive": [
+          4,
+          7
+        ]
+      },
+      "initial_height_below_AB": {
+        "formula": "($60E7 & 7) + 3",
+        "range_inclusive": [
+          3,
+          10
+        ]
+      }
+    },
+    "entropy_low_nibble_states": 16,
+    "failed_landing": "zero countdown state remains in fast descent and is destroyed at ground height $DD",
+    "failure_entropy_states": 1,
+    "failure_trigger": "($60E7 & $0F) == 0",
+    "fast_descent_vertical_units_per_update": 4,
+    "nominal_failure_fraction_if_low_nibble_uniform": "1/16",
+    "nominal_failure_percent_if_low_nibble_uniform": 6.25,
+    "object_type_hex": "19",
+    "open_parachute_vertical_units_per_update": 2,
+    "spawner": "98C1-98E5",
+    "successful_landing": "negative/open state at ground converts type $19 to grounded infantry type $0D and restores integrity from 3 to 5",
+    "update_handler": "8288-8317",
+    "updates_per_second": null
+  },
+  "ground_unit_deployment": {
+    "addresses": {
+      "routine": "9543-95F4",
+      "tables": "996C-9984"
+    },
+    "cap_rule": "purchase is rejected when the selected $6118 counter is greater than or equal to the command cap",
+    "commands": [
+      {
+        "active_cap": 26,
+        "constructor": "736E-73AB",
+        "cost_bags": 5,
+        "counter_offset": 6,
+        "deployment_size": 5,
+        "infantry_variant_flag": 0,
+        "initial_integrity": 5,
+        "key": "M",
+        "object_type_hex": "0D",
+        "role": "men",
+        "secondary_handler": "7DF9"
+      },
+      {
+        "active_cap": 6,
+        "constructor": "73AC-73DB",
+        "cost_bags": 4,
+        "counter_offset": 8,
+        "deployment_size": 1,
+        "initial_integrity": 15,
+        "key": "T",
+        "object_type_hex": "0E",
+        "role": "tank",
+        "secondary_handler": "7F1A"
+      },
+      {
+        "active_cap": 7,
+        "constructor": "73DC-7401",
+        "cost_bags": 3,
+        "counter_offset": 2,
+        "deployment_size": 1,
+        "initial_integrity": 6,
+        "key": "A",
+        "object_type_hex": "0F",
+        "role": "aa_missile_carrier",
+        "secondary_handler": "7F76"
+      },
+      {
+        "active_cap": 8,
+        "constructor": "7402-7424",
+        "cost_bags": 2,
+        "counter_offset": 10,
+        "deployment_size": 1,
+        "initial_integrity": 9,
+        "key": "D",
+        "object_type_hex": "10",
+        "role": "demolition_vehicle",
+        "secondary_handler": "8027"
+      },
+      {
+        "active_cap": 29,
+        "constructor": "736E-73AB",
+        "cost_bags": 5,
+        "counter_offset": 6,
+        "deployment_size": 2,
+        "infantry_variant_flag": 1,
+        "initial_integrity": 5,
+        "key": "E",
+        "object_type_hex": "0D",
+        "role": "engineers",
+        "secondary_handler": "7DF9"
+      }
+    ],
+    "shared_counter_note": "men and engineers share counter offset 6 and object type $0D; their command-specific thresholds are 26 and 29",
+    "table_order": [
+      "men",
+      "tank",
+      "aa_missile_carrier",
+      "demolition_vehicle",
+      "engineers"
+    ]
+  },
+  "ground_unit_mobility": {
+    "common_integrator": "7A96-7ABA",
+    "common_velocity_selector": "7A85-7A95",
+    "condition": "The common movement path advances one original horizontal coordinate unit. Collision clearance, targeting, firing, and interaction branches can stop or defer movement on a given wrapper.",
+    "forward_horizontal_velocity_by_owner_signed": [
+      1,
+      -1
+    ],
+    "moving_horizontal_units_per_completed_update_wrapper": 1,
+    "profiles": [
+      {
+        "moving_horizontal_units_per_completed_update_wrapper": 1,
+        "object_type_hex": "0D",
+        "roles": [
+          "men",
+          "engineers"
+        ]
+      },
+      {
+        "moving_horizontal_units_per_completed_update_wrapper": 1,
+        "object_type_hex": "0E",
+        "roles": [
+          "tank"
+        ]
+      },
+      {
+        "moving_horizontal_units_per_completed_update_wrapper": 1,
+        "object_type_hex": "0F",
+        "roles": [
+          "aa_missile_carrier"
+        ]
+      },
+      {
+        "moving_horizontal_units_per_completed_update_wrapper": 1,
+        "object_type_hex": "10",
+        "roles": [
+          "demolition_vehicle"
+        ]
+      }
+    ],
+    "reverse_horizontal_velocity_by_owner_signed": [
+      -1,
+      1
+    ],
+    "updates_per_second": null
+  },
+  "image_sha256": "e87a3807667347f4434a78260e7e2791a7e6e45c4193e90f63dcb6d7a94059e8",
+  "integrity": {
+    "array": "659C,Y",
+    "common_subtractor": "AC26-AC38",
+    "damage_operand": "60B3",
+    "player_maximum": 15,
+    "rule": "if integrity <= damage, destroy the object; otherwise integrity := integrity - damage"
+  },
+  "non_player_type_0B_ballistics": {
+    "object_type_09_stationary_gun": {
+      "damage": 5,
+      "horizontal_target_velocity_prediction_scales": [
+        0,
+        4,
+        8
+      ],
+      "horizontal_velocity": "(target_x - origin_x + target_width/2 + predicted_target_vx) / 8",
+      "life_updates": 11,
+      "vertical_acceleration": 1,
+      "vertical_target_velocity_prediction_scales": [
+        1,
+        4,
+        8
+      ],
+      "vertical_velocity": "(target_y - target_height/2 - 31 - origin_y + predicted_target_vy) / 8"
+    },
+    "object_type_0D_ground_infantry": {
+      "damage": 1,
+      "horizontal_velocities_signed": [
+        -2,
+        2
+      ],
+      "life_updates": 10,
+      "nominal_horizontal_travel_magnitude": 20,
+      "vertical_acceleration": 0,
+      "vertical_velocity": 0
+    },
+    "object_type_0E_tank": {
+      "alternate_horizontal_velocities_signed": [
+        -4,
+        4
+      ],
+      "damage_values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        15
+      ],
+      "life_updates": 10,
+      "nominal_horizontal_travel_magnitudes": [
+        20,
+        40
+      ],
+      "ordinary_horizontal_velocities_signed": [
+        -2,
+        2
+      ],
+      "vertical_acceleration": 0,
+      "vertical_velocity": 0
+    },
+    "object_type_17_fixed_armed_bunker": {
+      "damage": 4,
+      "horizontal_velocities_signed": [
+        -2,
+        2
+      ],
+      "life_updates": 10,
+      "nominal_horizontal_travel_magnitude": 20,
+      "vertical_acceleration": 0,
+      "vertical_velocity": 0
+    },
+    "travel_units": "original horizontal position units; nominal values exclude collision and boundary termination"
+  },
+  "other_observed_type_0B_projectiles": [
+    {
+      "creation_address": "7D5A",
+      "damage_values": [
+        5
+      ],
+      "dispatch_evidence": "object-update table base $8467: type $09 -> $7D5F -> $7CAD -> $7D5A",
+      "shooter_role": "stationary_gun_object_type_09"
+    },
+    {
+      "creation_address": "819C-81BD",
+      "damage_values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        15
+      ],
+      "dispatch_evidence": "secondary handler lookup base $8467: type $0E -> $7F1A -> $8146",
+      "selection": "ordinary branch 5; alternate branch 15 when random & $70 is zero, otherwise (random & 3) + 1 + carry",
+      "shooter_role": "tank_object_type_0E"
+    },
+    {
+      "creation_address": "8241",
+      "damage_values": [
+        1
+      ],
+      "dispatch_evidence": "secondary handler lookup base $8467: type $0D -> $7DF9 -> $820C",
+      "shooter_role": "ground_infantry_object_type_0D"
+    },
+    {
+      "creation_address": "8BEA",
+      "damage_values": [
+        4
+      ],
+      "dispatch_evidence": "primary handler table base $8E19: type $17 -> $8B9C",
+      "shooter_role": "fixed_armed_bunker_object_type_17"
+    }
+  ],
+  "player_weapons": {
+    "bomb": {
+      "creation_path": "94C1 -> 72AF -> 724C",
+      "damage": 7,
+      "ground_clamp_hex": "DC",
+      "initial_horizontal_velocity": "inherits player $64CC",
+      "initial_vertical_velocity": 0,
+      "object_type_hex": "0A",
+      "stage_ground_aftermath": {
+        "alternate_enabled_by_campaign_stage_1_8": [
+          false,
+          false,
+          false,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "alternate_stages_4_8": {
+          "destroyed_state_hex": "FF",
+          "standard_type11_effect_suppressed": true,
+          "type0C_batch_count": 0,
+          "type1D_creation_attempted_when_source_height_at_least_hex": "D6"
+        },
+        "ordinary_stages_1_3": {
+          "destroyed_state_hex": "00",
+          "standard_type11_effect_code_hex": "49",
+          "type0C_batch_count": 0,
+          "type1D_creation_attempted": false
+        },
+        "stage_parameter": "$4068 copied to $60ED",
+        "type1D_transition": {
+          "constructor": "7616-7643",
+          "converted_update_handler": "8DEC-8E03",
+          "eligible_infantry_collision_damage": 4,
+          "horizontal_offset_signed": -7,
+          "horizontal_velocity": "signed arithmetic shift right of the bomb velocity (floor division by two)",
+          "initial_integrity": 128,
+          "next_primary_update_converts_to_type_hex": "18",
+          "source_type_hex": "0A",
+          "spawn_handler": "B176-B1B6",
+          "vertical_position_hex": "DD"
+        },
+        "updates_per_second": null
+      },
+      "update_handler": "8CB8-8D46",
+      "vertical_velocity_delta_per_armed_update": 2
+    },
+    "late_campaign_alternate": {
+      "ammunition_capacity": 6,
+      "constructor": "7690-76B8",
+      "damage": 21,
+      "effect_creation_attempts_per_airborne_update": 1,
+      "emitted_effect_object_type_hex": "13",
+      "enabled_by_campaign_stage_1_8": [
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "firing_path": "98FD-9926",
+      "ground_height_hex": "DC",
+      "horizontal_velocity_rule": "accelerates one unit away from zero per update to signed cap -10/+10",
+      "initial_horizontal_velocity_by_aim_index_signed": [
+        -1,
+        -1,
+        -1,
+        1,
+        1,
+        1,
+        -1,
+        0,
+        1
+      ],
+      "object_type_hex": "1A",
+      "pad_rearm_eligible_counter_period": 8,
+      "pad_rearm_increment": 1,
+      "replaces": "player machine-gun firing path and its $60F6 ammunition/service model",
+      "stage_parameter": "$4069 copied to $60EE",
+      "update_handler": "8BFD-8C6C",
+      "updates_per_second": null,
+      "vertical_velocity_rule": "adds one downward unit when ($60C1 & 3) == 0, then integrates altitude"
+    },
+    "machine_gun": {
+      "aim_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "creation_path": "9476 -> 72AF -> 7286",
+      "damage": 2,
+      "horizontal_velocity_additions_signed": [
+        -8,
+        -8,
+        -8,
+        8,
+        8,
+        8,
+        -8,
+        0,
+        8
+      ],
+      "object_type_hex": "0B",
+      "spawn_horizontal_offsets_signed": [
+        -1,
+        -1,
+        -1,
+        11,
+        11,
+        11,
+        -1,
+        0,
+        11
+      ],
+      "spawn_vertical_offsets_signed": [
+        -2,
+        -4,
+        -8,
+        -2,
+        -4,
+        -8,
+        -4,
+        0,
+        -4
+      ],
+      "unused_firing_index": 7,
+      "vertical_acceleration": 0,
+      "vertical_velocities_signed": [
+        2,
+        0,
+        -2,
+        2,
+        0,
+        -2,
+        0,
+        0,
+        0
+      ]
+    },
+    "smart_missile": {
+      "creation_path": "963F -> 72AF -> 74DE",
+      "damage": 21,
+      "impact_object_type_hex": "13",
+      "lost_target_behavior": "vertical velocity increases by 2 per update until lower boundary DD",
+      "object_type_hex": "12",
+      "steering": "one circular angle step per update toward linked target",
+      "update_handler": "8670-87E2"
+    }
+  },
+  "special_collision_variants": {
+    "dispatch_object_types_hex": [
+      "14",
+      "18",
+      "1C"
+    ],
+    "fixed_damage": 4,
+    "notes": "type $14/$18 ignores player helicopters and applies link-state exclusions; type $1C delegates bunker collisions to their dedicated handler",
+    "ordinary_damage_target_types_hex": [
+      "0D",
+      "19"
+    ],
+    "type_0B_collision_result": "destroy projectile directly",
+    "type_14_18_handler": "B048-B06E",
+    "type_1C_handler": "B00E-B047"
+  },
+  "structure_role_mapping": {
+    "correction": "Earlier reports inferred type $17 as the time machine from unique per-side registration. The DTV consumer and fixed-object graphics instead prove type $05 is the time-machine objective; type $17 is the fixed armed bunker.",
+    "fixed_object_table": [
+      {
+        "horizontal_coordinate_hex": "0230",
+        "object_type_hex": "17",
+        "side": 0,
+        "table_index": 0
+      },
+      {
+        "horizontal_coordinate_hex": "0DD0",
+        "object_type_hex": "17",
+        "side": 1,
+        "table_index": 1
+      },
+      {
+        "horizontal_coordinate_hex": "0278",
+        "object_type_hex": "05",
+        "side": 0,
+        "table_index": 2
+      },
+      {
+        "horizontal_coordinate_hex": "0D88",
+        "object_type_hex": "05",
+        "side": 1,
+        "table_index": 3
+      },
+      {
+        "horizontal_coordinate_hex": "0290",
+        "object_type_hex": "04",
+        "side": 0,
+        "table_index": 4
+      },
+      {
+        "horizontal_coordinate_hex": "0D70",
+        "object_type_hex": "04",
+        "side": 1,
+        "table_index": 5
+      }
+    ],
+    "manual_corroboration": "The manual separately names time machines beside helipads, capturable bunker variants, machine-gun bunkers, and barrage balloons with lethal mooring lines.",
+    "roles": {
+      "04_helipad": {
+        "constructor": "714B-715C",
+        "default_sprite_hex": "36",
+        "per_side_link_field": "6106,X",
+        "proof": [
+          "pad service at $96D0 reads $6106,X and accepts a helicopter aligned 5..13 horizontal units from that object",
+          "the type-$04 collision handler keys hostile helicopter destruction through the opposing side's $6106 link",
+          "the fixed table places one beside each objective; an optional third pad is controlled by stage byte $4060"
+        ]
+      },
+      "05_time_machine_objective": {
+        "constructor": "715D-716E",
+        "default_sprite_hex": "31",
+        "initial_integrity": 128,
+        "per_side_link_field": "60F2,X",
+        "proof": [
+          "the type-$10 demolition vehicle tests arrival against the opposing $6106 pad coordinate, then destroys the opposing $60F2 type-$05 object",
+          "that path sets the battle-completion and winning-side fields",
+          "the manual identifies the DTV-only objective beside each helipad as the time machine"
+        ]
+      },
+      "06_bunker": {
+        "initial_integrity": 47,
+        "proof": "capturable by grounded infantry, changes owner, stores infantry, repairs while occupied, and can produce grounded infantry",
+        "stored_infantry_field": "67A4,Y"
+      },
+      "07_barrage_balloon": {
+        "default_runtime_sprites_hex": [
+          "12",
+          "13"
+        ],
+        "initial_height_hex": "CD",
+        "initial_integrity": 6,
+        "proof": "linked above type $06 and follows randomized vertical targets; hostile helicopter collision is lethal"
+      },
+      "08_balloon_mooring_line": {
+        "default_sprite_hex": "F0",
+        "initial_integrity": 128,
+        "proof": "tracks the type-$07 vertical position, maintains paired vertical endpoints, and has the separate hostile-helicopter line collision state",
+        "vertical_size_sentinel_hex": "FF"
+      },
+      "16_optional_bunker": {
+        "initial_integrity": 128,
+        "layout_gate_bytes": "4061-4063",
+        "proof": "optional fixed structures accepted by the same infantry capture/deposit resolver as types $06/$17"
+      },
+      "17_fixed_armed_bunker": {
+        "initial_integrity": 128,
+        "per_side_link_field": "60FA,X",
+        "proof": "one fixed per side; accepts infantry occupancy and fires a four-damage type-$0B machine-gun projectile only while occupied and target clearance is nonzero"
+      }
+    }
+  },
+  "targeting_and_fire_gates": {
+    "object_type_09_stationary_gun": {
+      "alternate_search_coordinate_offsets_signed": [
+        96,
+        -60
+      ],
+      "alternate_target_type_hex": "0E",
+      "counter_gate": "(60C1 XOR object_slot) & 1 == 0",
+      "eligible_counter_period": 2,
+      "helicopter_absolute_horizontal_range_strictly_below": 96,
+      "shared_fire_absolute_horizontal_range_strictly_below": 256
+    },
+    "object_type_0D_and_0E_fire_cooldown_reload": 3,
+    "object_type_0F_missile_carrier": {
+      "absolute_horizontal_range_strictly_below": 256,
+      "counter_gate": "(60C1 XOR object_slot) & 3 == 0",
+      "eligible_counter_period": 4,
+      "one_shot_self_destruction_after_launch": true,
+      "target": "active opposing player helicopter with no linked missile"
+    },
+    "object_type_17_counter_gate": "60C1 & 1 != 0",
+    "object_type_17_eligible_counter_period": 2,
+    "time_units": "completed update-wrapper counter values, not seconds"
+  },
+  "type_0B_projectile_lifecycle": {
+    "ground_clamp_hex": "DC",
+    "horizontal_velocity_source": "60CF -> 64CC,Y",
+    "initializer": "7286-72AE",
+    "life_counter": "673C,Y",
+    "life_counter_initial": "10 + vertical_acceleration",
+    "producer_velocities_are_original_signed_bytes": true,
+    "update_handler": "8D4A-8D81",
+    "upper_destroy_threshold_hex": "28",
+    "vertical_acceleration_source": "60A8 -> 67A4,Y",
+    "vertical_velocity_source": "60D0 -> 6534,Y"
+  },
+  "updates_per_second": null
+}

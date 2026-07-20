@@ -1,0 +1,4979 @@
+{
+  "encoding": {
+    "bit_order": "least-significant-bit is leftmost",
+    "decoded_format": "binary pixels stored as PGM P5 0/255",
+    "pixels_per_byte": 7
+  },
+  "font": {
+    "glyphs": [
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-00.pgm",
+        "decoded_width": 7,
+        "index": 0,
+        "raw_offset": 0,
+        "raw_sha256": "6d909f000d3a8c368495bf2a6d8a22e2c1090519440f0a6693f8c05614f580a8",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-01.pgm",
+        "decoded_width": 7,
+        "index": 1,
+        "raw_offset": 8,
+        "raw_sha256": "6c4b15f5dd535b26e023d6598c17e2350b61e5b870dcbc94517f49420da5fac6",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-02.pgm",
+        "decoded_width": 7,
+        "index": 2,
+        "raw_offset": 16,
+        "raw_sha256": "b502420f4dbe1fb195510d8207607317914b746b7ca456fbbb352147ef1c92c1",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-03.pgm",
+        "decoded_width": 7,
+        "index": 3,
+        "raw_offset": 24,
+        "raw_sha256": "553c55bef23126f95738967429d15ae8dc8a7609e983caf234d1a5988d99680d",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-04.pgm",
+        "decoded_width": 7,
+        "index": 4,
+        "raw_offset": 32,
+        "raw_sha256": "b75658470dd32e04a30b0df290eb539ce7ecef7a7d056ec0dbd636444e3e351b",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-05.pgm",
+        "decoded_width": 7,
+        "index": 5,
+        "raw_offset": 40,
+        "raw_sha256": "cad22db14e31408a77a36b794f64cce0750cee32cd55681aebfddfef35977a69",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-06.pgm",
+        "decoded_width": 7,
+        "index": 6,
+        "raw_offset": 48,
+        "raw_sha256": "c24d461659da435d623b19941ceea05f651b6d123d37e936805cf0537d5e19b0",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-07.pgm",
+        "decoded_width": 7,
+        "index": 7,
+        "raw_offset": 56,
+        "raw_sha256": "555f5ae9d46a279a3127f53ad66c0ec93a660ffb63a16bd5de80b00186a83f81",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-08.pgm",
+        "decoded_width": 7,
+        "index": 8,
+        "raw_offset": 64,
+        "raw_sha256": "7adb87fb19085d906c748fa8155a26e7e10835bfb12682e3daf5bc2f32e1bbce",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-09.pgm",
+        "decoded_width": 7,
+        "index": 9,
+        "raw_offset": 72,
+        "raw_sha256": "826960d0c647ffff91b8ef12475c32616408ee3a3e0a74b62cbe3b14a0eef1d6",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-10.pgm",
+        "decoded_width": 7,
+        "index": 10,
+        "raw_offset": 80,
+        "raw_sha256": "4fd6cbb44260e6e1c2ff0ab225d06dacd90c892eb469808e0dae10d0ef3e84d6",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-11.pgm",
+        "decoded_width": 7,
+        "index": 11,
+        "raw_offset": 88,
+        "raw_sha256": "f86b4101e6a7b6744e3e854ce5b33a04f1d223c4a8a69394586607a8b677aeab",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-12.pgm",
+        "decoded_width": 7,
+        "index": 12,
+        "raw_offset": 96,
+        "raw_sha256": "8f8d4748395d8539aeb1b12c51de2058caefd0fbec2990d8fda73946fa0fb054",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-13.pgm",
+        "decoded_width": 7,
+        "index": 13,
+        "raw_offset": 104,
+        "raw_sha256": "a90ca17f390691040a2a666a25f00f74c289020783b6220073c1ae2e4b9ea34c",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-14.pgm",
+        "decoded_width": 7,
+        "index": 14,
+        "raw_offset": 112,
+        "raw_sha256": "a2647cb916dfc278a2b1147bfb48d652847adada977170e31d5e801c8fff8bd0",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-15.pgm",
+        "decoded_width": 7,
+        "index": 15,
+        "raw_offset": 120,
+        "raw_sha256": "9e55a56142a2548d382abb919a4aa3d1055628e7c494b9442fe55e1e530a9fc8",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-16.pgm",
+        "decoded_width": 7,
+        "index": 16,
+        "raw_offset": 128,
+        "raw_sha256": "76d3e6f0c6b3a8c58145777479aacaef91129f6c326ee3af4e367f1065177fb1",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-17.pgm",
+        "decoded_width": 7,
+        "index": 17,
+        "raw_offset": 136,
+        "raw_sha256": "389e9bee74edc5f5ac5c2ed049fab3387db20e0ee65e033a155cdcac71f51ccd",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-18.pgm",
+        "decoded_width": 7,
+        "index": 18,
+        "raw_offset": 144,
+        "raw_sha256": "48ff1debdfebad22fa1feb649ec1cf5931408cfb97d49d6a92ab1cf35da419e1",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-19.pgm",
+        "decoded_width": 7,
+        "index": 19,
+        "raw_offset": 152,
+        "raw_sha256": "f341f37371a42878ab82afac256d481125d791f2c3f0f9e0a5ab2d76ad1864b5",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-20.pgm",
+        "decoded_width": 7,
+        "index": 20,
+        "raw_offset": 160,
+        "raw_sha256": "d2992365518d7af89080709cfb5797e90ab1b73acfc0fdb8c956d44c9b191298",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-21.pgm",
+        "decoded_width": 7,
+        "index": 21,
+        "raw_offset": 168,
+        "raw_sha256": "1ae82aba58a56f05110cf829c0657c9b1a00e0aa51178d9b68b650af0c69ab4b",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-22.pgm",
+        "decoded_width": 7,
+        "index": 22,
+        "raw_offset": 176,
+        "raw_sha256": "de4faae4ee7f790f2a34daac707125e6f0dab3b1677bca3e89e42491d90404f4",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-23.pgm",
+        "decoded_width": 7,
+        "index": 23,
+        "raw_offset": 184,
+        "raw_sha256": "39cfd443f9cee45adb9b0f84fe362f81467c89fa78a0364268fa76391624ecbc",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-24.pgm",
+        "decoded_width": 7,
+        "index": 24,
+        "raw_offset": 192,
+        "raw_sha256": "c5b63973b681ebf79ba5a5059ed75203a5eb9d7ed39c317e498c8fa4ea6862fa",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-25.pgm",
+        "decoded_width": 7,
+        "index": 25,
+        "raw_offset": 200,
+        "raw_sha256": "49c61fedbf0f7b77c5645503e871952ff994650d1578b55ac3db7cc70fe3ccb0",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-26.pgm",
+        "decoded_width": 7,
+        "index": 26,
+        "raw_offset": 208,
+        "raw_sha256": "eda4e7389f0a6a7761aebe50b579fbc9ee74b11be8c3fae7c1251f0f07b36cf5",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-27.pgm",
+        "decoded_width": 7,
+        "index": 27,
+        "raw_offset": 216,
+        "raw_sha256": "5728741425bb99ddcc9375a84f5f6571da1dbbe3703166dcce0570b9a197e999",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-28.pgm",
+        "decoded_width": 7,
+        "index": 28,
+        "raw_offset": 224,
+        "raw_sha256": "5bf8d4d098ef4f98e7926505ba1c666336283cd5b0488d9ece4340c307ac3d25",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-29.pgm",
+        "decoded_width": 7,
+        "index": 29,
+        "raw_offset": 232,
+        "raw_sha256": "f5936b40afd86f5486fd28094de0f66a8f1052f58920ff935f148834d4765c0f",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-30.pgm",
+        "decoded_width": 7,
+        "index": 30,
+        "raw_offset": 240,
+        "raw_sha256": "c69334c9e956719bafe54d72b60291f3f9eec43e08cae5060b6282c1ccad2d53",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-31.pgm",
+        "decoded_width": 7,
+        "index": 31,
+        "raw_offset": 248,
+        "raw_sha256": "a103feba8454cee047bb2008273ac068c70305b0ec40474e078fb664ed92f468",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-32.pgm",
+        "decoded_width": 7,
+        "index": 32,
+        "raw_offset": 256,
+        "raw_sha256": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-33.pgm",
+        "decoded_width": 7,
+        "index": 33,
+        "raw_offset": 264,
+        "raw_sha256": "1a04365237b8a423dc944c190902a8a27ccc0e8f8150cfd7500552506747032c",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-34.pgm",
+        "decoded_width": 7,
+        "index": 34,
+        "raw_offset": 272,
+        "raw_sha256": "4d3ae187b903747509ad1c6ed0051ba704498e140442c8e91791ad39c4a5c75e",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-35.pgm",
+        "decoded_width": 7,
+        "index": 35,
+        "raw_offset": 280,
+        "raw_sha256": "aeb35046e22097f845cda1f5422078ca1e790a2554d6ba9dccf4b857c52a61ed",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-36.pgm",
+        "decoded_width": 7,
+        "index": 36,
+        "raw_offset": 288,
+        "raw_sha256": "3749079075fe85dd116e81903b5c95ab1f98b243cded4913a84e4f0066d8419c",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-37.pgm",
+        "decoded_width": 7,
+        "index": 37,
+        "raw_offset": 296,
+        "raw_sha256": "4c537cd2dbcdb5ba66aa7accc4538f3b6f065de3c16de1179ce8a6e72cb114b4",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-38.pgm",
+        "decoded_width": 7,
+        "index": 38,
+        "raw_offset": 304,
+        "raw_sha256": "0a99cdff1ae5a625b14aa704df5d9203068250008a878d3696ab22a53d81693c",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-39.pgm",
+        "decoded_width": 7,
+        "index": 39,
+        "raw_offset": 312,
+        "raw_sha256": "7de654bb91cc209bcc195b087588ad8273cf41679fe36a2b6c1ca7b5a09994ec",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-40.pgm",
+        "decoded_width": 7,
+        "index": 40,
+        "raw_offset": 320,
+        "raw_sha256": "e74e93591a38e4a4ce437d905dbcc14a1e4314d50e0138110129604355914d95",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-41.pgm",
+        "decoded_width": 7,
+        "index": 41,
+        "raw_offset": 328,
+        "raw_sha256": "2582c9f3eab3cc38313f11d6eb870fbc8ea74f316e1983e0decd8362fc419951",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-42.pgm",
+        "decoded_width": 7,
+        "index": 42,
+        "raw_offset": 336,
+        "raw_sha256": "82d7a026c9671d82dfb74536b7054fa48090d7d6f726f05b5fedbf0ac0d05020",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-43.pgm",
+        "decoded_width": 7,
+        "index": 43,
+        "raw_offset": 344,
+        "raw_sha256": "6faf0ab30b798f013b39365f910d369bd75578f68e00f0b2149c66b3f5517f35",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-44.pgm",
+        "decoded_width": 7,
+        "index": 44,
+        "raw_offset": 352,
+        "raw_sha256": "7d97d02d9cd8cd9f54021c460207459ce885f0a5ca735d20b9c54085abe9215b",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-45.pgm",
+        "decoded_width": 7,
+        "index": 45,
+        "raw_offset": 360,
+        "raw_sha256": "61a004f57bec6e5beb16fb24016ce57de139cb62aae9ec7347c3bc0f6a481feb",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-46.pgm",
+        "decoded_width": 7,
+        "index": 46,
+        "raw_offset": 368,
+        "raw_sha256": "3207e8f1b4258089ca0994462056c0ff88cdc5254e69e2ba91e8626a5b62ca1d",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-47.pgm",
+        "decoded_width": 7,
+        "index": 47,
+        "raw_offset": 376,
+        "raw_sha256": "f1e3a5067ede25647b0da7e58d2011a111086cb46e3ee432a9857813ae0a5903",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-48.pgm",
+        "decoded_width": 7,
+        "index": 48,
+        "raw_offset": 384,
+        "raw_sha256": "9a87df573856ee20f88613e26ae88267b92752d627422d8975a4c1f3dd98cedb",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-49.pgm",
+        "decoded_width": 7,
+        "index": 49,
+        "raw_offset": 392,
+        "raw_sha256": "1ad3cdc2ada1c30911abb7fe4220e2ae20c4aa8261dc8320c3490deab39f7fe1",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-50.pgm",
+        "decoded_width": 7,
+        "index": 50,
+        "raw_offset": 400,
+        "raw_sha256": "b3587b006dc66511e5994970496813ff8d051c82315c517f3d5493de7e43a140",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-51.pgm",
+        "decoded_width": 7,
+        "index": 51,
+        "raw_offset": 408,
+        "raw_sha256": "8f770ccf0da32dd19755b47080bd30fb195c932e9ac7b6376356f80fe5e48faf",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-52.pgm",
+        "decoded_width": 7,
+        "index": 52,
+        "raw_offset": 416,
+        "raw_sha256": "295e21ad286642b2ce03e5718cc6522c34fdba457010518e4e7fd8d8509a3ef3",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-53.pgm",
+        "decoded_width": 7,
+        "index": 53,
+        "raw_offset": 424,
+        "raw_sha256": "269541daf5ddb4c9c1f7f6860abe680d114114ce4072080dc01eac9496b275dd",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-54.pgm",
+        "decoded_width": 7,
+        "index": 54,
+        "raw_offset": 432,
+        "raw_sha256": "6f97558510c1bf86f0412d5b40acfc0cc3e55da57d5dc18994da4b5e1eaa9bcc",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-55.pgm",
+        "decoded_width": 7,
+        "index": 55,
+        "raw_offset": 440,
+        "raw_sha256": "5d694801284f86209abbec247ca4ea12515c7b8b96866d8a88baf590ed9d9121",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-56.pgm",
+        "decoded_width": 7,
+        "index": 56,
+        "raw_offset": 448,
+        "raw_sha256": "0649fb829b41e76c28c0990c7bd9da30846f0239068097a420c5451fa8342b4e",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-57.pgm",
+        "decoded_width": 7,
+        "index": 57,
+        "raw_offset": 456,
+        "raw_sha256": "ce4316617c4ef997601d3329d51e26729be2d248e29cc4e5dfc48278213b6810",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-58.pgm",
+        "decoded_width": 7,
+        "index": 58,
+        "raw_offset": 464,
+        "raw_sha256": "812b7a139ac619a036f97aa80fab5f388dffeaebfb0603c7558090f57222e2dd",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-59.pgm",
+        "decoded_width": 7,
+        "index": 59,
+        "raw_offset": 472,
+        "raw_sha256": "cc443db03319ca6775fb273fd747c403a464a090d33121b51f7ea67d4d5a57fc",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-60.pgm",
+        "decoded_width": 7,
+        "index": 60,
+        "raw_offset": 480,
+        "raw_sha256": "0b31d2de16363d90651befe06c835473fdc711ee3601f26a9a5e518ef39a94b1",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-61.pgm",
+        "decoded_width": 7,
+        "index": 61,
+        "raw_offset": 488,
+        "raw_sha256": "a6a301350a7cd8f1b99904df0a025924a2cc3c3594c77031b31b670102e8428d",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-62.pgm",
+        "decoded_width": 7,
+        "index": 62,
+        "raw_offset": 496,
+        "raw_sha256": "c9e7b6726f8420ac48cf1324d97a8e39a72c10718088d4fb50ef8c85c4d4e0d4",
+        "raw_size": 8
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-font/glyph-63.pgm",
+        "decoded_width": 7,
+        "index": 63,
+        "raw_offset": 504,
+        "raw_sha256": "026038613eebe0e2e047bb1108e9decb76b7d690090250461e6aa381512f1a83",
+        "raw_size": 8
+      }
+    ],
+    "memory_end": 5887,
+    "memory_start": 5376,
+    "raw_path": "raw/title-font-64x8.bin",
+    "raw_sha256": "92a661f61bd63ac5c96611637a5f31b5fb832b1de064b112d97e307dc520c0a3",
+    "raw_size": 512
+  },
+  "gameplay_sprites": {
+    "descriptor_count": 165,
+    "descriptor_format": [
+      "signed x offset",
+      "signed y offset",
+      "width in packed bytes",
+      "height in rows",
+      "width*height packed pixel bytes"
+    ],
+    "effective_banks": [
+      {
+        "descriptor_count": 78,
+        "descriptors": [
+          {
+            "bank_offset": 159,
+            "decoded_height": 5,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-00.pgm",
+            "decoded_width": 14,
+            "index": 0,
+            "memory_address": 6559,
+            "phase_bit_count": 10,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-00.bin",
+            "raw_sha256": "2c55de33336b13fdf591e4e3d5d7beb1c3d3ab48ddc757e60adc3b5c21d7af72",
+            "raw_size": 14,
+            "width_bytes": 2,
+            "x_offset_signed": -2,
+            "y_offset_signed": -2
+          },
+          {
+            "bank_offset": 173,
+            "decoded_height": 10,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-01.pgm",
+            "decoded_width": 14,
+            "index": 1,
+            "memory_address": 6573,
+            "phase_bit_count": 20,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-01.bin",
+            "raw_sha256": "c6f873bc06a481b56bbec5d7f8d5df057f00485aba34e5bc42f19f5bfdec04ea",
+            "raw_size": 24,
+            "width_bytes": 2,
+            "x_offset_signed": -2,
+            "y_offset_signed": -10
+          },
+          {
+            "bank_offset": 197,
+            "decoded_height": 11,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-02.pgm",
+            "decoded_width": 35,
+            "index": 2,
+            "memory_address": 6597,
+            "phase_bit_count": 55,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-02.bin",
+            "raw_sha256": "4dd14a2ad7bca200f7a75528b9a96574fd90a256d9b557e93884e8bf345819e2",
+            "raw_size": 59,
+            "width_bytes": 5,
+            "x_offset_signed": 0,
+            "y_offset_signed": -11
+          },
+          {
+            "bank_offset": 256,
+            "decoded_height": 11,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-03.pgm",
+            "decoded_width": 28,
+            "index": 3,
+            "memory_address": 6656,
+            "phase_bit_count": 44,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-03.bin",
+            "raw_sha256": "660666804086cfd22f27851ca4081d145b5687ba425d48b8750b6b709c2f6594",
+            "raw_size": 48,
+            "width_bytes": 4,
+            "x_offset_signed": 0,
+            "y_offset_signed": -11
+          },
+          {
+            "bank_offset": 304,
+            "decoded_height": 16,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-04.pgm",
+            "decoded_width": 28,
+            "index": 4,
+            "memory_address": 6704,
+            "phase_bit_count": 44,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-04.bin",
+            "raw_sha256": "4420e3b32133b6ef852a000a6439589cc4d4e5d4288847071018dc9c04a67da9",
+            "raw_size": 68,
+            "width_bytes": 4,
+            "x_offset_signed": 0,
+            "y_offset_signed": -16
+          },
+          {
+            "bank_offset": 372,
+            "decoded_height": 10,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-05.pgm",
+            "decoded_width": 21,
+            "index": 5,
+            "memory_address": 6772,
+            "phase_bit_count": 30,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-05.bin",
+            "raw_sha256": "55b99236f49488001eb35142f849b4b941e54f0cfe4b377da306a7279c1b9749",
+            "raw_size": 34,
+            "width_bytes": 3,
+            "x_offset_signed": -2,
+            "y_offset_signed": -10
+          },
+          {
+            "bank_offset": 406,
+            "decoded_height": 3,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-06.pgm",
+            "decoded_width": 7,
+            "index": 6,
+            "memory_address": 6806,
+            "phase_bit_count": 3,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-06.bin",
+            "raw_sha256": "737a167be666c040490d9442f5d68edc9397427d2ff010dada444ebf1aa87f69",
+            "raw_size": 7,
+            "width_bytes": 1,
+            "x_offset_signed": 0,
+            "y_offset_signed": 0
+          },
+          {
+            "bank_offset": 413,
+            "decoded_height": 3,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-07.pgm",
+            "decoded_width": 7,
+            "index": 7,
+            "memory_address": 6813,
+            "phase_bit_count": 3,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-07.bin",
+            "raw_sha256": "dc848b5f0205c1302db4f23fb1d2a6ccf2d0c003cf2974c6299843c0ef70825c",
+            "raw_size": 7,
+            "width_bytes": 1,
+            "x_offset_signed": 0,
+            "y_offset_signed": 0
+          },
+          {
+            "bank_offset": 420,
+            "decoded_height": 5,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-08.pgm",
+            "decoded_width": 7,
+            "index": 8,
+            "memory_address": 6820,
+            "phase_bit_count": 5,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-08.bin",
+            "raw_sha256": "84c7faaf24439d9d509daeb046c893aea711bd090f6ff6d3eb84dcf27c2bc6eb",
+            "raw_size": 9,
+            "width_bytes": 1,
+            "x_offset_signed": 0,
+            "y_offset_signed": -7
+          },
+          {
+            "bank_offset": 429,
+            "decoded_height": 8,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-09.pgm",
+            "decoded_width": 35,
+            "index": 9,
+            "memory_address": 6829,
+            "phase_bit_count": 20,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-09.bin",
+            "raw_sha256": "71f88fa299c39f8df96adde8554198158f2ea42c98ebde0f15c8b83ef022f18b",
+            "raw_size": 44,
+            "width_bytes": 5,
+            "x_offset_signed": 0,
+            "y_offset_signed": -4
+          },
+          {
+            "bank_offset": 473,
+            "decoded_height": 8,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-10.pgm",
+            "decoded_width": 21,
+            "index": 10,
+            "memory_address": 6873,
+            "phase_bit_count": 12,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-10.bin",
+            "raw_sha256": "785a79474c5f4fdcc63689d85fbf5aa93a67d25023979b0e01e62f86144adb81",
+            "raw_size": 28,
+            "width_bytes": 3,
+            "x_offset_signed": 0,
+            "y_offset_signed": -4
+          },
+          {
+            "bank_offset": 501,
+            "decoded_height": 8,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-11.pgm",
+            "decoded_width": 28,
+            "index": 11,
+            "memory_address": 6901,
+            "phase_bit_count": 16,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-11.bin",
+            "raw_sha256": "66505991664f29fbec36f9879d031ba4d2da4ffce343468317918d8182948a65",
+            "raw_size": 36,
+            "width_bytes": 4,
+            "x_offset_signed": 0,
+            "y_offset_signed": -4
+          },
+          {
+            "bank_offset": 537,
+            "decoded_height": 8,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-12.pgm",
+            "decoded_width": 70,
+            "index": 12,
+            "memory_address": 6937,
+            "phase_bit_count": 37,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-12.bin",
+            "raw_sha256": "d9876523ac4f68e82e084bca354c61d18e2e3687ecf4dbd3eb8dea9cb7aef023",
+            "raw_size": 84,
+            "width_bytes": 10,
+            "x_offset_signed": -14,
+            "y_offset_signed": -4
+          },
+          {
+            "bank_offset": 621,
+            "decoded_height": 20,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-13.pgm",
+            "decoded_width": 35,
+            "index": 13,
+            "memory_address": 7021,
+            "phase_bit_count": 10,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-13.bin",
+            "raw_sha256": "28b01e99b4799e1beac1613f5b3e2403065e0383cf48966149b23612743d0495",
+            "raw_size": 104,
+            "width_bytes": 5,
+            "x_offset_signed": -1,
+            "y_offset_signed": -20
+          },
+          {
+            "bank_offset": 725,
+            "decoded_height": 11,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-14.pgm",
+            "decoded_width": 35,
+            "index": 14,
+            "memory_address": 7125,
+            "phase_bit_count": 55,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-14.bin",
+            "raw_sha256": "3bce416ddaf7d604313db7f82ec8839becbc8f161f58e36b141ad0e8ac2281d9",
+            "raw_size": 59,
+            "width_bytes": 5,
+            "x_offset_signed": 0,
+            "y_offset_signed": -11
+          },
+          {
+            "bank_offset": 784,
+            "decoded_height": 10,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-15.pgm",
+            "decoded_width": 35,
+            "index": 15,
+            "memory_address": 7184,
+            "phase_bit_count": 50,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-15.bin",
+            "raw_sha256": "ef9cc09c15bd847feb117286e22314d98f16774367179e89ce12144a1b145554",
+            "raw_size": 54,
+            "width_bytes": 5,
+            "x_offset_signed": 0,
+            "y_offset_signed": -11
+          },
+          {
+            "bank_offset": 838,
+            "decoded_height": 10,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-16.pgm",
+            "decoded_width": 35,
+            "index": 16,
+            "memory_address": 7238,
+            "phase_bit_count": 48,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-16.bin",
+            "raw_sha256": "8a3bc73644b0497301004da2199aa96724a8b26cf5f9bf438941a9d66a631b01",
+            "raw_size": 54,
+            "width_bytes": 5,
+            "x_offset_signed": 0,
+            "y_offset_signed": -11
+          },
+          {
+            "bank_offset": 892,
+            "decoded_height": 7,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-17.pgm",
+            "decoded_width": 28,
+            "index": 17,
+            "memory_address": 7292,
+            "phase_bit_count": 28,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-17.bin",
+            "raw_sha256": "ede1c7c64b6193f8ea6ca204190d6302ca50d73d88a84f9031bd97ff46b60259",
+            "raw_size": 32,
+            "width_bytes": 4,
+            "x_offset_signed": 2,
+            "y_offset_signed": -7
+          },
+          {
+            "bank_offset": 924,
+            "decoded_height": 4,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-18.pgm",
+            "decoded_width": 21,
+            "index": 18,
+            "memory_address": 7324,
+            "phase_bit_count": 12,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-18.bin",
+            "raw_sha256": "4b7f04c66e1bfe2a81d6ef766d72fa23590ecc04ef472b63f999a7e9b26dfc30",
+            "raw_size": 16,
+            "width_bytes": 3,
+            "x_offset_signed": 3,
+            "y_offset_signed": -4
+          },
+          {
+            "bank_offset": 940,
+            "decoded_height": 5,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-19.pgm",
+            "decoded_width": 14,
+            "index": 19,
+            "memory_address": 7340,
+            "phase_bit_count": 10,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-19.bin",
+            "raw_sha256": "8331530d377f04b76544b411ae1ecd32ab15f5e8e1a535f7dcc55a26b81f7522",
+            "raw_size": 14,
+            "width_bytes": 2,
+            "x_offset_signed": 5,
+            "y_offset_signed": -5
+          },
+          {
+            "bank_offset": 954,
+            "decoded_height": 14,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-20.pgm",
+            "decoded_width": 14,
+            "index": 20,
+            "memory_address": 7354,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-20.bin",
+            "raw_sha256": "1157444ef438ab03d30b2cc721a506b7bc826009f3754cb6c2262382611aabbb",
+            "raw_size": 32,
+            "width_bytes": 2,
+            "x_offset_signed": -2,
+            "y_offset_signed": -14
+          },
+          {
+            "bank_offset": 986,
+            "decoded_height": 14,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-21.pgm",
+            "decoded_width": 14,
+            "index": 21,
+            "memory_address": 7386,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-21.bin",
+            "raw_sha256": "66b280e4b7f55afeb5d9999a1dacae8f3300b5f32d0d1e0fb3f65279aaf38303",
+            "raw_size": 32,
+            "width_bytes": 2,
+            "x_offset_signed": -2,
+            "y_offset_signed": -14
+          },
+          {
+            "bank_offset": 1018,
+            "decoded_height": 7,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-22.pgm",
+            "decoded_width": 7,
+            "index": 22,
+            "memory_address": 7418,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-22.bin",
+            "raw_sha256": "dbfcdd94929c89cdde1868ab747103d653e8b10a6914225c2d9ee03d7c49b437",
+            "raw_size": 11,
+            "width_bytes": 1,
+            "x_offset_signed": 0,
+            "y_offset_signed": -7
+          },
+          {
+            "bank_offset": 1029,
+            "decoded_height": 7,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-23.pgm",
+            "decoded_width": 7,
+            "index": 23,
+            "memory_address": 7429,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-23.bin",
+            "raw_sha256": "032a26e227af2870ae3e8632d39ae1a19a03f2b33df142abeb3a850fe92d72ae",
+            "raw_size": 11,
+            "width_bytes": 1,
+            "x_offset_signed": -1,
+            "y_offset_signed": -7
+          },
+          {
+            "bank_offset": 1040,
+            "decoded_height": 10,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-24.pgm",
+            "decoded_width": 28,
+            "index": 24,
+            "memory_address": 7440,
+            "phase_bit_count": 40,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-24.bin",
+            "raw_sha256": "8e670ad5c18b4ccb93cee0bd6b905899f06601e099e2fde7f88147ac60d5f844",
+            "raw_size": 44,
+            "width_bytes": 4,
+            "x_offset_signed": 1,
+            "y_offset_signed": -13
+          },
+          {
+            "bank_offset": 1084,
+            "decoded_height": 10,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-25.pgm",
+            "decoded_width": 28,
+            "index": 25,
+            "memory_address": 7484,
+            "phase_bit_count": 40,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-25.bin",
+            "raw_sha256": "bbdc0e49e9a88ae187c03d703c3785e6e368454798ae7c2a54eb8678a20cf9e9",
+            "raw_size": 44,
+            "width_bytes": 4,
+            "x_offset_signed": 0,
+            "y_offset_signed": -13
+          },
+          {
+            "bank_offset": 1128,
+            "decoded_height": 9,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-26.pgm",
+            "decoded_width": 7,
+            "index": 26,
+            "memory_address": 7528,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-26.bin",
+            "raw_sha256": "9f872fad1ec21bfd344617497d4c7630c6b8dedcbb6f7dac7a53e1fc2b405f8e",
+            "raw_size": 13,
+            "width_bytes": 1,
+            "x_offset_signed": -1,
+            "y_offset_signed": -4
+          },
+          {
+            "bank_offset": 1141,
+            "decoded_height": 9,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-27.pgm",
+            "decoded_width": 7,
+            "index": 27,
+            "memory_address": 7541,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-27.bin",
+            "raw_sha256": "0506852fce1588e228d407015fcce0a32654557b685796fa981749e9d7a46211",
+            "raw_size": 13,
+            "width_bytes": 1,
+            "x_offset_signed": -1,
+            "y_offset_signed": -4
+          },
+          {
+            "bank_offset": 1154,
+            "decoded_height": 6,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-28.pgm",
+            "decoded_width": 7,
+            "index": 28,
+            "memory_address": 7554,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-28.bin",
+            "raw_sha256": "386d725f1c7d325482c4b89e459c16337484067b67f8c73e8367039c24c3d330",
+            "raw_size": 10,
+            "width_bytes": 1,
+            "x_offset_signed": -1,
+            "y_offset_signed": -4
+          },
+          {
+            "bank_offset": 1164,
+            "decoded_height": 4,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-29.pgm",
+            "decoded_width": 14,
+            "index": 29,
+            "memory_address": 7564,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-29.bin",
+            "raw_sha256": "9e83ab10cf5a30d881139f8f9503eb052a287a2bd8d211155ead4956d2c64ae9",
+            "raw_size": 12,
+            "width_bytes": 2,
+            "x_offset_signed": -2,
+            "y_offset_signed": -2
+          },
+          {
+            "bank_offset": 1176,
+            "decoded_height": 2,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-30.pgm",
+            "decoded_width": 14,
+            "index": 30,
+            "memory_address": 7576,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-30.bin",
+            "raw_sha256": "eb2291cdb66996701277aa1a4b6ac10d76bb9dcabe71b6d3f6f899bd078011a6",
+            "raw_size": 8,
+            "width_bytes": 2,
+            "x_offset_signed": -3,
+            "y_offset_signed": -1
+          },
+          {
+            "bank_offset": 1184,
+            "decoded_height": 6,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-31.pgm",
+            "decoded_width": 14,
+            "index": 31,
+            "memory_address": 7584,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-31.bin",
+            "raw_sha256": "9d97690ec87a618520fb8bdae290c9f42b20e5c21207e4bdd224a5d96d6382c5",
+            "raw_size": 16,
+            "width_bytes": 2,
+            "x_offset_signed": -2,
+            "y_offset_signed": -3
+          },
+          {
+            "bank_offset": 1200,
+            "decoded_height": 7,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-32.pgm",
+            "decoded_width": 7,
+            "index": 32,
+            "memory_address": 7600,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-32.bin",
+            "raw_sha256": "1963749b46da35855d6a74d2edb7fa5d0774143c277497f59f415c6641a575f6",
+            "raw_size": 11,
+            "width_bytes": 1,
+            "x_offset_signed": -1,
+            "y_offset_signed": -4
+          },
+          {
+            "bank_offset": 1211,
+            "decoded_height": 9,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-33.pgm",
+            "decoded_width": 7,
+            "index": 33,
+            "memory_address": 7611,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-33.bin",
+            "raw_sha256": "40d4b7922c38423a743810002c6701ac9b7d74490e34a2470db0070b9f94f3da",
+            "raw_size": 13,
+            "width_bytes": 1,
+            "x_offset_signed": -1,
+            "y_offset_signed": -4
+          },
+          {
+            "bank_offset": 1224,
+            "decoded_height": 9,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-34.pgm",
+            "decoded_width": 7,
+            "index": 34,
+            "memory_address": 7624,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-34.bin",
+            "raw_sha256": "ab7776913066b10f966d1f3edb40050cd9d9f5cd4f9f83161d86f61ff10a9727",
+            "raw_size": 13,
+            "width_bytes": 1,
+            "x_offset_signed": -1,
+            "y_offset_signed": -4
+          },
+          {
+            "bank_offset": 1237,
+            "decoded_height": 9,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-35.pgm",
+            "decoded_width": 7,
+            "index": 35,
+            "memory_address": 7637,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-35.bin",
+            "raw_sha256": "861ccc3dd6b9f7a1759acd27c8ac673325d0fcfd9f639117681db5db383d93c3",
+            "raw_size": 13,
+            "width_bytes": 1,
+            "x_offset_signed": -1,
+            "y_offset_signed": -4
+          },
+          {
+            "bank_offset": 1250,
+            "decoded_height": 7,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-36.pgm",
+            "decoded_width": 7,
+            "index": 36,
+            "memory_address": 7650,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-36.bin",
+            "raw_sha256": "5865706f3835f957aa0bb223aad807b11a45d43be9f7d94c3f2a6d93afc36550",
+            "raw_size": 11,
+            "width_bytes": 1,
+            "x_offset_signed": -1,
+            "y_offset_signed": -4
+          },
+          {
+            "bank_offset": 1261,
+            "decoded_height": 6,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-37.pgm",
+            "decoded_width": 14,
+            "index": 37,
+            "memory_address": 7661,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-37.bin",
+            "raw_sha256": "aa5801dc20cf8dd5b8dff0fa14b3c8be9859e2540ab30afdf9c3e8c0d2ed24e5",
+            "raw_size": 16,
+            "width_bytes": 2,
+            "x_offset_signed": -2,
+            "y_offset_signed": -3
+          },
+          {
+            "bank_offset": 1277,
+            "decoded_height": 2,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-38.pgm",
+            "decoded_width": 14,
+            "index": 38,
+            "memory_address": 7677,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-38.bin",
+            "raw_sha256": "7452ee39c2c8dab1857e449bb10390ebfed235a9b66a36bb66c2034c427a918b",
+            "raw_size": 8,
+            "width_bytes": 2,
+            "x_offset_signed": -3,
+            "y_offset_signed": -1
+          },
+          {
+            "bank_offset": 1285,
+            "decoded_height": 4,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-39.pgm",
+            "decoded_width": 14,
+            "index": 39,
+            "memory_address": 7685,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-39.bin",
+            "raw_sha256": "6f0471b7161215cd2219abccaa16e826802906193eef1c8cc62685852bdf96c0",
+            "raw_size": 12,
+            "width_bytes": 2,
+            "x_offset_signed": -2,
+            "y_offset_signed": -2
+          },
+          {
+            "bank_offset": 1297,
+            "decoded_height": 6,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-40.pgm",
+            "decoded_width": 7,
+            "index": 40,
+            "memory_address": 7697,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-40.bin",
+            "raw_sha256": "0d60078bb02cd3142035a256e81c93301181defb5b19a255b2d597ab21855901",
+            "raw_size": 10,
+            "width_bytes": 1,
+            "x_offset_signed": -1,
+            "y_offset_signed": -3
+          },
+          {
+            "bank_offset": 1307,
+            "decoded_height": 9,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-41.pgm",
+            "decoded_width": 7,
+            "index": 41,
+            "memory_address": 7707,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-41.bin",
+            "raw_sha256": "3d6ad84c2ec96b2580614a0691b992b84d4afe254e8275373a4f2ca72f10fead",
+            "raw_size": 13,
+            "width_bytes": 1,
+            "x_offset_signed": -1,
+            "y_offset_signed": -4
+          },
+          {
+            "bank_offset": 1320,
+            "decoded_height": 3,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-42.pgm",
+            "decoded_width": 7,
+            "index": 42,
+            "memory_address": 7720,
+            "phase_bit_count": 3,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-42.bin",
+            "raw_sha256": "eb9b53544485f3b233a03be188d5b9a6f28d4dc8425a8a158fa6548c175b2f8c",
+            "raw_size": 7,
+            "width_bytes": 1,
+            "x_offset_signed": -2,
+            "y_offset_signed": -2
+          },
+          {
+            "bank_offset": 1327,
+            "decoded_height": 4,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-43.pgm",
+            "decoded_width": 7,
+            "index": 43,
+            "memory_address": 7727,
+            "phase_bit_count": 4,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-43.bin",
+            "raw_sha256": "39b20cf13d407d13cf59c1b0be801046b96866f390960e3a5683c40ff76d846c",
+            "raw_size": 8,
+            "width_bytes": 1,
+            "x_offset_signed": -2,
+            "y_offset_signed": -2
+          },
+          {
+            "bank_offset": 1335,
+            "decoded_height": 4,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-44.pgm",
+            "decoded_width": 7,
+            "index": 44,
+            "memory_address": 7735,
+            "phase_bit_count": 4,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-44.bin",
+            "raw_sha256": "be5024e4d792112b7bbb22b028f1c0308ce76ac204697cd1d3ba489c3f90e5bc",
+            "raw_size": 8,
+            "width_bytes": 1,
+            "x_offset_signed": -2,
+            "y_offset_signed": -2
+          },
+          {
+            "bank_offset": 1343,
+            "decoded_height": 4,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-45.pgm",
+            "decoded_width": 7,
+            "index": 45,
+            "memory_address": 7743,
+            "phase_bit_count": 4,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-45.bin",
+            "raw_sha256": "3903effac2e96839add77ec81842cb06833731943a558723718b8a0147d2aee2",
+            "raw_size": 8,
+            "width_bytes": 1,
+            "x_offset_signed": -2,
+            "y_offset_signed": -2
+          },
+          {
+            "bank_offset": 1351,
+            "decoded_height": 3,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-46.pgm",
+            "decoded_width": 7,
+            "index": 46,
+            "memory_address": 7751,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-46.bin",
+            "raw_sha256": "74fe4f3595fa8e42ea60e6979fb1085567bf295996abd4429ec08291fb4a3109",
+            "raw_size": 7,
+            "width_bytes": 1,
+            "x_offset_signed": -2,
+            "y_offset_signed": -1
+          },
+          {
+            "bank_offset": 1358,
+            "decoded_height": 3,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-47.pgm",
+            "decoded_width": 7,
+            "index": 47,
+            "memory_address": 7758,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-47.bin",
+            "raw_sha256": "a18c6ab48cb6b7b37d3013870c79279d9ff73f98e872560ebfaf0929fa29737d",
+            "raw_size": 7,
+            "width_bytes": 1,
+            "x_offset_signed": -2,
+            "y_offset_signed": -1
+          },
+          {
+            "bank_offset": 1365,
+            "decoded_height": 3,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-48.pgm",
+            "decoded_width": 7,
+            "index": 48,
+            "memory_address": 7765,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-48.bin",
+            "raw_sha256": "74fe4f3595fa8e42ea60e6979fb1085567bf295996abd4429ec08291fb4a3109",
+            "raw_size": 7,
+            "width_bytes": 1,
+            "x_offset_signed": -2,
+            "y_offset_signed": -1
+          },
+          {
+            "bank_offset": 1372,
+            "decoded_height": 3,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-49.pgm",
+            "decoded_width": 7,
+            "index": 49,
+            "memory_address": 7772,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-49.bin",
+            "raw_sha256": "743564e4b83b586f893b9598eff497f207b1bfc746e5f293e544d71e29449ba3",
+            "raw_size": 7,
+            "width_bytes": 1,
+            "x_offset_signed": -2,
+            "y_offset_signed": -1
+          },
+          {
+            "bank_offset": 1379,
+            "decoded_height": 4,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-50.pgm",
+            "decoded_width": 7,
+            "index": 50,
+            "memory_address": 7779,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-50.bin",
+            "raw_sha256": "a976a6802ad23e2c407e8338820f80bc40f5e5da1ad633e00b7726d0f2c65764",
+            "raw_size": 8,
+            "width_bytes": 1,
+            "x_offset_signed": -1,
+            "y_offset_signed": -2
+          },
+          {
+            "bank_offset": 1387,
+            "decoded_height": 5,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-51.pgm",
+            "decoded_width": 7,
+            "index": 51,
+            "memory_address": 7787,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-51.bin",
+            "raw_sha256": "9e82b9cefb6f827d87c28089f1579a0d1fcd83b4913ab63ff55202748c13747a",
+            "raw_size": 9,
+            "width_bytes": 1,
+            "x_offset_signed": -2,
+            "y_offset_signed": -3
+          },
+          {
+            "bank_offset": 1396,
+            "decoded_height": 5,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-52.pgm",
+            "decoded_width": 7,
+            "index": 52,
+            "memory_address": 7796,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-52.bin",
+            "raw_sha256": "6aa68e3fb6a5ede383fb7b082de60766fd8a2a743ef7f488efae1d65805d51cf",
+            "raw_size": 9,
+            "width_bytes": 1,
+            "x_offset_signed": -3,
+            "y_offset_signed": -3
+          },
+          {
+            "bank_offset": 1405,
+            "decoded_height": 5,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-53.pgm",
+            "decoded_width": 7,
+            "index": 53,
+            "memory_address": 7805,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-53.bin",
+            "raw_sha256": "64f10c15db4b503f7304673f5fbd04ebd1d1aceac07f087c1fada3f5385dfc3f",
+            "raw_size": 9,
+            "width_bytes": 1,
+            "x_offset_signed": -2,
+            "y_offset_signed": -3
+          },
+          {
+            "bank_offset": 1414,
+            "decoded_height": 4,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-54.pgm",
+            "decoded_width": 7,
+            "index": 54,
+            "memory_address": 7814,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-54.bin",
+            "raw_sha256": "ef0f3c9d90abf29bf63c858072d3399674c5ef8e33ccdd8f4fad1802f3ad0fc8",
+            "raw_size": 8,
+            "width_bytes": 1,
+            "x_offset_signed": -2,
+            "y_offset_signed": -2
+          },
+          {
+            "bank_offset": 1422,
+            "decoded_height": 3,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-55.pgm",
+            "decoded_width": 7,
+            "index": 55,
+            "memory_address": 7822,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-55.bin",
+            "raw_sha256": "2ed67a7159e2580a1e44832610196b8a87e0f77be6043180bb4ecd380347b344",
+            "raw_size": 7,
+            "width_bytes": 1,
+            "x_offset_signed": -2,
+            "y_offset_signed": -2
+          },
+          {
+            "bank_offset": 1429,
+            "decoded_height": 4,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-56.pgm",
+            "decoded_width": 7,
+            "index": 56,
+            "memory_address": 7829,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-56.bin",
+            "raw_sha256": "18db600ff63c9149b895ddea52b4f70faca9112459fd68f9d4025546aaa8bb25",
+            "raw_size": 8,
+            "width_bytes": 1,
+            "x_offset_signed": -2,
+            "y_offset_signed": -2
+          },
+          {
+            "bank_offset": 1437,
+            "decoded_height": 4,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-57.pgm",
+            "decoded_width": 7,
+            "index": 57,
+            "memory_address": 7837,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-57.bin",
+            "raw_sha256": "0875b20a50644fc121f8842ce1977e153a583f9b5fb24051d8fbab95970d1d76",
+            "raw_size": 8,
+            "width_bytes": 1,
+            "x_offset_signed": -2,
+            "y_offset_signed": -2
+          },
+          {
+            "bank_offset": 1445,
+            "decoded_height": 3,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-58.pgm",
+            "decoded_width": 7,
+            "index": 58,
+            "memory_address": 7845,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-58.bin",
+            "raw_sha256": "e5a75b6657538d0e3175b0319402294b0162d35513c1b2b5a3ff27b95f71a44c",
+            "raw_size": 7,
+            "width_bytes": 1,
+            "x_offset_signed": -2,
+            "y_offset_signed": -1
+          },
+          {
+            "bank_offset": 1452,
+            "decoded_height": 3,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-59.pgm",
+            "decoded_width": 7,
+            "index": 59,
+            "memory_address": 7852,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-59.bin",
+            "raw_sha256": "d0e9fe135b2e06ac168c150fa9e7ad649be34fca7383d3b07e6d890ed145b79a",
+            "raw_size": 7,
+            "width_bytes": 1,
+            "x_offset_signed": -2,
+            "y_offset_signed": -1
+          },
+          {
+            "bank_offset": 1459,
+            "decoded_height": 3,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-60.pgm",
+            "decoded_width": 7,
+            "index": 60,
+            "memory_address": 7859,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-60.bin",
+            "raw_sha256": "c55137e3f53201d684c200f5133be55a825bc704c3943197581119da6cf32d8a",
+            "raw_size": 7,
+            "width_bytes": 1,
+            "x_offset_signed": -2,
+            "y_offset_signed": -1
+          },
+          {
+            "bank_offset": 1466,
+            "decoded_height": 3,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-61.pgm",
+            "decoded_width": 7,
+            "index": 61,
+            "memory_address": 7866,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-61.bin",
+            "raw_sha256": "8c67f0da782b4b02ee6e83dce944de75358910837904896d7b9d76a2f5c415b1",
+            "raw_size": 7,
+            "width_bytes": 1,
+            "x_offset_signed": -2,
+            "y_offset_signed": -1
+          },
+          {
+            "bank_offset": 1473,
+            "decoded_height": 4,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-62.pgm",
+            "decoded_width": 7,
+            "index": 62,
+            "memory_address": 7873,
+            "phase_bit_count": 4,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-62.bin",
+            "raw_sha256": "6397d1f4181578a320ab14f2f1f9265883a6eb828c92b467f3c30e3649a20699",
+            "raw_size": 8,
+            "width_bytes": 1,
+            "x_offset_signed": -2,
+            "y_offset_signed": -2
+          },
+          {
+            "bank_offset": 1481,
+            "decoded_height": 4,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-63.pgm",
+            "decoded_width": 7,
+            "index": 63,
+            "memory_address": 7881,
+            "phase_bit_count": 4,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-63.bin",
+            "raw_sha256": "dcf49fe546531d62e5bdcaf28a307b6e85bcb42b1b1a55ae2b411dc1636c5d58",
+            "raw_size": 8,
+            "width_bytes": 1,
+            "x_offset_signed": -2,
+            "y_offset_signed": -2
+          },
+          {
+            "bank_offset": 1489,
+            "decoded_height": 4,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-64.pgm",
+            "decoded_width": 7,
+            "index": 64,
+            "memory_address": 7889,
+            "phase_bit_count": 4,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-64.bin",
+            "raw_sha256": "84ab51179e8b0615c821e71d45676e21f9ef32e6ef335ceb0e3d43e8d87447be",
+            "raw_size": 8,
+            "width_bytes": 1,
+            "x_offset_signed": -2,
+            "y_offset_signed": -2
+          },
+          {
+            "bank_offset": 1497,
+            "decoded_height": 4,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-65.pgm",
+            "decoded_width": 7,
+            "index": 65,
+            "memory_address": 7897,
+            "phase_bit_count": 4,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-65.bin",
+            "raw_sha256": "0706d9dd55ae1c3671c8bd9163197493d9c8de60fcfce70a2dca24b446abd5fa",
+            "raw_size": 8,
+            "width_bytes": 1,
+            "x_offset_signed": -2,
+            "y_offset_signed": -2
+          },
+          {
+            "bank_offset": 1505,
+            "decoded_height": 4,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-66.pgm",
+            "decoded_width": 7,
+            "index": 66,
+            "memory_address": 7905,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-66.bin",
+            "raw_sha256": "c3f30480a9a097e8e8c1a026b9f121a07f69d557afe448e255d518e76eb6831e",
+            "raw_size": 8,
+            "width_bytes": 1,
+            "x_offset_signed": -2,
+            "y_offset_signed": -2
+          },
+          {
+            "bank_offset": 1513,
+            "decoded_height": 4,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-67.pgm",
+            "decoded_width": 7,
+            "index": 67,
+            "memory_address": 7913,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-67.bin",
+            "raw_sha256": "e9b2c137be4206c40286bd8df2b0f631584317ec3df005e516b005e66c234ec8",
+            "raw_size": 8,
+            "width_bytes": 1,
+            "x_offset_signed": -2,
+            "y_offset_signed": -2
+          },
+          {
+            "bank_offset": 1521,
+            "decoded_height": 4,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-68.pgm",
+            "decoded_width": 7,
+            "index": 68,
+            "memory_address": 7921,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-68.bin",
+            "raw_sha256": "35d19fe704bd3374e89ddc8ceb9b2de5b274539adc657bbe428f5f16a020d8f0",
+            "raw_size": 8,
+            "width_bytes": 1,
+            "x_offset_signed": -2,
+            "y_offset_signed": -2
+          },
+          {
+            "bank_offset": 1529,
+            "decoded_height": 4,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-69.pgm",
+            "decoded_width": 7,
+            "index": 69,
+            "memory_address": 7929,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-69.bin",
+            "raw_sha256": "5e8ffdcf2910b26dd00661e44e9f1e33e533a14fe89fe521150565c16a4dbd8f",
+            "raw_size": 8,
+            "width_bytes": 1,
+            "x_offset_signed": -2,
+            "y_offset_signed": -2
+          },
+          {
+            "bank_offset": 1537,
+            "decoded_height": 4,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-70.pgm",
+            "decoded_width": 7,
+            "index": 70,
+            "memory_address": 7937,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-70.bin",
+            "raw_sha256": "bb224c3a8dcdfe00ee2f59629896b7f2df416bbe5cfd78e1f83ff2935c93b757",
+            "raw_size": 8,
+            "width_bytes": 1,
+            "x_offset_signed": -2,
+            "y_offset_signed": -2
+          },
+          {
+            "bank_offset": 1545,
+            "decoded_height": 4,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-71.pgm",
+            "decoded_width": 7,
+            "index": 71,
+            "memory_address": 7945,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-71.bin",
+            "raw_sha256": "9faf6ecdd407d5b06a636e92250fe983279971d67d337ed050c3eaa42febb3a4",
+            "raw_size": 8,
+            "width_bytes": 1,
+            "x_offset_signed": -2,
+            "y_offset_signed": -2
+          },
+          {
+            "bank_offset": 1553,
+            "decoded_height": 4,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-72.pgm",
+            "decoded_width": 7,
+            "index": 72,
+            "memory_address": 7953,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-72.bin",
+            "raw_sha256": "85d584a16f52a8f1f26a97b7deafe259e258ea371963c97d2aad0e2f41d09bbb",
+            "raw_size": 8,
+            "width_bytes": 1,
+            "x_offset_signed": -2,
+            "y_offset_signed": -2
+          },
+          {
+            "bank_offset": 1561,
+            "decoded_height": 4,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-73.pgm",
+            "decoded_width": 7,
+            "index": 73,
+            "memory_address": 7961,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-73.bin",
+            "raw_sha256": "885a18ace4e5cb4699a82bc59f4d90920be4a8f28498498f3036783c5b97dbe0",
+            "raw_size": 8,
+            "width_bytes": 1,
+            "x_offset_signed": -2,
+            "y_offset_signed": -2
+          },
+          {
+            "bank_offset": 1569,
+            "decoded_height": 6,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-74.pgm",
+            "decoded_width": 56,
+            "index": 74,
+            "memory_address": 7969,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-74.bin",
+            "raw_sha256": "74caf8893db6971389afb05d9b432b26a80e54b1094d66217d0ca9c3e1216daa",
+            "raw_size": 52,
+            "width_bytes": 8,
+            "x_offset_signed": 0,
+            "y_offset_signed": -6
+          },
+          {
+            "bank_offset": 1621,
+            "decoded_height": 3,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-75.pgm",
+            "decoded_width": 7,
+            "index": 75,
+            "memory_address": 8021,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-75.bin",
+            "raw_sha256": "f61de9846978857e7b9504d30a708cd8cc6f7fd5fb1f20ebcc454d86ed60ca54",
+            "raw_size": 7,
+            "width_bytes": 1,
+            "x_offset_signed": -1,
+            "y_offset_signed": -1
+          },
+          {
+            "bank_offset": 1628,
+            "decoded_height": 5,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-76.pgm",
+            "decoded_width": 7,
+            "index": 76,
+            "memory_address": 8028,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-76.bin",
+            "raw_sha256": "97d1f46863ca461f2617ee6d9eb22b634b246fe970a60d6c6c82eb675addff1b",
+            "raw_size": 9,
+            "width_bytes": 1,
+            "x_offset_signed": -2,
+            "y_offset_signed": -3
+          },
+          {
+            "bank_offset": 1637,
+            "decoded_height": 16,
+            "decoded_path": "decoded/gameplay-sprites/1900/sprite-77.pgm",
+            "decoded_width": 49,
+            "index": 77,
+            "memory_address": 8037,
+            "phase_bit_count": 112,
+            "raw_path": "raw/gameplay-sprite-descriptors/1900-77.bin",
+            "raw_sha256": "370d1975ff96d7185e35f8c1b87a6eb4fdc56b9af5fae05ebdfce591cd9c3512",
+            "raw_size": 116,
+            "width_bytes": 7,
+            "x_offset_signed": -12,
+            "y_offset_signed": 0
+          }
+        ],
+        "header_count": 78,
+        "header_metadata_hex": "3A06",
+        "memory_end": 8191,
+        "memory_start": 6400,
+        "name": "1900",
+        "pointer_table_end": 158,
+        "pointer_table_start": 3,
+        "raw_path": "raw/gameplay-sprite-banks/bank-1900.bin",
+        "raw_sha256": "cb79131efaa9b5effef2a7c226011d9ba27b5bdc8f8979394e36f9ad374ac6f9",
+        "raw_size": 1792,
+        "residual_end": 8191,
+        "residual_start": 8153,
+        "source_span": "1900-1fff"
+      },
+      {
+        "descriptor_count": 14,
+        "descriptors": [
+          {
+            "bank_offset": 31,
+            "decoded_height": 15,
+            "decoded_path": "decoded/gameplay-sprites/d000/sprite-00.pgm",
+            "decoded_width": 42,
+            "index": 0,
+            "memory_address": 53279,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/d000-00.bin",
+            "raw_sha256": "57b21e75d38198d81d0b4323ab14a619354b4ad9a7eb28e9b10e7c9102d3d74c",
+            "raw_size": 94,
+            "width_bytes": 6,
+            "x_offset_signed": 0,
+            "y_offset_signed": -15
+          },
+          {
+            "bank_offset": 125,
+            "decoded_height": 10,
+            "decoded_path": "decoded/gameplay-sprites/d000/sprite-01.pgm",
+            "decoded_width": 42,
+            "index": 1,
+            "memory_address": 53373,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/d000-01.bin",
+            "raw_sha256": "2cb2f361eb0416e053660e62dd5c80a61312291bd38fc93ebeecf3c3e0078e90",
+            "raw_size": 64,
+            "width_bytes": 6,
+            "x_offset_signed": 0,
+            "y_offset_signed": -10
+          },
+          {
+            "bank_offset": 189,
+            "decoded_height": 10,
+            "decoded_path": "decoded/gameplay-sprites/d000/sprite-02.pgm",
+            "decoded_width": 42,
+            "index": 2,
+            "memory_address": 53437,
+            "phase_bit_count": 2,
+            "raw_path": "raw/gameplay-sprite-descriptors/d000-02.bin",
+            "raw_sha256": "ff4cd50044075231d5d0f83feb4b5585b1e6cd677feea99488f0dcba61a7be3d",
+            "raw_size": 64,
+            "width_bytes": 6,
+            "x_offset_signed": 0,
+            "y_offset_signed": -10
+          },
+          {
+            "bank_offset": 253,
+            "decoded_height": 15,
+            "decoded_path": "decoded/gameplay-sprites/d000/sprite-03.pgm",
+            "decoded_width": 42,
+            "index": 3,
+            "memory_address": 53501,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/d000-03.bin",
+            "raw_sha256": "2e17b5ff024277eb7445516b812a3a114064da3101dbf029b7620bcdbd1a36cc",
+            "raw_size": 94,
+            "width_bytes": 6,
+            "x_offset_signed": -10,
+            "y_offset_signed": -15
+          },
+          {
+            "bank_offset": 347,
+            "decoded_height": 10,
+            "decoded_path": "decoded/gameplay-sprites/d000/sprite-04.pgm",
+            "decoded_width": 42,
+            "index": 4,
+            "memory_address": 53595,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/d000-04.bin",
+            "raw_sha256": "62e860f54783886e48f1d6c62cdd8df4c2519159495dd4aac09685226014c50f",
+            "raw_size": 64,
+            "width_bytes": 6,
+            "x_offset_signed": -11,
+            "y_offset_signed": -10
+          },
+          {
+            "bank_offset": 411,
+            "decoded_height": 10,
+            "decoded_path": "decoded/gameplay-sprites/d000/sprite-05.pgm",
+            "decoded_width": 42,
+            "index": 5,
+            "memory_address": 53659,
+            "phase_bit_count": 2,
+            "raw_path": "raw/gameplay-sprite-descriptors/d000-05.bin",
+            "raw_sha256": "0f6e6d615ffdc63c0a06925503e5c36eea5968e765ef5c82e7ca26fa610846e7",
+            "raw_size": 64,
+            "width_bytes": 6,
+            "x_offset_signed": -11,
+            "y_offset_signed": -10
+          },
+          {
+            "bank_offset": 475,
+            "decoded_height": 10,
+            "decoded_path": "decoded/gameplay-sprites/d000/sprite-06.pgm",
+            "decoded_width": 21,
+            "index": 6,
+            "memory_address": 53723,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/d000-06.bin",
+            "raw_sha256": "86a1c4c38f3ca1fb75d3d63b51669ac35e9912818dd4253a428471fbfb6e4313",
+            "raw_size": 34,
+            "width_bytes": 3,
+            "x_offset_signed": 0,
+            "y_offset_signed": -10
+          },
+          {
+            "bank_offset": 509,
+            "decoded_height": 10,
+            "decoded_path": "decoded/gameplay-sprites/d000/sprite-07.pgm",
+            "decoded_width": 14,
+            "index": 7,
+            "memory_address": 53757,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/d000-07.bin",
+            "raw_sha256": "9f88d8d76a5fa22b14e55242688babca092e4840fd778751775b82cae0d84cc0",
+            "raw_size": 24,
+            "width_bytes": 2,
+            "x_offset_signed": 2,
+            "y_offset_signed": -10
+          },
+          {
+            "bank_offset": 533,
+            "decoded_height": 10,
+            "decoded_path": "decoded/gameplay-sprites/d000/sprite-08.pgm",
+            "decoded_width": 21,
+            "index": 8,
+            "memory_address": 53781,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/d000-08.bin",
+            "raw_sha256": "564819f2c87d7640becfc5e49f59062e588f5e019aa6224f0a729f5840c13005",
+            "raw_size": 34,
+            "width_bytes": 3,
+            "x_offset_signed": 0,
+            "y_offset_signed": -10
+          },
+          {
+            "bank_offset": 567,
+            "decoded_height": 28,
+            "decoded_path": "decoded/gameplay-sprites/d000/sprite-09.pgm",
+            "decoded_width": 42,
+            "index": 9,
+            "memory_address": 53815,
+            "phase_bit_count": 49,
+            "raw_path": "raw/gameplay-sprite-descriptors/d000-09.bin",
+            "raw_sha256": "26b6e25fc8477dfe88ff148b3c3117386efe164a6f60994edaecee46f5573231",
+            "raw_size": 172,
+            "width_bytes": 6,
+            "x_offset_signed": 0,
+            "y_offset_signed": -28
+          },
+          {
+            "bank_offset": 739,
+            "decoded_height": 28,
+            "decoded_path": "decoded/gameplay-sprites/d000/sprite-10.pgm",
+            "decoded_width": 42,
+            "index": 10,
+            "memory_address": 53987,
+            "phase_bit_count": 39,
+            "raw_path": "raw/gameplay-sprite-descriptors/d000-10.bin",
+            "raw_sha256": "8458c3fec073e24bdf12529872b6fe04ea61dbb8438dcb6c1378c70803b3ea3a",
+            "raw_size": 172,
+            "width_bytes": 6,
+            "x_offset_signed": 0,
+            "y_offset_signed": -28
+          },
+          {
+            "bank_offset": 911,
+            "decoded_height": 14,
+            "decoded_path": "decoded/gameplay-sprites/d000/sprite-11.pgm",
+            "decoded_width": 14,
+            "index": 11,
+            "memory_address": 54159,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/d000-11.bin",
+            "raw_sha256": "faa5d1de6a1655d45c3097999b13b1531291f1d00fa00ee71e68eb80caca4388",
+            "raw_size": 32,
+            "width_bytes": 2,
+            "x_offset_signed": -2,
+            "y_offset_signed": -14
+          },
+          {
+            "bank_offset": 943,
+            "decoded_height": 14,
+            "decoded_path": "decoded/gameplay-sprites/d000/sprite-12.pgm",
+            "decoded_width": 14,
+            "index": 12,
+            "memory_address": 54191,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/d000-12.bin",
+            "raw_sha256": "c2c1a1bc242a7ec885f89e8ab80f4e2c748b0d27cf8235da61394bb286ef2e65",
+            "raw_size": 32,
+            "width_bytes": 2,
+            "x_offset_signed": -2,
+            "y_offset_signed": -14
+          },
+          {
+            "bank_offset": 975,
+            "decoded_height": 11,
+            "decoded_path": "decoded/gameplay-sprites/d000/sprite-13.pgm",
+            "decoded_width": 14,
+            "index": 13,
+            "memory_address": 54223,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/d000-13.bin",
+            "raw_sha256": "6eb5aaf8d1ebd6b7d5a36c1144563b6a25d65ba75f42b85f9853a54c296e1e1d",
+            "raw_size": 26,
+            "width_bytes": 2,
+            "x_offset_signed": -2,
+            "y_offset_signed": -11
+          }
+        ],
+        "header_count": 14,
+        "header_metadata_hex": "CA03",
+        "memory_end": 54271,
+        "memory_start": 53248,
+        "name": "d000",
+        "pointer_table_end": 30,
+        "pointer_table_start": 3,
+        "raw_path": "raw/gameplay-sprite-banks/bank-d000.bin",
+        "raw_sha256": "8ed352cd2545a9673fad4c7040f4c4e797ed2fd3632609fa9ad6ff0f3ddd0b28",
+        "raw_size": 1024,
+        "residual_end": 54271,
+        "residual_start": 54249,
+        "source_span": "d000-d3ff"
+      },
+      {
+        "descriptor_count": 73,
+        "descriptors": [
+          {
+            "bank_offset": 149,
+            "decoded_height": 16,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-00.pgm",
+            "decoded_width": 42,
+            "index": 0,
+            "memory_address": 57493,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-00.bin",
+            "raw_sha256": "a1a2c96fa25900155cb4db41aedeb068bcb4da2519ecaae04f3b20500aed15e9",
+            "raw_size": 100,
+            "width_bytes": 6,
+            "x_offset_signed": 0,
+            "y_offset_signed": -16
+          },
+          {
+            "bank_offset": 249,
+            "decoded_height": 10,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-01.pgm",
+            "decoded_width": 42,
+            "index": 1,
+            "memory_address": 57593,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-01.bin",
+            "raw_sha256": "2e4df9107278b5403f91563ca7ef097db5e0a4298b45ad23ee9b31310d005d10",
+            "raw_size": 64,
+            "width_bytes": 6,
+            "x_offset_signed": 0,
+            "y_offset_signed": -10
+          },
+          {
+            "bank_offset": 313,
+            "decoded_height": 11,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-02.pgm",
+            "decoded_width": 42,
+            "index": 2,
+            "memory_address": 57657,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-02.bin",
+            "raw_sha256": "c39e1ddcc3a98e1c8fa08e35ed2b510a4e155268e09dedcb095bf834f8892977",
+            "raw_size": 70,
+            "width_bytes": 6,
+            "x_offset_signed": 0,
+            "y_offset_signed": -11
+          },
+          {
+            "bank_offset": 383,
+            "decoded_height": 16,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-03.pgm",
+            "decoded_width": 42,
+            "index": 3,
+            "memory_address": 57727,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-03.bin",
+            "raw_sha256": "38e4c57151d5ce2c166034941deaa8441d22e08acfff02eb6677e06ea1227511",
+            "raw_size": 100,
+            "width_bytes": 6,
+            "x_offset_signed": -6,
+            "y_offset_signed": -16
+          },
+          {
+            "bank_offset": 483,
+            "decoded_height": 10,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-04.pgm",
+            "decoded_width": 42,
+            "index": 4,
+            "memory_address": 57827,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-04.bin",
+            "raw_sha256": "4c5d2e47a8c1fe9f9b2293b3ececafa8faefa91589a0f896ad4ad3182daa7dd4",
+            "raw_size": 64,
+            "width_bytes": 6,
+            "x_offset_signed": -9,
+            "y_offset_signed": -10
+          },
+          {
+            "bank_offset": 547,
+            "decoded_height": 11,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-05.pgm",
+            "decoded_width": 42,
+            "index": 5,
+            "memory_address": 57891,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-05.bin",
+            "raw_sha256": "74822505ee3b5a246a3a78a113c6c064e7e2d04c7e69985e98c34a5d438ed915",
+            "raw_size": 70,
+            "width_bytes": 6,
+            "x_offset_signed": -8,
+            "y_offset_signed": -10
+          },
+          {
+            "bank_offset": 617,
+            "decoded_height": 10,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-06.pgm",
+            "decoded_width": 21,
+            "index": 6,
+            "memory_address": 57961,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-06.bin",
+            "raw_sha256": "5706046f2c7715baf928581cccbaef210e67ad1400a20652b42e74d0e13aaafb",
+            "raw_size": 34,
+            "width_bytes": 3,
+            "x_offset_signed": 0,
+            "y_offset_signed": -10
+          },
+          {
+            "bank_offset": 651,
+            "decoded_height": 10,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-07.pgm",
+            "decoded_width": 14,
+            "index": 7,
+            "memory_address": 57995,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-07.bin",
+            "raw_sha256": "0395618f7452d16b1bb534e3dd6af4ee26528dcfe20ea2857a81aea9222708fd",
+            "raw_size": 24,
+            "width_bytes": 2,
+            "x_offset_signed": 2,
+            "y_offset_signed": -10
+          },
+          {
+            "bank_offset": 675,
+            "decoded_height": 10,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-08.pgm",
+            "decoded_width": 21,
+            "index": 8,
+            "memory_address": 58019,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-08.bin",
+            "raw_sha256": "fb4abc2747030d2ec68dd3af1653099b3790300247d88b69a1c58a6e5b852aac",
+            "raw_size": 34,
+            "width_bytes": 3,
+            "x_offset_signed": 0,
+            "y_offset_signed": -10
+          },
+          {
+            "bank_offset": 709,
+            "decoded_height": 1,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-09.pgm",
+            "decoded_width": 28,
+            "index": 9,
+            "memory_address": 58053,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-09.bin",
+            "raw_sha256": "e7ce6efe0dda7ee930527d389872cbe93587df37db2816ad244c5c329d653107",
+            "raw_size": 8,
+            "width_bytes": 4,
+            "x_offset_signed": -6,
+            "y_offset_signed": -1
+          },
+          {
+            "bank_offset": 717,
+            "decoded_height": 1,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-10.pgm",
+            "decoded_width": 21,
+            "index": 10,
+            "memory_address": 58061,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-10.bin",
+            "raw_sha256": "a45501de9a1fcbcc8f521546740d30bcb9d27f18ab3f95122fdf880d0039a248",
+            "raw_size": 7,
+            "width_bytes": 3,
+            "x_offset_signed": -4,
+            "y_offset_signed": -1
+          },
+          {
+            "bank_offset": 724,
+            "decoded_height": 1,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-11.pgm",
+            "decoded_width": 14,
+            "index": 11,
+            "memory_address": 58068,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-11.bin",
+            "raw_sha256": "7bd3e9ce2b7bfa128e8dcccbc5da3be1806253c0f68607d525abd1bc6a53c66d",
+            "raw_size": 6,
+            "width_bytes": 2,
+            "x_offset_signed": -3,
+            "y_offset_signed": -1
+          },
+          {
+            "bank_offset": 730,
+            "decoded_height": 7,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-12.pgm",
+            "decoded_width": 28,
+            "index": 12,
+            "memory_address": 58074,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-12.bin",
+            "raw_sha256": "0d043c3adc8f65398a60d4f97600c90ac97ca9cdc4965f085bd0ed2967405b48",
+            "raw_size": 32,
+            "width_bytes": 4,
+            "x_offset_signed": -6,
+            "y_offset_signed": -4
+          },
+          {
+            "bank_offset": 762,
+            "decoded_height": 5,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-13.pgm",
+            "decoded_width": 21,
+            "index": 13,
+            "memory_address": 58106,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-13.bin",
+            "raw_sha256": "4368bc9aad7561d2a10d3ea8ca30fff8cc4e06e5b236ed180b7ecc426f9b845e",
+            "raw_size": 19,
+            "width_bytes": 3,
+            "x_offset_signed": -4,
+            "y_offset_signed": -3
+          },
+          {
+            "bank_offset": 781,
+            "decoded_height": 3,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-14.pgm",
+            "decoded_width": 14,
+            "index": 14,
+            "memory_address": 58125,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-14.bin",
+            "raw_sha256": "60e9a9e23e9a813e54c071ffa5298f0dcc59144d4b6eec2b9d492388865cb50f",
+            "raw_size": 10,
+            "width_bytes": 2,
+            "x_offset_signed": -2,
+            "y_offset_signed": -2
+          },
+          {
+            "bank_offset": 791,
+            "decoded_height": 7,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-15.pgm",
+            "decoded_width": 28,
+            "index": 15,
+            "memory_address": 58135,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-15.bin",
+            "raw_sha256": "01b71557ab03a96c69e6e16748b08d476d5f17d917670ecdc94cbf5a198d4e31",
+            "raw_size": 32,
+            "width_bytes": 4,
+            "x_offset_signed": -6,
+            "y_offset_signed": -4
+          },
+          {
+            "bank_offset": 823,
+            "decoded_height": 5,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-16.pgm",
+            "decoded_width": 21,
+            "index": 16,
+            "memory_address": 58167,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-16.bin",
+            "raw_sha256": "d90a4a1b543d12b1422fb66ac09ed975f600092f0290404a2c7c38ee950e7c9a",
+            "raw_size": 19,
+            "width_bytes": 3,
+            "x_offset_signed": -4,
+            "y_offset_signed": -3
+          },
+          {
+            "bank_offset": 842,
+            "decoded_height": 3,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-17.pgm",
+            "decoded_width": 14,
+            "index": 17,
+            "memory_address": 58186,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-17.bin",
+            "raw_sha256": "7fe738ae2a332bc2f3c080a1f19c90d7b7091950d16ed50625d16e122991cc45",
+            "raw_size": 10,
+            "width_bytes": 2,
+            "x_offset_signed": -2,
+            "y_offset_signed": -2
+          },
+          {
+            "bank_offset": 852,
+            "decoded_height": 7,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-18.pgm",
+            "decoded_width": 14,
+            "index": 18,
+            "memory_address": 58196,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-18.bin",
+            "raw_sha256": "34014125edb576e87dba467273a798d6990de6fc2e42c8070a2a26dd0edc2583",
+            "raw_size": 18,
+            "width_bytes": 2,
+            "x_offset_signed": 1,
+            "y_offset_signed": -7
+          },
+          {
+            "bank_offset": 870,
+            "decoded_height": 7,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-19.pgm",
+            "decoded_width": 14,
+            "index": 19,
+            "memory_address": 58214,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-19.bin",
+            "raw_sha256": "4fe96b032a8d5f47902ed3881e472367856986eccc5d993eab04198aa833e74e",
+            "raw_size": 18,
+            "width_bytes": 2,
+            "x_offset_signed": 1,
+            "y_offset_signed": -7
+          },
+          {
+            "bank_offset": 888,
+            "decoded_height": 16,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-20.pgm",
+            "decoded_width": 28,
+            "index": 20,
+            "memory_address": 58232,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-20.bin",
+            "raw_sha256": "33ddae7bb7ac8e1fdbe6957cd5a6982fdab95037c09adc66e4121889d0cf43dc",
+            "raw_size": 68,
+            "width_bytes": 4,
+            "x_offset_signed": 0,
+            "y_offset_signed": -16
+          },
+          {
+            "bank_offset": 956,
+            "decoded_height": 16,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-21.pgm",
+            "decoded_width": 28,
+            "index": 21,
+            "memory_address": 58300,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-21.bin",
+            "raw_sha256": "cf37fbadeb691bd6edb4a5f7c51451f1a98da9c19caa17cab653c88fe9c479a8",
+            "raw_size": 68,
+            "width_bytes": 4,
+            "x_offset_signed": 0,
+            "y_offset_signed": -16
+          },
+          {
+            "bank_offset": 1024,
+            "decoded_height": 16,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-22.pgm",
+            "decoded_width": 28,
+            "index": 22,
+            "memory_address": 58368,
+            "phase_bit_count": 17,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-22.bin",
+            "raw_sha256": "fb97e5bf75ff7fe5ad7561ac2c617ee0c1c8be190e167f26721c308ea7e62e56",
+            "raw_size": 68,
+            "width_bytes": 4,
+            "x_offset_signed": 0,
+            "y_offset_signed": -16
+          },
+          {
+            "bank_offset": 1092,
+            "decoded_height": 16,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-23.pgm",
+            "decoded_width": 28,
+            "index": 23,
+            "memory_address": 58436,
+            "phase_bit_count": 17,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-23.bin",
+            "raw_sha256": "786787d2d7f9a63f2d62de4d14f6936fcf51f49e9ae763a6006fa1cc26db493b",
+            "raw_size": 68,
+            "width_bytes": 4,
+            "x_offset_signed": 0,
+            "y_offset_signed": -16
+          },
+          {
+            "bank_offset": 1160,
+            "decoded_height": 7,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-24.pgm",
+            "decoded_width": 14,
+            "index": 24,
+            "memory_address": 58504,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-24.bin",
+            "raw_sha256": "cc5bdeaa77142e9487ec12ea20295f4e75e96dccc33d48bc5f929b829f0be528",
+            "raw_size": 18,
+            "width_bytes": 2,
+            "x_offset_signed": 0,
+            "y_offset_signed": -7
+          },
+          {
+            "bank_offset": 1178,
+            "decoded_height": 9,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-25.pgm",
+            "decoded_width": 14,
+            "index": 25,
+            "memory_address": 58522,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-25.bin",
+            "raw_sha256": "094818cf9d55e0b13c4581e14eb44787764099b36d2c5594ac28cb438c494676",
+            "raw_size": 22,
+            "width_bytes": 2,
+            "x_offset_signed": 0,
+            "y_offset_signed": -9
+          },
+          {
+            "bank_offset": 1200,
+            "decoded_height": 7,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-26.pgm",
+            "decoded_width": 14,
+            "index": 26,
+            "memory_address": 58544,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-26.bin",
+            "raw_sha256": "62c48ce8fbd35fa72cf5483171aeceb43176df9add0a61aae0f44e4ce0156245",
+            "raw_size": 18,
+            "width_bytes": 2,
+            "x_offset_signed": 0,
+            "y_offset_signed": -7
+          },
+          {
+            "bank_offset": 1218,
+            "decoded_height": 9,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-27.pgm",
+            "decoded_width": 14,
+            "index": 27,
+            "memory_address": 58562,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-27.bin",
+            "raw_sha256": "7eaff1cec3d144ae938b666aca2a658906080c24591a2a3981bd6b18a264437e",
+            "raw_size": 22,
+            "width_bytes": 2,
+            "x_offset_signed": 0,
+            "y_offset_signed": -9
+          },
+          {
+            "bank_offset": 1240,
+            "decoded_height": 9,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-28.pgm",
+            "decoded_width": 14,
+            "index": 28,
+            "memory_address": 58584,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-28.bin",
+            "raw_sha256": "a3a1d4ad116b0b10a5831bb3f72ecf8eb459006166639a69e71654cc4333b39b",
+            "raw_size": 22,
+            "width_bytes": 2,
+            "x_offset_signed": 0,
+            "y_offset_signed": -9
+          },
+          {
+            "bank_offset": 1262,
+            "decoded_height": 7,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-29.pgm",
+            "decoded_width": 7,
+            "index": 29,
+            "memory_address": 58606,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-29.bin",
+            "raw_sha256": "dbfcdd94929c89cdde1868ab747103d653e8b10a6914225c2d9ee03d7c49b437",
+            "raw_size": 11,
+            "width_bytes": 1,
+            "x_offset_signed": 0,
+            "y_offset_signed": -7
+          },
+          {
+            "bank_offset": 1273,
+            "decoded_height": 8,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-30.pgm",
+            "decoded_width": 7,
+            "index": 30,
+            "memory_address": 58617,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-30.bin",
+            "raw_sha256": "f800983a6c1990d69a4b8ec6bcd2783a0dc73d80eeca834a9436f7d117473fc8",
+            "raw_size": 12,
+            "width_bytes": 1,
+            "x_offset_signed": 0,
+            "y_offset_signed": -8
+          },
+          {
+            "bank_offset": 1285,
+            "decoded_height": 8,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-31.pgm",
+            "decoded_width": 7,
+            "index": 31,
+            "memory_address": 58629,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-31.bin",
+            "raw_sha256": "6e335cecdbaba98927a661be07eb8f02a9a1c0f34c2b6877eb4892ab0592b1a1",
+            "raw_size": 12,
+            "width_bytes": 1,
+            "x_offset_signed": 0,
+            "y_offset_signed": -8
+          },
+          {
+            "bank_offset": 1297,
+            "decoded_height": 8,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-32.pgm",
+            "decoded_width": 7,
+            "index": 32,
+            "memory_address": 58641,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-32.bin",
+            "raw_sha256": "26a44a37721207df282239f5945cd8ac01242c209ced15a26845d4905eedf10c",
+            "raw_size": 12,
+            "width_bytes": 1,
+            "x_offset_signed": 0,
+            "y_offset_signed": -8
+          },
+          {
+            "bank_offset": 1309,
+            "decoded_height": 8,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-33.pgm",
+            "decoded_width": 7,
+            "index": 33,
+            "memory_address": 58653,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-33.bin",
+            "raw_sha256": "0100c627837ff4240da3770d29fe748a58cdd88ce64970429a713a79da04b190",
+            "raw_size": 12,
+            "width_bytes": 1,
+            "x_offset_signed": 0,
+            "y_offset_signed": -8
+          },
+          {
+            "bank_offset": 1321,
+            "decoded_height": 8,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-34.pgm",
+            "decoded_width": 7,
+            "index": 34,
+            "memory_address": 58665,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-34.bin",
+            "raw_sha256": "ce52b4169774157e16aaa268d2b795089cee299a9e1f50745515e4d9804ebcd2",
+            "raw_size": 12,
+            "width_bytes": 1,
+            "x_offset_signed": 0,
+            "y_offset_signed": -8
+          },
+          {
+            "bank_offset": 1333,
+            "decoded_height": 8,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-35.pgm",
+            "decoded_width": 7,
+            "index": 35,
+            "memory_address": 58677,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-35.bin",
+            "raw_sha256": "f0d759214e9c67cb5863da7238603191e0c700549ff15c45f4702a3d334ff71d",
+            "raw_size": 12,
+            "width_bytes": 1,
+            "x_offset_signed": 0,
+            "y_offset_signed": -8
+          },
+          {
+            "bank_offset": 1345,
+            "decoded_height": 8,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-36.pgm",
+            "decoded_width": 7,
+            "index": 36,
+            "memory_address": 58689,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-36.bin",
+            "raw_sha256": "0f10d06bea6a4ed5bcec6ce8d7f05e1aee43b86c842c6baea3df584e5f50c706",
+            "raw_size": 12,
+            "width_bytes": 1,
+            "x_offset_signed": 0,
+            "y_offset_signed": -8
+          },
+          {
+            "bank_offset": 1357,
+            "decoded_height": 8,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-37.pgm",
+            "decoded_width": 7,
+            "index": 37,
+            "memory_address": 58701,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-37.bin",
+            "raw_sha256": "327bc9372f8006e9e2b96df9b8362ca4b392cd2554e6aa68247c5a3743ea9632",
+            "raw_size": 12,
+            "width_bytes": 1,
+            "x_offset_signed": 0,
+            "y_offset_signed": -8
+          },
+          {
+            "bank_offset": 1369,
+            "decoded_height": 8,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-38.pgm",
+            "decoded_width": 7,
+            "index": 38,
+            "memory_address": 58713,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-38.bin",
+            "raw_sha256": "f620b4c78458ceecb5625729d1e60cf64a7631e34f181848188e8e45fba2fbda",
+            "raw_size": 12,
+            "width_bytes": 1,
+            "x_offset_signed": 0,
+            "y_offset_signed": -8
+          },
+          {
+            "bank_offset": 1381,
+            "decoded_height": 8,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-39.pgm",
+            "decoded_width": 7,
+            "index": 39,
+            "memory_address": 58725,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-39.bin",
+            "raw_sha256": "bccf093487a445caf1407c478460c0a9799342e598e1c4a01a84175ddd448b2e",
+            "raw_size": 12,
+            "width_bytes": 1,
+            "x_offset_signed": 0,
+            "y_offset_signed": -8
+          },
+          {
+            "bank_offset": 1393,
+            "decoded_height": 8,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-40.pgm",
+            "decoded_width": 7,
+            "index": 40,
+            "memory_address": 58737,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-40.bin",
+            "raw_sha256": "ab33578b41b86826d4a6ce7fec4b28340c811bf0ee0a19284041cf67546aa900",
+            "raw_size": 12,
+            "width_bytes": 1,
+            "x_offset_signed": 0,
+            "y_offset_signed": -8
+          },
+          {
+            "bank_offset": 1405,
+            "decoded_height": 8,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-41.pgm",
+            "decoded_width": 7,
+            "index": 41,
+            "memory_address": 58749,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-41.bin",
+            "raw_sha256": "7ca116b2cbc6fa34e0f045f81bf1c87ad6f94915557eeeb4bb857202b102c798",
+            "raw_size": 12,
+            "width_bytes": 1,
+            "x_offset_signed": 0,
+            "y_offset_signed": -8
+          },
+          {
+            "bank_offset": 1417,
+            "decoded_height": 8,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-42.pgm",
+            "decoded_width": 7,
+            "index": 42,
+            "memory_address": 58761,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-42.bin",
+            "raw_sha256": "bfb6ed31f6d88b078198bea83d3874a5b1209bec72c6ed3a5245b39f4610a617",
+            "raw_size": 12,
+            "width_bytes": 1,
+            "x_offset_signed": 0,
+            "y_offset_signed": -8
+          },
+          {
+            "bank_offset": 1429,
+            "decoded_height": 8,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-43.pgm",
+            "decoded_width": 7,
+            "index": 43,
+            "memory_address": 58773,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-43.bin",
+            "raw_sha256": "f2ed82d10e0fff836f993d0e14640f5b384e59c13af41feee6f4386d0918848a",
+            "raw_size": 12,
+            "width_bytes": 1,
+            "x_offset_signed": 0,
+            "y_offset_signed": -8
+          },
+          {
+            "bank_offset": 1441,
+            "decoded_height": 8,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-44.pgm",
+            "decoded_width": 7,
+            "index": 44,
+            "memory_address": 58785,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-44.bin",
+            "raw_sha256": "15c101facbc80e564ca4066cb490191c642b132ddc23896bea93d531436b7f45",
+            "raw_size": 12,
+            "width_bytes": 1,
+            "x_offset_signed": 0,
+            "y_offset_signed": -8
+          },
+          {
+            "bank_offset": 1453,
+            "decoded_height": 12,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-45.pgm",
+            "decoded_width": 35,
+            "index": 45,
+            "memory_address": 58797,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-45.bin",
+            "raw_sha256": "345a2f4dca55d30ced0f6475de83c4922313b378de26979e0ebb588c09d170a2",
+            "raw_size": 64,
+            "width_bytes": 5,
+            "x_offset_signed": 0,
+            "y_offset_signed": -12
+          },
+          {
+            "bank_offset": 1517,
+            "decoded_height": 12,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-46.pgm",
+            "decoded_width": 35,
+            "index": 46,
+            "memory_address": 58861,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-46.bin",
+            "raw_sha256": "f4f63fb5ebd14ace268ed125355610f95f6e3551a0178b498707da3743c5d128",
+            "raw_size": 64,
+            "width_bytes": 5,
+            "x_offset_signed": 0,
+            "y_offset_signed": -12
+          },
+          {
+            "bank_offset": 1581,
+            "decoded_height": 12,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-47.pgm",
+            "decoded_width": 35,
+            "index": 47,
+            "memory_address": 58925,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-47.bin",
+            "raw_sha256": "9b5ba3137bc52d92753d29894190e83bed8435f402a3747a6cb77d61a782cb7f",
+            "raw_size": 64,
+            "width_bytes": 5,
+            "x_offset_signed": 0,
+            "y_offset_signed": -12
+          },
+          {
+            "bank_offset": 1645,
+            "decoded_height": 12,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-48.pgm",
+            "decoded_width": 35,
+            "index": 48,
+            "memory_address": 58989,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-48.bin",
+            "raw_sha256": "78417d8aaba69863d72eea32cef6f3769d307deb2e768fc2ec01871cffa7c8bf",
+            "raw_size": 64,
+            "width_bytes": 5,
+            "x_offset_signed": 0,
+            "y_offset_signed": -12
+          },
+          {
+            "bank_offset": 1709,
+            "decoded_height": 20,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-49.pgm",
+            "decoded_width": 56,
+            "index": 49,
+            "memory_address": 59053,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-49.bin",
+            "raw_sha256": "0526e302c279230550c0b31d5224fd1debae647f5cfac895ea7dad9370d1febc",
+            "raw_size": 164,
+            "width_bytes": 8,
+            "x_offset_signed": 0,
+            "y_offset_signed": -20
+          },
+          {
+            "bank_offset": 1873,
+            "decoded_height": 11,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-50.pgm",
+            "decoded_width": 35,
+            "index": 50,
+            "memory_address": 59217,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-50.bin",
+            "raw_sha256": "a836557070271c850cad73b89c0d86754c215b2e261224c2ede8a7f7e8a0a475",
+            "raw_size": 59,
+            "width_bytes": 5,
+            "x_offset_signed": 0,
+            "y_offset_signed": -11
+          },
+          {
+            "bank_offset": 1932,
+            "decoded_height": 11,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-51.pgm",
+            "decoded_width": 35,
+            "index": 51,
+            "memory_address": 59276,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-51.bin",
+            "raw_sha256": "5f2227406ef0448e3ce24534255993467ce55119c6ca54348e2346db67519b5d",
+            "raw_size": 59,
+            "width_bytes": 5,
+            "x_offset_signed": 0,
+            "y_offset_signed": -11
+          },
+          {
+            "bank_offset": 1991,
+            "decoded_height": 11,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-52.pgm",
+            "decoded_width": 35,
+            "index": 52,
+            "memory_address": 59335,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-52.bin",
+            "raw_sha256": "5637fa10422d980a9931d1877ce16b0fc4c45070d27f23bac671862f9edbde2b",
+            "raw_size": 59,
+            "width_bytes": 5,
+            "x_offset_signed": 0,
+            "y_offset_signed": -11
+          },
+          {
+            "bank_offset": 2050,
+            "decoded_height": 11,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-53.pgm",
+            "decoded_width": 35,
+            "index": 53,
+            "memory_address": 59394,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-53.bin",
+            "raw_sha256": "1d598084a5a2e7e5eaa8cceb1295fd6996b85ca4a3847813167f8956aee78a54",
+            "raw_size": 59,
+            "width_bytes": 5,
+            "x_offset_signed": 0,
+            "y_offset_signed": -11
+          },
+          {
+            "bank_offset": 2109,
+            "decoded_height": 6,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-54.pgm",
+            "decoded_width": 56,
+            "index": 54,
+            "memory_address": 59453,
+            "phase_bit_count": 1,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-54.bin",
+            "raw_sha256": "993bbb23d417a7ec7852efd2d215737736a89396c6b608c47725a514197fff05",
+            "raw_size": 52,
+            "width_bytes": 8,
+            "x_offset_signed": 0,
+            "y_offset_signed": -6
+          },
+          {
+            "bank_offset": 2161,
+            "decoded_height": 6,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-55.pgm",
+            "decoded_width": 56,
+            "index": 55,
+            "memory_address": 59505,
+            "phase_bit_count": 2,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-55.bin",
+            "raw_sha256": "1011fa13861ba28b301072db97714f989e0584d16c6c582c08571b36986e3215",
+            "raw_size": 52,
+            "width_bytes": 8,
+            "x_offset_signed": 0,
+            "y_offset_signed": -6
+          },
+          {
+            "bank_offset": 2213,
+            "decoded_height": 3,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-56.pgm",
+            "decoded_width": 28,
+            "index": 56,
+            "memory_address": 59557,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-56.bin",
+            "raw_sha256": "d7e39c036c117781578db796b6dc685b7e90a1722088f7afba5472d68e1edbe8",
+            "raw_size": 16,
+            "width_bytes": 4,
+            "x_offset_signed": 0,
+            "y_offset_signed": -3
+          },
+          {
+            "bank_offset": 2229,
+            "decoded_height": 2,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-57.pgm",
+            "decoded_width": 14,
+            "index": 57,
+            "memory_address": 59573,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-57.bin",
+            "raw_sha256": "93b59143055169ade039e9825146d232d04be01b93f59ca484cee6586dfe3bc0",
+            "raw_size": 8,
+            "width_bytes": 2,
+            "x_offset_signed": 0,
+            "y_offset_signed": -2
+          },
+          {
+            "bank_offset": 2237,
+            "decoded_height": 5,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-58.pgm",
+            "decoded_width": 7,
+            "index": 58,
+            "memory_address": 59581,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-58.bin",
+            "raw_sha256": "597fa2c5b21d9825f93dbf237507efe36a5d28263fbd52defc077359500db636",
+            "raw_size": 9,
+            "width_bytes": 1,
+            "x_offset_signed": -1,
+            "y_offset_signed": -4
+          },
+          {
+            "bank_offset": 2246,
+            "decoded_height": 4,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-59.pgm",
+            "decoded_width": 7,
+            "index": 59,
+            "memory_address": 59590,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-59.bin",
+            "raw_sha256": "4fa2ca4d4ede5acbc0544c6234de9892114bbc0fe2ebdf2f4629780a26ded52f",
+            "raw_size": 8,
+            "width_bytes": 1,
+            "x_offset_signed": -3,
+            "y_offset_signed": -4
+          },
+          {
+            "bank_offset": 2254,
+            "decoded_height": 4,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-60.pgm",
+            "decoded_width": 7,
+            "index": 60,
+            "memory_address": 59598,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-60.bin",
+            "raw_sha256": "4d1069d6634479a0612aa175f00bc115790ed9c17f47fba657164973a2259156",
+            "raw_size": 8,
+            "width_bytes": 1,
+            "x_offset_signed": 0,
+            "y_offset_signed": -4
+          },
+          {
+            "bank_offset": 2262,
+            "decoded_height": 2,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-61.pgm",
+            "decoded_width": 7,
+            "index": 61,
+            "memory_address": 59606,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-61.bin",
+            "raw_sha256": "419751906f97da9683e12481d8d22021a4b945ad56759bd66858afd292b42ca5",
+            "raw_size": 6,
+            "width_bytes": 1,
+            "x_offset_signed": -3,
+            "y_offset_signed": -1
+          },
+          {
+            "bank_offset": 2268,
+            "decoded_height": 2,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-62.pgm",
+            "decoded_width": 7,
+            "index": 62,
+            "memory_address": 59612,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-62.bin",
+            "raw_sha256": "7d087bba2cb9cf5b403d73f157ccc860e99de1ccf1d5ca4f6d7988cb5ec2ebb2",
+            "raw_size": 6,
+            "width_bytes": 1,
+            "x_offset_signed": 0,
+            "y_offset_signed": -1
+          },
+          {
+            "bank_offset": 2274,
+            "decoded_height": 15,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-63.pgm",
+            "decoded_width": 56,
+            "index": 63,
+            "memory_address": 59618,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-63.bin",
+            "raw_sha256": "a1c58ffbc254164575c500e8e529f40f9ef014ee13a4057ef59c2d93e1a0dc54",
+            "raw_size": 124,
+            "width_bytes": 8,
+            "x_offset_signed": 0,
+            "y_offset_signed": 0
+          },
+          {
+            "bank_offset": 2398,
+            "decoded_height": 15,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-64.pgm",
+            "decoded_width": 63,
+            "index": 64,
+            "memory_address": 59742,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-64.bin",
+            "raw_sha256": "660831dc9a97b442a4882d281dd1ac9e8ace657d5ab5e15864ebeeecce408f10",
+            "raw_size": 139,
+            "width_bytes": 9,
+            "x_offset_signed": 0,
+            "y_offset_signed": 0
+          },
+          {
+            "bank_offset": 2537,
+            "decoded_height": 11,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-65.pgm",
+            "decoded_width": 28,
+            "index": 65,
+            "memory_address": 59881,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-65.bin",
+            "raw_sha256": "ee3546a1d601a09a7dbf9aa11dc93d7da1f0a426c8deb67a9deb31dda7273d49",
+            "raw_size": 48,
+            "width_bytes": 4,
+            "x_offset_signed": 0,
+            "y_offset_signed": -11
+          },
+          {
+            "bank_offset": 2585,
+            "decoded_height": 11,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-66.pgm",
+            "decoded_width": 28,
+            "index": 66,
+            "memory_address": 59929,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-66.bin",
+            "raw_sha256": "b4aed659ab0199565a2e00707128c525fe699ac6b3789c3923cc693db31a97d6",
+            "raw_size": 48,
+            "width_bytes": 4,
+            "x_offset_signed": 0,
+            "y_offset_signed": -11
+          },
+          {
+            "bank_offset": 2633,
+            "decoded_height": 11,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-67.pgm",
+            "decoded_width": 28,
+            "index": 67,
+            "memory_address": 59977,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-67.bin",
+            "raw_sha256": "31c58e50b03bd7c73b672d839cc62a927f7d9c868e5bc0325f485985667ed3cb",
+            "raw_size": 48,
+            "width_bytes": 4,
+            "x_offset_signed": 0,
+            "y_offset_signed": -11
+          },
+          {
+            "bank_offset": 2681,
+            "decoded_height": 11,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-68.pgm",
+            "decoded_width": 28,
+            "index": 68,
+            "memory_address": 60025,
+            "phase_bit_count": 0,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-68.bin",
+            "raw_sha256": "3094e1d49e2862c0ae459e82df153918ad5b3d21b391e7a0641809f8b9dbde59",
+            "raw_size": 48,
+            "width_bytes": 4,
+            "x_offset_signed": 0,
+            "y_offset_signed": -11
+          },
+          {
+            "bank_offset": 2729,
+            "decoded_height": 8,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-69.pgm",
+            "decoded_width": 14,
+            "index": 69,
+            "memory_address": 60073,
+            "phase_bit_count": 16,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-69.bin",
+            "raw_sha256": "848c661685b0afd2176433c45418715a7de5946881ca06dfb759c1a0c9dbe1ba",
+            "raw_size": 20,
+            "width_bytes": 2,
+            "x_offset_signed": -2,
+            "y_offset_signed": -8
+          },
+          {
+            "bank_offset": 2749,
+            "decoded_height": 8,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-70.pgm",
+            "decoded_width": 14,
+            "index": 70,
+            "memory_address": 60093,
+            "phase_bit_count": 16,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-70.bin",
+            "raw_sha256": "e8cba2777ce7bedab0bc14da2e8741d56b7ecd234bd5899d127b2f8e0fc99f0c",
+            "raw_size": 20,
+            "width_bytes": 2,
+            "x_offset_signed": -2,
+            "y_offset_signed": -8
+          },
+          {
+            "bank_offset": 2769,
+            "decoded_height": 6,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-71.pgm",
+            "decoded_width": 14,
+            "index": 71,
+            "memory_address": 60113,
+            "phase_bit_count": 12,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-71.bin",
+            "raw_sha256": "a76af261b53caeffc18b41fa4a6c30eff72e44b157a952efb5ef9eaed274d6e2",
+            "raw_size": 16,
+            "width_bytes": 2,
+            "x_offset_signed": -2,
+            "y_offset_signed": -6
+          },
+          {
+            "bank_offset": 2785,
+            "decoded_height": 5,
+            "decoded_path": "decoded/gameplay-sprites/e000/sprite-72.pgm",
+            "decoded_width": 7,
+            "index": 72,
+            "memory_address": 60129,
+            "phase_bit_count": 5,
+            "raw_path": "raw/gameplay-sprite-descriptors/e000-72.bin",
+            "raw_sha256": "52eda141fbb8bdf0f46758af25b93093e80a3ff880fe8ed786c74fda7007a646",
+            "raw_size": 9,
+            "width_bytes": 1,
+            "x_offset_signed": 0,
+            "y_offset_signed": -6
+          }
+        ],
+        "header_count": 73,
+        "header_metadata_hex": "550A",
+        "memory_end": 60159,
+        "memory_start": 57344,
+        "name": "e000",
+        "pointer_table_end": 148,
+        "pointer_table_start": 3,
+        "raw_path": "raw/gameplay-sprite-banks/bank-e000.bin",
+        "raw_sha256": "47cde613ce03ee6cd413208b1959f4bce1ee8feaa69dc8d142143915fdc28ed0",
+        "raw_size": 2816,
+        "residual_end": 60159,
+        "residual_start": 60138,
+        "source_span": "e000-eaff"
+      }
+    ],
+    "encoding": {
+      "bit_7": "Apple II HGR phase bit; preserved in raw fixtures and round-trip metadata",
+      "bit_order": "least-significant visible bit is leftmost",
+      "decoded_format": "visible binary pixels stored as PGM P5 0/255",
+      "visible_pixels_per_byte": 7
+    },
+    "loader_routine": "selector5 $6BEC-$6C2C",
+    "loader_spans": [
+      {
+        "memory_end": 54271,
+        "memory_start": 53248,
+        "name": "d000-d3ff",
+        "overwritten_before_render": false,
+        "page_count": 4,
+        "raw_path": "raw/gameplay-loader-spans/d000-d3ff.bin",
+        "raw_sha256": "8ed352cd2545a9673fad4c7040f4c4e797ed2fd3632609fa9ad6ff0f3ddd0b28",
+        "raw_size": 1024,
+        "reads": [
+          {
+            "file_sector": 15,
+            "logical_sector": 15,
+            "page": 211,
+            "track": 24
+          },
+          {
+            "file_sector": 14,
+            "logical_sector": 14,
+            "page": 210,
+            "track": 24
+          },
+          {
+            "file_sector": 13,
+            "logical_sector": 13,
+            "page": 209,
+            "track": 24
+          },
+          {
+            "file_sector": 12,
+            "logical_sector": 12,
+            "page": 208,
+            "track": 24
+          }
+        ]
+      },
+      {
+        "memory_end": 8191,
+        "memory_start": 6400,
+        "name": "1900-1fff",
+        "overwritten_before_render": false,
+        "page_count": 7,
+        "raw_path": "raw/gameplay-loader-spans/1900-1fff.bin",
+        "raw_sha256": "cb79131efaa9b5effef2a7c226011d9ba27b5bdc8f8979394e36f9ad374ac6f9",
+        "raw_size": 1792,
+        "reads": [
+          {
+            "file_sector": 11,
+            "logical_sector": 11,
+            "page": 31,
+            "track": 24
+          },
+          {
+            "file_sector": 10,
+            "logical_sector": 10,
+            "page": 30,
+            "track": 24
+          },
+          {
+            "file_sector": 9,
+            "logical_sector": 9,
+            "page": 29,
+            "track": 24
+          },
+          {
+            "file_sector": 8,
+            "logical_sector": 8,
+            "page": 28,
+            "track": 24
+          },
+          {
+            "file_sector": 7,
+            "logical_sector": 7,
+            "page": 27,
+            "track": 24
+          },
+          {
+            "file_sector": 6,
+            "logical_sector": 6,
+            "page": 26,
+            "track": 24
+          },
+          {
+            "file_sector": 5,
+            "logical_sector": 5,
+            "page": 25,
+            "track": 24
+          }
+        ]
+      },
+      {
+        "memory_end": 57855,
+        "memory_start": 57344,
+        "name": "e000-e1ff-overwritten",
+        "overwritten_before_render": true,
+        "page_count": 2,
+        "raw_path": "raw/gameplay-loader-spans/e000-e1ff-overwritten.bin",
+        "raw_sha256": "b079989e5168f71d7c81653173f9e5ab610841f982202eea6be465b6d60a6781",
+        "raw_size": 512,
+        "reads": [
+          {
+            "file_sector": 4,
+            "logical_sector": 4,
+            "page": 225,
+            "track": 24
+          },
+          {
+            "file_sector": 3,
+            "logical_sector": 3,
+            "page": 224,
+            "track": 24
+          }
+        ]
+      },
+      {
+        "memory_end": 60159,
+        "memory_start": 57344,
+        "name": "e000-eaff",
+        "overwritten_before_render": false,
+        "page_count": 11,
+        "raw_path": "raw/gameplay-loader-spans/e000-eaff.bin",
+        "raw_sha256": "47cde613ce03ee6cd413208b1959f4bce1ee8feaa69dc8d142143915fdc28ed0",
+        "raw_size": 2816,
+        "reads": [
+          {
+            "file_sector": 2,
+            "logical_sector": 2,
+            "page": 234,
+            "track": 24
+          },
+          {
+            "file_sector": 1,
+            "logical_sector": 1,
+            "page": 233,
+            "track": 24
+          },
+          {
+            "file_sector": 0,
+            "logical_sector": 0,
+            "page": 232,
+            "track": 24
+          },
+          {
+            "file_sector": 15,
+            "logical_sector": 15,
+            "page": 231,
+            "track": 23
+          },
+          {
+            "file_sector": 14,
+            "logical_sector": 14,
+            "page": 230,
+            "track": 23
+          },
+          {
+            "file_sector": 13,
+            "logical_sector": 13,
+            "page": 229,
+            "track": 23
+          },
+          {
+            "file_sector": 12,
+            "logical_sector": 12,
+            "page": 228,
+            "track": 23
+          },
+          {
+            "file_sector": 11,
+            "logical_sector": 11,
+            "page": 227,
+            "track": 23
+          },
+          {
+            "file_sector": 10,
+            "logical_sector": 10,
+            "page": 226,
+            "track": 23
+          },
+          {
+            "file_sector": 9,
+            "logical_sector": 9,
+            "page": 225,
+            "track": 23
+          },
+          {
+            "file_sector": 8,
+            "logical_sector": 8,
+            "page": 224,
+            "track": 23
+          }
+        ]
+      }
+    ],
+    "loader_start_sector": 15,
+    "loader_start_track": 24
+  },
+  "image_sha256": "e87a3807667347f4434a78260e7e2791a7e6e45c4193e90f63dcb6d7a94059e8",
+  "procedural_graphics": {
+    "evidence": [
+      "E-ASSET-SOURCE-003"
+    ],
+    "fuel_gauge_recipe": {
+      "exhausted_checker_bytes_hex": [
+        "AA",
+        "D5"
+      ],
+      "filled_byte_hex": "7F",
+      "filled_row_count": "floor(current fuel / 4), capped by the 32-row loop",
+      "output": "32 one-byte rows repeated across three HGR bands",
+      "routine": "selector5 draw_fuel_gauge_pattern $B9F2-$BA51"
+    },
+    "indexed_fill_palettes": {
+      "consumers": [
+        {
+          "output": "one 40-byte HGR row",
+          "routine": "selector0 fill_title_pattern_row $081F-$084E"
+        },
+        {
+          "output": "masked two-byte raster point; paired masks use the same palette vocabulary",
+          "routine": "selector0 draw_protection_pixel_pair $605B-$60A3"
+        },
+        {
+          "output": "40 bytes on each of four corresponding HGR rows",
+          "routine": "selector5 fill_display_status_rows $B80A-$B860"
+        }
+      ],
+      "copies": [
+        {
+          "memory_end": 4424,
+          "memory_start": 4409,
+          "name": "title-fill-palette",
+          "raw_path": "raw/procedural-graphics/title-fill-palette.bin",
+          "raw_sha256": "bc0055bfb26b8657a2c6528270505c2610fc873b5207154cd0b42a7694f78e07",
+          "raw_size": 16,
+          "source_artifact": "disassembly/selector0-load03-0800-1fff.rebuilt.bin"
+        },
+        {
+          "memory_end": 26336,
+          "memory_start": 26321,
+          "name": "protection-fill-palette",
+          "raw_path": "raw/procedural-graphics/protection-fill-palette.bin",
+          "raw_sha256": "a7591fe68459f639aee541d09f8de5e572924f8693fce155904c7ccefea59ede",
+          "raw_size": 16,
+          "source_artifact": "disassembly/selector0-load05-6000-67ff.rebuilt.bin"
+        },
+        {
+          "memory_end": 47817,
+          "memory_start": 47802,
+          "name": "display-fill-palette",
+          "raw_path": "raw/procedural-graphics/display-fill-palette.bin",
+          "raw_sha256": "bc0055bfb26b8657a2c6528270505c2610fc873b5207154cd0b42a7694f78e07",
+          "raw_size": 16,
+          "source_artifact": "disassembly/selector5-load00-6900-baff.rebuilt.bin"
+        }
+      ],
+      "copy_relationship": "title and display orders are byte-identical; protection uses the same pattern vocabulary in a different index order",
+      "entry_count": 8,
+      "entry_format": "two adjacent Apple II HGR bytes; low seven bits are visible LSB-first pixels and bit 7 is phase",
+      "patterns": [
+        {
+          "bytes_hex": "0000",
+          "decoded_height": 1,
+          "decoded_path": "decoded/procedural-fill-patterns/title-display-fill-pattern-0.pgm",
+          "decoded_width": 14,
+          "index": 0,
+          "palette": "title-display",
+          "phase_bits": [
+            0,
+            0
+          ],
+          "raw_path": "raw/procedural-graphics/title-display-fill-pattern-0.bin",
+          "raw_sha256": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
+          "raw_size": 2
+        },
+        {
+          "bytes_hex": "7F7F",
+          "decoded_height": 1,
+          "decoded_path": "decoded/procedural-fill-patterns/title-display-fill-pattern-1.pgm",
+          "decoded_width": 14,
+          "index": 1,
+          "palette": "title-display",
+          "phase_bits": [
+            0,
+            0
+          ],
+          "raw_path": "raw/procedural-graphics/title-display-fill-pattern-1.bin",
+          "raw_sha256": "4ca3666b54471bc946c602e7c07152c3d58b6a5148962c6dcd95c37c68011426",
+          "raw_size": 2
+        },
+        {
+          "bytes_hex": "2A55",
+          "decoded_height": 1,
+          "decoded_path": "decoded/procedural-fill-patterns/title-display-fill-pattern-2.pgm",
+          "decoded_width": 14,
+          "index": 2,
+          "palette": "title-display",
+          "phase_bits": [
+            0,
+            0
+          ],
+          "raw_path": "raw/procedural-graphics/title-display-fill-pattern-2.bin",
+          "raw_sha256": "27be7c00f29594037e28e495486caab091476e7c335c5b66dbb49e9674dd49c0",
+          "raw_size": 2
+        },
+        {
+          "bytes_hex": "552A",
+          "decoded_height": 1,
+          "decoded_path": "decoded/procedural-fill-patterns/title-display-fill-pattern-3.pgm",
+          "decoded_width": 14,
+          "index": 3,
+          "palette": "title-display",
+          "phase_bits": [
+            0,
+            0
+          ],
+          "raw_path": "raw/procedural-graphics/title-display-fill-pattern-3.bin",
+          "raw_sha256": "2b79a561ea823f6e98db6fdc7c0a801e40964b600ecd8567d0ef74a023affbd9",
+          "raw_size": 2
+        },
+        {
+          "bytes_hex": "8080",
+          "decoded_height": 1,
+          "decoded_path": "decoded/procedural-fill-patterns/title-display-fill-pattern-4.pgm",
+          "decoded_width": 14,
+          "index": 4,
+          "palette": "title-display",
+          "phase_bits": [
+            1,
+            1
+          ],
+          "raw_path": "raw/procedural-graphics/title-display-fill-pattern-4.bin",
+          "raw_sha256": "af472cf2977dbfccc45851e12525627fc9ecc03f274f108a865b18a672f38ba6",
+          "raw_size": 2
+        },
+        {
+          "bytes_hex": "FFFF",
+          "decoded_height": 1,
+          "decoded_path": "decoded/procedural-fill-patterns/title-display-fill-pattern-5.pgm",
+          "decoded_width": 14,
+          "index": 5,
+          "palette": "title-display",
+          "phase_bits": [
+            1,
+            1
+          ],
+          "raw_path": "raw/procedural-graphics/title-display-fill-pattern-5.bin",
+          "raw_sha256": "ca2fd00fa001190744c15c317643ab092e7048ce086a243e2be9437c898de1bb",
+          "raw_size": 2
+        },
+        {
+          "bytes_hex": "AAD5",
+          "decoded_height": 1,
+          "decoded_path": "decoded/procedural-fill-patterns/title-display-fill-pattern-6.pgm",
+          "decoded_width": 14,
+          "index": 6,
+          "palette": "title-display",
+          "phase_bits": [
+            1,
+            1
+          ],
+          "raw_path": "raw/procedural-graphics/title-display-fill-pattern-6.bin",
+          "raw_sha256": "eba802001044d9c17c219232e29b2619ff9e74ae358d2809a3817b3474527dca",
+          "raw_size": 2
+        },
+        {
+          "bytes_hex": "D5AA",
+          "decoded_height": 1,
+          "decoded_path": "decoded/procedural-fill-patterns/title-display-fill-pattern-7.pgm",
+          "decoded_width": 14,
+          "index": 7,
+          "palette": "title-display",
+          "phase_bits": [
+            1,
+            1
+          ],
+          "raw_path": "raw/procedural-graphics/title-display-fill-pattern-7.bin",
+          "raw_sha256": "563823db063f826d3155d73bf5164b8dcd195e51f8515a2b065795675a6fb525",
+          "raw_size": 2
+        },
+        {
+          "bytes_hex": "0000",
+          "decoded_height": 1,
+          "decoded_path": "decoded/procedural-fill-patterns/protection-fill-pattern-0.pgm",
+          "decoded_width": 14,
+          "index": 0,
+          "palette": "protection",
+          "phase_bits": [
+            0,
+            0
+          ],
+          "raw_path": "raw/procedural-graphics/protection-fill-pattern-0.bin",
+          "raw_sha256": "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7",
+          "raw_size": 2
+        },
+        {
+          "bytes_hex": "552A",
+          "decoded_height": 1,
+          "decoded_path": "decoded/procedural-fill-patterns/protection-fill-pattern-1.pgm",
+          "decoded_width": 14,
+          "index": 1,
+          "palette": "protection",
+          "phase_bits": [
+            0,
+            0
+          ],
+          "raw_path": "raw/procedural-graphics/protection-fill-pattern-1.bin",
+          "raw_sha256": "2b79a561ea823f6e98db6fdc7c0a801e40964b600ecd8567d0ef74a023affbd9",
+          "raw_size": 2
+        },
+        {
+          "bytes_hex": "2A55",
+          "decoded_height": 1,
+          "decoded_path": "decoded/procedural-fill-patterns/protection-fill-pattern-2.pgm",
+          "decoded_width": 14,
+          "index": 2,
+          "palette": "protection",
+          "phase_bits": [
+            0,
+            0
+          ],
+          "raw_path": "raw/procedural-graphics/protection-fill-pattern-2.bin",
+          "raw_sha256": "27be7c00f29594037e28e495486caab091476e7c335c5b66dbb49e9674dd49c0",
+          "raw_size": 2
+        },
+        {
+          "bytes_hex": "7F7F",
+          "decoded_height": 1,
+          "decoded_path": "decoded/procedural-fill-patterns/protection-fill-pattern-3.pgm",
+          "decoded_width": 14,
+          "index": 3,
+          "palette": "protection",
+          "phase_bits": [
+            0,
+            0
+          ],
+          "raw_path": "raw/procedural-graphics/protection-fill-pattern-3.bin",
+          "raw_sha256": "4ca3666b54471bc946c602e7c07152c3d58b6a5148962c6dcd95c37c68011426",
+          "raw_size": 2
+        },
+        {
+          "bytes_hex": "8080",
+          "decoded_height": 1,
+          "decoded_path": "decoded/procedural-fill-patterns/protection-fill-pattern-4.pgm",
+          "decoded_width": 14,
+          "index": 4,
+          "palette": "protection",
+          "phase_bits": [
+            1,
+            1
+          ],
+          "raw_path": "raw/procedural-graphics/protection-fill-pattern-4.bin",
+          "raw_sha256": "af472cf2977dbfccc45851e12525627fc9ecc03f274f108a865b18a672f38ba6",
+          "raw_size": 2
+        },
+        {
+          "bytes_hex": "D5AA",
+          "decoded_height": 1,
+          "decoded_path": "decoded/procedural-fill-patterns/protection-fill-pattern-5.pgm",
+          "decoded_width": 14,
+          "index": 5,
+          "palette": "protection",
+          "phase_bits": [
+            1,
+            1
+          ],
+          "raw_path": "raw/procedural-graphics/protection-fill-pattern-5.bin",
+          "raw_sha256": "563823db063f826d3155d73bf5164b8dcd195e51f8515a2b065795675a6fb525",
+          "raw_size": 2
+        },
+        {
+          "bytes_hex": "AAD5",
+          "decoded_height": 1,
+          "decoded_path": "decoded/procedural-fill-patterns/protection-fill-pattern-6.pgm",
+          "decoded_width": 14,
+          "index": 6,
+          "palette": "protection",
+          "phase_bits": [
+            1,
+            1
+          ],
+          "raw_path": "raw/procedural-graphics/protection-fill-pattern-6.bin",
+          "raw_sha256": "eba802001044d9c17c219232e29b2619ff9e74ae358d2809a3817b3474527dca",
+          "raw_size": 2
+        },
+        {
+          "bytes_hex": "FFFF",
+          "decoded_height": 1,
+          "decoded_path": "decoded/procedural-fill-patterns/protection-fill-pattern-7.pgm",
+          "decoded_width": 14,
+          "index": 7,
+          "palette": "protection",
+          "phase_bits": [
+            1,
+            1
+          ],
+          "raw_path": "raw/procedural-graphics/protection-fill-pattern-7.bin",
+          "raw_sha256": "ca2fd00fa001190744c15c317643ab092e7048ce086a243e2be9437c898de1bb",
+          "raw_size": 2
+        }
+      ],
+      "unique_byte_orders": 2
+    },
+    "protection_rasterizer": {
+      "address_formulas": {
+        "mask_pair_index": "x % 7",
+        "scanline_high_without_page": "((y & 7) << 2) + ((y >> 4) & 3)",
+        "scanline_low": "((y >> 6) * $28) + ($80 if y bit 3 is set else 0)",
+        "two_byte_address_offset": "2 * floor(x / 7)"
+      },
+      "consumers": [
+        "draw_protection_pixel_pair $605B",
+        "draw_protection_line $6134",
+        "initialize_protection_points $627F"
+      ],
+      "coordinate_domain": {
+        "x_max": 139,
+        "x_min": 0,
+        "y_max": 191,
+        "y_min": 0
+      },
+      "paths": [
+        {
+          "center": [
+            70,
+            96
+          ],
+          "frame_count": 84,
+          "line_count_per_frame": 8,
+          "name": "moving spokes",
+          "seed_count": 8
+        },
+        {
+          "direction": "index 35 down to 0",
+          "frame_count": 36,
+          "name": "contracting symmetric boxes"
+        },
+        {
+          "direction": "index 0 up to 35",
+          "frame_count": 36,
+          "name": "expanding symmetric boxes"
+        }
+      ],
+      "raw_region": {
+        "memory_end": 26368,
+        "memory_start": 25643,
+        "name": "protection-raster-tables-and-seeds",
+        "raw_path": "raw/procedural-graphics/protection-raster-tables-and-seeds.bin",
+        "raw_sha256": "c8fcdbb885c60e8ad479620b15d6d9fc75cd86c96d708613823efab8a5b2a52d",
+        "raw_size": 726,
+        "source_artifact": "disassembly/selector0-load05-6000-67ff.rebuilt.bin"
+      },
+      "tables": [
+        {
+          "memory_end": 25834,
+          "memory_start": 25643,
+          "name": "hgr-scanline-low",
+          "raw_path": "raw/procedural-graphics/hgr-scanline-low.bin",
+          "raw_sha256": "791f7b019594a0c49298970b6ee26abefd106dc76b2493d1dfd6ae6b4c99d6f4",
+          "raw_size": 192,
+          "source_artifact": "disassembly/selector0-load05-6000-67ff.rebuilt.bin"
+        },
+        {
+          "memory_end": 26026,
+          "memory_start": 25835,
+          "name": "hgr-scanline-high",
+          "raw_path": "raw/procedural-graphics/hgr-scanline-high.bin",
+          "raw_sha256": "c0bf5461a9898e024433671ab771d00a15d4a780c049cc2148de196dd7943e63",
+          "raw_size": 192,
+          "source_artifact": "disassembly/selector0-load05-6000-67ff.rebuilt.bin"
+        },
+        {
+          "memory_end": 26166,
+          "memory_start": 26027,
+          "name": "x-byte-offsets",
+          "raw_path": "raw/procedural-graphics/x-byte-offsets.bin",
+          "raw_sha256": "cb316fe7ae810dbf236cf4c59a0c845eea0f2be9a1e9b347de0a48e57ce68f0b",
+          "raw_size": 140,
+          "source_artifact": "disassembly/selector0-load05-6000-67ff.rebuilt.bin"
+        },
+        {
+          "memory_end": 26306,
+          "memory_start": 26167,
+          "name": "x-mask-indices",
+          "raw_path": "raw/procedural-graphics/x-mask-indices.bin",
+          "raw_sha256": "0b7def933c3232e783caa7fa0fad3ac38ab5a61fe754097979b9b53bfc994996",
+          "raw_size": 140,
+          "source_artifact": "disassembly/selector0-load05-6000-67ff.rebuilt.bin"
+        },
+        {
+          "memory_end": 26313,
+          "memory_start": 26307,
+          "name": "first-byte-masks",
+          "raw_path": "raw/procedural-graphics/first-byte-masks.bin",
+          "raw_sha256": "1831a30a355e29b80db479fc925967bf3382cea0c2186e65c1fd5b29bba3b0ff",
+          "raw_size": 7,
+          "source_artifact": "disassembly/selector0-load05-6000-67ff.rebuilt.bin"
+        },
+        {
+          "memory_end": 26320,
+          "memory_start": 26314,
+          "name": "second-byte-masks",
+          "raw_path": "raw/procedural-graphics/second-byte-masks.bin",
+          "raw_sha256": "3cd21257ce20358fb07d224d43ede528bc5ca31cba06f27eae1d9e8c881bb4f3",
+          "raw_size": 7,
+          "source_artifact": "disassembly/selector0-load05-6000-67ff.rebuilt.bin"
+        },
+        {
+          "memory_end": 26344,
+          "memory_start": 26337,
+          "name": "initial-x-positions",
+          "raw_path": "raw/procedural-graphics/initial-x-positions.bin",
+          "raw_sha256": "5c4ac24bc25dd426c7800c59aea1c41297f3f7b375a112f34b8c584190be1c00",
+          "raw_size": 8,
+          "source_artifact": "disassembly/selector0-load05-6000-67ff.rebuilt.bin"
+        },
+        {
+          "memory_end": 26352,
+          "memory_start": 26345,
+          "name": "initial-y-positions",
+          "raw_path": "raw/procedural-graphics/initial-y-positions.bin",
+          "raw_sha256": "e16945f639662ab03b07f2eadcebfc3933b35b8bb203d268a1b33a15cd29a217",
+          "raw_size": 8,
+          "source_artifact": "disassembly/selector0-load05-6000-67ff.rebuilt.bin"
+        },
+        {
+          "memory_end": 26360,
+          "memory_start": 26353,
+          "name": "initial-x-velocities",
+          "raw_path": "raw/procedural-graphics/initial-x-velocities.bin",
+          "raw_sha256": "3bdc5f1618ec2afa223890ecd56cbccee66eae83a1dbb2ea6c32bdedbca75f70",
+          "raw_size": 8,
+          "source_artifact": "disassembly/selector0-load05-6000-67ff.rebuilt.bin"
+        },
+        {
+          "memory_end": 26368,
+          "memory_start": 26361,
+          "name": "initial-y-velocities",
+          "raw_path": "raw/procedural-graphics/initial-y-velocities.bin",
+          "raw_sha256": "80e7ae453f889ab7919a96816e5d9ad003e73bd9bb74ccde7f1f99ea6e9f596a",
+          "raw_size": 8,
+          "source_artifact": "disassembly/selector0-load05-6000-67ff.rebuilt.bin"
+        }
+      ]
+    },
+    "representation": "renderer-consumed HGR patterns and tables used to generate rows, gauges, spokes, and box frames at runtime",
+    "scope_boundary": "static encodings and runtime transform recipes only; screen placement remains pending emulator screenshots",
+    "title_animation": {
+      "composite_encoding": "bits 0-1, 2-3, and 4-5 select the three animated component-frame offsets",
+      "composite_frames": [
+        {
+          "component_frame_offsets": [
+            2,
+            0,
+            0
+          ],
+          "index": 0,
+          "packed_hex": "02"
+        },
+        {
+          "component_frame_offsets": [
+            2,
+            0,
+            0
+          ],
+          "index": 1,
+          "packed_hex": "02"
+        },
+        {
+          "component_frame_offsets": [
+            1,
+            0,
+            0
+          ],
+          "index": 2,
+          "packed_hex": "01"
+        },
+        {
+          "component_frame_offsets": [
+            1,
+            0,
+            0
+          ],
+          "index": 3,
+          "packed_hex": "01"
+        },
+        {
+          "component_frame_offsets": [
+            0,
+            0,
+            0
+          ],
+          "index": 4,
+          "packed_hex": "00"
+        },
+        {
+          "component_frame_offsets": [
+            0,
+            0,
+            0
+          ],
+          "index": 5,
+          "packed_hex": "00"
+        },
+        {
+          "component_frame_offsets": [
+            0,
+            0,
+            0
+          ],
+          "index": 6,
+          "packed_hex": "00"
+        },
+        {
+          "component_frame_offsets": [
+            0,
+            0,
+            0
+          ],
+          "index": 7,
+          "packed_hex": "00"
+        },
+        {
+          "component_frame_offsets": [
+            0,
+            2,
+            0
+          ],
+          "index": 8,
+          "packed_hex": "08"
+        },
+        {
+          "component_frame_offsets": [
+            0,
+            2,
+            0
+          ],
+          "index": 9,
+          "packed_hex": "08"
+        },
+        {
+          "component_frame_offsets": [
+            0,
+            1,
+            0
+          ],
+          "index": 10,
+          "packed_hex": "04"
+        },
+        {
+          "component_frame_offsets": [
+            0,
+            1,
+            0
+          ],
+          "index": 11,
+          "packed_hex": "04"
+        },
+        {
+          "component_frame_offsets": [
+            0,
+            0,
+            0
+          ],
+          "index": 12,
+          "packed_hex": "00"
+        },
+        {
+          "component_frame_offsets": [
+            0,
+            0,
+            0
+          ],
+          "index": 13,
+          "packed_hex": "00"
+        },
+        {
+          "component_frame_offsets": [
+            0,
+            0,
+            1
+          ],
+          "index": 14,
+          "packed_hex": "10"
+        },
+        {
+          "component_frame_offsets": [
+            0,
+            0,
+            1
+          ],
+          "index": 15,
+          "packed_hex": "10"
+        },
+        {
+          "component_frame_offsets": [
+            0,
+            0,
+            0
+          ],
+          "index": 16,
+          "packed_hex": "00"
+        },
+        {
+          "component_frame_offsets": [
+            0,
+            0,
+            0
+          ],
+          "index": 17,
+          "packed_hex": "00"
+        },
+        {
+          "component_frame_offsets": [
+            0,
+            0,
+            0
+          ],
+          "index": 18,
+          "packed_hex": "00"
+        },
+        {
+          "component_frame_offsets": [
+            0,
+            0,
+            0
+          ],
+          "index": 19,
+          "packed_hex": "00"
+        },
+        {
+          "component_frame_offsets": [
+            0,
+            0,
+            0
+          ],
+          "index": 20,
+          "packed_hex": "00"
+        },
+        {
+          "component_frame_offsets": [
+            0,
+            0,
+            0
+          ],
+          "index": 21,
+          "packed_hex": "00"
+        },
+        {
+          "component_frame_offsets": [
+            0,
+            0,
+            0
+          ],
+          "index": 22,
+          "packed_hex": "00"
+        },
+        {
+          "component_frame_offsets": [
+            0,
+            0,
+            0
+          ],
+          "index": 23,
+          "packed_hex": "00"
+        },
+        {
+          "component_frame_offsets": [
+            0,
+            0,
+            0
+          ],
+          "index": 24,
+          "packed_hex": "00"
+        },
+        {
+          "component_frame_offsets": [
+            0,
+            0,
+            0
+          ],
+          "index": 25,
+          "packed_hex": "00"
+        },
+        {
+          "component_frame_offsets": [
+            0,
+            0,
+            0
+          ],
+          "index": 26,
+          "packed_hex": "00"
+        },
+        {
+          "component_frame_offsets": [
+            0,
+            0,
+            0
+          ],
+          "index": 27,
+          "packed_hex": "00"
+        },
+        {
+          "component_frame_offsets": [
+            0,
+            0,
+            0
+          ],
+          "index": 28,
+          "packed_hex": "00"
+        },
+        {
+          "component_frame_offsets": [
+            0,
+            0,
+            0
+          ],
+          "index": 29,
+          "packed_hex": "00"
+        },
+        {
+          "component_frame_offsets": [
+            0,
+            0,
+            0
+          ],
+          "index": 30,
+          "packed_hex": "00"
+        },
+        {
+          "component_frame_offsets": [
+            0,
+            0,
+            0
+          ],
+          "index": 31,
+          "packed_hex": "00"
+        }
+      ],
+      "consumers": [
+        "scan_title_events $0BE3",
+        "update_title_particles $0C5B",
+        "update_title_sprite_motion $0DC5",
+        "update_title_composite_motion $0D77"
+      ],
+      "delay_sequence": [
+        248,
+        54,
+        54,
+        1,
+        1,
+        1,
+        1,
+        196,
+        196,
+        196,
+        240,
+        1,
+        165,
+        0
+      ],
+      "particle_masks": [
+        {
+          "byte_hex": "01",
+          "decoded_height": 1,
+          "decoded_path": "decoded/procedural-fill-patterns/title-particle-mask-0.pgm",
+          "decoded_width": 7,
+          "index": 0,
+          "phase_bit": 0,
+          "raw_path": "raw/procedural-graphics/title-particle-mask-0.bin",
+          "raw_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a"
+        },
+        {
+          "byte_hex": "02",
+          "decoded_height": 1,
+          "decoded_path": "decoded/procedural-fill-patterns/title-particle-mask-1.pgm",
+          "decoded_width": 7,
+          "index": 1,
+          "phase_bit": 0,
+          "raw_path": "raw/procedural-graphics/title-particle-mask-1.bin",
+          "raw_sha256": "dbc1b4c900ffe48d575b5da5c638040125f65db0fe3e24494b76ea986457d986"
+        },
+        {
+          "byte_hex": "81",
+          "decoded_height": 1,
+          "decoded_path": "decoded/procedural-fill-patterns/title-particle-mask-2.pgm",
+          "decoded_width": 7,
+          "index": 2,
+          "phase_bit": 1,
+          "raw_path": "raw/procedural-graphics/title-particle-mask-2.bin",
+          "raw_sha256": "591b7cc95037822dec5a4d593a2e2e8b19c07ddd2570e5699003d17f14c440a6"
+        },
+        {
+          "byte_hex": "82",
+          "decoded_height": 1,
+          "decoded_path": "decoded/procedural-fill-patterns/title-particle-mask-3.pgm",
+          "decoded_width": 7,
+          "index": 3,
+          "phase_bit": 1,
+          "raw_path": "raw/procedural-graphics/title-particle-mask-3.bin",
+          "raw_sha256": "a5ab782c805e8bfbe34cb65742a0471cf5a53a97f0a1160ab6cccbb64c9131ce"
+        },
+        {
+          "byte_hex": "01",
+          "decoded_height": 1,
+          "decoded_path": "decoded/procedural-fill-patterns/title-particle-mask-4.pgm",
+          "decoded_width": 7,
+          "index": 4,
+          "phase_bit": 0,
+          "raw_path": "raw/procedural-graphics/title-particle-mask-4.bin",
+          "raw_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a"
+        },
+        {
+          "byte_hex": "02",
+          "decoded_height": 1,
+          "decoded_path": "decoded/procedural-fill-patterns/title-particle-mask-5.pgm",
+          "decoded_width": 7,
+          "index": 5,
+          "phase_bit": 0,
+          "raw_path": "raw/procedural-graphics/title-particle-mask-5.bin",
+          "raw_sha256": "dbc1b4c900ffe48d575b5da5c638040125f65db0fe3e24494b76ea986457d986"
+        },
+        {
+          "byte_hex": "00",
+          "decoded_height": 1,
+          "decoded_path": "decoded/procedural-fill-patterns/title-particle-mask-6.pgm",
+          "decoded_width": 7,
+          "index": 6,
+          "phase_bit": 0,
+          "raw_path": "raw/procedural-graphics/title-particle-mask-6.bin",
+          "raw_sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d"
+        },
+        {
+          "byte_hex": "00",
+          "decoded_height": 1,
+          "decoded_path": "decoded/procedural-fill-patterns/title-particle-mask-7.pgm",
+          "decoded_width": 7,
+          "index": 7,
+          "phase_bit": 0,
+          "raw_path": "raw/procedural-graphics/title-particle-mask-7.bin",
+          "raw_sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d"
+        }
+      ],
+      "sprite_frame_sequence": [
+        2,
+        1,
+        0,
+        1,
+        2
+      ],
+      "tables": [
+        {
+          "memory_end": 2064,
+          "memory_start": 2051,
+          "name": "title-delay-sequence",
+          "raw_path": "raw/procedural-graphics/title-delay-sequence.bin",
+          "raw_sha256": "3270edeb888b48c3ea22c77aac9c998a7a6c6b8116125a73a7ef00e918d5c9aa",
+          "raw_size": 14,
+          "source_artifact": "disassembly/selector0-load03-0800-1fff.rebuilt.bin"
+        },
+        {
+          "memory_end": 4024,
+          "memory_start": 4020,
+          "name": "title-sprite-frame-sequence",
+          "raw_path": "raw/procedural-graphics/title-sprite-frame-sequence.bin",
+          "raw_sha256": "5acafeaa4f3fe0680c8cff1bfd47b7508ae257d0fb69827b2f654eaa83dc5d86",
+          "raw_size": 5,
+          "source_artifact": "disassembly/selector0-load03-0800-1fff.rebuilt.bin"
+        },
+        {
+          "memory_end": 4478,
+          "memory_start": 4425,
+          "name": "title-timed-event-table",
+          "raw_path": "raw/procedural-graphics/title-timed-event-table.bin",
+          "raw_sha256": "ee7f2a109998ed88dadefd79c31915773d637d7b1921f81a94c9600b605f3279",
+          "raw_size": 54,
+          "source_artifact": "disassembly/selector0-load03-0800-1fff.rebuilt.bin"
+        },
+        {
+          "memory_end": 4486,
+          "memory_start": 4479,
+          "name": "title-particle-masks",
+          "raw_path": "raw/procedural-graphics/title-particle-masks.bin",
+          "raw_sha256": "8acb98589efc2319c2901333531113d0fad44859f0b8976aa6b5d9275cc76a17",
+          "raw_size": 8,
+          "source_artifact": "disassembly/selector0-load03-0800-1fff.rebuilt.bin"
+        },
+        {
+          "memory_end": 4518,
+          "memory_start": 4487,
+          "name": "title-composite-animation",
+          "raw_path": "raw/procedural-graphics/title-composite-animation.bin",
+          "raw_sha256": "3abeda6cee9846578d233472ff637cfad4e712b3c196f8e45f003b49c5fa325b",
+          "raw_size": 32,
+          "source_artifact": "disassembly/selector0-load03-0800-1fff.rebuilt.bin"
+        }
+      ],
+      "timed_event_terminator_hex": "0000",
+      "timed_events": [
+        {
+          "routine_address": 3421,
+          "trigger_counter": 200
+        },
+        {
+          "routine_address": 3716,
+          "trigger_counter": 500
+        },
+        {
+          "routine_address": 3727,
+          "trigger_counter": 532
+        },
+        {
+          "routine_address": 3739,
+          "trigger_counter": 540
+        },
+        {
+          "routine_address": 3750,
+          "trigger_counter": 570
+        },
+        {
+          "routine_address": 3716,
+          "trigger_counter": 600
+        },
+        {
+          "routine_address": 3733,
+          "trigger_counter": 630
+        },
+        {
+          "routine_address": 3739,
+          "trigger_counter": 640
+        },
+        {
+          "routine_address": 3750,
+          "trigger_counter": 700
+        },
+        {
+          "routine_address": 3756,
+          "trigger_counter": 700
+        },
+        {
+          "routine_address": 3427,
+          "trigger_counter": 900
+        },
+        {
+          "routine_address": 3762,
+          "trigger_counter": 1000
+        },
+        {
+          "routine_address": 3968,
+          "trigger_counter": 1560
+        }
+      ]
+    }
+  },
+  "selector5_sound": {
+    "effects": [
+      {
+        "call_sites": [
+          "95E4-95EA",
+          "95EE-95F4"
+        ],
+        "inner_loop_parameter_hex": "20",
+        "name": "ground-unit deployment cue",
+        "real_time_seconds": null,
+        "routine": "6972-697C",
+        "speaker_toggle_count": 16
+      },
+      {
+        "condition": "interactive-side fuel below $10 after fuel-gauge rendering",
+        "name": "critical-fuel tick",
+        "real_time_seconds": null,
+        "routine": "B4DD-B4F8",
+        "speaker_toggle_count_per_eligible_hud_update": 1
+      }
+    ],
+    "evidence": [
+      "E-SOUND-001"
+    ],
+    "representation": "synthesized Apple II speaker toggles; no note or sample stream is consumed by these gameplay paths",
+    "scope_boundary": "complete source-exact selector-5 load; shared/presentation accesses and inert workspace false positives are classified separately below",
+    "stream_count": 0
+  },
+  "shared_synthesized_sound": {
+    "access_sites": [
+      {
+        "artifact": "selector0-load00-d000-ffff.bin",
+        "classification": "executed graphics-transform speaker side effect",
+        "instruction": "E0E1 STA $C030"
+      },
+      {
+        "artifact": "selector0-load00-d000-ffff.bin",
+        "classification": "executed invalid-input beep",
+        "instruction": "F32A BIT $C030"
+      },
+      {
+        "artifact": "selector0-load00-d000-ffff.bin",
+        "classification": "executed invalid-input beep",
+        "instruction": "F332 BIT $C030"
+      },
+      {
+        "artifact": "selector0-load00-d000-ffff.bin",
+        "classification": "executed paired-toggle tone engine",
+        "instruction": "F42C BIT $C030"
+      },
+      {
+        "artifact": "selector0-load00-d000-ffff.bin",
+        "classification": "executed paired-toggle tone engine",
+        "instruction": "F435 BIT $C030"
+      },
+      {
+        "artifact": "stage2-6000-70ff.bin",
+        "classification": "byte-identical relocated graphics-transform speaker side effect",
+        "instruction": "60E1 STA $C030"
+      },
+      {
+        "artifact": "selector1-load04-6900-69ff.bin",
+        "classification": "callable shared service; no internal selector-1 call site claimed",
+        "instruction": "6976 BIT $C030"
+      },
+      {
+        "artifact": "selector5-load00-6900-baff.bin",
+        "classification": "executed deployment service; E-SOUND-001",
+        "instruction": "6976 BIT $C030"
+      },
+      {
+        "artifact": "selector5-load00-6900-baff.bin",
+        "classification": "executed critical-fuel tick; E-SOUND-001",
+        "instruction": "B4F5 BIT $C030"
+      },
+      {
+        "artifact": "stage1-ba00-bfff.bin",
+        "classification": "inert initial RWTS scratch bytes overwritten before use",
+        "instruction": "BEE9 LDA $C030"
+      },
+      {
+        "artifact": "stage3-4000-43ff.bin",
+        "classification": "inert initial interpreter workspace bytes cleared before use",
+        "instruction": "43E9 LDA $C030"
+      }
+    ],
+    "active_or_callable_access_count": 9,
+    "corpus_boundary": "boot page, stages 1-3, and every decoded selector load; all literal $C030 instruction operands classified",
+    "effects": [
+      {
+        "derivation": "13 outer iterations with 16*(1+2+...+13) copied chunks/toggles",
+        "name": "graphics-transform speaker cue",
+        "real_time_seconds": null,
+        "routine_copies": [
+          "E0C1-E104",
+          "60C1-6104"
+        ],
+        "speaker_toggle_count": 1456
+      },
+      {
+        "call_site": "F216",
+        "derivation": "64 outer iterations, two speaker toggles each",
+        "name": "invalid-input beep",
+        "real_time_seconds": null,
+        "routine": "F323-F338",
+        "speaker_toggle_count": 128
+      },
+      {
+        "call_site": "F1C9",
+        "derivation": "two toggles per tone-engine iteration across counts 80,72,...,8",
+        "name": "presentation sweep",
+        "real_time_seconds": null,
+        "routine": "F446-F461",
+        "speaker_toggle_count": 880,
+        "tone_engine": "F420-F445"
+      }
+    ],
+    "evidence": [
+      "E-SOUND-002"
+    ],
+    "fixtures": [
+      {
+        "classification": "executed presentation/graphics transform with speaker side effect",
+        "memory_end": 57604,
+        "memory_start": 57537,
+        "name": "graphics-transform-toggle-loop-selector0",
+        "raw_path": "raw/synthesized-sound/graphics-transform-toggle-loop-selector0.bin",
+        "raw_sha256": "ab42bd4ebc0f53ef0697cbda79a0e43496d39b825a5fa4b3489cff6e0f1513b4",
+        "raw_size": 68,
+        "source_artifact": "extract/selector0-load00-d000-ffff.bin"
+      },
+      {
+        "classification": "byte-identical relocated execution copy",
+        "memory_end": 24836,
+        "memory_start": 24769,
+        "name": "graphics-transform-toggle-loop-stage2",
+        "raw_path": "raw/synthesized-sound/graphics-transform-toggle-loop-stage2.bin",
+        "raw_sha256": "ab42bd4ebc0f53ef0697cbda79a0e43496d39b825a5fa4b3489cff6e0f1513b4",
+        "raw_size": 68,
+        "source_artifact": "extract/stage2-6000-70ff.bin"
+      },
+      {
+        "classification": "executed bounded input-error effect",
+        "memory_end": 62264,
+        "memory_start": 62243,
+        "name": "invalid-input-beep",
+        "raw_path": "raw/synthesized-sound/invalid-input-beep.bin",
+        "raw_sha256": "73277a9a512fa2dce30cfbfdce522cab9e29e09e8b396fe6aabd1122dc734475",
+        "raw_size": 22,
+        "source_artifact": "extract/selector0-load00-d000-ffff.bin"
+      },
+      {
+        "classification": "executed parameterized synthesized-tone service",
+        "memory_end": 62533,
+        "memory_start": 62496,
+        "name": "paired-toggle-tone-engine",
+        "raw_path": "raw/synthesized-sound/paired-toggle-tone-engine.bin",
+        "raw_sha256": "748416b21469ba35e009c1c2faf2652530586f3f7fa0e712c34bc2222c11f7e8",
+        "raw_size": 38,
+        "source_artifact": "extract/selector0-load00-d000-ffff.bin"
+      },
+      {
+        "classification": "executed bounded presentation effect",
+        "memory_end": 62561,
+        "memory_start": 62534,
+        "name": "presentation-sweep",
+        "raw_path": "raw/synthesized-sound/presentation-sweep.bin",
+        "raw_sha256": "417c0d275f09a3ec14b935dd3b1f6d1ab5f7fa922d8dbadb0781f682329f397b",
+        "raw_size": 28,
+        "source_artifact": "extract/selector0-load00-d000-ffff.bin"
+      },
+      {
+        "classification": "callable shared service; no internal selector-1 call site claimed",
+        "memory_end": 27004,
+        "memory_start": 26994,
+        "name": "shared-delay-toggle-selector1",
+        "raw_path": "raw/synthesized-sound/shared-delay-toggle-selector1.bin",
+        "raw_sha256": "d4e45ac643727371f4d8216ab74b9215bd228f36c2c9117c09e2c00465e08e5f",
+        "raw_size": 11,
+        "source_artifact": "extract/selector1-load04-6900-69ff.bin"
+      },
+      {
+        "classification": "byte-identical gameplay-used copy also covered by E-SOUND-001",
+        "memory_end": 27004,
+        "memory_start": 26994,
+        "name": "shared-delay-toggle-selector5",
+        "raw_path": "raw/synthesized-sound/shared-delay-toggle-selector5.bin",
+        "raw_sha256": "d4e45ac643727371f4d8216ab74b9215bd228f36c2c9117c09e2c00465e08e5f",
+        "raw_size": 11,
+        "source_artifact": "extract/selector5-load00-6900-baff.bin"
+      },
+      {
+        "classification": "inert initial RWTS scratch bytes; no recovered control-flow entry",
+        "memory_end": 48879,
+        "memory_start": 48857,
+        "name": "stage1-overwrite-workspace-false-positive",
+        "raw_path": "raw/synthesized-sound/stage1-overwrite-workspace-false-positive.bin",
+        "raw_sha256": "dff798970ba91f4c91b548614d29df570403638bb29978996c4acd51a155a2e9",
+        "raw_size": 23,
+        "source_artifact": "extract/stage1-ba00-bfff.bin"
+      },
+      {
+        "classification": "inert initial interpreter workspace bytes; no recovered control-flow entry",
+        "memory_end": 17391,
+        "memory_start": 17369,
+        "name": "stage3-overwrite-workspace-false-positive",
+        "raw_path": "raw/synthesized-sound/stage3-overwrite-workspace-false-positive.bin",
+        "raw_sha256": "dff798970ba91f4c91b548614d29df570403638bb29978996c4acd51a155a2e9",
+        "raw_size": 23,
+        "source_artifact": "extract/stage3-4000-43ff.bin"
+      }
+    ],
+    "inert_workspace_access_count": 2,
+    "literal_access_count": 11,
+    "representation": "Apple II speaker toggles synthesized by executable code; no note, sample, or sound-data stream was found",
+    "stream_count": 0
+  },
+  "source_artifact": "disassembly/selector0-load03-0800-1fff.rebuilt.bin",
+  "title_bitmaps": {
+    "descriptor_count": 38,
+    "descriptors": [
+      {
+        "decoded_height": 1,
+        "decoded_path": "decoded/title-bitmaps/bitmap-00.pgm",
+        "decoded_width": 119,
+        "index": 0,
+        "memory_address": 5964,
+        "raw_path": "raw/title-bitmap-descriptors/descriptor-00.bin",
+        "raw_sha256": "1f65c1adb6df14191d47fa35e86ce2e4ff840986ae67b625988cd3fa93c3bbff",
+        "raw_size": 19,
+        "region_offset": 76,
+        "width_bytes": 17
+      },
+      {
+        "decoded_height": 1,
+        "decoded_path": "decoded/title-bitmaps/bitmap-01.pgm",
+        "decoded_width": 119,
+        "index": 1,
+        "memory_address": 5983,
+        "raw_path": "raw/title-bitmap-descriptors/descriptor-01.bin",
+        "raw_sha256": "2b6c80abedcca0e90cf52b570b12266941a1bba01e9916b9c6fb4b540c55c816",
+        "raw_size": 19,
+        "region_offset": 95,
+        "width_bytes": 17
+      },
+      {
+        "decoded_height": 1,
+        "decoded_path": "decoded/title-bitmaps/bitmap-02.pgm",
+        "decoded_width": 105,
+        "index": 2,
+        "memory_address": 6002,
+        "raw_path": "raw/title-bitmap-descriptors/descriptor-02.bin",
+        "raw_sha256": "2999897145a7abe519e0dca9b715a6e4ef63308065e6ef582409debd082f6033",
+        "raw_size": 17,
+        "region_offset": 114,
+        "width_bytes": 15
+      },
+      {
+        "decoded_height": 1,
+        "decoded_path": "decoded/title-bitmaps/bitmap-03.pgm",
+        "decoded_width": 105,
+        "index": 3,
+        "memory_address": 6019,
+        "raw_path": "raw/title-bitmap-descriptors/descriptor-03.bin",
+        "raw_sha256": "4a9a32d3791d5174764b1e4c2350f52626b33d9e5b52cf23684973f678885064",
+        "raw_size": 17,
+        "region_offset": 131,
+        "width_bytes": 15
+      },
+      {
+        "decoded_height": 1,
+        "decoded_path": "decoded/title-bitmaps/bitmap-04.pgm",
+        "decoded_width": 77,
+        "index": 4,
+        "memory_address": 6036,
+        "raw_path": "raw/title-bitmap-descriptors/descriptor-04.bin",
+        "raw_sha256": "6c172f450723bd995efac7e8208e5710afc1a36d6677bde7dcd26d1741884245",
+        "raw_size": 13,
+        "region_offset": 148,
+        "width_bytes": 11
+      },
+      {
+        "decoded_height": 1,
+        "decoded_path": "decoded/title-bitmaps/bitmap-05.pgm",
+        "decoded_width": 77,
+        "index": 5,
+        "memory_address": 6049,
+        "raw_path": "raw/title-bitmap-descriptors/descriptor-05.bin",
+        "raw_sha256": "ddf95c07102422a4fcb83ddce7b3cb8f441234a4cc4a3f38ad853eb91425d645",
+        "raw_size": 13,
+        "region_offset": 161,
+        "width_bytes": 11
+      },
+      {
+        "decoded_height": 16,
+        "decoded_path": "decoded/title-bitmaps/bitmap-06.pgm",
+        "decoded_width": 119,
+        "index": 6,
+        "memory_address": 6062,
+        "raw_path": "raw/title-bitmap-descriptors/descriptor-06.bin",
+        "raw_sha256": "facb879061b1f87069ffe192136d906940771389b2fbe4cf69b13cd2195a218d",
+        "raw_size": 274,
+        "region_offset": 174,
+        "width_bytes": 17
+      },
+      {
+        "decoded_height": 16,
+        "decoded_path": "decoded/title-bitmaps/bitmap-07.pgm",
+        "decoded_width": 119,
+        "index": 7,
+        "memory_address": 6336,
+        "raw_path": "raw/title-bitmap-descriptors/descriptor-07.bin",
+        "raw_sha256": "a5812df73aecbe308888e3832db02605168b6671aabe97fb208fb51a05ea4f6c",
+        "raw_size": 274,
+        "region_offset": 448,
+        "width_bytes": 17
+      },
+      {
+        "decoded_height": 23,
+        "decoded_path": "decoded/title-bitmaps/bitmap-08.pgm",
+        "decoded_width": 140,
+        "index": 8,
+        "memory_address": 6610,
+        "raw_path": "raw/title-bitmap-descriptors/descriptor-08.bin",
+        "raw_sha256": "d0913bff6e2d7ac2ea77006f8fbb136cbb5a971235616405e9c830687a80422a",
+        "raw_size": 462,
+        "region_offset": 722,
+        "width_bytes": 20
+      },
+      {
+        "decoded_height": 23,
+        "decoded_path": "decoded/title-bitmaps/bitmap-09.pgm",
+        "decoded_width": 140,
+        "index": 9,
+        "memory_address": 7072,
+        "raw_path": "raw/title-bitmap-descriptors/descriptor-09.bin",
+        "raw_sha256": "73e70e636c8562bc39ab634a9aa81d776fe08be387fb5ec4ae5e4df6e163059d",
+        "raw_size": 462,
+        "region_offset": 1184,
+        "width_bytes": 20
+      },
+      {
+        "decoded_height": 7,
+        "decoded_path": "decoded/title-bitmaps/bitmap-10.pgm",
+        "decoded_width": 21,
+        "index": 10,
+        "memory_address": 7534,
+        "raw_path": "raw/title-bitmap-descriptors/descriptor-10.bin",
+        "raw_sha256": "a32e323abd184e3e073e8aae8d84384930ebe8d4079ef3322beb453e61919171",
+        "raw_size": 23,
+        "region_offset": 1646,
+        "width_bytes": 3
+      },
+      {
+        "decoded_height": 7,
+        "decoded_path": "decoded/title-bitmaps/bitmap-11.pgm",
+        "decoded_width": 21,
+        "index": 11,
+        "memory_address": 7557,
+        "raw_path": "raw/title-bitmap-descriptors/descriptor-11.bin",
+        "raw_sha256": "4303b53ec63ef5be90a62f7f9efd6a4e84a105cba81552e66d6d16848c8424a5",
+        "raw_size": 23,
+        "region_offset": 1669,
+        "width_bytes": 3
+      },
+      {
+        "decoded_height": 7,
+        "decoded_path": "decoded/title-bitmaps/bitmap-12.pgm",
+        "decoded_width": 21,
+        "index": 12,
+        "memory_address": 7580,
+        "raw_path": "raw/title-bitmap-descriptors/descriptor-12.bin",
+        "raw_sha256": "c362fc3fac9ff38c3ff4796e3bbff62704508ced27f64aa890b073d217405350",
+        "raw_size": 23,
+        "region_offset": 1692,
+        "width_bytes": 3
+      },
+      {
+        "decoded_height": 7,
+        "decoded_path": "decoded/title-bitmaps/bitmap-13.pgm",
+        "decoded_width": 21,
+        "index": 13,
+        "memory_address": 7603,
+        "raw_path": "raw/title-bitmap-descriptors/descriptor-13.bin",
+        "raw_sha256": "8fa6a3f5f4aef8d837d90039ce891ddcebf8ea18c3c1458dffd3f24250ab85ea",
+        "raw_size": 23,
+        "region_offset": 1715,
+        "width_bytes": 3
+      },
+      {
+        "decoded_height": 7,
+        "decoded_path": "decoded/title-bitmaps/bitmap-14.pgm",
+        "decoded_width": 21,
+        "index": 14,
+        "memory_address": 7626,
+        "raw_path": "raw/title-bitmap-descriptors/descriptor-14.bin",
+        "raw_sha256": "c40d5bf86c97561e9609252b4809364d3d963c0ef6fadd3a1e702e8ea9806e6a",
+        "raw_size": 23,
+        "region_offset": 1738,
+        "width_bytes": 3
+      },
+      {
+        "decoded_height": 7,
+        "decoded_path": "decoded/title-bitmaps/bitmap-15.pgm",
+        "decoded_width": 21,
+        "index": 15,
+        "memory_address": 7649,
+        "raw_path": "raw/title-bitmap-descriptors/descriptor-15.bin",
+        "raw_sha256": "42c07318af40de42009aa455e69373e5dd9203437fb0f62f132f318e23fc386d",
+        "raw_size": 23,
+        "region_offset": 1761,
+        "width_bytes": 3
+      },
+      {
+        "decoded_height": 7,
+        "decoded_path": "decoded/title-bitmaps/bitmap-16.pgm",
+        "decoded_width": 21,
+        "index": 16,
+        "memory_address": 7672,
+        "raw_path": "raw/title-bitmap-descriptors/descriptor-16.bin",
+        "raw_sha256": "5caa29c9aad98a41167e53e4737eb56a3545248f5adcef7ada69f7960e593505",
+        "raw_size": 23,
+        "region_offset": 1784,
+        "width_bytes": 3
+      },
+      {
+        "decoded_height": 7,
+        "decoded_path": "decoded/title-bitmaps/bitmap-17.pgm",
+        "decoded_width": 21,
+        "index": 17,
+        "memory_address": 7695,
+        "raw_path": "raw/title-bitmap-descriptors/descriptor-17.bin",
+        "raw_sha256": "a32e323abd184e3e073e8aae8d84384930ebe8d4079ef3322beb453e61919171",
+        "raw_size": 23,
+        "region_offset": 1807,
+        "width_bytes": 3
+      },
+      {
+        "decoded_height": 7,
+        "decoded_path": "decoded/title-bitmaps/bitmap-18.pgm",
+        "decoded_width": 21,
+        "index": 18,
+        "memory_address": 7718,
+        "raw_path": "raw/title-bitmap-descriptors/descriptor-18.bin",
+        "raw_sha256": "aae3d3732ad6c1a8ba82ea3069ae403fdecfa6398e092996888d62cbd16373df",
+        "raw_size": 23,
+        "region_offset": 1830,
+        "width_bytes": 3
+      },
+      {
+        "decoded_height": 7,
+        "decoded_path": "decoded/title-bitmaps/bitmap-19.pgm",
+        "decoded_width": 21,
+        "index": 19,
+        "memory_address": 7741,
+        "raw_path": "raw/title-bitmap-descriptors/descriptor-19.bin",
+        "raw_sha256": "c362fc3fac9ff38c3ff4796e3bbff62704508ced27f64aa890b073d217405350",
+        "raw_size": 23,
+        "region_offset": 1853,
+        "width_bytes": 3
+      },
+      {
+        "decoded_height": 7,
+        "decoded_path": "decoded/title-bitmaps/bitmap-20.pgm",
+        "decoded_width": 21,
+        "index": 20,
+        "memory_address": 7764,
+        "raw_path": "raw/title-bitmap-descriptors/descriptor-20.bin",
+        "raw_sha256": "c6e85a1ca5b3574cbff3afd49620a8fb463435775c6e27ae9196338a2d0c0498",
+        "raw_size": 23,
+        "region_offset": 1876,
+        "width_bytes": 3
+      },
+      {
+        "decoded_height": 7,
+        "decoded_path": "decoded/title-bitmaps/bitmap-21.pgm",
+        "decoded_width": 21,
+        "index": 21,
+        "memory_address": 7787,
+        "raw_path": "raw/title-bitmap-descriptors/descriptor-21.bin",
+        "raw_sha256": "c40d5bf86c97561e9609252b4809364d3d963c0ef6fadd3a1e702e8ea9806e6a",
+        "raw_size": 23,
+        "region_offset": 1899,
+        "width_bytes": 3
+      },
+      {
+        "decoded_height": 7,
+        "decoded_path": "decoded/title-bitmaps/bitmap-22.pgm",
+        "decoded_width": 14,
+        "index": 22,
+        "memory_address": 7810,
+        "raw_path": "raw/title-bitmap-descriptors/descriptor-22.bin",
+        "raw_sha256": "8b05c23fc883ba1eef34d32a806d04dee5033785dabf4b77d16b402c8d3f4086",
+        "raw_size": 16,
+        "region_offset": 1922,
+        "width_bytes": 2
+      },
+      {
+        "decoded_height": 7,
+        "decoded_path": "decoded/title-bitmaps/bitmap-23.pgm",
+        "decoded_width": 14,
+        "index": 23,
+        "memory_address": 7826,
+        "raw_path": "raw/title-bitmap-descriptors/descriptor-23.bin",
+        "raw_sha256": "94fd1a6e9fea8c26dc02cd291f95473b54ee4d358cea5835bd8f19045e0f21c6",
+        "raw_size": 16,
+        "region_offset": 1938,
+        "width_bytes": 2
+      },
+      {
+        "decoded_height": 7,
+        "decoded_path": "decoded/title-bitmaps/bitmap-24.pgm",
+        "decoded_width": 14,
+        "index": 24,
+        "memory_address": 7842,
+        "raw_path": "raw/title-bitmap-descriptors/descriptor-24.bin",
+        "raw_sha256": "fbe94e802890dbb788699f183ac990b181d84ce96a748fa73563e306abea5b23",
+        "raw_size": 16,
+        "region_offset": 1954,
+        "width_bytes": 2
+      },
+      {
+        "decoded_height": 7,
+        "decoded_path": "decoded/title-bitmaps/bitmap-25.pgm",
+        "decoded_width": 14,
+        "index": 25,
+        "memory_address": 7858,
+        "raw_path": "raw/title-bitmap-descriptors/descriptor-25.bin",
+        "raw_sha256": "ee0898e367a8d3b3edc6282a2ee8ddaaa1fa076c7bc957ab5ed2ac86df56407a",
+        "raw_size": 16,
+        "region_offset": 1970,
+        "width_bytes": 2
+      },
+      {
+        "decoded_height": 2,
+        "decoded_path": "decoded/title-bitmaps/bitmap-26.pgm",
+        "decoded_width": 14,
+        "index": 26,
+        "memory_address": 7874,
+        "raw_path": "raw/title-bitmap-descriptors/descriptor-26.bin",
+        "raw_sha256": "7162bef0441a8a79f1f916b1b00d50a9128ba398e81df0e170225f4d75aea36d",
+        "raw_size": 6,
+        "region_offset": 1986,
+        "width_bytes": 2
+      },
+      {
+        "decoded_height": 2,
+        "decoded_path": "decoded/title-bitmaps/bitmap-27.pgm",
+        "decoded_width": 14,
+        "index": 27,
+        "memory_address": 7880,
+        "raw_path": "raw/title-bitmap-descriptors/descriptor-27.bin",
+        "raw_sha256": "62fe3b7ac33c8e6b83e9790c4285b608a2347bc9ed2749121633d41d8a9010a7",
+        "raw_size": 6,
+        "region_offset": 1992,
+        "width_bytes": 2
+      },
+      {
+        "decoded_height": 4,
+        "decoded_path": "decoded/title-bitmaps/bitmap-28.pgm",
+        "decoded_width": 14,
+        "index": 28,
+        "memory_address": 7886,
+        "raw_path": "raw/title-bitmap-descriptors/descriptor-28.bin",
+        "raw_sha256": "017cad56d58a8cf6569bfc5d4688ebb67e661729e1c275a7780a693ba791905a",
+        "raw_size": 10,
+        "region_offset": 1998,
+        "width_bytes": 2
+      },
+      {
+        "decoded_height": 4,
+        "decoded_path": "decoded/title-bitmaps/bitmap-29.pgm",
+        "decoded_width": 14,
+        "index": 29,
+        "memory_address": 7896,
+        "raw_path": "raw/title-bitmap-descriptors/descriptor-29.bin",
+        "raw_sha256": "3279ca45f855facfcf41045c0c263b883066ff847a0c73472a2eb11127ff4ff6",
+        "raw_size": 10,
+        "region_offset": 2008,
+        "width_bytes": 2
+      },
+      {
+        "decoded_height": 5,
+        "decoded_path": "decoded/title-bitmaps/bitmap-30.pgm",
+        "decoded_width": 21,
+        "index": 30,
+        "memory_address": 7906,
+        "raw_path": "raw/title-bitmap-descriptors/descriptor-30.bin",
+        "raw_sha256": "dfe1cc3ccdaa4f16f5adeb779c9c11c5c5b832606740710132f169dd0b24bc61",
+        "raw_size": 17,
+        "region_offset": 2018,
+        "width_bytes": 3
+      },
+      {
+        "decoded_height": 5,
+        "decoded_path": "decoded/title-bitmaps/bitmap-31.pgm",
+        "decoded_width": 21,
+        "index": 31,
+        "memory_address": 7923,
+        "raw_path": "raw/title-bitmap-descriptors/descriptor-31.bin",
+        "raw_sha256": "df4afff1ab8a7e8573f5329dc513f9db4c302ebfafa74aeec25ea0d0108ba09b",
+        "raw_size": 17,
+        "region_offset": 2035,
+        "width_bytes": 3
+      },
+      {
+        "decoded_height": 6,
+        "decoded_path": "decoded/title-bitmaps/bitmap-32.pgm",
+        "decoded_width": 21,
+        "index": 32,
+        "memory_address": 7940,
+        "raw_path": "raw/title-bitmap-descriptors/descriptor-32.bin",
+        "raw_sha256": "1bdb3b5a817e76e5c2ec13cdb21ade466df4c2464dcd3e942d68b2f1a954fa9c",
+        "raw_size": 20,
+        "region_offset": 2052,
+        "width_bytes": 3
+      },
+      {
+        "decoded_height": 6,
+        "decoded_path": "decoded/title-bitmaps/bitmap-33.pgm",
+        "decoded_width": 21,
+        "index": 33,
+        "memory_address": 7960,
+        "raw_path": "raw/title-bitmap-descriptors/descriptor-33.bin",
+        "raw_sha256": "15e6727ca4ccd4ddea1761f6cf59a77966caf1f0b3766236ba66cd2746f1d0bf",
+        "raw_size": 20,
+        "region_offset": 2072,
+        "width_bytes": 3
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-bitmaps/bitmap-34.pgm",
+        "decoded_width": 28,
+        "index": 34,
+        "memory_address": 7980,
+        "raw_path": "raw/title-bitmap-descriptors/descriptor-34.bin",
+        "raw_sha256": "e76a1ba8af88b41ac998375212a9a724069b9fbb0dfde49d216db6257d13cd66",
+        "raw_size": 34,
+        "region_offset": 2092,
+        "width_bytes": 4
+      },
+      {
+        "decoded_height": 8,
+        "decoded_path": "decoded/title-bitmaps/bitmap-35.pgm",
+        "decoded_width": 28,
+        "index": 35,
+        "memory_address": 8014,
+        "raw_path": "raw/title-bitmap-descriptors/descriptor-35.bin",
+        "raw_sha256": "9dd416bbeee0f1a68ed6a81d135c536112e707cdf9c8384c630e1c561b5e9f98",
+        "raw_size": 34,
+        "region_offset": 2126,
+        "width_bytes": 4
+      },
+      {
+        "decoded_height": 9,
+        "decoded_path": "decoded/title-bitmaps/bitmap-36.pgm",
+        "decoded_width": 28,
+        "index": 36,
+        "memory_address": 8048,
+        "raw_path": "raw/title-bitmap-descriptors/descriptor-36.bin",
+        "raw_sha256": "9b8403fd05ee5b0cc162b7215f79278cab8095303f4e03352fb279230dd3cca6",
+        "raw_size": 38,
+        "region_offset": 2160,
+        "width_bytes": 4
+      },
+      {
+        "decoded_height": 9,
+        "decoded_path": "decoded/title-bitmaps/bitmap-37.pgm",
+        "decoded_width": 28,
+        "index": 37,
+        "memory_address": 8086,
+        "raw_path": "raw/title-bitmap-descriptors/descriptor-37.bin",
+        "raw_sha256": "fa597281a0a64b64b176bcb4b9b39429177622f5d8b8e50b8983660a68f13f5d",
+        "raw_size": 38,
+        "region_offset": 2198,
+        "width_bytes": 4
+      }
+    ],
+    "memory_end": 8191,
+    "memory_start": 5888,
+    "raw_path": "raw/title-bitmap-region.bin",
+    "raw_sha256": "8274e3e3beb9b3e6938967d33c92c2622f2707ea2714f2f79f303f47247a98e0",
+    "raw_size": 2304,
+    "residual_end": 8191,
+    "residual_start": 8124
+  }
+}

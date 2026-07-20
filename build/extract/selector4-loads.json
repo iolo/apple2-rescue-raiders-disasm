@@ -1,0 +1,142 @@
+{
+  "commands": [
+    {
+      "kind": "backward_load",
+      "load_index": 0,
+      "opcode": 3
+    },
+    {
+      "kind": "backward_load",
+      "load_index": 1,
+      "opcode": 3
+    },
+    {
+      "kind": "backward_load",
+      "load_index": 2,
+      "opcode": 3
+    }
+  ],
+  "end_address": 17085,
+  "entry_point": 32768,
+  "loads": [
+    {
+      "count": 8,
+      "index": 0,
+      "memory_end": 34815,
+      "memory_start": 32768,
+      "page": 135,
+      "path": "selector4-load00-8000-87ff.bin",
+      "reads": [
+        {
+          "file_sector": 15,
+          "logical_sector": 15,
+          "page": 135,
+          "track": 33
+        },
+        {
+          "file_sector": 14,
+          "logical_sector": 14,
+          "page": 134,
+          "track": 33
+        },
+        {
+          "file_sector": 13,
+          "logical_sector": 13,
+          "page": 133,
+          "track": 33
+        },
+        {
+          "file_sector": 12,
+          "logical_sector": 12,
+          "page": 132,
+          "track": 33
+        },
+        {
+          "file_sector": 11,
+          "logical_sector": 11,
+          "page": 131,
+          "track": 33
+        },
+        {
+          "file_sector": 10,
+          "logical_sector": 10,
+          "page": 130,
+          "track": 33
+        },
+        {
+          "file_sector": 9,
+          "logical_sector": 9,
+          "page": 129,
+          "track": 33
+        },
+        {
+          "file_sector": 8,
+          "logical_sector": 8,
+          "page": 128,
+          "track": 33
+        }
+      ],
+      "sector": 15,
+      "sha256": "56c1280364ecef7879e5dc3eb1682d7af2977de51a1d674f80a35412339d564a",
+      "track": 33
+    },
+    {
+      "count": 4,
+      "index": 1,
+      "memory_end": 42239,
+      "memory_start": 41216,
+      "page": 164,
+      "path": "selector4-load01-a100-a4ff.bin",
+      "reads": [
+        {
+          "file_sector": 3,
+          "logical_sector": 3,
+          "page": 164,
+          "track": 18
+        },
+        {
+          "file_sector": 2,
+          "logical_sector": 2,
+          "page": 163,
+          "track": 18
+        },
+        {
+          "file_sector": 1,
+          "logical_sector": 1,
+          "page": 162,
+          "track": 18
+        },
+        {
+          "file_sector": 0,
+          "logical_sector": 0,
+          "page": 161,
+          "track": 18
+        }
+      ],
+      "sector": 3,
+      "sha256": "6d609822a1e7d36783be7f12bd803b8b879f47025bf3628ee6d36fbfdc0b464f",
+      "track": 18
+    },
+    {
+      "count": 1,
+      "index": 2,
+      "memory_end": 41215,
+      "memory_start": 40960,
+      "page": 160,
+      "path": "selector4-load02-a000-a0ff.bin",
+      "reads": [
+        {
+          "file_sector": 13,
+          "logical_sector": 13,
+          "page": 160,
+          "track": 11
+        }
+      ],
+      "sector": 13,
+      "sha256": "02b23764daf496eb72d46d0e8ed059dd6ae8bb88988de07be7181e2166d9687f",
+      "track": 11
+    }
+  ],
+  "selector": 4,
+  "stream_address": 17067
+}

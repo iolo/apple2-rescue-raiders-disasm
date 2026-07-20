@@ -1,0 +1,10 @@
+{
+  "geometry": {
+    "bytes_per_sector": 256,
+    "stored_sectors_per_track": 16,
+    "tracks": 35
+  },
+  "path": "rescue_raiders.dsk",
+  "sha256": "e87a3807667347f4434a78260e7e2791a7e6e45c4193e90f63dcb6d7a94059e8",
+  "size": 143360
+}

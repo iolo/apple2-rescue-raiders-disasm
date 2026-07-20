@@ -1,0 +1,52 @@
+{
+  "commands": [
+    {
+      "kind": "backward_load",
+      "load_index": 0,
+      "opcode": 3
+    }
+  ],
+  "end_address": 17039,
+  "entry_point": 32768,
+  "loads": [
+    {
+      "count": 4,
+      "index": 0,
+      "memory_end": 33791,
+      "memory_start": 32768,
+      "page": 131,
+      "path": "selector2-load00-8000-83ff.bin",
+      "reads": [
+        {
+          "file_sector": 3,
+          "logical_sector": 3,
+          "page": 131,
+          "track": 30
+        },
+        {
+          "file_sector": 2,
+          "logical_sector": 2,
+          "page": 130,
+          "track": 30
+        },
+        {
+          "file_sector": 1,
+          "logical_sector": 1,
+          "page": 129,
+          "track": 30
+        },
+        {
+          "file_sector": 0,
+          "logical_sector": 0,
+          "page": 128,
+          "track": 30
+        }
+      ],
+      "sector": 3,
+      "sha256": "14e89a5fde2e791ecd54bed6a4864aa4dc6947eb6e6e5629c585abf3e87d13fe",
+      "track": 30
+    }
+  ],
+  "selector": 2,
+  "stream_address": 17031
+}

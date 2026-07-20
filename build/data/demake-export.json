@@ -1,0 +1,118 @@
+{
+  "exports": [
+    {
+      "evidence": [
+        "E-FLOW-050",
+        "E-FLOW-060",
+        "E-FLOW-070",
+        "E-FLOW-080",
+        "E-FLOW-START-001"
+      ],
+      "id": "campaign_flow",
+      "path": "campaign-flow.json",
+      "sha256": "4a51b532f8f27082bed7af3b6d5e64987cf1826e3c09c6cd17bd6af93aee5e8e"
+    },
+    {
+      "evidence": [
+        "E-FLIGHT-001",
+        "E-FLIGHT-002"
+      ],
+      "id": "helicopter_flight",
+      "path": "helicopter-flight.json",
+      "sha256": "4be563c593eeb985e6528c33ff586de48527ca6246657b4abfe2dc689d5a21dc"
+    },
+    {
+      "evidence": [
+        "E-SERVICE-001",
+        "E-SERVICE-002",
+        "E-SERVICE-003"
+      ],
+      "id": "helicopter_service",
+      "path": "helicopter-service.json",
+      "sha256": "f1699102e75f809587a785b50fc765389432b1a9441ec08f8559b064b21fac53"
+    },
+    {
+      "evidence": [
+        "E-TIMING-001"
+      ],
+      "id": "main_loop_timing",
+      "path": "main-loop-timing.json",
+      "sha256": "34c4e0b8e64ef2e9d1725cff324e562a866f92aa6338b1e7bca47537a34378e8"
+    },
+    {
+      "evidence": [
+        "E-COMBAT-001",
+        "E-COMBAT-002",
+        "E-COMBAT-003",
+        "E-COMBAT-007",
+        "E-COMBAT-008",
+        "E-COMBAT-009",
+        "E-COMBAT-010",
+        "E-ECONOMY-001",
+        "E-UNIT-PROFILE-001",
+        "E-MOBILITY-001",
+        "E-PARACHUTE-001",
+        "E-STAGE-WEAPON-001",
+        "E-STAGE-BOMB-001",
+        "E-STRUCTURE-001",
+        "E-STRUCTURE-ROLE-001",
+        "E-OBJECT-CATALOG-001"
+      ],
+      "id": "helicopter_combat",
+      "path": "helicopter-combat.json",
+      "sha256": "e11b896b83d167d55a2605d3fd631d6c5ac7bee5c3aceb3ebc62d7bfc68c07a7"
+    },
+    {
+      "evidence": [
+        "E-STRATEGY-001"
+      ],
+      "id": "strategy",
+      "path": "strategy.json",
+      "sha256": "9cc099f8a01540aeb0170b849197837735c9718ca473b50d7d6d459cc20e4915"
+    },
+    {
+      "evidence": [
+        "E-OBJECT-CATALOG-001",
+        "E-STRUCTURE-ROLE-001"
+      ],
+      "id": "object_type_catalog",
+      "path": "object-type-catalog.json",
+      "sha256": "2ecb99de1d1d66c4a64fcacfc3bfab8e1e2b810d9465b3b7239f1f2a25e2db54"
+    },
+    {
+      "evidence": [
+        "E-SCORE-001"
+      ],
+      "id": "scoring",
+      "path": "scoring.json",
+      "sha256": "fc6a2568f80638c0d7983498542625ad7d30a2c8d0b686c7b40969f446256164"
+    },
+    {
+      "evidence": [
+        "E-BATTLEFIELD-001",
+        "E-STAGE-WEAPON-001",
+        "E-STAGE-BOMB-001",
+        "E-STAGE-PARAM-001",
+        "E-STRUCTURE-001",
+        "E-STRUCTURE-ROLE-001",
+        "E-OBJECT-CATALOG-001"
+      ],
+      "id": "battlefields",
+      "path": "battlefields.json",
+      "sha256": "88cc0d9bb3b27a9db05f94efd9324cb1e471614ad9de9e3bb1520fb3d0508598"
+    }
+  ],
+  "representation_policy": {
+    "default": "original binary units and signedness",
+    "demake_pixel_conversion": null,
+    "normalized_values": "present only where a statically proved conversion is documented",
+    "real_time_cadence": null
+  },
+  "schema_version": "1.0.0",
+  "source_image_sha256": "e87a3807667347f4434a78260e7e2791a7e6e45c4193e90f63dcb6d7a94059e8",
+  "unresolved": [
+    "completed update wrappers per real-time second",
+    "entropy distribution rather than conditional branch fractions",
+    "higher-level tactical names for nine strategy progression rows and 37 auxiliary flag bytes"
+  ]
+}

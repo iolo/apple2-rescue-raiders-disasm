@@ -1,0 +1,348 @@
+{
+  "battle_end_accumulation": {
+    "campaign_stage_bonus_by_stage_1_8": [
+      100,
+      150,
+      200,
+      250,
+      300,
+      350,
+      400,
+      450
+    ],
+    "campaign_stage_bonus_formula": "100 + 50 * (stage - 1)",
+    "object_type_values": [
+      {
+        "adjustment_group": 7,
+        "object_type_hex": "00",
+        "raw_hex": "00",
+        "saturating_count_increment": 0,
+        "score_increment": 0
+      },
+      {
+        "adjustment_group": 0,
+        "object_type_hex": "01",
+        "raw_hex": "00",
+        "saturating_count_increment": 0,
+        "score_increment": 0
+      },
+      {
+        "adjustment_group": 7,
+        "object_type_hex": "02",
+        "raw_hex": "77",
+        "saturating_count_increment": 7,
+        "score_increment": 7
+      },
+      {
+        "adjustment_group": 0,
+        "object_type_hex": "03",
+        "raw_hex": "00",
+        "saturating_count_increment": 0,
+        "score_increment": 0
+      },
+      {
+        "adjustment_group": 0,
+        "object_type_hex": "04",
+        "raw_hex": "00",
+        "saturating_count_increment": 0,
+        "score_increment": 0
+      },
+      {
+        "adjustment_group": 0,
+        "object_type_hex": "05",
+        "raw_hex": "00",
+        "saturating_count_increment": 0,
+        "score_increment": 0
+      },
+      {
+        "adjustment_group": 6,
+        "object_type_hex": "06",
+        "raw_hex": "40",
+        "saturating_count_increment": 0,
+        "score_increment": 4
+      },
+      {
+        "adjustment_group": 0,
+        "object_type_hex": "07",
+        "raw_hex": "00",
+        "saturating_count_increment": 0,
+        "score_increment": 0
+      },
+      {
+        "adjustment_group": 0,
+        "object_type_hex": "08",
+        "raw_hex": "00",
+        "saturating_count_increment": 0,
+        "score_increment": 0
+      },
+      {
+        "adjustment_group": 5,
+        "object_type_hex": "09",
+        "raw_hex": "20",
+        "saturating_count_increment": 0,
+        "score_increment": 2
+      },
+      {
+        "adjustment_group": 0,
+        "object_type_hex": "0A",
+        "raw_hex": "00",
+        "saturating_count_increment": 0,
+        "score_increment": 0
+      },
+      {
+        "adjustment_group": 0,
+        "object_type_hex": "0B",
+        "raw_hex": "00",
+        "saturating_count_increment": 0,
+        "score_increment": 0
+      },
+      {
+        "adjustment_group": 0,
+        "object_type_hex": "0C",
+        "raw_hex": "00",
+        "saturating_count_increment": 0,
+        "score_increment": 0
+      },
+      {
+        "adjustment_group": 1,
+        "object_type_hex": "0D",
+        "raw_hex": "10",
+        "saturating_count_increment": 0,
+        "score_increment": 1
+      },
+      {
+        "adjustment_group": 2,
+        "object_type_hex": "0E",
+        "raw_hex": "54",
+        "saturating_count_increment": 4,
+        "score_increment": 5
+      },
+      {
+        "adjustment_group": 3,
+        "object_type_hex": "0F",
+        "raw_hex": "25",
+        "saturating_count_increment": 5,
+        "score_increment": 2
+      },
+      {
+        "adjustment_group": 4,
+        "object_type_hex": "10",
+        "raw_hex": "F2",
+        "saturating_count_increment": 2,
+        "score_increment": 15
+      },
+      {
+        "adjustment_group": 0,
+        "object_type_hex": "11",
+        "raw_hex": "00",
+        "saturating_count_increment": 0,
+        "score_increment": 0
+      },
+      {
+        "adjustment_group": 0,
+        "object_type_hex": "12",
+        "raw_hex": "00",
+        "saturating_count_increment": 0,
+        "score_increment": 0
+      },
+      {
+        "adjustment_group": 0,
+        "object_type_hex": "13",
+        "raw_hex": "00",
+        "saturating_count_increment": 0,
+        "score_increment": 0
+      },
+      {
+        "adjustment_group": 0,
+        "object_type_hex": "14",
+        "raw_hex": "00",
+        "saturating_count_increment": 0,
+        "score_increment": 0
+      },
+      {
+        "adjustment_group": 0,
+        "object_type_hex": "15",
+        "raw_hex": "00",
+        "saturating_count_increment": 0,
+        "score_increment": 0
+      },
+      {
+        "adjustment_group": 8,
+        "object_type_hex": "16",
+        "raw_hex": "00",
+        "saturating_count_increment": 0,
+        "score_increment": 0
+      },
+      {
+        "adjustment_group": 8,
+        "object_type_hex": "17",
+        "raw_hex": "F0",
+        "saturating_count_increment": 0,
+        "score_increment": 15
+      },
+      {
+        "adjustment_group": 0,
+        "object_type_hex": "18",
+        "raw_hex": "00",
+        "saturating_count_increment": 0,
+        "score_increment": 0
+      },
+      {
+        "adjustment_group": 1,
+        "object_type_hex": "19",
+        "raw_hex": "10",
+        "saturating_count_increment": 0,
+        "score_increment": 1
+      },
+      {
+        "adjustment_group": 0,
+        "object_type_hex": "1A",
+        "raw_hex": "00",
+        "saturating_count_increment": 0,
+        "score_increment": 0
+      },
+      {
+        "adjustment_group": 0,
+        "object_type_hex": "1B",
+        "raw_hex": "00",
+        "saturating_count_increment": 0,
+        "score_increment": 0
+      },
+      {
+        "adjustment_group": 0,
+        "object_type_hex": "1C",
+        "raw_hex": "00",
+        "saturating_count_increment": 0,
+        "score_increment": 0
+      },
+      {
+        "adjustment_group": 0,
+        "object_type_hex": "1D",
+        "raw_hex": "00",
+        "saturating_count_increment": 0,
+        "score_increment": 0
+      },
+      {
+        "adjustment_group": null,
+        "object_type_hex": "1E",
+        "raw_hex": "00",
+        "saturating_count_increment": 0,
+        "score_increment": 0
+      }
+    ],
+    "object_values_address": "6E6F",
+    "routine": "6D18-6D76"
+  },
+  "display": {
+    "digits": 4,
+    "formatter": "6D77-6DC0",
+    "last_score_bytes": "01FC-01FF",
+    "negative_marker_high_bit_hex": "BB"
+  },
+  "event_adjustments": {
+    "creation_calls_use_index_base_hex": "00",
+    "destruction_index_formula": "((2 - $6604,Y) << 4) + adjustment_group",
+    "group_by_object_type_00_1D": [
+      7,
+      0,
+      7,
+      0,
+      0,
+      0,
+      6,
+      0,
+      0,
+      5,
+      0,
+      0,
+      0,
+      1,
+      2,
+      3,
+      4,
+      0,
+      0,
+      0,
+      0,
+      0,
+      8,
+      8,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "logical_high_table": {
+      "base": "6E37",
+      "indexed_length": 41
+    },
+    "logical_low_table": {
+      "base": "6E2F",
+      "indexed_length": 41
+    },
+    "routine": "6CCF-6CFD",
+    "state_banks": [
+      {
+        "adjustment_by_group_0_8": [
+          0,
+          -1,
+          -5,
+          -2,
+          -15,
+          -3,
+          0,
+          -21,
+          0
+        ],
+        "index_base_hex": "00",
+        "object_state_code": 2
+      },
+      {
+        "adjustment_by_group_0_8": [
+          100,
+          -2,
+          -1,
+          0,
+          -5,
+          0,
+          -25,
+          0,
+          1
+        ],
+        "index_base_hex": "10",
+        "object_state_code": 1
+      },
+      {
+        "adjustment_by_group_0_8": [
+          -100,
+          1,
+          5,
+          2,
+          15,
+          3,
+          -25,
+          7,
+          -1
+        ],
+        "index_base_hex": "20",
+        "object_state_code": 0
+      }
+    ],
+    "zero_group_is_no_op": true
+  },
+  "evidence": [
+    "E-SCORE-001"
+  ],
+  "image_sha256": "e87a3807667347f4434a78260e7e2791a7e6e45c4193e90f63dcb6d7a94059e8",
+  "initial_value": 0,
+  "representation": "four-digit packed BCD in $0F:$0E; ten's-complement values $9000-$9999 are negative",
+  "time_penalty": {
+    "amount": -1,
+    "applies_while_high_bcd_byte_strictly_below_hex": "90",
+    "counter_address": "6023",
+    "period_completed_update_wrappers": 90,
+    "updates_per_second": null
+  }
+}

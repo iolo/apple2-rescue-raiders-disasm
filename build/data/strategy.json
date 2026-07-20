@@ -1,0 +1,964 @@
+{
+  "auxiliary_flags_raw_hex": "FFFFFF010101FF000100000000010100010100000000000000000000000001010000000000",
+  "command_selection": {
+    "decoded_ascii": [
+      "E",
+      "D",
+      "A",
+      "T",
+      "M"
+    ],
+    "decoded_roles": [
+      "engineers",
+      "demolition_vehicle",
+      "aa_missile_carrier",
+      "tank",
+      "men"
+    ],
+    "direct_m_gate": "side ready, random-byte shift carry clear, count $6116 >= 10, and linked-HQ state permits it",
+    "encoded_high_bit_hex": [
+      "C5",
+      "C4",
+      "C1",
+      "D4",
+      "CD"
+    ],
+    "foreign_hq_command": "T while a foreign linked HQ has zero capture delay; otherwise decrement $60AD,side once when ($60C1 & $0F) == 0",
+    "index0_override": "if random_byte & $06 is nonzero, command index 0 is remapped to index 4 (M)",
+    "resource_score_candidates": [
+      {
+        "eight_bit_formula": "4 * value modulo 256",
+        "index": 0,
+        "resource_role": "shared men/engineer count",
+        "source": "611E,side"
+      },
+      {
+        "eight_bit_formula": "15 * value modulo 256",
+        "index": 1,
+        "resource_role": "demolition vehicle count",
+        "source": "6122,side"
+      },
+      {
+        "eight_bit_formula": "17 * value + original bit 4 modulo 256",
+        "forced_hex_in_stages_1_2": "FF",
+        "index": 2,
+        "resource_role": "AA missile carrier count",
+        "source": "611A,side"
+      },
+      {
+        "eight_bit_formula": "20 * value + original bit 4 modulo 256",
+        "index": 3,
+        "resource_role": "tank count",
+        "source": "6120,side"
+      }
+    ],
+    "role_evidence": "the bytes enter the same M/T/A/D/E input dispatcher exported by ground_unit_deployment",
+    "selection": "strict minimum; equal scores retain the higher index because the scan runs 2 down to 0 from initial index 3"
+  },
+  "coordinator": {
+    "close_opponent_weapon_gate": "stage is not 1, both helicopters eligible, vertical separation below 10, and $60C1 & $3F == 0",
+    "real_time_cadence": null,
+    "routine": "9A15-9B2C",
+    "saved_horizontal_velocity_fields": "606E-606F",
+    "saved_vertical_target_fields": "6070-6071",
+    "side_field": "6604,current object",
+    "vertical_target_minimum_hex": "39"
+  },
+  "evidence": [
+    "E-STRATEGY-001"
+  ],
+  "handler_tables": {
+    "first_phase": [
+      {
+        "address_hex": "9BC2",
+        "index": 0,
+        "name": "input_gate"
+      },
+      {
+        "address_hex": "9BD0",
+        "index": 1,
+        "name": "object_altitude"
+      },
+      {
+        "address_hex": "9BE6",
+        "index": 2,
+        "name": "service_altitude"
+      },
+      {
+        "address_hex": "9C00",
+        "index": 3,
+        "name": "saved_altitude"
+      },
+      {
+        "address_hex": "9C19",
+        "index": 4,
+        "name": "low_horizontal_speed"
+      },
+      {
+        "address_hex": "9C31",
+        "index": 5,
+        "name": "noop_1"
+      },
+      {
+        "address_hex": "9C32",
+        "index": 6,
+        "name": "noop_2"
+      },
+      {
+        "address_hex": "9C33",
+        "index": 7,
+        "name": "grounded_command"
+      },
+      {
+        "address_hex": "9C5C",
+        "index": 8,
+        "name": "type12_search"
+      },
+      {
+        "address_hex": "9C85",
+        "index": 9,
+        "name": "type0d_proximity"
+      },
+      {
+        "address_hex": "9CF3",
+        "index": 10,
+        "name": "tracked_object"
+      },
+      {
+        "address_hex": "9D46",
+        "index": 11,
+        "name": "countdown_motion"
+      },
+      {
+        "address_hex": "9D55",
+        "index": 12,
+        "name": "mark_state"
+      },
+      {
+        "address_hex": "9D5D",
+        "index": 13,
+        "name": "linked_target"
+      },
+      {
+        "address_hex": "9DAB",
+        "index": 14,
+        "name": "opposing_player"
+      },
+      {
+        "address_hex": "9E3A",
+        "index": 15,
+        "name": "opponent_pursuit"
+      },
+      {
+        "address_hex": "9EEF",
+        "index": 16,
+        "name": "opponent_gate"
+      }
+    ],
+    "primary_action": [
+      {
+        "address_hex": "A47B",
+        "index": 0,
+        "name": "enable_motion"
+      },
+      {
+        "address_hex": "A483",
+        "index": 1,
+        "name": "copy_opponent_candidate"
+      },
+      {
+        "address_hex": "A4BC",
+        "index": 2,
+        "name": "type0e_candidate"
+      },
+      {
+        "address_hex": "A4E7",
+        "index": 3,
+        "name": "offset_any_object"
+      },
+      {
+        "address_hex": "A508",
+        "index": 4,
+        "name": "boundary_gate"
+      },
+      {
+        "address_hex": "A599",
+        "index": 5,
+        "name": "opponent_gate"
+      },
+      {
+        "address_hex": "A5B7",
+        "index": 6,
+        "name": "stage_delay"
+      }
+    ],
+    "secondary_action": [
+      {
+        "address_hex": "A0D4",
+        "index": 0,
+        "name": "finalize_1"
+      },
+      {
+        "address_hex": "A0D7",
+        "index": 1,
+        "name": "finalize_2"
+      },
+      {
+        "address_hex": "A0DA",
+        "index": 2,
+        "name": "offset_from_link"
+      },
+      {
+        "address_hex": "A0F1",
+        "index": 3,
+        "name": "acquire_type0d"
+      },
+      {
+        "address_hex": "A188",
+        "index": 4,
+        "name": "finalize_3"
+      },
+      {
+        "address_hex": "A18B",
+        "index": 5,
+        "name": "search_type40"
+      },
+      {
+        "address_hex": "A1DE",
+        "index": 6,
+        "name": "track_saved_object"
+      },
+      {
+        "address_hex": "A201",
+        "index": 7,
+        "name": "offset_saved_object"
+      },
+      {
+        "address_hex": "A22E",
+        "index": 8,
+        "name": "finalize_4"
+      },
+      {
+        "address_hex": "A231",
+        "index": 9,
+        "name": "follow_moving_target"
+      },
+      {
+        "address_hex": "A2C4",
+        "index": 10,
+        "name": "follow_wide_target"
+      },
+      {
+        "address_hex": "A0F1",
+        "index": 11,
+        "name": "acquire_type0d"
+      },
+      {
+        "address_hex": "A352",
+        "index": 12,
+        "name": "refresh_opponent_link"
+      },
+      {
+        "address_hex": "A37D",
+        "index": 13,
+        "name": "opponent_resource_gate"
+      }
+    ]
+  },
+  "image_sha256": "e87a3807667347f4434a78260e7e2791a7e6e45c4193e90f63dcb6d7a94059e8",
+  "module": {
+    "memory_end_hex": "ABFF",
+    "memory_start_hex": "9A00",
+    "source": "selector5-load00-6900-baff"
+  },
+  "primary_scripts": [
+    {
+      "action": 0,
+      "handler": {
+        "address_hex": "A47B",
+        "index": 0,
+        "name": "enable_motion"
+      },
+      "initial_state": 5,
+      "offset_hex": "00",
+      "raw_record_hex": [
+        "05",
+        "02",
+        "00",
+        "01",
+        "FF"
+      ],
+      "secondary_action_sequence": [
+        2,
+        0,
+        1
+      ],
+      "terminator_hex": "FF"
+    },
+    {
+      "action": 1,
+      "handler": {
+        "address_hex": "A483",
+        "index": 1,
+        "name": "copy_opponent_candidate"
+      },
+      "initial_state": 3,
+      "offset_hex": "05",
+      "raw_record_hex": [
+        "03",
+        "03",
+        "04",
+        "05",
+        "FF"
+      ],
+      "secondary_action_sequence": [
+        3,
+        4,
+        5
+      ],
+      "terminator_hex": "FF"
+    },
+    {
+      "action": 2,
+      "handler": {
+        "address_hex": "A4BC",
+        "index": 2,
+        "name": "type0e_candidate"
+      },
+      "initial_state": 3,
+      "offset_hex": "0A",
+      "raw_record_hex": [
+        "03",
+        "03",
+        "06",
+        "05",
+        "FF"
+      ],
+      "secondary_action_sequence": [
+        3,
+        6,
+        5
+      ],
+      "terminator_hex": "FF"
+    },
+    {
+      "action": 3,
+      "handler": {
+        "address_hex": "A4E7",
+        "index": 3,
+        "name": "offset_any_object"
+      },
+      "initial_state": 3,
+      "offset_hex": "0F",
+      "raw_record_hex": [
+        "03",
+        "0B",
+        "07",
+        "05",
+        "FF"
+      ],
+      "secondary_action_sequence": [
+        11,
+        7,
+        5
+      ],
+      "terminator_hex": "FF"
+    },
+    {
+      "action": 4,
+      "handler": {
+        "address_hex": "A508",
+        "index": 4,
+        "name": "boundary_gate"
+      },
+      "initial_state": 1,
+      "offset_hex": "14",
+      "raw_record_hex": [
+        "01",
+        "03",
+        "06",
+        "00",
+        "09",
+        "FF"
+      ],
+      "secondary_action_sequence": [
+        3,
+        6,
+        0,
+        9
+      ],
+      "terminator_hex": "FF"
+    },
+    {
+      "action": 5,
+      "handler": {
+        "address_hex": "A599",
+        "index": 5,
+        "name": "opponent_gate"
+      },
+      "initial_state": 0,
+      "offset_hex": "1C",
+      "raw_record_hex": [
+        "00",
+        "0C",
+        "0D",
+        "FF"
+      ],
+      "secondary_action_sequence": [
+        12,
+        13
+      ],
+      "terminator_hex": "FF"
+    },
+    {
+      "action": 6,
+      "handler": {
+        "address_hex": "A5B7",
+        "index": 6,
+        "name": "stage_delay"
+      },
+      "initial_state": 2,
+      "offset_hex": "20",
+      "raw_record_hex": [
+        "02",
+        "08",
+        "FF"
+      ],
+      "secondary_action_sequence": [
+        8
+      ],
+      "terminator_hex": "FF"
+    }
+  ],
+  "progression_tables": {
+    "row_count": 9,
+    "row_width": 8,
+    "rows": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2
+      ],
+      [
+        0,
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        3
+      ],
+      [
+        0,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4,
+        4
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        4,
+        5,
+        5
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        6
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "semantic_boundary": "row structure is consumer-backed; individual auxiliary field roles remain unassigned"
+  },
+  "secondary_scripts": [
+    {
+      "first_handler_names": [
+        "service_altitude"
+      ],
+      "first_handler_sequence": [
+        2
+      ],
+      "handler": {
+        "address_hex": "A0D4",
+        "index": 0,
+        "name": "finalize_1"
+      },
+      "offset_hex": "00",
+      "script": 0,
+      "terminator_hex": "FF"
+    },
+    {
+      "first_handler_names": [
+        "input_gate"
+      ],
+      "first_handler_sequence": [
+        0
+      ],
+      "handler": {
+        "address_hex": "A0D7",
+        "index": 1,
+        "name": "finalize_2"
+      },
+      "offset_hex": "02",
+      "script": 1,
+      "terminator_hex": "FF"
+    },
+    {
+      "first_handler_names": [
+        "object_altitude",
+        "low_horizontal_speed"
+      ],
+      "first_handler_sequence": [
+        1,
+        4
+      ],
+      "handler": {
+        "address_hex": "A0DA",
+        "index": 2,
+        "name": "offset_from_link"
+      },
+      "offset_hex": "04",
+      "script": 2,
+      "terminator_hex": "FF"
+    },
+    {
+      "first_handler_names": [
+        "object_altitude",
+        "low_horizontal_speed",
+        "countdown_motion",
+        "mark_state",
+        "tracked_object",
+        "service_altitude",
+        "type0d_proximity",
+        "input_gate"
+      ],
+      "first_handler_sequence": [
+        1,
+        4,
+        11,
+        12,
+        10,
+        2,
+        9,
+        0
+      ],
+      "handler": {
+        "address_hex": "A0F1",
+        "index": 3,
+        "name": "acquire_type0d"
+      },
+      "offset_hex": "07",
+      "script": 3,
+      "terminator_hex": "FF"
+    },
+    {
+      "first_handler_names": [
+        "object_altitude",
+        "low_horizontal_speed"
+      ],
+      "first_handler_sequence": [
+        1,
+        4
+      ],
+      "handler": {
+        "address_hex": "A188",
+        "index": 4,
+        "name": "finalize_3"
+      },
+      "offset_hex": "10",
+      "script": 4,
+      "terminator_hex": "FF"
+    },
+    {
+      "first_handler_names": [
+        "service_altitude",
+        "grounded_command"
+      ],
+      "first_handler_sequence": [
+        2,
+        7
+      ],
+      "handler": {
+        "address_hex": "A18B",
+        "index": 5,
+        "name": "search_type40"
+      },
+      "offset_hex": "13",
+      "script": 5,
+      "terminator_hex": "FF"
+    },
+    {
+      "first_handler_names": [
+        "object_altitude",
+        "tracked_object"
+      ],
+      "first_handler_sequence": [
+        1,
+        10
+      ],
+      "handler": {
+        "address_hex": "A1DE",
+        "index": 6,
+        "name": "track_saved_object"
+      },
+      "offset_hex": "16",
+      "script": 6,
+      "terminator_hex": "FF"
+    },
+    {
+      "first_handler_names": [
+        "object_altitude",
+        "tracked_object"
+      ],
+      "first_handler_sequence": [
+        1,
+        10
+      ],
+      "handler": {
+        "address_hex": "A201",
+        "index": 7,
+        "name": "offset_saved_object"
+      },
+      "offset_hex": "19",
+      "script": 7,
+      "terminator_hex": "FF"
+    },
+    {
+      "first_handler_names": [
+        "object_altitude",
+        "linked_target"
+      ],
+      "first_handler_sequence": [
+        1,
+        13
+      ],
+      "handler": {
+        "address_hex": "A22E",
+        "index": 8,
+        "name": "finalize_4"
+      },
+      "offset_hex": "1C",
+      "script": 8,
+      "terminator_hex": "FF"
+    },
+    {
+      "first_handler_names": [
+        "object_altitude",
+        "low_horizontal_speed",
+        "countdown_motion",
+        "input_gate"
+      ],
+      "first_handler_sequence": [
+        1,
+        4,
+        11,
+        0
+      ],
+      "handler": {
+        "address_hex": "A231",
+        "index": 9,
+        "name": "follow_moving_target"
+      },
+      "offset_hex": "1F",
+      "script": 9,
+      "terminator_hex": "FF"
+    },
+    {
+      "first_handler_names": [
+        "object_altitude",
+        "low_horizontal_speed",
+        "type12_search",
+        "input_gate"
+      ],
+      "first_handler_sequence": [
+        1,
+        4,
+        8,
+        0
+      ],
+      "handler": {
+        "address_hex": "A2C4",
+        "index": 10,
+        "name": "follow_wide_target"
+      },
+      "offset_hex": "24",
+      "script": 10,
+      "terminator_hex": "FF"
+    },
+    {
+      "first_handler_names": [
+        "object_altitude",
+        "low_horizontal_speed",
+        "countdown_motion",
+        "mark_state",
+        "tracked_object",
+        "service_altitude",
+        "type0d_proximity",
+        "input_gate"
+      ],
+      "first_handler_sequence": [
+        1,
+        4,
+        11,
+        12,
+        10,
+        2,
+        9,
+        0
+      ],
+      "handler": {
+        "address_hex": "A0F1",
+        "index": 11,
+        "name": "acquire_type0d"
+      },
+      "offset_hex": "07",
+      "script": 11,
+      "terminator_hex": "FF"
+    },
+    {
+      "first_handler_names": [
+        "object_altitude",
+        "low_horizontal_speed",
+        "input_gate"
+      ],
+      "first_handler_sequence": [
+        1,
+        4,
+        0
+      ],
+      "handler": {
+        "address_hex": "A352",
+        "index": 12,
+        "name": "refresh_opponent_link"
+      },
+      "offset_hex": "2B",
+      "script": 12,
+      "terminator_hex": "FF"
+    },
+    {
+      "first_handler_names": [
+        "object_altitude",
+        "opposing_player",
+        "opponent_pursuit"
+      ],
+      "first_handler_sequence": [
+        1,
+        14,
+        15
+      ],
+      "handler": {
+        "address_hex": "A37D",
+        "index": 13,
+        "name": "opponent_resource_gate"
+      },
+      "offset_hex": "2F",
+      "script": 13,
+      "terminator_hex": "FF"
+    }
+  ],
+  "steering": {
+    "direction_clamp_signed": [
+      -1,
+      0,
+      1
+    ],
+    "generic_object_side_offsets_signed": [
+      -32,
+      32
+    ],
+    "negative_distance_outside_wrapped_table": -7,
+    "negative_same_page_low_byte_E5_FF_signed": [
+      -6,
+      -6,
+      -6,
+      -6,
+      -6,
+      -6,
+      -5,
+      -5,
+      -5,
+      -5,
+      -5,
+      -5,
+      -4,
+      -4,
+      -4,
+      -4,
+      -4,
+      -3,
+      -3,
+      -3,
+      -3,
+      -2,
+      -2,
+      -2,
+      -1,
+      -1,
+      0
+    ],
+    "positive_distance_28_or_more": 7,
+    "positive_overlap_note": "logical distance index 27 reads $40 at $AB7E, the first byte of the side-specific type-$0D offset table",
+    "positive_same_page_distance_0_27_raw": [
+      1,
+      1,
+      2,
+      2,
+      2,
+      3,
+      3,
+      3,
+      3,
+      4,
+      4,
+      4,
+      4,
+      4,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      64
+    ],
+    "type0d_side_offsets_signed": [
+      64,
+      -64
+    ]
+  },
+  "table_addresses": {
+    "commands": "ABCC-ABD0",
+    "first_handlers": "AAFB-AB1C",
+    "negative_velocity": "AB48-AB62",
+    "positive_velocity_logical_view": "AB63-AB7E",
+    "primary_handlers": "AB39-AB46",
+    "primary_offsets": "AA6B-AA71",
+    "primary_values": "AA48-AA6A",
+    "progression_rows": "AAB3-AAFA",
+    "secondary_handlers": "AB1D-AB38",
+    "secondary_offsets": "AAA5-AAB2",
+    "secondary_values": "AA72-AAA4",
+    "target_clearances": "ABC9-ABCB",
+    "target_ranks": "ABAB-ABC8"
+  },
+  "targeting": {
+    "clearance_by_rank": [
+      0,
+      0,
+      0
+    ],
+    "eligible_object_types_hex": [
+      "00",
+      "0D",
+      "0E",
+      "10"
+    ],
+    "hostile_score": "absolute 16-bit horizontal distance minus rank clearance; smallest score wins",
+    "rank_by_object_type_00_1D": [
+      0,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0,
+      1,
+      null,
+      2,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "type08_vertical_avoidance": {
+      "common_near_offset": -30,
+      "far_vertical_target_hex": "BF",
+      "near_distance_strictly_below": 86
+    }
+  },
+  "uncertainty": [
+    "auxiliary progression rows and flag bytes are retained without invented tactical labels",
+    "random branch frequencies require the runtime entropy distribution",
+    "all cadence is in completed update-counter values, not seconds"
+  ]
+}
