@@ -678,7 +678,7 @@ protection_hgr_page_block_end:
 .assert copy_protection_hgr_page - selector0_entry_start = $03f8, error, "protection HGR copy origin drift"
 .assert protection_hgr_page_block_end - advance_protection_hgr_page = $0046, error, "protection HGR page block size drift"
 
-    .include "protection_tables.inc"
+    .include "../../assets/protection/protection_tables.inc"
 
 selector0_entry_end:
 .assert selector0_entry_end - selector0_entry_start = $0800, error, "selector-0 entry load size drift"

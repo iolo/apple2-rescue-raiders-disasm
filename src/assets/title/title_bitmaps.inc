@@ -353,4 +353,3 @@ title_bitmap_region_end:
 .assert title_bitmap_descriptor_offsets - selector0_opening_start = $0f00, error, "title bitmap region origin drift"
 .assert title_bitmap_residual_tail - selector0_opening_start = $17bc, error, "title bitmap residual origin drift"
 .assert title_bitmap_region_end - title_bitmap_descriptor_offsets = $0900, error, "title bitmap region size drift"
-

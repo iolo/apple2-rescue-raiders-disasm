@@ -123,4 +123,3 @@ protection_data_region_end:
 .assert protection_initialized_workspace - selector0_entry_start = $0702, error, "protection workspace origin drift"
 .assert protection_residual_tail - selector0_entry_start = $0733, error, "protection residual origin drift"
 .assert protection_data_region_end - protection_hgr_scanline_low = $03d5, error, "protection data region size drift"
-

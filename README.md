@@ -24,9 +24,10 @@ and `completion-audit.md` preserves incomplete and approval-gated release gates.
 `build/data/demake-export.json` is the versioned index for all nine mechanics
 exports and states their original-unit/normalization policy.
 
-`rebuild` starts from all 560 extracted stored-sector artifacts, reinserts the
-assembled boot, stage 1, stage 3, selector-0, and selector-5 outputs at their
-disk locations, and writes `build/rebuild/rescue-raiders-rebuilt.dsk`. Its
+`rebuild` starts from all 560 extracted stored-sector artifacts and reinserts
+every authoritative assembled artifact currently represented under `src/`:
+the boot and three loader stages, promoted selector-0/1/2/5 loads, and all four
+selector-6 loads. It writes `build/rebuild/rescue-raiders-rebuilt.dsk`. Its
 manifest records every replacement and requires the candidate to be byte-for-
 byte identical to the pinned canonical image.
 
@@ -62,6 +63,30 @@ does **not** establish a DOS filesystem. Three reversible permutations remain
 available so later loader stages can be tested without silently forcing the
 track-0 conclusion onto every region.
 
+## Hidden `ZIPPY` commands
+
+During an interactive battlefield, entering `ZIPPY` toggles the game's hidden
+cheat/input mode. The input path normalizes lowercase letters, so `zippy` also
+works. The mode remains active until the battlefield input module is reset or
+`ZIPPY` is entered again. While it is active, these keys have special effects:
+
+| Key | Effect |
+| --- | --- |
+| `J` | Teleport the player's helicopter to horizontal coordinate `$0260`, toward the left side |
+| `K` | Teleport the player's helicopter to `$07F7`, approximately the battlefield midpoint |
+| `L` | Teleport the player's helicopter to `$0DA0`, toward the right side |
+| `/` | Add one reserve helicopter; the original 8-bit increment has no cap |
+| `-` | Toggle damage immunity for the human player's helicopter |
+| `Return`, then `1`-`8` | Transition to the selected battlefield |
+| `Return`, then `9` | Advance through the final campaign/briefing gate |
+| `Ctrl-A` | Toggle the row-ten hexadecimal diagnostic display; it is invisible when no diagnostic bytes are queued |
+
+Thus `ZIPPYK` is the direct form of the remembered midpoint command. `ZIPPY`
+does not have to be re-entered before every command while the mode remains
+enabled. Battlefield selection specifically requires `Return` before its
+digit. A bare digit `1`-`9` instead changes an internal HUD animation cadence
+to `20 - 2 * digit`; it does not select a battlefield.
+
 ## Authored versus generated files
 
 - Authored: `Makefile`, `config/`, `disk/`, `evidence/`, `src/`, `tools/`, and
@@ -70,12 +95,18 @@ track-0 conclusion onto every region.
 - Canonical external input: `./rescue_raiders.dsk`, pinned by
   `original/checksums.txt`.
 
+The complete source-tree policy and current selector ownership are documented
+in [`src/README.md`](src/README.md). Loader phases live under `src/loader/`,
+runtime load sets under `src/overlays/`, and lossless native asset definitions
+under `src/assets/`. Generated `da65` listings in `build/disassembly/` are
+comparison artifacts, never the authoritative source.
+
 The initial boot listing uses the Apple II boot-page origin `$0800`. This is a
 confirmed static address: operands in the sector refer back to `$08A0`, `$08AC`,
 and `$08AD`, and the sector-count byte at `$0800` precedes executable code at
 `$0801`. Labels beyond the source-exact boot page remain provisional.
 
-`src/stage1/stage1_loader.s` promotes the complete `$BB00-$BD94` Disk II codec,
+`src/loader/stage1/rwts_loader.s` promotes the complete `$BB00-$BD94` Disk II codec,
 seek path, and high-level RWTS dispatcher; the `$BD95-$BFC7` work buffers,
 translation/seek tables, and delay utility; and the `INTER`/`IOB` interface at
 `$BFC8-$BFED` to labeled ca65 source/data. The build asserts their addresses and
@@ -84,7 +115,7 @@ same source emitter as the independently rebuilt `$0800` boot page, and the
 unreferenced `$BFEE-$BFFF` residual is explicitly bounded data. No `INCBIN`
 remains in the module, which is now classified `source-exact`.
 
-`src/stage3/stage3_stream.s` reconstructs all of `$4000-$43FF`: selector stream
+`src/loader/stage3/overlay_loader.s` reconstructs all of `$4000-$43FF`: selector stream
 setup, the self-modifying dispatcher and relocation paths, five opcode handlers,
 seven pointer-defined streams, hardware/signature tables, and bounded residual
 workspace data. The complete output compares byte-for-byte with no `INCBIN`, so
@@ -105,15 +136,16 @@ the runtime-rendered `Cherbourg` row; see
 high-bit message records, city pointer/name tables, workspace, and embedded
 source-text tail. Three companion type maps cover the `$7800` disk/graphics
 code and tables, the `$A000` glyph renderer/state/prompt, and the `$A100`
-bitmap/font rows. Deterministic da65/ca65 encoders rebuild all 4,096 selector-6
-bytes exactly with no `INCBIN`.
+bitmap/font rows. The four authoritative assembly files under
+`src/overlays/selector6-briefing/` rebuild all 4,096 selector-6 bytes exactly
+with no `INCBIN`; `da65` still produces disposable comparison listings.
 FLOW-30 is also statically confirmed: selector 0 entry `$6000` directly calls
 the `$0800` high-resolution graphics/title animator, whose event scanner reads
 the `$1149` timed table and exits through the `$0618 -> $0F80` record before
 selector 1 is requested. The `$0EB2` event installs the copyright notice at
 `$11A7` as the text-stream pointer; `$0ED5/$0F24` directly consume and render
 its high-bit bytes.
-`src/selector0/opening.s` and `entry.s` now promote that direct entry, graphics
+`src/overlays/selector0-opening/opening.s` and `entry.s` now promote that direct entry, graphics
 initializer/animation loop, event initialization/scanner, complete timed table,
 and selector-1 handoff to labeled source. Their complete `$0800-$1FFF` and
 `$6000-$67FF` load artifacts rebuild byte-for-byte, making selector 0
@@ -191,7 +223,7 @@ The source preserves the overlap
 between the final list-insertion JMP operand and the constructor pointer table
 beginning at `$7875`.
 
-`src/selector5/flight.s` promotes player initialization at `$6FC4-$70B3`, the
+`src/overlays/selector5-battlefield/flight.s` promotes player initialization at `$6FC4-$70B3`, the
 analog flight input at `$914C-$91C1`, signed-step limiter at `$94CA-$94D5`,
 player-helicopter motion at
 `$97AC-$9866`, field repair at `$925D-$9292`, pad service at `$96D0-$97AB`,

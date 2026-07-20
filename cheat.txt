@@ -1,0 +1,37 @@
+# cheat
+
+Typing ZIPPY toggles cheat/debug mode. It remains enabled until reset or until you type ZIPPY again. Lowercase letters also work.
+
+
+```
+   Command after ZIPPY    Effect
+  ━━━━━━━━━━━━━━━━━━━━━  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   J                      Teleport helicopter toward the left side, coordinate $0260
+  ─────────────────────  ─────────────────────────────────────────────────────────────
+   K                      Teleport helicopter to the middle, coordinate $07F7
+  ─────────────────────  ─────────────────────────────────────────────────────────────
+   L                      Teleport helicopter toward the right side, coordinate $0DA0
+  ─────────────────────  ─────────────────────────────────────────────────────────────
+   /                      Add one reserve helicopter/life
+  ─────────────────────  ─────────────────────────────────────────────────────────────
+   -                      Toggle player-helicopter invulnerability
+  ─────────────────────  ─────────────────────────────────────────────────────────────
+   Return, then 1–8       Jump to the corresponding battlefield
+  ─────────────────────  ─────────────────────────────────────────────────────────────
+   Return, then 9         Skip toward the final briefing/ending sequence
+  ─────────────────────  ─────────────────────────────────────────────────────────────
+   Ctrl-A                 Toggle an internal hexadecimal debug/status display
+```
+
+
+Thus the familiar combined forms are ZIPPYJ, ZIPPYK, ZIPPYL, ZIPPY/, and ZIPPY-. For level selection, type ZIPPY,
+press Return, then press the digit.
+
+
+A couple of implementation details:
+
+
+- Invulnerability prevents damage to the human player’s helicopter; it does not affect enemy units.
+- / increments an 8-bit helicopter counter without enforcing a maximum.
+- Ctrl-A may appear to do nothing in the retail game because the debug row is displayed only when internal diagnostic bytes have been queued.
+- Ordinary digit keys 1–9 without first pressing Return merely change an internal HUD-animation cadence; they do not select a battlefield.

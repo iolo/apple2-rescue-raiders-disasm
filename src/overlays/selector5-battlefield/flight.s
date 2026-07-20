@@ -1,4 +1,5 @@
-; Rescue Raiders selector-5 flight input and player-helicopter motion slices.
+; Rescue Raiders selector-5 battlefield overlay: flight input, objects, combat,
+; strategy, display, data, and player-helicopter motion.
 .setcpu "6502"
 .segment "SELECTOR5"
 
@@ -5156,9 +5157,11 @@ compare_selector_key:
 selector_key_done:
     rts
 
-; In the enabled debug/input mode, accept campaign digits 1-9 and prime the
-; same battle-transition counters used by ordinary flow.
-read_campaign_digit:
+; ZIPPY cheat command Return, followed by a digit. In enabled cheat mode,
+; accept 1-9, store digit-1 as the current campaign index, and prime the same
+; battle-transition counters used by ordinary flow. The subsequent transition
+; advances to the requested battlefield; 9 advances through the final gate.
+cheat_select_campaign:
     bit $6046
     bpl campaign_digit_done
     bit $c010
@@ -5180,27 +5183,31 @@ wait_for_campaign_digit:
 campaign_digit_done:
     rts
 
-position_player_at_left_edge:
+; ZIPPY J/K/L teleport the human player's helicopter horizontally. These are
+; the exact 12-bit battlefield coordinates: J=$0260, K=$07F7 (the midpoint),
+; and L=$0DA0. Only the horizontal coordinate changes; repairing active-list
+; order makes the moved object visible to the normal update/render paths.
+cheat_teleport_player_left:
     lda #$60
     ldx #$02
-    bne position_debug_player
-position_player_at_right_edge:
+    bne cheat_teleport_player
+cheat_teleport_player_middle:
     lda #$f7
     ldx #$07
-    bne position_debug_player
-position_player_at_center:
+    bne cheat_teleport_player
+cheat_teleport_player_right:
     lda #$a0
     ldx #$0d
-position_debug_player:
+cheat_teleport_player:
     bit $6046
-    bpl position_debug_player_done
+    bpl cheat_teleport_player_done
     ldy $6113
     sty current_object
     sta $6394,y
     txa
     sta $632c,y
     jmp finish_position_update
-position_debug_player_done:
+cheat_teleport_player_done:
     rts
 
 ; Sample buttons, normalize a pending key, dispatch command-table entries, and
@@ -5269,7 +5276,7 @@ dispatch_player_input_command:
     jmp $90f6
 check_input_mode_sequence:
     ldy $6045
-    cmp hidden_debug_sequence_reversed,y
+    cmp cheat_enable_sequence_reversed,y
     bne reset_input_mode_sequence
     dec $6045
     bpl finish_player_input_frame
@@ -5289,10 +5296,10 @@ dispatch_demo_input:
 
 input_dispatch_source_end:
 .assert wait_for_selector_key - selector5_start = $2693, error, "selector key wait origin drift"
-.assert read_campaign_digit - selector5_start = $26c5, error, "campaign digit input origin drift"
-.assert position_player_at_left_edge - selector5_start = $26ee, error, "debug player left entry drift"
-.assert position_player_at_right_edge - selector5_start = $26f4, error, "debug player right entry drift"
-.assert position_player_at_center - selector5_start = $26fa, error, "debug player center entry drift"
+.assert cheat_select_campaign - selector5_start = $26c5, error, "cheat campaign selector origin drift"
+.assert cheat_teleport_player_left - selector5_start = $26ee, error, "cheat player-left entry drift"
+.assert cheat_teleport_player_middle - selector5_start = $26f4, error, "cheat player-middle entry drift"
+.assert cheat_teleport_player_right - selector5_start = $26fa, error, "cheat player-right entry drift"
 .assert dispatch_player_input - selector5_start = $2714, error, "player input dispatch origin drift"
 .assert input_dispatch_source_end - wait_for_selector_key = $0125, error, "input dispatch source size drift"
 
@@ -6459,20 +6466,23 @@ spawn_player_falling_infantry:
     sta $60a7
     jmp object_constructor_jump
 
-debug_increment_player_pool:
+; ZIPPY / adds one reserve helicopter. The original byte increment has no cap.
+cheat_add_reserve_helicopter:
     bit $6046
-    bpl debug_increment_player_pool_done
+    bpl cheat_add_reserve_helicopter_done
     inc $60ab
-debug_increment_player_pool_done:
+cheat_add_reserve_helicopter_done:
     rts
 
-debug_toggle_60a6:
+; ZIPPY - toggles human-player helicopter damage suppression. The damage
+; dispatcher tests this byte only for a type-$02 object whose owner is nonzero.
+cheat_toggle_player_invulnerability:
     bit $6046
-    bpl debug_toggle_60a6_done
+    bpl cheat_toggle_player_invulnerability_done
     lda $60a6
     eor #$ff
     sta $60a6
-debug_toggle_60a6_done:
+cheat_toggle_player_invulnerability_done:
     rts
 
 ; Alternate weapon path selected by $60EE. A zero table entry returns through
@@ -6500,7 +6510,9 @@ increment_input_transition_counter:
 input_transition_counter_done:
     rts
 
-debug_toggle_60ba:
+; ZIPPY Ctrl-A toggles the row-ten hexadecimal diagnostic display. It remains
+; invisible when the diagnostic byte count at $60D3 is zero.
+cheat_toggle_hex_status_row:
     bit $6046
     bpl input_transition_counter_done
     lda $60ba
@@ -6509,23 +6521,24 @@ debug_toggle_60ba:
     rts
 
 player_input_command_keys:
+    ; M T A D E H Space C Esc Ctrl-R J K L / Return - Ctrl-A
     .byte $cd,$d4,$c1,$c4,$c5,$c8,$a0,$c3,$9b,$92,$ca,$cb,$cc,$af,$8d,$ad,$81
 player_input_command_handlers:
     .word store_input_state_6042,store_input_state_6042,store_input_state_6042
     .word store_input_state_6042,store_input_state_6042,store_input_state_6042
     .word store_input_state_6042,increment_input_exit_counter
-    .word wait_for_selector_key,request_battlefield_exit,position_player_at_left_edge
-    .word position_player_at_right_edge,position_player_at_center,debug_increment_player_pool
-    .word debug_toggle_60a6,read_campaign_digit,debug_toggle_60ba
+    .word wait_for_selector_key,request_battlefield_exit,cheat_teleport_player_left
+    .word cheat_teleport_player_middle,cheat_teleport_player_right,cheat_add_reserve_helicopter
+    .word cheat_toggle_player_invulnerability,cheat_select_campaign,cheat_toggle_hex_status_row
 
 player_input_helpers_source_end:
 .assert increment_player_smoke_counter - selector5_start = $2fba, error, "player smoke counter origin drift"
 .assert spawn_player_falling_infantry - selector5_start = $2fc1, error, "falling infantry spawn origin drift"
-.assert debug_increment_player_pool - selector5_start = $2fe6, error, "debug player pool origin drift"
-.assert debug_toggle_60a6 - selector5_start = $2fef, error, "debug 60A6 toggle origin drift"
+.assert cheat_add_reserve_helicopter - selector5_start = $2fe6, error, "cheat helicopter increment origin drift"
+.assert cheat_toggle_player_invulnerability - selector5_start = $2fef, error, "cheat invulnerability toggle origin drift"
 .assert fire_type1a_alternate - selector5_start = $2ffd, error, "alternate weapon origin drift"
 .assert increment_input_transition_counter - selector5_start = $3027, error, "input transition counter origin drift"
-.assert debug_toggle_60ba - selector5_start = $302b, error, "debug 60BA toggle origin drift"
+.assert cheat_toggle_hex_status_row - selector5_start = $302b, error, "cheat diagnostic-row toggle origin drift"
 .assert player_input_command_keys - selector5_start = $3039, error, "input command key table origin drift"
 .assert player_input_command_handlers - selector5_start = $304a, error, "input command handler table origin drift"
 .assert player_input_helpers_source_end - increment_player_smoke_counter = $00b2, error, "player input helper source size drift"
@@ -6563,13 +6576,14 @@ horizontal_target_table_end:
 .assert horizontal_target_table - selector5_start = $308e, error, "horizontal target table origin drift"
 .assert horizontal_target_table_end - horizontal_target_table = $001a, error, "horizontal target table size drift"
 
-; Compared from the last byte toward the first by the hidden input sequence.
-hidden_debug_sequence_reversed:
+; Compared from the last byte toward the first. Entering ZIPPY toggles $6046;
+; the J/K/L, /, Return, -, and Ctrl-A handlers test its negative flag.
+cheat_enable_sequence_reversed:
     .byte $d9,$d0,$d0,$c9,$da       ; high-bit "YPPIZ" => entered as "ZIPPY"
 
-hidden_debug_sequence_reversed_end:
-.assert hidden_debug_sequence_reversed - selector5_start = $30a8, error, "hidden debug sequence origin drift"
-.assert hidden_debug_sequence_reversed_end - hidden_debug_sequence_reversed = $0005, error, "hidden debug sequence size drift"
+cheat_enable_sequence_reversed_end:
+.assert cheat_enable_sequence_reversed - selector5_start = $30a8, error, "cheat enable sequence origin drift"
+.assert cheat_enable_sequence_reversed_end - cheat_enable_sequence_reversed = $0005, error, "cheat enable sequence size drift"
 
 ; Nine-way animation/aim tables used by smoke and the player machine gun.
 ; Machine-gun velocity bytes are original signed units indexed by rotor/gun

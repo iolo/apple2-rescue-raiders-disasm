@@ -45,7 +45,7 @@ class GeometryTests(unittest.TestCase):
         self.assertEqual(0x17, physical_projection[0x2FF])
 
     def test_stage1_source_anchors(self):
-        source = (ROOT / "src" / "stage1" / "stage1_loader.s").read_text()
+        source = (ROOT / "src" / "loader" / "stage1" / "rwts_loader.s").read_text()
         self.assertIn("emit_rescue_raiders_boot_page", source)
         self.assertIn("RWTS0:", source)
         self.assertIn("encode_6_and_2:", source)
@@ -68,7 +68,7 @@ class GeometryTests(unittest.TestCase):
         self.assertNotIn(".incbin", source.lower())
 
     def test_stage3_source_anchors(self):
-        source = (ROOT / "src" / "stage3" / "stage3_stream.s").read_text()
+        source = (ROOT / "src" / "loader" / "stage3" / "overlay_loader.s").read_text()
         self.assertIn("stage3_entry:", source)
         self.assertIn("interpret_next:", source)
         self.assertIn("handler_call_operand:", source)
@@ -81,8 +81,24 @@ class GeometryTests(unittest.TestCase):
         self.assertIn("residual_workspace_initial:", source)
         self.assertNotIn(".incbin", source.lower())
 
+    def test_promoted_loader_overlay_and_asset_sources(self):
+        stage2 = (ROOT / "src" / "loader" / "stage2" / "bootstrap.s").read_text()
+        selector1 = (ROOT / "src" / "overlays" / "selector1-transition" / "main.s").read_text()
+        selector6_dir = ROOT / "src" / "overlays" / "selector6-briefing"
+        selector6 = [(selector6_dir / name).read_text() for name in (
+            "main.s", "bitmap_font.s", "disk_graphics.s", "renderer_prompt.s",
+        )]
+        campaign_map = (ROOT / "src" / "assets" / "maps" / "campaign_map_packed.s").read_text()
+        self.assertIn('.segment "STAGE2"', stage2)
+        self.assertIn('.segment "SELECTOR1"', selector1)
+        self.assertEqual(4, sum('.segment "SELECTOR6' in source for source in selector6))
+        self.assertIn("campaign_map_packed:", campaign_map)
+        self.assertIn("campaign_map_packed_end:", campaign_map)
+        for source in [stage2, selector1, campaign_map, *selector6]:
+            self.assertNotIn(".incbin", source.lower())
+
     def test_selector5_flight_source_anchors(self):
-        source = (ROOT / "src" / "selector5" / "flight.s").read_text()
+        source = (ROOT / "src" / "overlays" / "selector5-battlefield" / "flight.s").read_text()
         self.assertIn("initialize_player_helicopters:", source)
         self.assertIn("sample_player_paddles:", source)
         self.assertIn("scale_vertical:", source)
@@ -176,7 +192,14 @@ class GeometryTests(unittest.TestCase):
         self.assertIn("collision_table_overlap_return = collision_handlers_by_object_type+1", source)
         self.assertIn("horizontal_target_table:", source)
         self.assertIn("player_animation_feedback_states:", source)
-        self.assertIn("hidden_debug_sequence_reversed:", source)
+        self.assertIn("cheat_enable_sequence_reversed:", source)
+        self.assertIn("cheat_select_campaign:", source)
+        self.assertIn("cheat_teleport_player_left:", source)
+        self.assertIn("cheat_teleport_player_middle:", source)
+        self.assertIn("cheat_teleport_player_right:", source)
+        self.assertIn("cheat_add_reserve_helicopter:", source)
+        self.assertIn("cheat_toggle_player_invulnerability:", source)
+        self.assertIn("cheat_toggle_hex_status_row:", source)
         self.assertIn("player_input_command_handlers:", source)
         self.assertIn("find_smart_missile_target:", source)
         self.assertIn("update_strategy_state:", source)
@@ -301,10 +324,10 @@ class GeometryTests(unittest.TestCase):
         self.assertTrue(opening[0x9A7:].startswith(bytes(value | 0x80 for value in b"COPYRIGHT (C) 1984 ALL RIGHTS RESERVED")))
 
     def test_selector0_opening_source_anchors(self):
-        opening = (ROOT / "src" / "selector0" / "opening.s").read_text()
-        bitmaps = (ROOT / "src" / "selector0" / "title_bitmaps.inc").read_text()
-        entry = (ROOT / "src" / "selector0" / "entry.s").read_text()
-        protection = (ROOT / "src" / "selector0" / "protection_tables.inc").read_text()
+        opening = (ROOT / "src" / "overlays" / "selector0-opening" / "opening.s").read_text()
+        bitmaps = (ROOT / "src" / "assets" / "title" / "title_bitmaps.inc").read_text()
+        entry = (ROOT / "src" / "overlays" / "selector0-opening" / "entry.s").read_text()
+        protection = (ROOT / "src" / "assets" / "protection" / "protection_tables.inc").read_text()
         self.assertIn("title_module_entry:", opening)
         self.assertIn("title_delay_table:", opening)
         self.assertIn("compute_title_hgr_row_pointer:", opening)
@@ -351,7 +374,8 @@ class GeometryTests(unittest.TestCase):
         self.assertIn("title_text_and_loop_state:", opening)
         self.assertIn("title_residual_prefix:", opening)
         self.assertIn("title_font_64x8:", opening)
-        self.assertIn(".include \"title_bitmaps.inc\"", opening)
+        self.assertIn('.include "../../assets/fonts/title_font_64x8.inc"', opening)
+        self.assertIn('.include "../../assets/title/title_bitmaps.inc"', opening)
         self.assertIn("title_bitmap_descriptor_offsets:", bitmaps)
         self.assertIn("title_bitmap_descriptor_37:", bitmaps)
         self.assertIn("title_bitmap_residual_tail:", bitmaps)
@@ -396,7 +420,7 @@ class GeometryTests(unittest.TestCase):
         self.assertIn("clear_title_hgr_margins:", entry)
         self.assertIn("advance_protection_hgr_page:", entry)
         self.assertIn("copy_protection_hgr_page:", entry)
-        self.assertIn(".include \"protection_tables.inc\"", entry)
+        self.assertIn('.include "../../assets/protection/protection_tables.inc"', entry)
         self.assertIn("protection_hgr_scanline_low:", protection)
         self.assertIn("protection_x_byte_offsets:", protection)
         self.assertIn("protection_initial_x_positions:", protection)

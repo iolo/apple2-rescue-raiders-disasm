@@ -1992,7 +1992,7 @@ def do_disassemble(args: argparse.Namespace) -> None:
         raise SystemExit(run.stderr or run.stdout)
     normalize_da65_header(listing)
     root = pathlib.Path(__file__).resolve().parents[1]
-    source = root / "src" / "boot" / "boot_sector.s"
+    source = root / "src" / "loader" / "boot" / "boot_sector.s"
     obj = args.output / "boot-sector.o"
     include_dir = args.output.parent / "extract" / "stored"
     run = subprocess.run(["ca65", "--bin-include-dir", str(include_dir), "-o", str(obj), str(source)], text=True, capture_output=True)
@@ -2010,7 +2010,7 @@ def do_disassemble(args: argparse.Namespace) -> None:
     if run.returncode:
         raise SystemExit(run.stderr or run.stdout)
     normalize_da65_header(stage1_listing)
-    stage1_source = root / "src" / "stage1" / "stage1_loader.s"
+    stage1_source = root / "src" / "loader" / "stage1" / "rwts_loader.s"
     stage1_obj = args.output / "stage1-ba00-bfff.o"
     stage1_include_dir = args.output.parent / "extract"
     run = subprocess.run(["ca65", "--bin-include-dir", str(stage1_include_dir), "-o", str(stage1_obj), str(stage1_source)], text=True, capture_output=True)
@@ -2022,7 +2022,7 @@ def do_disassemble(args: argparse.Namespace) -> None:
         raise SystemExit(run.stderr or run.stdout)
     if stage1_rebuilt.read_bytes() != stage1.read_bytes():
         raise SystemExit("source-exact stage-1 rebuild mismatch")
-    stage3_source = root / "src" / "stage3" / "stage3_stream.s"
+    stage3_source = root / "src" / "loader" / "stage3" / "overlay_loader.s"
     stage3_obj = args.output / "stage3-4000-43ff.o"
     run = subprocess.run(["ca65", "--bin-include-dir", str(stage1_include_dir), "-o", str(stage3_obj), str(stage3_source)], text=True, capture_output=True)
     if run.returncode:
@@ -2037,7 +2037,7 @@ def do_disassemble(args: argparse.Namespace) -> None:
         ("selector0-load03-0800-1fff", "opening.s", "selector0-opening.cfg"),
         ("selector0-load05-6000-67ff", "entry.s", "selector0-entry.cfg"),
     ):
-        selector0_source = root / "src" / "selector0" / source_name
+        selector0_source = root / "src" / "overlays" / "selector0-opening" / source_name
         selector0_obj = args.output / f"{stem}.o"
         run = subprocess.run(["ca65", "-I", str(selector0_source.parent), "--bin-include-dir", str(stage1_include_dir), "-o", str(selector0_obj), str(selector0_source)], text=True, capture_output=True)
         if run.returncode:
@@ -2048,7 +2048,7 @@ def do_disassemble(args: argparse.Namespace) -> None:
             raise SystemExit(run.stderr or run.stdout)
         if selector0_rebuilt.read_bytes() != (args.output.parent / "extract" / f"{stem}.bin").read_bytes():
             raise SystemExit(f"source-exact {stem} promoted-region rebuild mismatch")
-    selector5_source = root / "src" / "selector5" / "flight.s"
+    selector5_source = root / "src" / "overlays" / "selector5-battlefield" / "flight.s"
     selector5_obj = args.output / "selector5-load00-6900-baff.o"
     run = subprocess.run(["ca65", "--bin-include-dir", str(stage1_include_dir), "-o", str(selector5_obj), str(selector5_source)], text=True, capture_output=True)
     if run.returncode:
@@ -2079,25 +2079,19 @@ def do_disassemble(args: argparse.Namespace) -> None:
         if run.returncode:
             raise SystemExit(run.stderr or run.stdout)
         normalize_da65_header(target)
-        generated_source = {
-            "stage2-6000-70ff.bin": ("STAGE2", "stage2.cfg", "stage-2"),
-            "selector6-load00-8000-87ff.bin": ("SELECTOR6", "selector6.cfg", "selector-6 main-load"),
-            "selector6-load01-a100-a4ff.bin": ("SELECTOR6A1", "selector6-load01.cfg", "selector-6 bitmap/font load"),
-            "selector6-load02-7800-7aff.bin": ("SELECTOR678", "selector6-load02.cfg", "selector-6 disk/graphics load"),
-            "selector6-load03-a000-a0ff.bin": ("SELECTOR6A0", "selector6-load03.cfg", "selector-6 renderer/prompt load"),
+        authoritative_source = {
+            "stage2-6000-70ff.bin": (root / "src" / "loader" / "stage2" / "bootstrap.s", "stage2.cfg", "stage-2"),
+            "selector1-load04-6900-69ff.bin": (root / "src" / "overlays" / "selector1-transition" / "main.s", "selector1.cfg", "selector-1 transition entry"),
+            "selector2-load00-8000-83ff.bin": (root / "src" / "assets" / "maps" / "campaign_map_packed.s", "selector2.cfg", "selector-2 packed campaign map"),
+            "selector6-load00-8000-87ff.bin": (root / "src" / "overlays" / "selector6-briefing" / "main.s", "selector6.cfg", "selector-6 main-load"),
+            "selector6-load01-a100-a4ff.bin": (root / "src" / "overlays" / "selector6-briefing" / "bitmap_font.s", "selector6-load01.cfg", "selector-6 bitmap/font load"),
+            "selector6-load02-7800-7aff.bin": (root / "src" / "overlays" / "selector6-briefing" / "disk_graphics.s", "selector6-load02.cfg", "selector-6 disk/graphics load"),
+            "selector6-load03-a000-a0ff.bin": (root / "src" / "overlays" / "selector6-briefing" / "renderer_prompt.s", "selector6-load03.cfg", "selector-6 renderer/prompt load"),
         }.get(filename)
-        if generated_source:
-            segment, config_name, description = generated_source
-            listing = target.read_text()
-            cpu_directive = '        .setcpu "6502"\n'
-            if listing.count(cpu_directive) != 1:
-                raise SystemExit(f"{description} generated-source CPU directive drift")
-            target.write_text(listing.replace(
-                cpu_directive,
-                cpu_directive + f'        .segment "{segment}"\n',
-            ))
+        if authoritative_source:
+            source_path, config_name, description = authoritative_source
             generated_obj = args.output / filename.replace(".bin", ".o")
-            run = subprocess.run(["ca65", "-o", str(generated_obj), str(target)], text=True, capture_output=True)
+            run = subprocess.run(["ca65", "-o", str(generated_obj), str(source_path)], text=True, capture_output=True)
             if run.returncode:
                 raise SystemExit(run.stderr or run.stdout)
             generated_rebuilt = args.output / filename.replace(".bin", ".rebuilt.bin")
@@ -2226,6 +2220,8 @@ def do_rebuild(args: argparse.Namespace) -> None:
     replace_linear("stage3", "stage3-4000-43ff.rebuilt.bin", coordinate_to_offset(21, 0))
     replace_selector_load(0, 3, "selector0-load03-0800-1fff.rebuilt.bin")
     replace_selector_load(0, 5, "selector0-load05-6000-67ff.rebuilt.bin")
+    replace_selector_load(1, 4, "selector1-load04-6900-69ff.rebuilt.bin")
+    replace_selector_load(2, 0, "selector2-load00-8000-83ff.rebuilt.bin")
     replace_selector_load(5, 0, "selector5-load00-6900-baff.rebuilt.bin")
     replace_selector_load(6, 0, "selector6-load00-8000-87ff.rebuilt.bin")
     replace_selector_load(6, 1, "selector6-load01-a100-a4ff.rebuilt.bin")
@@ -2962,9 +2958,11 @@ def do_report(args: argparse.Namespace) -> None:
         "runtime_loads": {
             "stage2_source_exact_bytes": 0x1100,
             "selector0_source_exact_bytes": 0x2000,
+            "selector1_source_exact_bytes": 0x0100,
+            "selector2_asset_source_exact_bytes": 0x0400,
             "selector5_source_exact_bytes": 0x5200,
             "selector6_source_exact_bytes": 0x1000,
-            "source_exact_bytes_total": 0x9300,
+            "source_exact_bytes_total": 0x9800,
             "incbin_bytes_in_source_exact_loads": 0,
         },
         "modules": {
@@ -2993,10 +2991,12 @@ def do_report(args: argparse.Namespace) -> None:
         ("Extraction/geometry", "complete", "560 sectors and three reversible mappings"),
         ("Boot/loader model", "complete", "Source-exact boot and stages 1/2/3 handoffs"),
         ("Selector 0", "complete", "8,192 source-exact bytes, zero INCBIN"),
+        ("Selector 1 transition", "partial", "256-byte executable entry promoted; supporting loads remain to classify"),
+        ("Selector 2 map", "complete", "1,024-byte packed map represented as native source asset"),
         ("Selector 5", "complete", "20,992 source-exact bytes, zero INCBIN"),
         ("Stage 2", "complete", "4,352 typed source-exact bytes, zero INCBIN"),
         ("Selector 6", "complete", "4,096 typed source-exact bytes across four loads, zero INCBIN"),
-        ("Remaining runtime source", "complete", "All runtime overlays named by the recovery plan have source-exact encoders"),
+        ("Remaining runtime source", "complete", "All runtime overlays named by the recovery plan have authoritative source-exact representations under src/"),
         ("Static asset encodings", "complete", "All known decoded-selector assets have raw fixtures and round-trip checks"),
         ("Screenshot placement", "approval-gated", "Requires qualified, user-authorized apple2ts run"),
         ("Demake exports", "partial", "Versioned original-unit export exists; cadence and auxiliary tactical semantics remain unresolved"),
@@ -3088,6 +3088,11 @@ def do_verify(args: argparse.Namespace) -> None:
         rebuilt_selector0 = (args.build / "disassembly" / f"{stem}.rebuilt.bin").read_bytes()
         if rebuilt_selector0 != selector0 or len(rebuilt_selector0) != expected_length:
             raise SystemExit(f"source-exact {stem} promoted-region rebuild mismatch")
+    for stem, expected_length in (("selector1-load04-6900-69ff", 0x0100), ("selector2-load00-8000-83ff", 0x0400)):
+        promoted = (args.build / "extract" / f"{stem}.bin").read_bytes()
+        rebuilt_promoted = (args.build / "disassembly" / f"{stem}.rebuilt.bin").read_bytes()
+        if rebuilt_promoted != promoted or len(rebuilt_promoted) != expected_length:
+            raise SystemExit(f"source-exact {stem} promoted-region rebuild mismatch")
     selector5 = (args.build / "extract" / "selector5-load00-6900-baff.bin").read_bytes()
     rebuilt_selector5 = (args.build / "disassembly" / "selector5-load00-6900-baff.rebuilt.bin").read_bytes()
     if rebuilt_selector5 != selector5 or len(rebuilt_selector5) != 0x5200:
@@ -3107,7 +3112,7 @@ def do_verify(args: argparse.Namespace) -> None:
         raise SystemExit("rebuilt disk does not reproduce canonical image")
     if rebuild_manifest["candidate_sha256"] != EXPECTED_SHA256 or not rebuild_manifest["byte_identical_to_canonical"]:
         raise SystemExit("rebuilt disk manifest drift")
-    expected_replacements = {"stage1", "boot-sector", "stage2", "stage3", "selector0-load03", "selector0-load05", "selector5-load00", "selector6-load00", "selector6-load01", "selector6-load02", "selector6-load03"}
+    expected_replacements = {"stage1", "boot-sector", "stage2", "stage3", "selector0-load03", "selector0-load05", "selector1-load04", "selector2-load00", "selector5-load00", "selector6-load00", "selector6-load01", "selector6-load02", "selector6-load03"}
     actual_replacements = {item["id"] for item in rebuild_manifest["source_exact_replacements"]}
     if actual_replacements != expected_replacements:
         raise SystemExit("rebuilt disk source-replacement manifest drift")
@@ -3485,7 +3490,7 @@ def do_verify(args: argparse.Namespace) -> None:
     if coverage["image_sha256"] != EXPECTED_SHA256 or coverage["disk"]["stored_bytes_losslessly_mapped"] != IMAGE_SIZE:
         raise SystemExit("release coverage lineage/disk metric drift")
     if (coverage["disk"]["source_exact_sector_count"], coverage["disk"]["source_exact_disk_bytes"],
-            coverage["runtime_loads"]["source_exact_bytes_total"], coverage["runtime_loads"]["incbin_bytes_in_source_exact_loads"]) != (157, 0x9D00, 0x9300, 0):
+            coverage["runtime_loads"]["source_exact_bytes_total"], coverage["runtime_loads"]["incbin_bytes_in_source_exact_loads"]) != (161, 0xA100, 0x9800, 0):
         raise SystemExit("release source-exact coverage metric drift")
     if coverage["dynamic"] != {"approved_questions": 0, "answered_questions": 0, "runtime_checkpoint_runs": 0}:
         raise SystemExit("unapproved dynamic coverage was populated")
@@ -3510,7 +3515,7 @@ def do_verify(args: argparse.Namespace) -> None:
     }
     if manifested_paths != actual_paths or release_manifest["artifact_count_excluding_manifest"] != len(actual_paths):
         raise SystemExit("release manifest does not cover every generated artifact")
-    print("verified: canonical hash, 560 sectors, 3 mapping round trips, source-exact boot/stages 1/2/3 and complete selector-0/5/6 loads, byte-exact rebuilt disk, title, 165 gameplay sprites, procedural-HGR asset round trips, eight battlefield definitions, synthesized sound, strategy scripts, and scoring tables")
+    print("verified: canonical hash, 560 sectors, 3 mapping round trips, authoritative source-exact boot/stages 1/2/3, promoted selector-0/1/2/5/6 loads, byte-exact rebuilt disk, title, 165 gameplay sprites, procedural-HGR asset round trips, eight battlefield definitions, synthesized sound, strategy scripts, and scoring tables")
 
 
 def parser() -> argparse.ArgumentParser:

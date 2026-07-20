@@ -400,6 +400,32 @@ is the preferred first battlefield observation because it exercises gameplay
 without synthetic joystick input. Keyboard automation may be used only for the
 real `FLOW-20` and `FLOW-50` actions, with the transition verified.
 
+### Recovered hidden battlefield commands
+
+The selector-5 keyboard dispatcher statically confirms the user-observed
+`ZIPPY` sequence. Its five high-bit characters are stored in reverse order and
+compared from the final table byte toward the first. Completing the sequence
+XOR-toggles `$6046` between `$00` and `$FF`; the negative value enables seven
+gated command families. Lowercase alphabetic input is normalized to uppercase.
+
+| Input after enabling `ZIPPY` | State change | Confirmed behavior |
+| --- | --- | --- |
+| `J` | player X = `$0260` | Teleport toward the left side and repair active-object ordering |
+| `K` | player X = `$07F7` | Teleport to approximately the battlefield midpoint |
+| `L` | player X = `$0DA0` | Teleport toward the right side |
+| `/` | increment `$60AB` | Add one reserve helicopter, without a saturation check |
+| `-` | XOR `$60A6` with `$FF` | Toggle damage suppression for the nonzero-owner player helicopter |
+| `Return`, `1`-`9` | set `$05` to digit minus one; set `$60C6/$60C7` to `$02/$F0` | Request battlefield 1-8 or advance through the final gate with 9 |
+| `Ctrl-A` | XOR `$60BA` with `$FF` | Toggle row-ten hexadecimal diagnostics when `$60D3` queues bytes |
+
+The raw teleport constants correct an earlier semantic-label error: `K` is the
+midpoint command and `L` is the right-side command. The disassembled labels now
+reflect the constants rather than the earlier inference. Bare digits are a
+separate, ungated path that sets HUD cadence `$60B5` to `20 - 2 * digit`; they
+are not battlefield selectors. `Esc`/`SAVE`, `Ctrl-R`, and the gated `CONT`
+sequence also share the input machinery but are ordinary save/exit flow, not
+members of the `ZIPPY` cheat table.
+
 ## Operating Principles
 
 1. Preserve before interpreting. All analysis begins with an immutable input
@@ -516,17 +542,14 @@ config/                   # tool versions, da65 info, linker configs
 disk/                     # authored geometry and loader notes
 evidence/                 # claims, hypotheses, experiments, run manifests
 src/
-  boot/
-  loader/
-  runtime/
-  data/
-  hardware.inc
-  memory.inc
-  symbols.inc
-assets/
-  raw/
-  decoded/
-  manifests/
+  README.md               # source ownership and promotion status
+  loader/                 # boot plus sequential loader stages 1-3
+  overlays/               # selector-numbered runtime load sets
+  assets/                 # lossless native asset definitions
+build/
+  extract/                # regenerated raw sectors and selector loads
+  disassembly/            # regenerated mechanical comparison listings
+  assets/                 # regenerated raw slices and visual previews
 data/
   raw/
   decoded/
@@ -962,7 +985,7 @@ unique-content coverage; do not omit duplicates in a way that inflates progress.
 | Phase 6 screenshot placement | Approval-gated, not executed | Requires the apple2ts qualification gate and user authorization; static asset completion is not a screenshot-placement observation |
 | Phase 8 demake integration | Partial | Versioned `demake-export.json` covers exact scoring/economy, the complete 30-type catalog, battlefield layouts/formations, structure roles and durability behavior, stage transitions, movement/parachute behavior, combat profiles, and strategy scripts. Real-time cadence, entropy distribution, machine-gun representation, complete joined combat profiles, and auxiliary tactical-field semantics remain explicit gaps |
 | M6 runtime checkpoints | Approval-gated, not executed | Requires the apple2ts qualification gate and user authorization; static flow evidence is not a runtime smoke result |
-| Remaining runtime source | Complete for the recovery-plan overlay set | Stage 2 (`$6000-$70FF`) and all four selector-6 loads (`$7800`, `$8000`, `$A000`, `$A100`) now have bounded, typed, deterministic source-exact encoders with zero `INCBIN` |
+| Remaining runtime source | Complete for the recovery-plan overlay set | Stage 2 (`$6000-$70FF`) and all four selector-6 loads (`$7800`, `$8000`, `$A000`, `$A100`) now have authoritative bounded, typed source under `src/` with zero `INCBIN`; generated `da65` files are comparison artifacts only |
 | M7 recovery release | In progress | Exact disk construction, clean regeneration, coverage, artifact lineage, module schema, static assets, and planned runtime-source recovery are complete; remaining mechanics fields and approval-gated runtime checks remain |
 
 ### Unconfirmed Original Metrics
