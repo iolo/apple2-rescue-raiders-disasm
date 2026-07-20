@@ -39,6 +39,10 @@ continues to emit the original bytes.
 | 5 | `overlays/selector5-battlefield/` | Curated, source-exact battlefield overlay |
 | 6 | `overlays/selector6-briefing/` | Source-exact briefing/map overlay; labels are progressively curated |
 
+Selector 5 uses `flight.s` as a thin assembly entry point. Its ordered
+`modules/*.inc` fragments split the `$6900-$BAFF` load by subsystem while
+remaining one ca65 translation unit; see `overlays/selector5-battlefield/README.md`.
+
 Unknown or weakly classified bytes should remain explicit `.byte` data in a
 source file when promoted. Promotion must not invent code boundaries or asset
 semantics merely to eliminate a generated artifact.
