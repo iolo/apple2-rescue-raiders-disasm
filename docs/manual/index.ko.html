@@ -1,0 +1,382 @@
+<!doctype html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="레스큐 레이더스 한국어 훈련 지침서. 게임 소개, 구성 요소와 무기, 플레이 방법, 조작 요약을 원본과 같은 이미지로 제공합니다." name="description"/>
+<meta content="#f4f1e9" name="theme-color"/>
+<link href="index.html" hreflang="en" rel="alternate"/>
+<link href="index.ko.html" hreflang="ko" rel="alternate"/>
+<link href="data:," rel="icon"/>
+<title>Rescue Raiders — 한국어 훈련 지침서</title>
+<style>
+    :root { color-scheme: light; --paper: #f4f1e9; --ink: #242620; --muted: #64665b; --rule: #d2d0c4; --accent: #46543a; --sans: Arial, "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans CJK KR", sans-serif; --serif: Georgia, "Noto Serif CJK KR", "AppleMyungjo", "Batang", serif; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--serif); font-size: 18px; line-height: 1.7; }
+    a { color: var(--accent); text-underline-offset: .2em; text-decoration-thickness: 1px; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible, summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; }
+    img { display: block; max-width: 100%; height: auto; }
+    summary { cursor: pointer; }
+    .skip-link { position: fixed; top: -5rem; left: 1rem; z-index: 10; background: var(--ink); color: white; padding: .5rem 1rem; }
+    .skip-link:focus { top: 1rem; }
+    .masthead { position: sticky; top: 0; z-index: 5; background: var(--paper); border-bottom: 1px solid var(--rule); }
+    .masthead-inner { max-width: 1240px; padding: 16px 40px; margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; font: 12px/1.5 var(--sans); letter-spacing: .08em; text-transform: uppercase; }
+    .masthead a { color: var(--ink); text-decoration: none; }
+    .masthead-meta { display: flex; align-items: center; gap: 20px; }
+    .masthead .language-link { text-transform: none; letter-spacing: 0; text-decoration: underline; }
+    .masthead .wordmark { font-weight: 900; font-size: 15px; letter-spacing: -.025em; }
+    .reading-progress { position: absolute; bottom: -1px; left: 0; width: 0; height: 2px; background: var(--accent); }
+    .hero { max-width: 1160px; margin: auto; padding: 70px 40px 64px; display: grid; grid-template-columns: 1fr 285px; gap: 64px; align-items: center; }
+    .eyebrow { margin: 0 0 20px; font: 11px/1.6 var(--sans); font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+    h1 { font: 900 clamp(48px, 6.8vw, 82px)/.9 var(--sans); letter-spacing: -.065em; text-transform: uppercase; margin: 0 0 26px; }
+    .hero-subtitle { margin: 0 0 20px; font-size: 30px; font-style: italic; }
+    .hero-description { max-width: 400px; font-size: 17px; line-height: 1.6; }
+    .hero-links { display: flex; flex-wrap: wrap; gap: 12px 26px; margin-top: 28px; font: 13px/1.5 var(--sans); }
+    .hero-cover { margin: 0; }
+    .hero-cover img { width: 100%; mix-blend-mode: normal; }
+    .hero-cover figcaption { margin-top: 14px; text-align: right; font: 10px/1.5 var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+    .book { max-width: 1160px; margin: 0 auto; padding: 0 40px; display: grid; grid-template-columns: 215px minmax(0, 1fr); gap: 68px; border-top: 1px solid var(--ink); }
+    .sidebar { min-width: 0; }
+    .contents { position: sticky; top: 84px; max-height: calc(100dvh - 100px); overflow-y: auto; margin-top: 32px; padding-bottom: 28px; font: 12px/1.55 var(--sans); }
+    .contents summary { list-style: none; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 16px; cursor: default; }
+    .contents summary::-webkit-details-marker { display: none; }
+    .contents ol { padding: 0; margin: 0; list-style: none; }
+    .contents li { margin: 0; padding: 0; }
+    .contents a { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; padding: 7px 0 7px 12px; border-left: 2px solid transparent; color: var(--muted); text-decoration: none; transition: color .15s, border-color .15s; }
+    .contents a:hover, .contents a[aria-current="location"] { border-color: var(--accent); color: var(--ink); }
+    .contents a[aria-current="location"] { font-weight: 700; }
+    .contents .appendix-start { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--rule); }
+    main { min-width: 0; padding-bottom: 64px; }
+    section { padding: 48px 0; border-bottom: 1px solid var(--rule); }
+    section:last-child { border-bottom: 0; }
+    h2 { margin: 0 0 28px; font: 700 36px/1.15 var(--sans); letter-spacing: -.045em; }
+    h3 { margin: 36px 0 14px; font: 700 21px/1.3 var(--sans); letter-spacing: -.02em; }
+    h4 { margin: 0 0 12px; font: 700 15px/1.4 var(--sans); }
+    p { margin: 0 0 20px; }
+    strong { font-weight: 700; }
+    li { padding-left: 5px; margin-bottom: 12px; }
+    ul, ol { padding-left: 26px; }
+    .lead { font-size: 21px; line-height: 1.6; }
+    .illustration { margin: 30px 0; }
+    .illustration img { width: 100%; }
+    figcaption { margin-top: 12px; font: 12px/1.5 var(--sans); color: var(--muted); }
+    .unit { display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 28px; padding: 24px 0; border-top: 1px solid var(--rule); }
+    .unit img { width: 128px; max-height: 125px; object-fit: contain; image-rendering: pixelated; margin-top: 4px; }
+    .unit p:last-child { margin-bottom: 0; }
+    .unit h4 { text-transform: uppercase; letter-spacing: .015em; }
+    .note { margin: 28px 0; padding: 20px 24px; border-left: 3px solid var(--accent); background: #e9e8dd; }
+    .note h4 { margin-bottom: 8px; font-size: 12px; text-transform: uppercase; letter-spacing: .08em; }
+    .note p:last-child { margin-bottom: 0; }
+    .transmission { margin: 28px 0; padding: 24px; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); text-align: center; font: 14px/1.8 var(--sans); }
+    .transmission strong { display: block; }
+    kbd { font: 12px/1.8 var(--sans); display: inline-block; min-width: 25px; padding: 0 6px; border: 1px solid #b8b9ad; border-bottom-width: 2px; border-radius: 3px; background: #faf9f4; text-align: center; color: var(--ink); white-space: nowrap; vertical-align: 1px; }
+    .table-scroll { overflow-x: auto; margin: 24px 0; }
+    table { width: 100%; border-collapse: collapse; font: 14px/1.6 var(--sans); text-align: left; }
+    caption { text-align: left; margin-bottom: 12px; font-size: 12px; color: var(--muted); }
+    th, td { border-bottom: 1px solid var(--rule); padding: 13px 10px 13px 0; vertical-align: top; }
+    th { font-size: 11px; letter-spacing: .06em; text-transform: uppercase; border-top: 1px solid var(--ink); border-bottom-color: var(--ink); }
+    td:last-child, th:last-child { padding-right: 0; }
+    .prices td:last-child, .prices th:last-child { text-align: right; white-space: nowrap; }
+    .controls td:first-child { width: 95px; white-space: nowrap; }
+    .joystick-figure { width: 260px; margin: 24px auto; }
+    .credits { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 28px; font: 14px/1.6 var(--sans); margin: 24px 0; }
+    .credits dt { font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+    .credits dd { margin: 0; }
+    footer { max-width: 1080px; margin: 0 auto; padding: 28px 0 36px; border-top: 1px solid var(--ink); display: flex; justify-content: space-between; gap: 24px; color: var(--muted); font: 11px/1.7 var(--sans); }
+    footer p { margin: 0; }
+    @media (min-width: 761px) { .hero > * { animation: arrive .45s ease-out both; } .hero-cover { animation-delay: .08s; } }
+    @keyframes arrive { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    @media (max-width: 1000px) { .hero { gap: 40px; } .book { grid-template-columns: 180px minmax(0,1fr); gap: 36px; } footer { margin: 0 40px; } }
+    @media (max-width: 760px) {
+      body { font-size: 17px; } html { scroll-padding-top: 5rem; }
+      .masthead-inner { padding: 14px 20px; } .masthead .wordmark { font-size: 13px; }
+      .hero { padding: 38px 24px; grid-template-columns: 1fr 125px; gap: 24px; } h1 { font-size: clamp(34px,7.5vw,54px); } .eyebrow { font-size: 9px; margin-bottom: 15px; } .hero-subtitle { font-size: 23px; margin-bottom: 12px; } .hero-description { font-size: 15px; } .hero-links { font-size: 12px; margin-top: 20px; } .hero-cover figcaption { font-size: 8px; }
+      .book { display: block; padding: 0 24px; } .contents { position: static; max-height: none; overflow: visible; margin: 0; padding: 0; border-bottom: 1px solid var(--ink); } .contents summary { padding: 18px 0; margin: 0; cursor: pointer; display: flex; justify-content: space-between; } .contents summary::after { content: '+'; font-size: 18px; line-height: 1; } .contents[open] summary::after { content: '−'; } .contents nav { padding-bottom: 24px; } .contents a { padding-top: 9px; padding-bottom: 9px; }
+      section { padding: 36px 0; } h2 { font-size: 30px; } h3 { font-size: 20px; } .lead { font-size: 19px; }
+      .unit { grid-template-columns: 88px minmax(0,1fr); gap: 20px; } .unit img { width: 64px; max-height: 100px; } .unit h4 { font-size: 13px; }
+      footer { margin: 0 24px; }
+    }
+    @media (max-width: 420px) { .masthead-inner { padding-inline: 16px; gap: 8px; } .masthead .wordmark { font-size: 12px; } .hero { gap: 16px; grid-template-columns: 1fr 96px; padding-left: 20px; padding-right: 20px; } .hero-description { grid-column: 1 / -1; } .hero-links { gap: 10px 18px; } .hero-cover figcaption { display: none; } .book { padding: 0 20px; } .unit { grid-template-columns: 65px minmax(0,1fr); gap: 16px; } .credits { grid-template-columns: 1fr; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
+  
+    /* Local Korean font fallbacks keep this edition fully usable offline. */
+    body { word-break: keep-all; overflow-wrap: break-word; line-height: 1.85; }
+    h2, h3 { letter-spacing: -.025em; }
+    .hero h1 { word-break: normal; overflow-wrap: normal; }
+    .hero-subtitle { font-style: normal; }
+    .unit h4 { line-height: 1.6; }
+</style>
+</head>
+<body id="top">
+<a class="skip-link" href="#introduction">본문으로 건너뛰기</a>
+<header class="masthead">
+<div class="masthead-inner">
+<a class="wordmark" href="#top">Rescue Raiders</a>
+<div class="masthead-meta"><span>훈련 지침서</span><a class="language-link" href="index.html" hreflang="en" lang="en">English</a></div>
+</div>
+<div aria-hidden="true" class="reading-progress"></div>
+</header>
+<div class="hero">
+<div>
+<p class="eyebrow">Sir-Tech Software, Inc. · 제2판 · 1984</p>
+<h1 lang="en">Rescue <br/>Raiders</h1>
+<p class="hero-subtitle">훈련 지침서</p>
+<p class="hero-description">전략 전쟁 시뮬레이션 게임.<br/>현재를 구하기 위해 과거로 떠나십시오.</p>
+<div class="hero-links"><a href="#introduction">지침서 읽기 ↓</a><a href="#reference">조작 요약 ↗</a></div>
+</div>
+<figure class="hero-cover">
+<img alt="레스큐 레이더스 만화풍 표지. 병사들이 군용 헬리콥터로 달려가고, 위에는 게임 제목, 아래에는 훈련 지침서 띠가 있습니다." height="1536" src="images/cover.jpg" width="1024"/>
+<figcaption>훈련 지침서</figcaption>
+</figure>
+</div>
+<div class="book">
+<aside class="sidebar">
+<details class="contents" open="">
+<summary>목차</summary>
+<nav aria-label="목차">
+<ol>
+<li><a href="#introduction">들어가며</a></li>
+<li><a href="#about">게임 소개</a></li>
+<li><a href="#elements">게임 구성 요소</a></li>
+<li><a href="#weapons">무기</a></li>
+<li><a href="#getting-started">시작하기</a></li>
+<li><a href="#how-to-play">플레이 방법</a></li>
+<li><a href="#finance">자금</a></li>
+<li><a href="#status-reports">컴퓨터 현황 보고</a></li>
+<li><a href="#scoring">점수</a></li>
+<li><a href="#other-features">기타 기능</a></li>
+<li class="appendix-start"><a href="#reference">조작 요약</a></li>
+<li><a href="#publication">제작진</a></li>
+</ol>
+</nav>
+</details>
+</aside>
+<main id="manual">
+<section aria-labelledby="introduction-title" id="introduction">
+<h2 id="introduction-title">들어가며</h2>
+<p class="lead"><strong>1944년 6월 6일, 디데이. 수천 척의 함선과 수천 대의 항공기가 지원하는 가운데 수십만 명의 병사가 프랑스 북부 노르망디 해안으로 밀려듭니다. 세계 역사상 최대 규모의 상륙작전입니다.</strong></p>
+<p><strong>작전은 성공합니다. 공격이 끝날 무렵 미국, 캐나다, 영국, 프랑스, 폴란드, 네덜란드, 노르웨이, 덴마크, 벨기에, 오스트레일리아, 뉴질랜드의 병사들은 독일의 에르빈 롬멜 원수가 “난공불락”이라 장담했던 방어선을 돌파합니다. 서방 세계의 군대가 히틀러의 잔혹한 야만성에 맞서 힘을 합쳐 유럽 북부 해안에 교두보를 마련한 것입니다.</strong></p>
+<p>그러나 아직은 교두보에 불과합니다. 전 세계 신문이 상륙 소식을 대대적으로 알리는 동안에도 연합군은 위태롭기 그지없는 거점을 확보하기 위해 움직이고 있습니다. 상륙한 지 얼마 되지 않아 다시 바다로 밀려나는 일을 막으려면 프랑스 북부와 네덜란드, 벨기에 곳곳의 독일군 거점을 무너뜨려야 합니다. 노르망디 전투가 시작되었습니다.</p>
+<p>노르망디의 전원 지대는 병사들에게 악몽과도 같습니다. 넓고 평평한 들판 사이로는 북해에서 불어오는 바람을 막기 위해 키운 높고 빽빽한 생울타리가 이어집니다. 독일군은 그 안에 몸을 숨기고 들판을 건너야 하는 연합군 병사들을 매복 공격합니다. 전투는 들판에서 다음 들판으로, 농가에서 다음 농가로 이어지는 싸움의 연속입니다. 불과 몇 마일 전진하는 데도 며칠씩 걸리곤 합니다.</p>
+<p>전투 초기 몇 주 동안 독일군은 거세게 저항합니다. 러시아와 북아프리카에서 오랫동안 싸운 장교들이 새로 투입된 잘 훈련된 병사들을 지휘합니다. 이들은 연합군의 공격에 놀라운 저항을 보입니다. 예를 들어 생로에서 독일군을 몰아내기 위해서는 도시가 말 그대로 평지가 될 때까지 공중 폭격과 포격을 퍼부어야 했습니다. 이후 참상을 목격한 연합군 최고사령관 드와이트 D. 아이젠하워는 도시의 잔해가 된 돌과 콘크리트 위를 밟고 “땅에 발을 대지 않은 채” 생로의 한쪽 끝에서 다른 쪽 끝까지 걸어갈 수 있을 정도라고 말합니다.</p>
+<p>마침내 전투에서 승리합니다. 디데이로부터 석 달 뒤, 연합군은 프랑스와 네덜란드, 벨기에의 북부 해안선을 완전히 장악하고 프랑스와 저지대 지역을 해방합니다. 독일은 프랑스·네덜란드·벨기에·이탈리아의 서방 연합군과 동유럽을 휩쓸며 베를린으로 진격하는 소련군 사이에 끼어 압박받게 됩니다.</p>
+<p>노르망디 전투는 세계사에서 중대한 사건입니다. 디데이에 연합군이 해변에서 격퇴되었거나 이후 전투가 독일의 승리로 끝났다면, 그 영향은 오늘날과 그 이후까지 이어졌을 것입니다. 좋든 나쁘든 세상은 지금과 다른 모습이었을 것입니다.</p>
+<p>역사는 복잡하게 얽힌 사건들의 망입니다. 어느 시점에 일어나는 일은 과거의 사건과 같은 시기에 벌어지는 다른 사건의 영향을 받습니다. 그 사건 역시 당대의 다른 사건에 영향을 미치고 미래에 결과를 남깁니다. 이렇게 맞물린 관계 속에서는 사소한 일이란 없습니다. “작은” 사건 하나가 20년이나 100년 뒤에 지대한 영향을 줄 수도 있습니다. 두 가지 예를 살펴봅시다.</p>
+<ol>
+<li>한 러시아 판사가 차르 치하의 법정에서 급진 학생 단체의 일원에게 암살 음모에 가담했다는 이유로 사형을 선고하고, 그 학생은 교수형을 당합니다. 그의 동생 블라디미르 일리치 울리야노프는 차르 정부를 증오하기 시작합니다. 그 증오는 훗날 이름을 레닌으로 바꾼 뒤에도 평생 사라지지 않습니다.</li>
+<li>빈의 한 미술학교 교수가 실직 상태인 제1차 세계대전 참전 군인의 입학 지원을 거절합니다. 그 전직 군인, 아돌프 히틀러는 미술이 아닌 다른 분야에서 진로를 찾아야 합니다.</li>
+</ol>
+<p>성급한 청년에게 판사가 관용을 베풀었거나 전직 군인의 그림에서 교수가 재능을 발견했다면 역사의 흐름은 달라졌을까요? 확실히 알 수는 없지만, 그랬을 가능성은 높아 보입니다.</p>
+<p>그렇다면 노르망디 전투에서 대규모 군대의 이동, 도시의 파괴, 군인과 민간인의 막대한 희생에 변화가 생겼을 때 그 여파가 얼마나 멀리 퍼졌을지는 더욱 쉽게 짐작할 수 있습니다. 오늘날 살아 있는 사람 중 몇 명이나 그 전투에서 살아남은 아버지나 할아버지를 두고 있을까요? 전사한 다른 병사들이 살아남았다면 얼마나 많은 사람이 더 태어났을까요? 연합군의 승리는 어떤 영향을 남겼을까요? 독일이 승리했다면 어떤 영향이 있었을까요?</p>
+<p>이 질문들의 답은 추측할 수밖에 없습니다. 노르망디 전투가 오늘날 살아 있는 거의 모든 사람의 삶에 영향을 미쳤다고는 말할 수 있습니다. 하지만 그 영향이 정확히 무엇인지를 분석하기도 지극히 어렵습니다. 전투의 결과가 달랐다면 어떤 일이 벌어졌을지 예측하는 것은 더 말할 것도 없습니다.</p>
+<p>이제 오늘날 어떤 집단이 그런 분석을 할 수 있다고 믿으며, 자신들에게 유리하도록 전투의 결과를 바꿀 수단까지 갖고 있다고 가정해 봅시다. 이들은 시간 여행을 통해 병사와 현대 무기를 1944년의 유럽으로 보내 노르망디 전투에 개입하려 합니다. 그 결과 40년 뒤 막대한 정치·경제적 권력을 손에 넣으려는 것입니다. 현재를 지배하기 위해 과거를 바꾸려는 이들의 계획은 당신을 비롯한 모든 사람에게 엄청난 위험입니다. 이들이 성공한다면 잘해야 절대적인 지배 아래 놓이게 됩니다. 최악의 경우 당신은 아예 태어나지 않았을 수도 있습니다.</p>
+<p>이것이 <strong>레스큐 레이더스</strong>의 설정입니다. 테러리스트 집단은 실제로 존재하며, 타임머신을 갖고 있습니다. 이들은 자신들의 기술로 제2차 세계대전의 흐름을 바꾸어 바로 당신을 지배하려 합니다.</p>
+<figure class="illustration"><img alt="헬리콥터와 전차가 보이는 군 지휘실의 만화풍 삽화. 오른쪽 아래 원형 화면에는 헤드셋을 쓴 지휘관이 있습니다." height="1091" loading="lazy" src="images/time-travel.jpg" width="1442"/></figure>
+<p>반대로 당신에게는 이들을 막을 기회가 있습니다. 그 기회를 잡겠습니까? 현재를 구하기 위해 과거로 떠나겠습니까?</p>
+</section>
+<section aria-labelledby="about-title" id="about">
+<h2 id="about-title">게임 소개</h2>
+<p><strong>레스큐 레이더스</strong>는 전략 전쟁 시뮬레이션 게임입니다. 항공기와 지상군을 지휘해 적을 향해 진격하고 적군을 격파합니다. 다른 전략 전쟁 게임과 달리, 이 게임에서는 전황을 직접 보고 행동을 조종할 수 있습니다. 지도 위의 알 수 없는 기호 대신 실제로 움직이는 헬리콥터와 지상 차량, 병사와 미사일을 보게 됩니다.</p>
+<p>승리하려면 <em>전술</em>과 <em>전략</em>을 모두 활용해야 합니다. 전술은 이 게임에서 적과 직접 맞붙어 싸우는 부분입니다. 전술적으로 성공하려면 무기와 병력, 장비를 활용해 개별 전투에서 이겨야 합니다.</p>
+<p>전략은 전장에서 적보다 <em>유리한 위치</em>를 확보하는 기술이자 학문입니다. 레스큐 레이더스에는 장악할 경우 시간 테러리스트보다 우위를 점할 수 있는 요소들이 있습니다. 이런 전략적 요소를 확보하도록 전술을 운용해야 합니다. 전술만으로는 이 게임에서 승리할 수 없습니다.</p>
+<p>다른 장군들과 마찬가지로, 전략적 요소가 무엇인지 직접 찾아내고 이를 어떻게 활용할지 배워야 합니다.</p>
+<p>공정한 대결을 위해 적에게도 최소한 플레이어와 동등하게 전략적 요소를 장악할 기회가 주어집니다.</p>
+<p>레스큐 레이더스는 여덟 번의 전투로 구성됩니다. 한 전투에서 이기면 자동으로 다음 전투로 넘어갑니다. 다음 전투는 앞선 전투보다 어려워집니다. 어느 전투에서든 패배하면 적이 완전히 승리한 것으로 게임이 끝납니다.</p>
+<figure class="illustration"><img alt="폐허가 된 건물 옆의 먼지 날리는 들판을 통과하는 전차와 그 위에 탄 보병의 만화풍 삽화." height="814" loading="lazy" src="images/battlefield.jpg" width="1931"/></figure>
+</section>
+<section aria-labelledby="elements-title" id="elements">
+<h2 id="elements-title">게임 구성 요소</h2>
+<p>레스큐 레이더스에는 여러 종류의 고정 요소와 이동 요소가 등장합니다. 고정 요소에는 양측의 본부 역할을 하는 타임머신, 헬리패드, 벙커가 있습니다. 이동 요소에는 헬리콥터, 전차, 보병, 공병, 대공 미사일 차량, 폭파반 차량(DTV)이 있습니다.</p>
+<h3 id="stationary-elements">고정 요소</h3>
+<div class="unit"><img alt="타임머신" height="96" loading="lazy" src="images/time-machine.png" width="128"/><div><h4>타임머신</h4><p>전장 양 끝에 있는 타임머신은 각 진영의 본부입니다. 어느 한쪽이 폭파반 차량을 상대 타임머신까지 이동시키는 데 성공하면 전투의 승패가 결정됩니다. 타임머신은 다른 모든 수단의 공격을 견뎌 내며, 오직 폭파반 차량만이 파괴할 수 있습니다.</p></div></div>
+<div class="unit"><img alt="헬리콥터 이착륙장" height="96" loading="lazy" src="images/helicopter-pad.png" width="128"/><div><h4>헬리패드</h4><p>헬리패드는 새로운 헬리콥터가 출발하는 곳입니다. 전투 중에는 연료 보급, 재무장, 수리 거점으로도 쓰입니다. 헬리콥터가 헬리패드에 착륙하면 자동으로 연료를 채우고 손상을 수리하며 무장을 최대로 보충합니다. 다만 이 작업은 즉시 끝나지 않습니다! 각 타임머신 옆에 헬리패드가 하나씩 있습니다.</p></div></div>
+<div class="unit"><img alt="벙커" height="96" loading="lazy" src="images/bunker.png" width="128"/><div><h4>벙커</h4><p>레스큐 레이더스에는 여러 종류의 벙커가 있습니다. 무기에 맞으면 파괴되는 벙커도 있고, 아주 많은 공격을 받아야 파괴되거나 아예 파괴할 수 없는 벙커도 있습니다. 벙커를 장악하려면 반드시 병사를 안에 배치해야 합니다. 벙커는 전장 곳곳에 흩어져 있습니다.</p></div></div>
+<div class="unit"><img alt="방공 기구" height="96" loading="lazy" src="images/barrage-balloon.png" width="128"/><div><h4>방공 기구</h4><p>방공 기구는 일부 벙커에 줄로 매어 둔 “반고정” 요소입니다. 적의 기구나 계류줄에 부딪히면 헬리콥터가 파괴됩니다. 아군의 기구와 계류줄은 안전하게 통과할 수 있습니다.</p></div></div>
+<h3 id="mobile-elements">이동 요소</h3>
+<div class="unit"><img alt="헬리콥터" height="96" loading="lazy" src="images/helicopter.png" width="128"/><div><h4>헬리콥터</h4><p>헬리콥터는 주된 정찰 수단이자 전투 차량, 병력 수송 수단입니다. 게임에 등장하는 요소 중 가장 강력하게 무장되어 있고 파괴력도 가장 높으며, 이동 요소 중 가장 빠릅니다. 게임을 시작할 때 헬리콥터 네 대가 주어집니다. 헬리콥터가 모두 소진되면 패배합니다. 적은 헬리콥터를 무제한으로 보유합니다. 게임 초반의 헬리콥터는 기관총, 고폭탄, “스마트” 미사일로 무장합니다. 기체는 경량 구조이므로 적의 어떤 공격에도 손상되거나 파괴될 수 있습니다.</p></div></div>
+<div class="unit"><img alt="전차" height="96" loading="lazy" src="images/tank.png" width="128"/><div><h4>전차</h4><p>전차는 두꺼운 장갑을 갖춘 지상 차량으로, 게임 초반에는 전차포와 기관총을 장비합니다. 전차의 무기는 적 전차를 비롯한 모든 이동 요소에 효과적입니다. 전차는 게임에 등장하는 이동 요소 가운데 적의 공격을 가장 잘 견딥니다.</p></div></div>
+<div class="unit"><img alt="자동화기를 든 보병" height="96" loading="lazy" src="images/soldier.png" width="128"/><div><h4>보병과 공병</h4><p>병사들은 공수 보병입니다. 낙하산을 갖추고 있으며, 경화기의 공격을 어느 정도 막아 주는 방탄복을 입습니다. 무장은 자동화기입니다.</p><p>공병은 군사 시설 건설 전문가입니다. 전투 중 손상되거나 파괴된 일부 시설을 수리하거나 다시 설치할 수 있습니다. 공병도 우선은 일반 보병처럼 싸웁니다. 헬리콥터로 수송하면 일반 보병으로 바뀝니다.</p></div></div>
+<div class="unit"><img alt="대공 미사일 차량" height="96" loading="lazy" src="images/missile-carrier.png" width="128"/><div><h4>대공 미사일 차량</h4><p>대공 미사일 차량은 지프와 비슷하게 생겼으며, 차량마다 유도 미사일 한 발을 탑재합니다. 적 헬리콥터가 사정거리에 들어오면 미사일이 자동으로 발사되어 표적을 추적합니다. 이 차량은 헬리콥터만 공격합니다. 방어 능력이 없어 다른 어떤 요소의 공격에도 파괴될 수 있습니다. 한 번만 사용할 수 있는 장비이므로 미사일을 발사한 뒤에는 자폭합니다.</p></div></div>
+<div class="unit"><img alt="폭파반 차량" height="96" loading="lazy" src="images/demolition-vehicle.png" width="128"/><div><h4>폭파반 차량</h4><p>폭파반 차량은 밴이나 구급차처럼 생겼습니다. 타임머신을 무력화하고 파괴하는 전자 장비를 싣고 있습니다. 그 외의 공격 능력이나 방어 능력은 없으며, 다른 어떤 요소의 공격에도 취약합니다.</p></div></div>
+</section>
+<section aria-labelledby="weapons-title" id="weapons">
+<h2 id="weapons-title">무기</h2>
+<div class="unit"><img alt="유도 미사일" height="96" loading="lazy" src="images/missile.png" width="128"/><div><h4>미사일</h4><p>“스마트” 미사일은 헬리콥터와 대공 미사일 차량이 탑재하는 유도 무기입니다. 양측이 보유한 무기 중 가장 빠르고, 사정거리가 길며, 위력이 강합니다. 발사된 표적을 찾아 추적합니다. 대공 미사일 차량에서 발사한 미사일은 적 헬리콥터만 공격합니다. 헬리콥터에서는 적의 어떤 요소를 상대로든 유도 미사일을 발사할 수 있습니다.</p></div></div>
+<div class="unit"><img alt="고폭탄" height="96" loading="lazy" src="images/bomb.png" width="128"/><div><h4>폭탄</h4><p>고폭탄은 헬리콥터만 탑재합니다. 폭탄에 맞은 요소는 손상되거나 파괴됩니다. 효과를 내려면 표적에 직접 명중해야 합니다.</p></div></div>
+<div class="unit"><img alt="게임에 표시되는 기관총 탄환" height="96" loading="lazy" src="images/machine-gun.png" width="128"/><div><h4>기관총</h4><p>기관총은 헬리콥터, 전차, 보병이 장비합니다. 발사 속도는 빠르지만 게임에 등장하는 무기 가운데 위력과 사정거리가 가장 낮습니다. 전차와 보병의 기관총 탄약은 무제한입니다.</p></div></div>
+<p>이러한 이동 요소의 무기 외에도 고정식 무기와 발사 장치가 있습니다.</p>
+<div class="unit"><img alt="지상에 설치된 대공포" height="96" loading="lazy" src="images/anti-aircraft-gun.png" width="128"/><div><h4>대공포와 대전차포</h4><p>대공포는 지상에 설치된 속사포입니다. 헬리콥터에 효과적이며, 경우에 따라 전차를 공격하기도 합니다. 대공포 또는 대전차포는 적이 사정거리에 들어오면 자동으로 발포합니다.</p><p>일부 벙커에는 점령한 진영이 사용할 수 있는 기관총이 설치되어 있습니다.</p></div></div>
+<aside class="note"><h4>중요 안내</h4><p>전시에는 기술이 매우 빠르게 발전합니다. 다음 전투로 진행하면서 일부 무기가 달라질 수 있습니다.</p></aside>
+</section>
+<section aria-labelledby="getting-started-title" id="getting-started">
+<h2 id="getting-started-title">시작하기</h2>
+<p>레스큐 레이더스는 디스크 드라이브, 조이스틱<a aria-label="조이스틱 관련 중요 안내 보기" href="#joystick-note">*</a>, 64K 이상의 RAM을 갖춘 Apple II 계열 컴퓨터에서 실행할 수 있습니다. 컬러 TV나 모니터를 사용하면 그래픽을 가장 잘 감상할 수 있지만, 흑백 모니터로도 충분히 즐길 수 있습니다.</p>
+<p>게임을 불러오는 방법은 간단합니다.</p>
+<ol><li>컴퓨터와 모니터 또는 TV의 전원을 켭니다.</li><li>레스큐 레이더스 게임 디스크의 라벨이 위를 향하고 자신 쪽에 오도록 드라이브에 넣은 뒤 문을 닫습니다. 드라이브가 여러 대라면 1번 드라이브를 사용합니다. Apple //c에서는 내장 드라이브입니다. 컴퓨터를 켜면 1번 드라이브의 빨간 불이 켜집니다.</li></ol>
+<p>(Apple //c에서 플레이할 때는 이 순서를 반대로 합니다. 즉, 게임 디스크를 먼저 넣은 다음 컴퓨터의 전원을 켭니다.)</p>
+<p>디스크 드라이브에서 딸깍거리거나 돌아가는 소리가 납니다. 잠시 후 모니터 화면 상단에 “Rescue Raiders”가 표시되어 프로그램을 불러오는 중임을 알려 줍니다.</p>
+<p>프로그램을 모두 불러오면 타이틀 시퀀스가 시작됩니다.</p>
+<p>타이틀 화면이 나타난 뒤에도 디스크 드라이브는 몇 초 동안 더 작동합니다. 이후 시연 프로그램이 시작되어 게임의 몇 가지 기능을 보여 줍니다.</p>
+<p>플레이할 준비가 되면 키보드의 <kbd>S</kbd> 키를 누릅니다. Start, 즉 시작을 뜻합니다. 시연 화면이 사라지고 다음과 같은 메시지가 나타납니다.</p>
+<div class="transmission">긴급 통신&gt;<strong>셰르부르에서 테러리스트가<br/>발견되었습니다.</strong>전투를 준비하십시오.</div>
+<p>잠시 뒤에는 이 메시지 대신 유럽 지도가 나타나고, 깜박이는 별이 셰르부르의 위치를 알려 줍니다. 다시 잠깐 기다리면 지도가 사라지고 실제 게임이 시작됩니다.</p>
+<h3 id="troubleshooting">문제 해결</h3>
+<p>레스큐 레이더스는 프로그램을 불러올 때 디스크 드라이브의 회전 속도를 검사하여 정상 작동 여부를 확인합니다. 허용 범위를 벗어나면 화면에 다음 메시지가 표시됩니다.</p>
+<div class="transmission"><strong lang="en">BAD DRIVE SPEED</strong><span>드라이브 회전 속도 오류</span></div>
+<p>이 메시지가 나타난 뒤에도 게임이 정상적으로 작동할 수는 있습니다. 하지만 경고를 무시하고 계속 플레이하면 디스크가 손상될 가능성이 있으며, 이런 상태에서는 최고 점수나 진행 중인 게임을 저장하지 않습니다. 다른 컴퓨터에서 게임을 불러와 보십시오. 다른 컴퓨터에서는 회전 속도 경고 없이 실행된다면 사용하던 디스크 드라이브에 문제가 있는 것입니다. 다른 컴퓨터에서는 같은 문제가 발생하지 않을 경우, 해당 드라이브의 회전 속도를 점검하고 조정받으십시오.</p>
+</section>
+<section aria-labelledby="how-to-play-title" id="how-to-play">
+<h2 id="how-to-play-title">플레이 방법</h2>
+<p>레스큐 레이더스의 전장은 옆으로 길게 펼쳐져 있습니다. 타임머신과 헬리콥터 이착륙장으로 이루어진 아군 본부는 전장 오른쪽 끝에, 적의 본부는 왼쪽 끝에 있습니다.</p>
+<h3 id="game-screen">게임 화면</h3>
+<p>게임 화면은 정보를 얻을 수 있는 두 영역으로 나뉩니다. 화면 아래쪽 대부분을 차지하는 넓은 영역은 TV처럼 전황을 보여 주는 주 화면입니다. 대체로 플레이어의 헬리콥터를 중심으로 주변의 물체와 장비, 병사를 표시합니다. 화면 상단을 가로지르는 작은 영역은 “전술 레이더”로, 미사일을 포함해 전장에 있는 모든 요소를 보여 줍니다.</p>
+<figure class="illustration screen-diagram"><img alt="게임 스프라이트로 구성한 화면 설명도. 상단 RADAR는 전술 레이더, 중앙 PLAY AREA는 헬리콥터와 공수 보병이 있는 주 화면, 하단 GROUND는 방공 기구와 계류줄, 벙커, 전차, 미사일 차량이 있는 지상입니다." height="864" loading="lazy" src="images/game-screen.png" width="1520"/><figcaption>RADAR: 전술 레이더 · PLAY AREA: 주 화면 · GROUND: 지상</figcaption></figure>
+<p>주 화면은 전투나 정찰 중 헬리콥터를 조종할 때 사용합니다. 전술 레이더는 아군과 적군의 모든 요소가 어디에 있는지 한눈에 파악하는 지도 역할을 합니다. 특히 헬리콥터를 향해 날아오는 적의 유도 무기를 발견하는 데 유용합니다. 레이더의 물체는 종류에 따라 색으로 구분됩니다. 헬리콥터는 다른 요소보다 큰 흰색 사각형으로 표시됩니다.</p>
+<h3 id="helicopter-operations">헬리콥터 조종과 운용</h3>
+<p>플레이어가 직접 조종하고 운용하는 요소는 헬리콥터뿐입니다. 조이스틱을 원하는 이동 방향으로 밀면 헬리콥터가 그쪽으로 움직입니다.</p>
+<p>헬리콥터의 무기는 조이스틱 버튼으로 조작합니다.</p>
+<p><strong>버튼 0</strong>, 즉 플레이어와 가까운 쪽 버튼을 누르면 헬리콥터의 기관총이 발사됩니다. 버튼을 누르고 있는 동안 계속 발사되며, 탄약이 떨어지면 멈춥니다.</p>
+<p><strong>버튼 1</strong>, 즉 플레이어와 먼 쪽 버튼을 누르면 폭탄을 투하합니다. 버튼을 누르고 있는 동안 계속 투하됩니다. 폭탄은 한 번에 최대 열 발까지 실을 수 있습니다.</p>
+<p><em>두 버튼을 동시에 누르면 헬리콥터의 유도 미사일을 발사합니다. 발사하려면 헬리콥터가 표적과 같은 고도에 있어야 합니다. 미사일은 그 고도에서 가장 가까운 적에게 고정되므로, 공격하려던 표적과 다른 적을 향할 수도 있습니다.</em> 헬리콥터에는 유도 미사일을 최대 두 발까지 탑재할 수 있습니다.</p>
+<p>헬리콥터의 모든 무기는 적의 모든 이동 요소에 사용할 수 있으며 효과가 있습니다. 고정 요소도 공격할 수 있지만, 타임머신과 일부 벙커에는 효과가 없습니다.</p>
+<p>헬리콥터가 지상이나 헬리패드에 있을 때는 무기를 발사하거나 투하할 수 없습니다. 지상에서 버튼 1을 누르면 폭탄 대신 탑승 중인 병사들이 내려 적을 향해 행군하기 시작합니다.</p>
+<p>헬리콥터에는 조종사 외에 병사를 최대 다섯 명까지 태울 수 있습니다. 아군 병사들 앞에 착륙하면 병사들이 헬리콥터에 도착하는 대로 탑승하며, 다섯 명이 차면 더는 타지 않습니다.</p>
+<p>병사를 태운 채 비행 중에 스페이스 바를 누르면 병사 한 명이 뛰어내려 낙하산으로 착지를 시도합니다. 스페이스 바를 다섯 번 누르면 탑승한 다섯 명을 모두 공수할 수 있습니다. 때로는 낙하산이 펴지지 않아 병사가 추락해 사망하기도 합니다. 헬리콥터가 공중에서 파괴되었을 때도 간혹 한 명이 탈출하여 낙하산으로 안전하게 착지한 뒤 보병으로 싸우기도 합니다. 이 병사는 조종사일 수도, 수송 중이던 보병일 수도 있습니다.</p>
+<figure class="illustration"><img alt="들판과 벙커 위에서 기체를 기울여 선회하는 헬리콥터와 그 뒤를 따르는 두 대의 헬리콥터를 그린 만화풍 삽화." height="1019" loading="lazy" src="images/air-combat.jpg" width="1543"/></figure>
+<p>헬리콥터는 적의 무기에 맞으면 파괴되지 않더라도 손상을 입습니다. 기체 뒤쪽 아래에서 연기가 피어오르면 손상된 것입니다. 피해가 심할수록 연기도 커집니다.</p>
+<p>헬리콥터가 파괴되었지만 예비 기체가 남아 있다면, 화면은 마지막 위치를 몇 초 동안 더 보여 준 뒤 본부의 헬리패드로 전환됩니다. 파괴된 자리에서 벌어지는 일을 계속 보고 싶을 때는 화면이 헬리패드로 바뀌기 전에 조이스틱 버튼 중 아무 것이나 누른 채 유지하십시오. 그러면 파괴 이후의 전황을 계속 볼 수 있습니다. 누르고 있던 버튼을 놓으면 전장 오른쪽 끝의 새 헬리콥터로 화면이 돌아옵니다.</p>
+<p>무기와 탄약을 보충하거나 연료를 채우고 손상을 수리하려면 헬리패드로 돌아오십시오. 수리와 재무장, 연료 보급이 모두 끝나면 전술 레이더 바로 아래에 녹색 막대가 나타납니다. 필요한 보급과 수리가 많을수록 이 막대가 나타날 때까지 더 오래 기다려야 합니다. 병사가 탑승해 있다면 특정 조건에서 헬리패드로 돌아가지 않고도 수리할 수 있습니다.</p>
+<p>연료가 부족해지면 화면 가운데에 “Low Fuel”(연료 부족) 메시지가 나타납니다. 연료가 위험 수준까지 떨어지면 경고음이 똑딱거리기 시작하고 화면 상단에 연료계가 표시됩니다.</p>
+<aside class="note" id="joystick-note"><h4>중요 안내</h4><p>레스큐 레이더스는 Kraft Model 820처럼 버튼이 두 개인 조이스틱만 사용하도록 설계되었습니다. 일부 조이스틱은 위 설명과 다르게 작동할 수 있습니다. 헬리콥터를 원활하게 조종할 수 있는지는 조이스틱의 품질과 상태에 달려 있습니다.</p></aside>
+<h3 id="ground-forces">지상군</h3>
+<p>영토를 확보하고 적 타임머신을 파괴하여 승리하려면 지상군을 진격시켜야 합니다. 지상군에는 헬리콥터를 제외한 모든 이동 요소가 포함됩니다.</p>
+<p>지상군은 키보드로 출동시킵니다.</p>
+<div aria-label="가로로 스크롤할 수 있는 참고 표" class="table-scroll" role="region" tabindex="0"><table class="controls"><thead><tr><th scope="col">키</th><th scope="col">출동 대상</th></tr></thead><tbody>
+<tr><td><kbd>T</kbd></td><td>전차</td></tr><tr><td><kbd>M</kbd></td><td>보병</td></tr><tr><td><kbd>E</kbd></td><td>공병</td></tr><tr><td><kbd>A</kbd></td><td>대공 미사일 차량</td></tr><tr><td><kbd>D</kbd></td><td>폭파반 차량</td></tr>
+</tbody></table></div>
+<p><kbd>T</kbd>, <kbd>A</kbd>, <kbd>D</kbd>를 누르면 해당 차량 한 대가 출동합니다. <kbd>M</kbd>을 누르면 보병 다섯 명이, <kbd>E</kbd>를 누르면 공병 두 명이 출동합니다. 차량이나 병력이 전장에 진입할 때까지 기다린 뒤에야 다음 부대를 출동시킬 수 있습니다. 출동할 때 딸깍 소리가 나며, 병력이나 차량이 전장으로 들어오는 동안에는 전술 레이더 위아래의 선이 파란색에서 흰색으로 바뀝니다. 흑백 모니터에서도 색 자체는 구분할 수 없지만 변화는 알아볼 수 있습니다.</p>
+<p>지상군은 자동으로 전진하며 적을 공격합니다. 지상 요소가 전진을 멈추는 때는 실제로 적을 향해 발포하고 있을 때뿐입니다.</p>
+<p>전장의 저항을 돌파할 수 있도록 지상군을 적절히 출동시키십시오. 통상적인 손실과 사상자가 발생한다는 점도 예상해야 합니다.</p>
+<p>헬리콥터는 지상군을 지원하고 보호하는 데 매우 유용합니다.</p>
+</section>
+<section aria-labelledby="finance-title" id="finance">
+<h2 id="finance-title">자금</h2>
+<p>실제 군대처럼 아군도 작전에 돈이 필요합니다. 처음 지급되는 헬리콥터와 그 기체에 필요한 연료 및 무장을 제외하면 모든 것에 비용을 지불해야 합니다. 지상 요소를 출동시키는 키를 누를 때마다 해당 비용이 잔액에서 차감됩니다. 자금이 충분하면 <kbd>H</kbd> 키를 눌러 헬리콥터를 추가로 구입할 수 있습니다.</p>
+<p>전투를 진행한 시간에 따라 돈이 들어옵니다. 15초마다 작은 돈주머니 한 개가 잔액에 추가됩니다.</p>
+<p>구입 비용은 다음과 같습니다. 단위는 작은 돈주머니입니다.</p>
+<div aria-label="가로로 스크롤할 수 있는 참고 표" class="table-scroll" role="region" tabindex="0"><table class="prices"><thead><tr><th scope="col">항목 및 수량</th><th scope="col">가격</th></tr></thead><tbody>
+<tr><td>헬리콥터 1대</td><td>20개</td></tr><tr><td>전차 1대</td><td>4개</td></tr><tr><td>보병 5명</td><td>5개</td></tr><tr><td>공병 2명</td><td>5개</td></tr><tr><td>대공 미사일 차량 1대</td><td>3개</td></tr><tr><td>폭파반 차량 1대</td><td>2개</td></tr>
+</tbody></table></div>
+<p>자금이 부족하면 해당 요소의 출동 키를 눌러도 아무 일도 일어나지 않습니다.</p>
+<p>전장에 동시에 존재할 수 있는 각 이동 요소의 수에는 제한이 있습니다. 이 한도를 넘기려 하면 충분한 돈이 있더라도 키를 눌러 새 요소를 출동시킬 수 없습니다.</p>
+</section>
+<section aria-labelledby="status-title" id="status-reports">
+<h2 id="status-title">컴퓨터 현황 보고</h2>
+<p>언제든 <kbd>C</kbd>를 누르면 지휘 컴퓨터의 현황 보고를 볼 수 있습니다. 현재 자금과 헬리콥터의 전투 준비 상태를 알려 줍니다. 먼저 자금이 표시되고, 이어서 기내의 폭탄 수, 유도 미사일 수, 탑승 병사 수가 차례로 나옵니다. 마지막으로 남은 헬리콥터 수가 표시됩니다.</p>
+<p>자금은 크기가 다른 두 종류의 돈주머니로 표시됩니다. 큰 돈주머니 하나는 작은 돈주머니 네 개에 해당합니다. 앞서 소개한 장비와 병력의 가격은 작은 돈주머니 기준입니다.</p>
+<p>폭탄, 미사일, 병사 기호는 보고 시점에 해당 물자나 병력이 헬리콥터에 실려 있을 때만 표시됩니다.</p>
+<p>현황 보고 중에는 화면 상단의 전술 레이더 바로 아래에 헬리콥터의 연료계가 나타납니다. 컬러 모니터에서는 남은 연료가 흰색으로, 사용한 연료가 빨간색으로 표시됩니다. 연료를 소모하면 흰색 막대가 왼쪽으로 줄어들고 그 자리를 빨간색이 채웁니다. 흑백 모니터에서도 실제 색은 같지만 “흰색” 부분과 “빨간색” 부분의 차이를 알아볼 수 있습니다.</p>
+<p>보고가 끝나기 전에 특정 항목을 다시 보고 싶으면 <kbd>C</kbd>를 눌러 처음부터 다시 표시할 수 있습니다.</p>
+<p>숫자 키 <kbd>1</kbd>~<kbd>9</kbd>로 보고의 표시 속도를 조절합니다. <kbd>1</kbd>은 가장 느린 속도, <kbd>9</kbd>는 가장 빠른 속도입니다. 나머지 숫자는 그 사이의 속도를 지정합니다.</p>
+</section>
+<section aria-labelledby="scoring-title" id="scoring">
+<h2 id="scoring-title">점수</h2>
+<p>레스큐 레이더스의 목표는 전투에서 이기는 것입니다. 시간 테러리스트와의 전쟁에서 완전한 승리를 거두려면 여덟 전장에서 모두 적을 물리쳐야 합니다. 그 목표에 이르지 못하더라도 자신의 진척과 성과를 가늠할 수 있도록 점수가 제공됩니다.</p>
+<p>점수는 다음 두 가지를 기준으로 계산됩니다.</p>
+<ol><li>적에게 입힌 피해의 양</li><li>적에게 피해를 입히기 위해 지불한 대가</li></ol>
+<p>점수는 레스큐 레이더스의 목표를 얼마나 잘 달성했는지 보여 주는 지표입니다. 여덟 번의 전투에서 승리하면서 가능한 한 높은 점수를 얻는 것을 목표로 삼으십시오.</p>
+<p>그러나 전쟁은 흑백으로 단순하게 나눌 수 있는 문제가 아닙니다. 승자 역시 승리를 위해 막대한 대가를 치릅니다. 무기와 장비의 구입 비용뿐 아니라 국가의 생산 체계를 소비재에서 군수품 중심으로 바꾸는 데도 큰 재정 부담이 따릅니다. 민간인은 세금이라는 직접적인 방식과 전시 경제에서 상품과 서비스가 부족해지거나 사라지는 간접적인 방식으로 그 비용을 떠안습니다. 그렇더라도 전쟁의 금전적 비용보다 중요한 것은 도덕적 대가입니다. 아무리 많은 돈으로도 죽은 사람들을 되살릴 수는 없습니다. 전쟁 중인 국가는 승리의 이익과 그 대가 사이에서 균형을 잡아야 할 도덕적 의무가 있습니다.</p>
+<p>물론 레스큐 레이더스에서 실제로 다치는 사람은 없습니다. 하지만 지나치게 큰 희생을 치르고 승리하면 점수에서 불이익을 받도록 설계되어 있습니다.</p>
+<p>이동 요소를 출동시킬 때마다 점수가 차감됩니다. 전투에 소요한 시간에 따라서도 점수가 줄어듭니다. 다른 조건이 같다면 승리하는 데 오래 걸릴수록 점수가 낮아집니다.</p>
+<p>점수 체계는 승리나 패배를 평가하고 서로 비교하는 수단입니다. 점수 자체가 게임의 승패를 결정하지는 않습니다. 따라서 아주 낮거나 심지어 마이너스 점수로도 게임에서 이길 수 있으며, 반대로 매우 높은 점수를 얻고도 패배할 수 있습니다. 물론 이는 극단적인 경우입니다.</p>
+<p>최고 점수는 언제나 가장 적은 비용으로 승리한 플레이어가 기록합니다. 이상적인 플레이는 가능한 한 적은 지상군을 사용하는 것입니다. 예를 들어 보병 한 부대나 전차 한 대를 출동시킬 때마다 점수를 잃습니다. 언제나 최대한 많은 지상군을 내보내는 것뿐인 “전략”을 쓴다면 매우 낮은 점수를 받게 됩니다.</p>
+<p>언제든 <kbd>ESC</kbd> 키를 눌러 현재 점수를 볼 수 있습니다. 점수가 표시되는 동안 게임은 일시 정지되므로, <kbd>ESC</kbd>는 방해를 받았을 때 게임을 잠시 멈추는 용도로도 편리합니다. 몇 분 이상 멈춰 둘 예정이라면 다시 플레이할 때까지 모니터의 전원을 끄는 것이 좋습니다. 움직이지 않는 화면을 오랫동안 켜 두어 모니터에 잔상이 남는 일을 방지할 수 있습니다. <kbd>ESC</kbd>를 다시 누르면 게임을 계속합니다.</p>
+<p>승리하거나 패배했을 때 점수가 상위 다섯 개 안에 들면 게임 디스크에 기록할 기회가 주어집니다. 최고 점수 입력 화면에서 이름을 입력하고 <kbd>RETURN</kbd>을 누르십시오. 최고 점수는 게임을 처음 불러왔을 때나 게임을 저장한 뒤에 실행되는 시연 프로그램에서 표시됩니다. 디스크 뒷면에 수록된 백업 사본에는 최고 점수를 저장할 수 없습니다.</p>
+</section>
+<section aria-labelledby="features-title" id="other-features">
+<h2 id="features-title">기타 기능</h2>
+<p>레스큐 레이더스의 여덟 전투에서 모두 승리하려면 여러 시간이 걸릴 수 있습니다. 매번 처음부터 다시 시작하지 않고도 여러 차례에 나누어 같은 게임을 계속할 수 있도록 저장 기능을 마련했습니다.</p>
+<p>현재 게임을 저장하려면 <kbd>ESC</kbd>를 눌러 게임을 멈추고 점수를 표시한 다음 “SAVE”를 입력합니다. 즉, <kbd>S</kbd> <kbd>A</kbd> <kbd>V</kbd> <kbd>E</kbd>를 차례로 누릅니다. 입력한 글자는 화면에 나타나지 않지만, 디스크 드라이브의 빨간 불이 켜지고 게임을 저장하는 동안 잠깐 드라이브가 돌아갑니다. 저장이 끝나면 플레이 시작 전에 나오던 시연 프로그램으로 돌아갑니다. 이때, 또는 게임이 저장된 디스크로 프로그램을 불러왔을 때 시연 화면 오른쪽 위에 작은 디스켓 기호가 보입니다. 이제 디스크를 드라이브에서 꺼내고 컴퓨터와 모니터의 전원을 꺼도 됩니다.</p>
+<p>저장한 게임을 다시 시작하려면 처음 플레이할 때처럼 컴퓨터와 모니터를 켜고 게임 디스크를 넣습니다. 디스크에 저장된 게임이 있으면 시연 화면 오른쪽 위에 작은 디스크 그림이 나타납니다. 이어서 플레이하려면 CONTinue, 즉 계속을 뜻하는 “CONT”를 입력합니다. <kbd>C</kbd> <kbd>O</kbd> <kbd>N</kbd> <kbd>T</kbd>를 차례로 누르십시오. 저장된 게임을 불러온 뒤에는 디스크에서 해당 저장 데이터가 삭제됩니다. 화면은 가운데 점수판까지 포함해 저장 당시의 모습 그대로 돌아옵니다. <kbd>ESC</kbd>를 누르면 플레이를 재개합니다. 저장한 직후 마음이 바뀌었을 때도 시연 프로그램에서 “CONT”를 입력하면 바로 이어서 할 수 있습니다. 이 경우에도 저장 데이터는 남지 않습니다.</p>
+<aside class="note"><h4>중요 안내</h4><p>게임은 한 번에 하나만 저장할 수 있습니다. 저장 데이터는 디스크에 계속 보관할 수 있지만, 불러와서 이어 할 때 삭제됩니다. 새 게임을 저장하면 디스크에 있던 이전 저장 데이터를 덮어씁니다. 게임 디스크 뒷면의 백업 사본에서는 게임을 저장할 수 없습니다.</p></aside>
+<p>한 전투에서 승리하면 메시지에 이어 프랑스와 저지대 지역의 해방에 관련된 도시 하나의 짤막한 역사가 표시됩니다. 이 글은 화면 아래에서 가로로 흘러갑니다. 세계적으로 흥미로운 장소들의 이야기를 간추린 내용이니, 재미와 지식을 얻는 기회로 읽어 보시기 바랍니다. 다만 첫 서너 전투를 여러 번 치르다 보면 같은 역사를 다시 읽고 싶지 않을 수도 있습니다. 이때는 글이 흐르기 시작할 때 <kbd>ESC</kbd>를 눌러 건너뛸 수 있습니다.</p>
+<p>빠르게 게임을 시작할 수 있도록 이 지침서에는 조작 요약도 포함되어 있습니다. 레스큐 레이더스에서 사용하는 조이스틱과 키보드 명령을 정리한 것입니다.</p>
+<p>이제 나머지는 당신에게 달려 있습니다. 적이 어떤 장애물과 방어 수단을 배치하는지 알아내고, 이를 극복할 전술과 전략을 세워야 합니다.</p>
+<p>이 지침서만으로는 레스큐 레이더스에서 승리하는 데 필요한 정보가 모두 갖추어지지 않았다고 느낄 수도 있습니다. 그렇다면 맞게 느낀 것입니다. 승리를 쉽게 만들어 줄 몇 가지 사실과 세부 사항은 의도적으로 설명하지 않았습니다.</p>
+<p><em>행운을 빕니다!!</em></p>
+</section>
+<section aria-labelledby="reference-title" id="reference">
+<h2 id="reference-title">조작 요약</h2>
+<h3>헬리콥터 조작 요약</h3>
+<figure class="illustration joystick-figure"><img alt="버튼이 두 개인 조이스틱의 만화풍 삽화. 왼쪽 위가 버튼 1, 왼쪽 아래가 버튼 0이며 오른쪽에 스틱이 있습니다." height="1141" loading="lazy" src="images/joystick.jpg" width="1378"/></figure>
+<div aria-label="가로로 스크롤할 수 있는 참고 표" class="table-scroll" role="region" tabindex="0"><table><caption>조이스틱 조작</caption><thead><tr><th scope="col">조이스틱 입력</th><th scope="col">기체 상태</th><th scope="col">동작</th><th scope="col">참고 사항</th></tr></thead><tbody>
+<tr><td>버튼 0</td><td>비행 중</td><td>기관총 발사</td><td>탄약을 가득 채우면 50발</td></tr>
+<tr><td>버튼 1</td><td>비행 중</td><td>폭탄 투하</td><td>—</td></tr>
+<tr><td>버튼 1</td><td>지상</td><td>병사 하차</td><td>—</td></tr>
+<tr><td>버튼 0과 1</td><td>비행 중</td><td>기체 앞쪽의 가장 가까운 적에게 미사일 발사</td><td>두 버튼을 동시에 누름</td></tr>
+<tr><td>—</td><td>헬리패드 위</td><td>연료 보급 또는 수리</td><td>헬리패드 착륙 후 자동으로 진행</td></tr>
+<tr><td>—</td><td>아군 보병 무리 앞에 착륙</td><td>병사 탑승</td><td>최대 5명 탑승</td></tr>
+</tbody></table></div>
+<p>헬리콥터의 무기는 공중에 떠 있을 때만 사용할 수 있습니다.<br/>Kraft Model 820처럼 버튼이 두 개인 조이스틱이 필요합니다.</p>
+<h3>진행 중인 게임 저장하기</h3>
+<ol><li><kbd>ESC</kbd>를 누릅니다.</li><li>따옴표 없이 “SAVE”를 입력합니다.</li><li>디스크 드라이브가 멈추고 시연 프로그램이 시작될 때까지 기다립니다.</li></ol>
+<h3>저장한 게임 불러오기</h3>
+<ol><li>게임을 불러온 뒤 시연 프로그램이 시작될 때까지 기다립니다.</li><li>따옴표 없이 “CONT”를 입력합니다.</li><li>디스크 드라이브가 멈추고 게임 화면이 나타나면 <kbd>ESC</kbd>를 누릅니다.</li></ol>
+<h3>키보드</h3>
+<div aria-label="가로로 스크롤할 수 있는 참고 표" class="table-scroll" role="region" tabindex="0"><table class="controls"><caption>키보드 명령</caption><thead><tr><th scope="col">키</th><th scope="col">명령</th></tr></thead><tbody>
+<tr><td><kbd>H</kbd></td><td>예비 헬리콥터 구입</td></tr><tr><td><kbd>T</kbd></td><td>전차 구입 및 출동</td></tr><tr><td><kbd>M</kbd></td><td>보병 5명 고용 및 출동</td></tr><tr><td><kbd>E</kbd></td><td>공병 2명 고용 및 출동</td></tr><tr><td><kbd>A</kbd></td><td>대공 미사일 차량 구입 및 출동</td></tr><tr><td><kbd>D</kbd></td><td>폭파반 차량 구입 및 출동</td></tr><tr><td><kbd>C</kbd></td><td>컴퓨터 현황 보고 표시</td></tr><tr><td><kbd>ESC</kbd></td><td>점수 표시 및 일시 정지</td></tr><tr><td><kbd>1</kbd>–<kbd>9</kbd></td><td>정보 표시 속도 조절</td></tr><tr><td><kbd>Space Bar</kbd></td><td>공수 보병 투하</td></tr><tr><td><kbd>CTRL</kbd> + <kbd>R</kbd></td><td>게임 초기화</td></tr>
+</tbody></table></div>
+</section>
+<section aria-labelledby="publication-title" id="publication">
+<h2 id="publication-title">제작진</h2>
+<p><strong>레스큐 레이더스</strong><br/><em>전략 전쟁 시뮬레이션 게임</em><br/>제2판</p>
+<dl class="credits">
+<div><dt>프로그래밍</dt><dd lang="en">Arthur Britto II · Greg Hale</dd></div>
+<div><dt>게임 텍스트 및 훈련 지침서</dt><dd lang="en">G. Daniel Hackett</dd></div>
+<div><dt>전략 설계</dt><dd lang="en">G. Daniel Hackett<br/>Norman A. Sirotek<br/>Arthur Britto II</dd></div>
+<div><dt>그래픽 디자인</dt><dd lang="en">Rick Austin</dd></div>
+<div><dt>그래픽 디지털화</dt><dd lang="en">Arthur Britto II</dd></div>
+<div><dt>발행</dt><dd lang="en">Sir-Tech Software, Inc.<br/>6 Main Street<br/>Ogdensburg, New York 13669</dd></div>
+</dl>
+</section>
+</main>
+</div>
+<footer><p>Rescue Raiders © 1984 Arthur Britto II · Greg Hale.<br/>발행: Sir-Tech Software, Inc. 모든 권리 보유.</p><a href="#top">맨 위로 ↑</a></footer>
+<script>
+    (() => {
+      const contents = document.querySelector('.contents');
+      const mobile = window.matchMedia('(max-width: 760px)');
+      const setContents = () => { contents.open = !mobile.matches; };
+      setContents();
+      mobile.addEventListener('change', setContents);
+      const links = [...contents.querySelectorAll('a[href^="#"]')];
+      links.forEach(link => link.addEventListener('click', () => {
+        if (mobile.matches) contents.open = false;
+      }));
+      const sections = [...document.querySelectorAll('main > section')];
+      const progress = document.querySelector('.reading-progress');
+      let pending = false;
+      const update = () => {
+        const extent = document.documentElement.scrollHeight - window.innerHeight;
+        progress.style.width = `${extent > 0 ? Math.min(100, Math.max(0, window.scrollY / extent * 100)) : 0}%`;
+        const current = sections.reduce((id, section) => section.getBoundingClientRect().top <= 160 ? section.id : id, '');
+        links.forEach(link => {
+          if (link.hash === `#${current}`) link.setAttribute('aria-current', 'location');
+          else link.removeAttribute('aria-current');
+        });
+        pending = false;
+      };
+      const scheduleUpdate = () => {
+        if (!pending) { pending = true; window.requestAnimationFrame(update); }
+      };
+      window.addEventListener('scroll', scheduleUpdate, { passive: true });
+      window.addEventListener('resize', scheduleUpdate);
+      window.addEventListener('load', scheduleUpdate);
+      update();
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+Generation mode: built-in image_gen (style-transfer edit).
+Reference: the previous black-and-white cover.jpg from the Training Guide.
+Output: images/cover.jpg.
+
+Use case: style-transfer.
+Asset type: portrait cover illustration for the Rescue Raiders game manual.
+Edit target: the referenced existing cover.jpg. Redraw this same cover in a classic Marvel Comics Bronze Age action-adventure cover style: confident heavy brush inks, dramatic foreshortening, heroic but believable military anatomy, finely controlled crosshatching, bold flat comic-book colors and restrained printed halftone shading. This should be a polished color comic cover, not a photo or a 3D render.
+Preserve the original cover's overall composition and approximately 2:3 portrait aspect ratio: the huge two-line RESCUE RAIDERS title at the top, a large military transport helicopter seen from its front-left with the rotor sweeping across the middle, and a helmeted soldier viewed from behind running toward the helicopter's open side door in the lower-right foreground, carrying his rifle with webbing and pouches. Preserve the small distant soldier at left and the sense of movement across the landing area. The foreground soldier is running on the ground, not parachuting.
+Use a blue-gray helicopter, olive and khaki military gear, a clean warm sky with the original clouds, vivid but disciplined comic colors and strong light/shadow shapes. Preserve the thick rectangular cover border and diagonal bottom-right banner.
+Text (verbatim): "RESCUE" on the first title line, "RAIDERS" on the second, and "TRAINING GUIDE" in the diagonal banner. Make these large, clean and accurately spelled, with expressive retro action-comics lettering echoing the original title. Keep all title letters inside the frame with comfortable margins.
+Keep the core subjects, the same story, and original title. Do not add superheroes, superhero costumes, Marvel logos, other franchise characters, issue numbers, prices, speech bubbles, additional slogans, explosions, extra weapons, artist signatures, or watermarks. This is a new stylistic interpretation of the provided Rescue Raiders cover.

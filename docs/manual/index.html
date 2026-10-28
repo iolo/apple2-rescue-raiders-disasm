@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Rescue Raiders Training Guide: how to play, illustrated game elements, weapons, controls, and quick reference.">
+  <meta name="theme-color" content="#f4f1e9">
+  <link rel="alternate" hreflang="en" href="index.html">
+  <link rel="alternate" hreflang="ko" href="index.ko.html">
+  <link rel="icon" href="data:,">
+  <title>Rescue Raiders — Training Guide</title>
+  <style>
+    :root { color-scheme: light; --paper: #f4f1e9; --ink: #242620; --muted: #64665b; --rule: #d2d0c4; --accent: #46543a; --sans: Arial, Helvetica, sans-serif; --serif: Georgia, 'Times New Roman', serif; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--serif); font-size: 18px; line-height: 1.7; }
+    a { color: var(--accent); text-underline-offset: .2em; text-decoration-thickness: 1px; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible, summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; }
+    img { display: block; max-width: 100%; height: auto; }
+    summary { cursor: pointer; }
+    .skip-link { position: fixed; top: -5rem; left: 1rem; z-index: 10; background: var(--ink); color: white; padding: .5rem 1rem; }
+    .skip-link:focus { top: 1rem; }
+    .masthead { position: sticky; top: 0; z-index: 5; background: var(--paper); border-bottom: 1px solid var(--rule); }
+    .masthead-inner { max-width: 1240px; padding: 16px 40px; margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; font: 12px/1.5 var(--sans); letter-spacing: .08em; text-transform: uppercase; }
+    .masthead a { color: var(--ink); text-decoration: none; }
+    .masthead-meta { display: flex; align-items: center; gap: 20px; }
+    .masthead .language-link { text-transform: none; letter-spacing: 0; text-decoration: underline; }
+    .masthead .wordmark { font-weight: 900; font-size: 15px; letter-spacing: -.025em; }
+    .reading-progress { position: absolute; bottom: -1px; left: 0; width: 0; height: 2px; background: var(--accent); }
+    .hero { max-width: 1160px; margin: auto; padding: 70px 40px 64px; display: grid; grid-template-columns: 1fr 285px; gap: 64px; align-items: center; }
+    .eyebrow { margin: 0 0 20px; font: 11px/1.6 var(--sans); font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+    h1 { font: 900 clamp(48px, 6.8vw, 82px)/.9 var(--sans); letter-spacing: -.065em; text-transform: uppercase; margin: 0 0 26px; }
+    .hero-subtitle { margin: 0 0 20px; font-size: 30px; font-style: italic; }
+    .hero-description { max-width: 400px; font-size: 17px; line-height: 1.6; }
+    .hero-links { display: flex; flex-wrap: wrap; gap: 12px 26px; margin-top: 28px; font: 13px/1.5 var(--sans); }
+    .hero-cover { margin: 0; }
+    .hero-cover img { width: 100%; mix-blend-mode: normal; }
+    .hero-cover figcaption { margin-top: 14px; text-align: right; font: 10px/1.5 var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+    .book { max-width: 1160px; margin: 0 auto; padding: 0 40px; display: grid; grid-template-columns: 215px minmax(0, 1fr); gap: 68px; border-top: 1px solid var(--ink); }
+    .sidebar { min-width: 0; }
+    .contents { position: sticky; top: 84px; max-height: calc(100dvh - 100px); overflow-y: auto; margin-top: 32px; padding-bottom: 28px; font: 12px/1.55 var(--sans); }
+    .contents summary { list-style: none; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 16px; cursor: default; }
+    .contents summary::-webkit-details-marker { display: none; }
+    .contents ol { padding: 0; margin: 0; list-style: none; }
+    .contents li { margin: 0; padding: 0; }
+    .contents a { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; padding: 7px 0 7px 12px; border-left: 2px solid transparent; color: var(--muted); text-decoration: none; transition: color .15s, border-color .15s; }
+    .contents a:hover, .contents a[aria-current="location"] { border-color: var(--accent); color: var(--ink); }
+    .contents a[aria-current="location"] { font-weight: 700; }
+    .contents .appendix-start { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--rule); }
+    main { min-width: 0; padding-bottom: 64px; }
+    section { padding: 48px 0; border-bottom: 1px solid var(--rule); }
+    section:last-child { border-bottom: 0; }
+    h2 { margin: 0 0 28px; font: 700 36px/1.15 var(--sans); letter-spacing: -.045em; }
+    h3 { margin: 36px 0 14px; font: 700 21px/1.3 var(--sans); letter-spacing: -.02em; }
+    h4 { margin: 0 0 12px; font: 700 15px/1.4 var(--sans); }
+    p { margin: 0 0 20px; }
+    strong { font-weight: 700; }
+    li { padding-left: 5px; margin-bottom: 12px; }
+    ul, ol { padding-left: 26px; }
+    .lead { font-size: 21px; line-height: 1.6; }
+    .illustration { margin: 30px 0; }
+    .illustration img { width: 100%; }
+    figcaption { margin-top: 12px; font: 12px/1.5 var(--sans); color: var(--muted); }
+    .unit { display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 28px; padding: 24px 0; border-top: 1px solid var(--rule); }
+    .unit img { width: 128px; max-height: 125px; object-fit: contain; image-rendering: pixelated; margin-top: 4px; }
+    .unit p:last-child { margin-bottom: 0; }
+    .unit h4 { text-transform: uppercase; letter-spacing: .015em; }
+    .note { margin: 28px 0; padding: 20px 24px; border-left: 3px solid var(--accent); background: #e9e8dd; }
+    .note h4 { margin-bottom: 8px; font-size: 12px; text-transform: uppercase; letter-spacing: .08em; }
+    .note p:last-child { margin-bottom: 0; }
+    .transmission { margin: 28px 0; padding: 24px; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); text-align: center; font: 14px/1.8 var(--sans); }
+    .transmission strong { display: block; }
+    kbd { font: 12px/1.8 var(--sans); display: inline-block; min-width: 25px; padding: 0 6px; border: 1px solid #b8b9ad; border-bottom-width: 2px; border-radius: 3px; background: #faf9f4; text-align: center; color: var(--ink); white-space: nowrap; vertical-align: 1px; }
+    .table-scroll { overflow-x: auto; margin: 24px 0; }
+    table { width: 100%; border-collapse: collapse; font: 14px/1.6 var(--sans); text-align: left; }
+    caption { text-align: left; margin-bottom: 12px; font-size: 12px; color: var(--muted); }
+    th, td { border-bottom: 1px solid var(--rule); padding: 13px 10px 13px 0; vertical-align: top; }
+    th { font-size: 11px; letter-spacing: .06em; text-transform: uppercase; border-top: 1px solid var(--ink); border-bottom-color: var(--ink); }
+    td:last-child, th:last-child { padding-right: 0; }
+    .prices td:last-child, .prices th:last-child { text-align: right; white-space: nowrap; }
+    .controls td:first-child { width: 95px; white-space: nowrap; }
+    .joystick-figure { width: 260px; margin: 24px auto; }
+    .credits { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 28px; font: 14px/1.6 var(--sans); margin: 24px 0; }
+    .credits dt { font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+    .credits dd { margin: 0; }
+    footer { max-width: 1080px; margin: 0 auto; padding: 28px 0 36px; border-top: 1px solid var(--ink); display: flex; justify-content: space-between; gap: 24px; color: var(--muted); font: 11px/1.7 var(--sans); }
+    footer p { margin: 0; }
+    @media (min-width: 761px) { .hero > * { animation: arrive .45s ease-out both; } .hero-cover { animation-delay: .08s; } }
+    @keyframes arrive { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    @media (max-width: 1000px) { .hero { gap: 40px; } .book { grid-template-columns: 180px minmax(0,1fr); gap: 36px; } footer { margin: 0 40px; } }
+    @media (max-width: 760px) {
+      body { font-size: 17px; } html { scroll-padding-top: 5rem; }
+      .masthead-inner { padding: 14px 20px; } .masthead .wordmark { font-size: 13px; }
+      .hero { padding: 38px 24px; grid-template-columns: 1fr 125px; gap: 24px; } h1 { font-size: clamp(34px,7.5vw,54px); } .eyebrow { font-size: 9px; margin-bottom: 15px; } .hero-subtitle { font-size: 23px; margin-bottom: 12px; } .hero-description { font-size: 15px; } .hero-links { font-size: 12px; margin-top: 20px; } .hero-cover figcaption { font-size: 8px; }
+      .book { display: block; padding: 0 24px; } .contents { position: static; max-height: none; overflow: visible; margin: 0; padding: 0; border-bottom: 1px solid var(--ink); } .contents summary { padding: 18px 0; margin: 0; cursor: pointer; display: flex; justify-content: space-between; } .contents summary::after { content: '+'; font-size: 18px; line-height: 1; } .contents[open] summary::after { content: '−'; } .contents nav { padding-bottom: 24px; } .contents a { padding-top: 9px; padding-bottom: 9px; }
+      section { padding: 36px 0; } h2 { font-size: 30px; } h3 { font-size: 20px; } .lead { font-size: 19px; }
+      .unit { grid-template-columns: 88px minmax(0,1fr); gap: 20px; } .unit img { width: 64px; max-height: 100px; } .unit h4 { font-size: 13px; }
+      footer { margin: 0 24px; }
+    }
+    @media (max-width: 420px) { .masthead-inner { padding-inline: 16px; gap: 8px; } .masthead .wordmark { font-size: 12px; } .hero { gap: 16px; grid-template-columns: 1fr 96px; padding-left: 20px; padding-right: 20px; } .hero-description { grid-column: 1 / -1; } .hero-links { gap: 10px 18px; } .hero-cover figcaption { display: none; } .book { padding: 0 20px; } .unit { grid-template-columns: 65px minmax(0,1fr); gap: 16px; } .credits { grid-template-columns: 1fr; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
+  </style>
+</head>
+<body id="top">
+  <a class="skip-link" href="#introduction">Skip to the manual</a>
+  <header class="masthead">
+    <div class="masthead-inner">
+      <a class="wordmark" href="#top">Rescue Raiders</a>
+      <div class="masthead-meta"><span>Training Guide</span><a class="language-link" href="index.ko.html" lang="ko" hreflang="ko">한국어</a></div>
+    </div>
+    <div class="reading-progress" aria-hidden="true"></div>
+  </header>
+
+  <div class="hero">
+    <div>
+      <p class="eyebrow">Sir-Tech Software, Inc. · Second edition · 1984</p>
+      <h1>Rescue <br>Raiders</h1>
+      <p class="hero-subtitle">Training Guide</p>
+      <p class="hero-description">A strategic war simulation game.<br>Travel to the past to rescue the present.</p>
+      <div class="hero-links"><a href="#introduction">Read the manual ↓</a><a href="#reference">Quick reference ↗</a></div>
+    </div>
+    <figure class="hero-cover">
+      <img src="images/cover.jpg" alt="Rescue Raiders comic-book cover: soldiers run toward a military helicopter beneath the bold title and above a Training Guide banner." width="1024" height="1536">
+      <figcaption>Training Guide</figcaption>
+    </figure>
+  </div>
+
+  <div class="book">
+    <aside class="sidebar">
+      <details class="contents" open>
+        <summary>Contents</summary>
+        <nav aria-label="Manual contents">
+          <ol>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#about">About the game</a></li>
+            <li><a href="#elements">Game elements</a></li>
+            <li><a href="#weapons">Weapons</a></li>
+            <li><a href="#getting-started">Getting started</a></li>
+            <li><a href="#how-to-play">How to play</a></li>
+            <li><a href="#finance">Finance</a></li>
+            <li><a href="#status-reports">Computer status reports</a></li>
+            <li><a href="#scoring">Scoring</a></li>
+            <li><a href="#other-features">Other features</a></li>
+            <li class="appendix-start"><a href="#reference">Quick reference</a></li>
+            <li><a href="#publication">Credits</a></li>
+          </ol>
+        </nav>
+      </details>
+    </aside>
+
+    <main id="manual">
+      <section id="introduction" aria-labelledby="introduction-title">
+        <h2 id="introduction-title">Introduction</h2>
+        <p class="lead"><strong>June 6, 1944. D-Day. Hundreds of thousands of men, supported by thousands of ships and aircraft, pour onto the beaches of Normandy in northern France. It is the largest amphibious assault in the history of the world.</strong></p>
+        <p><strong>It is successful. By the end of the attack, soldiers from the United States, Canada, Great Britain, France, Poland, the Netherlands, Norway, Denmark, Belgium, Australia and New Zealand have succeeded in overcoming a defense that German field marshal Erwin Rommel has called “impenetrable.” The forces of western civilization have combined against Hitler’s savage barbarism and gained a toehold on the coast of northern Europe.</strong></p>
+        <p>But it is only a toehold. Even as newspapers throughout the world trumpet the news of the invasion, the Allied armies are moving to secure their position, which is precarious at best. To accomplish this, to insure that they will not be driven into the sea as quickly as they arrived, they must knock out German strongholds throughout northern France, Holland and Belgium. The Battle of Normandy has begun.</p>
+        <p>The countryside of Normandy is a soldier’s nightmare. Large flat fields are separated by tall, dense hedgerows grown to break the winds that sweep down from the North Sea. The hedges provide ample concealment for German troops who wait in ambush for Allied soldiers who must cross the fields. The fighting is a series of struggles from field to field, and from farmhouse to farmhouse. It often takes days to advance only a few miles.</p>
+        <p>In the first weeks, the German defense is fierce. Fresh, well-trained soldiers are commanded by officers with long experience fighting in Russia and North Africa. These men offer incredible resistance to Allied attacks. To drive them out of Saint-Lo, for example, it is necessary to pound the city with aerial and artillery bombardments that literally flatten it. Afterwards, Supreme Allied Commander Dwight D. Eisenhower observes the destruction and comments that it is possible to walk from one end of Saint-Lo to the other, “without touching the ground,” on the layers of broken building stone and concrete that are all that is left of the city.</p>
+        <p>Eventually the battle is won. Three months after D-Day, Allied forces have “locked up” the northern coastline of France, Holland and Belgium, and have liberated France and the Low Countries. Germany is caught in a vise between the Western Allies in France, Holland, Belgium and Italy, and the Red Army which is sweeping across eastern Europe toward Berlin.</p>
+        <p>The Battle of Normandy is a crucial part of the world’s history. If the Allies had been repulsed from the beaches on D-Day, or if the subsequent fighting had resulted in German victories, there would have been effects lasting to modern times and beyond. For better or worse, the world would be different than it is.</p>
+        <p>History is a complex network of events. Something which occurs at any particular time is influenced by things which have happened in the past and by other things happening at the same time. In turn, an event influences other events at the time it happens and has consequences in the future. Within this network of interlocking events, nothing is insignificant. A “minor” occurrence may have the most profound effects twenty or a hundred years later. Consider two examples:</p>
+        <ol>
+          <li>A Russian judge in a Czarist court sentences a member of a radical student group to death for his part in an assassination plot, and the student is hanged. The student’s younger brother, Vladimir Ilyich Ulyanov, begins to nurture a hatred of the Czarist government that will last the rest of his life, even after he has changed his name to Lenin.</li>
+          <li>A professor in a Viennese art school rejects an application for admission to the school from an unemployed World War I veteran. The ex-soldier, one Adolf Hitler, must seek a career outside of art.</li>
+        </ol>
+        <p>Would the course of history have been different if the judge had shown leniency to an impetuous youth, or if the professor had found merit in the ex-soldier’s drawings? We can’t know for certain, but it seems likely.</p>
+        <p>How much more likely then, that any changes in the vast movements of armies, the destruction of cities, the wholesale loss of life among soldiers and civilians during the fighting for Normandy, would have far-reaching consequences? How many people living today have fathers or grandfathers who survived the battles? How many people would have been born if other soldiers had not been killed? What effects has the Allied victory had? What effects would a German victory have had?</p>
+        <p>We can only speculate on the answers to these questions. We can state that the Battle of Normandy has had effects on the lives of virtually everyone living today, but we would find it extremely difficult to analyze exactly what those effects are, let alone to predict what the effects of a different Battle of Normandy would have been.</p>
+        <p>Now suppose that a group of people exists today which believes that it can make such an analysis, and further suppose that this group has the means to alter the outcome of the battle in such a way that the group will benefit. Using time travel, members of the group will take soldiers and modern weapons to the Europe of 1944 to influence the Battle of Normandy so that the group will gain enormous political and economic power forty years later. Their desire is to change the past so that they can rule the present. The danger to you — to everyone — would be enormous. If these people should succeed in their plans, you would be under the absolute domination, at the very best. At worst, you would never have been born at all.</p>
+        <p>This is the premise of <strong>Rescue Raiders.</strong> The group of terrorists does exist; they have a time machine; they are determined to use their technology to change the course of World War II so that they can control…YOU.</p>
+        <figure class="illustration"><img src="images/time-travel.jpg" alt="Comic-book illustration of a military command room overlooking helicopters and tanks, with a headset-wearing officer in a circular inset." loading="lazy" width="1442" height="1091"></figure>
+        <p>In turn, you have the opportunity to stop the terrorists. Will you take this opportunity? Will you travel to the past to rescue the present?</p>
+      </section>
+
+      <section id="about" aria-labelledby="about-title">
+        <h2 id="about-title">About the game</h2>
+        <p><strong>Rescue Raiders</strong> is a strategic war simulation game. You command aircraft and ground forces to advance toward the enemy and destroy him. Unlike other strategic war games, Rescue Raiders lets you see and control what happens directly. You will actually see helicopters, ground vehicles, soldiers and missiles. You do not see a set of odd symbols on a map.</p>
+        <p>To win Rescue Raiders you must use both <em>tactics</em> and <em>strategy.</em> Tactics is the “shoot-’em-up” part of the game. To succeed tactically, you must use your weapons, men and equipment to win fights against the enemy.</p>
+        <p>Strategy is the art and science of gaining an advantage <em>over</em> the enemy on the battlefield. Rescue Raiders contains elements which, if you gain control of them, will give you an advantage over the Time Terrorists. You must coordinate your tactics to gain control of these strategic elements. You cannot win Rescue Raiders by tactics alone.</p>
+        <p>Like any other General, you must discover for yourself the strategic elements and learn how to deal with them.</p>
+        <p>In the interests of fairness, the enemy has at least the same opportunity to control strategic elements as you do.</p>
+        <p>Rescue Raiders is divided into eight battles. If you win a battle, you will automatically proceed to the next battle. Each new battle is more difficult than the last. Your loss of any of the battles will end the game in total victory for the enemy.</p>
+        <figure class="illustration"><img src="images/battlefield.jpg" alt="Comic-book illustration of tanks carrying infantry through a dusty countryside beside ruined buildings." loading="lazy" width="1931" height="814"></figure>
+      </section>
+
+      <section id="elements" aria-labelledby="elements-title">
+        <h2 id="elements-title">Game elements</h2>
+        <p>Rescue Raiders contains a number of stationary and mobile elements. Stationary elements include time machines (headquarters) for you and the enemy, helicopter pads and bunkers. Mobile elements are helicopters, tanks, soldiers (men), engineers, anti-aircraft-missile carriers, and demolition team vehicles (DTVs).</p>
+        <h3 id="stationary-elements">Stationary elements</h3>
+        <div class="unit"><img src="images/time-machine.png" alt="Time machine" loading="lazy" width="128" height="96"><div><h4>Time machines</h4><p>The time machine located at each end of the field serve as headquarters for both sides. A battle is won or lost when you or the enemy succeed in moving a Demolition Team Vehicle to the opponent’s time machine. Only the Demolition Team Vehicle will destroy time machines, which are impervious to all other machines.</p></div></div>
+        <div class="unit"><img src="images/helicopter-pad.png" alt="Helicopter launch pad" loading="lazy" width="128" height="96"><div><h4>Helicopter pads</h4><p>Helicopter pads serve as the starting points for new helicopters. They also serve as refueling, re-arming and repair stations for helicopters during combat. A helicopter is automatically (but not instantly!) refueled, repaired and loaded with a maximum weapon supply whenever it lands on a helicopter pad. A helicopter pad is located by each time machine.</p></div></div>
+        <div class="unit"><img src="images/bunker.png" alt="Bunker" loading="lazy" width="128" height="96"><div><h4>Bunkers</h4><p>There are different types of bunkers in Rescue Raiders. Some of these may be destroyed if hit by weapon fire, while other types can only be destroyed by a very high number of hits, or cannot be destroyed at all. A bunker can be controlled only by placing soldiers in it. Bunkers are found at different locations from one end of the field to the other.</p></div></div>
+        <div class="unit"><img src="images/barrage-balloon.png" alt="Barrage balloon" loading="lazy" width="128" height="96"><div><h4>Barrage balloons</h4><p>Barrage balloons are “semi-stationary” elements which are moored to some of the bunkers. Helicopters will be destroyed if they strike an opponent’s balloon or its mooring line. Helicopters can fly safely past any friendly barrage balloon or its mooring line.</p></div></div>
+        <h3 id="mobile-elements">Mobile elements</h3>
+        <div class="unit"><img src="images/helicopter.png" alt="Helicopter" loading="lazy" width="128" height="96"><div><h4>Helicopters</h4><p>Helicopters serve as primary observation platforms, as fighting vehicles, and as troop transport vehicles. Helicopters are the most heavily-armed and destructive game elements, and are also the fastest-moving of the game’s mobile elements. You will have four (4) helicopters at the beginning of play. If you run out of helicopters, you will lose the game. The enemy has an unlimited supply of helicopters. Helicopters are armed with machine guns, high explosive bombs and “smart” missiles at the beginning of a game. Helicopters are lightly-constructed and can be damaged or destroyed by any opposing fire.</p></div></div>
+        <div class="unit"><img src="images/tank.png" alt="Tank" loading="lazy" width="128" height="96"><div><h4>Tanks</h4><p>Tanks are heavily-armored ground vehicles equipped with cannon and machine guns at the beginning of play. Tank weapons are effective against any other mobile game elements, including other tanks. Tanks resist enemy fire better than any other mobile element in the game.</p></div></div>
+        <div class="unit"><img src="images/soldier.png" alt="Soldier with an automatic weapon" loading="lazy" width="128" height="96"><div><h4>Soldiers &amp; engineers</h4><p>Soldiers or men are airborne infantry. They are equipped with parachutes, and they wear body armor which provides some protection against light weapon fire. They are equipped with automatic weapons.</p><p>Engineers are military construction specialists. They can repair or replace certain installations which may be damaged or destroyed in combat. Engineers fight as normal soldiers first. Engineers become soldiers if they are transported by helicopter.</p></div></div>
+        <div class="unit"><img src="images/missile-carrier.png" alt="Anti-aircraft missile carrier" loading="lazy" width="128" height="96"><div><h4>Anti-aircraft missile carriers</h4><p>Anti-Aircraft Missile Carriers are jeep-like vehicles. Each is equipped with a single smart missile. This missile is automatically launched when an enemy helicopter is in range and will seek and “home in” on the helicopter. Missile carriers will only attack helicopters. The carriers have no defensive capabilities, and can be destroyed by fire from any other element. A missile carrier is a “one-shot” item: it self-destructs after launching its missile.</p></div></div>
+        <div class="unit"><img src="images/demolition-vehicle.png" alt="Demolition team vehicle" loading="lazy" width="128" height="96"><div><h4>Demolition team vehicles</h4><p>Demolition Team Vehicles look like vans or ambulances. They contain electronic devices which allow them to neutralize and destroy the time machines. DTVs have no other offensive or defensive capabilities and are vulnerable to fire from any other game element.</p></div></div>
+      </section>
+
+      <section id="weapons" aria-labelledby="weapons-title">
+        <h2 id="weapons-title">Weapons</h2>
+        <div class="unit"><img src="images/missile.png" alt="Smart missile" loading="lazy" width="128" height="96"><div><h4>Missiles</h4><p>“Smart” missiles are carried by helicopters and by anti-aircraft-missile carriers. They are the fastest, long-range and most powerful weapons possessed by either side. A smart missile will seek and “home-in” on the target it is launched against. Smart missiles launched by the Anti-Aircraft Missile Carriers will attack only opposing helicopters. A smart missile can be launched from a helicopter against any opposing element.</p></div></div>
+        <div class="unit"><img src="images/bomb.png" alt="High-explosive bomb" loading="lazy" width="128" height="96"><div><h4>Bombs</h4><p>High-explosive bombs are carried by helicopters only. An element struck by a bomb will be damaged or destroyed. High-explosive bombs must score a direct hit to be effective.</p></div></div>
+        <div class="unit"><img src="images/machine-gun.png" alt="In-game machine-gun round" loading="lazy" width="128" height="96"><div><h4>Machine guns</h4><p>Machine guns are carried by helicopters, tanks and soldiers. They have a high rate of fire, but they have the least power and range of any weapon in the game. Tanks and soldiers have an unlimited supply of machine-gun ammunition.</p></div></div>
+        <p>In addition to these weapons carried by mobile elements, there are also stationary weapons and weapon-launchers.</p>
+        <div class="unit"><img src="images/anti-aircraft-gun.png" alt="Ground-based anti-aircraft gun" loading="lazy" width="128" height="96"><div><h4>Anti-aircraft &amp; tank guns</h4><p>Anti-aircraft guns are ground-based rapid-fire cannons. They are effective against helicopters and in some cases may be turned against tanks. Anti-aircraft (or anti-tank) guns fire automatically whenever the opposing element is in range.</p><p>Some bunkers are equipped with machine guns which can be used by the side occupying them.</p></div></div>
+        <aside class="note"><h4>Important note</h4><p>Technological development is very rapid during wartime. Some weapons may change as you progress from battle to battle.</p></aside>
+      </section>
+
+      <section id="getting-started" aria-labelledby="getting-started-title">
+        <h2 id="getting-started-title">Getting started</h2>
+        <p>Rescue Raiders can be played on any Apple II-series microcomputer equipped with a disk drive, a joystick<a href="#joystick-note" aria-label="See important joystick note">*</a> and at least 64K of RAM. A color TV set or monitor will show the graphics to best advantage, but the game can be played and enjoyed with a monochrome monitor.</p>
+        <p>Loading the game is simple:</p>
+        <ol><li>Switch the computer and monitor or TV set ON.</li><li>Insert the Rescue Raiders game disk in the disk drive with the disk label up and toward you, then close the disk drive door. If you have more than one disk drive, use Drive 1 (the INTERNAL drive on an Apple //c). The red light on Drive 1 will light when the computer is switched on.</li></ol>
+        <p>(When playing Rescue Raiders with an Apple //c computer, reverse the order of these steps. That is, insert the game disk before switching the computer on).</p>
+        <p>Your disk drive will then make some clicking and whirring sounds. After a few seconds, “Rescue Raiders” will be displayed at the top of the monitor screen, indicating that the program is loading.</p>
+        <p>When the program has been loaded, the title sequence will begin.</p>
+        <p>Once the title display appears on the screen, your disk drive will run for several more seconds. At the end of this, a “demo program” will begin running, and will show you some of the features of the game.</p>
+        <p>When you are ready to begin play, press the <kbd>S</kbd> key (for Start) on your keyboard. This will cause the demo program to disappear, and the message:</p>
+        <div class="transmission">Emergency Transmission&gt;<strong>Terrorists have been found at<br>Cherbourg</strong>Prepare for action.</div>
+        <p>will appear on your screen. After a short pause, this message will be replaced by a map of Europe, with a blinking star showing Cherbourg’s location. After another pause, the map will disappear and actual game play will begin.</p>
+        <h3 id="troubleshooting">Trouble-shooting</h3>
+        <p>As it is loaded, Rescue Raiders checks the speed of your disk drive to insure it will work correctly. If your drive is operating outside of correct limits, the message:</p>
+        <div class="transmission"><strong>BAD DRIVE SPEED</strong></div>
+        <p>will be displayed on your screen. Rescue Raiders may continue to operate properly after this message appears, but there is a possibility that you will damage your disk if you continue playing after receiving a drive speed warning, and Rescue Raiders will not save high scores or games in progress under these conditions. Try loading the game on another computer system. If it loads successfully without presenting a drive speed warning, the problem lies with your disk drives. Please get your drive speed checked and adjusted if you receive a drive speed warning and the problem is not repeated with other machines.</p>
+      </section>
+
+      <section id="how-to-play" aria-labelledby="how-to-play-title">
+        <h2 id="how-to-play-title">How to play</h2>
+        <p>The play area in Rescue Raiders is a long battlefield. Your headquarters, consisting of a time machine and a helicopter launch pad, are located at the right end of this battlefield, and the enemy’s headquarters are located at the left end.</p>
+        <h3 id="game-screen">The game screen</h3>
+        <p>The game screen is divided into two main areas from which you can obtain information. The larger area, consisting of most of the screen from the bottom up, is a television-like display. This display is roughly centered on your helicopter, and shows objects, equipment and men in the immediate vicinity of your helicopter. The smaller area stretching across the top of the screen is your “tactical radar” display: it depicts every element on the battlefield, including missiles.</p>
+        <figure class="illustration screen-diagram"><img src="images/game-screen.png" alt="Game-screen diagram using the game’s sprites: an arrow labels the tactical radar strip at the top; another labels the central play area with a helicopter and parachuting soldiers; a third labels the ground with a tethered balloon, bunker, tanks, and missile carrier." loading="lazy" width="1520" height="864"></figure>
+        <p>You use the large display to maneuver your helicopter in combat and on reconnaissance missions. Use the tactical radar display to obtain an instant summary (or “map”) of the positions of all elements belonging to you or the enemy. One important use of the tactical radar is to detect enemy weapons which may be homing “in on” your helicopter. Objects in the tactical radar display are color-coded according to what type of element they are. The helicopters are represented as white squares which are larger than any other element on the tactical radar.</p>
+        <h3 id="helicopter-operations">Helicopter maneuvers and operations</h3>
+        <p>Your helicopter is the only game element which you directly control and operate. You use your joystick to fly the helicopter: simply push the stick in the direction you want the helicopter to go.</p>
+        <p>Helicopter weapons are controlled by the joystick buttons.</p>
+        <p><strong>Button 0</strong> (the button nearest you) fires the helicopter machine gun. The machine gun will continue to fire as long as Button 0 is depressed or until you are out of ammunition.</p>
+        <p><strong>Button 1</strong> (the button farthest away from you) drops bombs. Bombs will be released as long as Button 1 is depressed. You can carry up to ten bombs at a time.</p>
+        <p><em>Press both buttons simultaneously to trigger the helicopter smart missiles. The helicopter must be at the same altitude as a target before the missiles will launch. The missiles will “lock in” on the closest enemy element at the helicopter’s altitude, which may not be the target you wish to hit.</em> Your helicopter carries a maximum of two smart missiles at a time.</p>
+        <p>Any helicopter weapon can be used, and is effective, against any mobile element. Helicopter weapons can be used against any stationary element, but are ineffective against the time machines and certain bunkers.</p>
+        <p>No weapons can be fired or launched while your helicopter is on the ground or on a pad. If you press Button 1 while on the ground, bombs will not be released, but men who are in the helicopter will get out and begin to march toward the enemy.</p>
+        <p>Your helicopter can carry up to five men at a time, in addition to the pilot. If you land in front of any group of your own men, they will climb into the helicopter as they reach it, until five are on board.</p>
+        <p>If you press the space bar while the helicopter is flying and carrying men, one of the men will bail out and attempt to parachute to the ground. You can drop a full load of men by pressing the space bar five times. Sometimes a parachute will not open, and the man will fall to the ground and be killed. If your helicopter is destroyed in the air, a man will sometimes survive to bail out and parachute safely to the ground, where he will fight as an infantryman. This man may be the helicopter’s pilot or an infantryman that is being transported.</p>
+        <figure class="illustration"><img src="images/air-combat.jpg" alt="Comic-book illustration of a helicopter banking above fields and bunkers, with two helicopters following behind." loading="lazy" width="1543" height="1019"></figure>
+        <p>Your helicopter will be damaged if it is hit by enemy weapons, even if it is not destroyed. You can tell when your helicopter has been damaged, because it will emit puffs of smoke from the lower rear part of its fuselage. These puffs of smoke will increase in size as damage becomes more severe.</p>
+        <p>If your helicopter is destroyed and you still have additional helicopters remaining, the screen will continue to show the helicopter’s last location for a few seconds, then will switch to your headquarters helicopter pad. At times, you may wish to continue watching the action taking place at the site where your helicopter was destroyed: holding down either joystick button (before the view shifts to the helicopter pad) will allow you to see events occurring after the destruction of your helicopter. Releasing the joystick button(s) will then return the screen view to the new helicopter at the right end of the field.</p>
+        <p>Return your helicopter to the launch pad if you want to replace depleted weapons and ammunition, or if you wish to refuel or repair damage. When the helicopter has been completely repaired, re-armed and refueled, a green bar will appear across the top of the screen immediately below the tactical radar display. The more supplies and repairs your helicopter requires, the longer it will have to wait on the pad before the green bar appears. If men are on board the helicopter, they may be able to make repairs without returning to the launch pad under certain circumstances.</p>
+        <p>When your fuel becomes low, the “Low Fuel” message will appear in the center of the display screen. When fuel becomes dangerously low, an audible warning will begin to tick, and a fuel gauge will be displayed at the top of the screen.</p>
+        <aside class="note" id="joystick-note"><h4>Important note</h4><p>Rescue Raiders is designed to be used only with a “two-button” joystick, such as the Kraft Model 820 joystick. Some joysticks may work differently than described above. Your ability to control the Rescue Raiders helicopters depends on the quality and condition of your joystick.</p></aside>
+        <h3 id="ground-forces">Ground forces</h3>
+        <p>You must advance ground forces to take ground and to win the game by destroying the enemy time machine. Ground forces include all mobile elements except helicopters.</p>
+        <p>Ground forces are deployed by using the keyboard.</p>
+        <div class="table-scroll" role="region" aria-label="Scrollable reference table" tabindex="0"><table class="controls"><thead><tr><th scope="col">Press</th><th scope="col">For</th></tr></thead><tbody>
+          <tr><td><kbd>T</kbd></td><td>Tanks</td></tr><tr><td><kbd>M</kbd></td><td>Men (soldiers)</td></tr><tr><td><kbd>E</kbd></td><td>Engineers</td></tr><tr><td><kbd>A</kbd></td><td>Anti-Aircraft Missile Carriers</td></tr><tr><td><kbd>D</kbd></td><td>Demolition Team Vehicles</td></tr>
+        </tbody></table></div>
+        <p>Pressing <kbd>T</kbd>, <kbd>A</kbd> or <kbd>D</kbd> will bring one vehicle onto the field. Pressing <kbd>M</kbd> will deploy a squad of five men, and <kbd>E</kbd> will deploy two engineers. You must wait until a vehicle or squad is on the field before deploying something else. You will hear a click as an element is deployed, and the lines above and below the tactical radar display will change from blue to white while elements are moving onto the field (this change is visible on a monochrome monitor, although the colors are not).</p>
+        <p>Ground forces advance and fire on enemy forces automatically. A ground force element stops moving forward only when it is actually firing at an enemy element.</p>
+        <p>Ground forces should be deployed in such a way that they will overcome resistance on the field. Remember to anticipate normal losses and casualties.</p>
+        <p>Your helicopter is an invaluable tool for supporting and defending ground forces.</p>
+      </section>
+
+      <section id="finance" aria-labelledby="finance-title">
+        <h2 id="finance-title">Finance</h2>
+        <p>Like a real army, your forces require money to operate. Everything you use, except for your initial allotment of helicopters and the fuel and weapons for them, must be paid for. Every time you press a key to deploy a mobile ground element, the price of that element will be subtracted from your balance. You may purchase additional helicopters by pressing the <kbd>H</kbd> key if you have sufficient cash.</p>
+        <p>You receive money according to the time you spend in combat. Every fifteen seconds, one small bag of money is added to your account.</p>
+        <p>You will be charged at the following rates, in small bags of money:</p>
+        <div class="table-scroll" role="region" aria-label="Scrollable reference table" tabindex="0"><table class="prices"><thead><tr><th scope="col">Item (quantity)</th><th scope="col">Price</th></tr></thead><tbody>
+          <tr><td>1 Helicopter</td><td>20 bags</td></tr><tr><td>1 Tank</td><td>4 bags</td></tr><tr><td>5 Men</td><td>5 bags</td></tr><tr><td>2 Engineers</td><td>5 bags</td></tr><tr><td>1 Anti-Aircraft Missile Carrier</td><td>3 bags</td></tr><tr><td>1 Demolition Team Vehicle</td><td>2 bags</td></tr>
+        </tbody></table></div>
+        <p>If you do not have sufficient cash to pay for an item, pressing the key to deploy it will have no effect.</p>
+        <p>The game imposes limits on the total number of each mobile element which can be on the field at one time. If you attempt to exceed these limits, pressing a key will not deploy a new element, even if you have enough cash to buy it.</p>
+      </section>
+
+      <section id="status-reports" aria-labelledby="status-title">
+        <h2 id="status-title">Computer status reports</h2>
+        <p>You can obtain a report from your command computer at any time by pressing <kbd>C</kbd>. This report shows you the amount of cash you have and displays your helicopter combat readiness. The amount of cash is displayed first, followed by the number of bombs, smart missiles and men aboard your helicopter. Last, the number of helicopters remaining to you is shown.</p>
+        <p>Cash is displayed as moneybags of two different sizes. One large bag represents four small ones. The prices of equipment and men listed above are listed in small bags.</p>
+        <p>You will see the symbols for bombs, missiles or men only if they are on board your helicopter at the time of the report.</p>
+        <p>A gauge showing the fuel supply for your helicopter will be displayed across the top of the screen just below the tactical radar display during a Computer Status Report. On a color monitor, white represents fuel remaining, and red represents fuel already used. The white bar will shorten to the left and be replaced by red as fuel is consumed. You will be able to see the difference between the “white” and “red” portions on a monochrome monitor, even though the actual colors are the same.</p>
+        <p>If you wish to repeat a particular item in the report before the report is finished, pressing <kbd>C</kbd> will cause the report to begin again.</p>
+        <p>The number keys, <kbd>1</kbd>–<kbd>9</kbd>, adjust the speed of reports. Pressing <kbd>1</kbd> will cause the reports to be displayed at the slowest possible speed; pressing <kbd>9</kbd> will give the fastest reports. Other number keys will display reports at various intermediate speeds.</p>
+      </section>
+
+      <section id="scoring" aria-labelledby="scoring-title">
+        <h2 id="scoring-title">Scoring</h2>
+        <p>The objective of Rescue Raiders is to win battles. The only way to achieve total victory and truly win the war against the Time Terrorists is to defeat them on all eight Rescue Raiders battlefields. To help you measure your progress and your achievement even if you fall short of this goal, a point score is provided.</p>
+        <p>Rescue Raiders is scored according to two factors:</p>
+        <ol><li>The amount of damage done to the enemy;</li><li>The cost of damaging the enemy.</li></ol>
+        <p>Your point score is an indication of how well you have achieved the objectives of Rescue Raiders. Your goal should be the highest possible point score while winning the eight battles.</p>
+        <p>War, however, is not a black-and-white issue. The winner of a war pays an enormous price for victory. There are the obvious financial burdens involved not only in the purchase of weapons and equipment, but in the shifting of a nation’s production from consumer goods to military supplies. The civilian population must bear the cost of this production directly, in the form of taxes, and indirectly, in the form of goods and services which become scarce or unavailable in a wartime economy. Even so, the financial cost of a war is less important than its moral cost. No amount of money will restore those who are killed. A nation at war has a moral obligation to balance the advantages of victory against its costs.</p>
+        <p>Of course, no one is actually harmed in Rescue Raiders, but the game’s scoring is designed to penalize victory at excessive cost.</p>
+        <p>Points are deducted from your score for each mobile element which you deploy. Points are also deducted for time spent in battle: the longer it takes you to win, the lower your score will be, with all factors equal.</p>
+        <p>The point system offers a method of assessing and comparing victories or losses. The point score has no bearing on winning or losing the game itself. Therefore, it is possible to win Rescue Raiders with a very low or even a negative (minus) score, and it is possible to lose with a very high score, although these would be extreme situations.</p>
+        <p>The best scores will always be recorded by players who achieve victory at the lowest cost. The ideal game will involve the smallest possible number of ground forces. Every time you deploy a squad of men or a tank, for example, you lose points. If your game “strategy” consists of no more than sending out maximum ground forces at all times, you will be penalized by very low point scores.</p>
+        <p>You can display your current score at any time by pressing the <kbd>ESC</kbd> key. Game play will be paused or frozen while the score is displayed, so pressing <kbd>ESC</kbd> is also a handy way to stop the game if you are interrupted. (If you will be pausing for more than a few minutes, we suggest switching off your monitor until you resume play. This will prevent the possibility of “burning” your monitor screen which could occur if you left it with a non-moving display for an extended period of time). Press <kbd>ESC</kbd> again to resume play.</p>
+        <p>Whenever you win or lose, you will be given the opportunity to record your score on the game disk if it is among the top five. To do this, simply type your name then press <kbd>RETURN</kbd> when the screen for recording high scores appears. High scores are displayed during the demo program when Rescue Raiders is first loaded or after a game is saved. Note that you cannot save high scores on the backup copy of Rescue Raiders which is recorded on the “flip” side of the game disk.</p>
+      </section>
+
+      <section id="other-features" aria-labelledby="features-title">
+        <h2 id="features-title">Other features</h2>
+        <p>It can take many hours to win all eight battles in RESCUE RAIDERS. A “save game” feature has been incorporated to allow you to continue playing the same game over an extended period of time without starting from the beginning at every session.</p>
+        <p>To save your current game, press <kbd>ESC</kbd> to freeze the game and display your score, then type “SAVE” (press the keys <kbd>S</kbd> <kbd>A</kbd> <kbd>V</kbd> <kbd>E</kbd> in sequence). The letters you type will not be shown on the screen, but the red light on your disk drive will come on, and the drive will whir briefly while the game is saved. After saving the game, Rescue Raiders will return the “demo” program that precedes normal game play. (At this time, or when you load Rescue Raiders with a saved game disk, you will see a small “diskette” symbol in the upper right hand corner of the demo game screen). You can remove the Rescue Raiders disk from the disk drive and switch off the computer monitor.</p>
+        <p>To resume play with a saved game, switch the computer and monitor on and insert the Rescue Raiders disk just as you would to start playing from the beginning. When the “demo” program begins, however, there will be a small picture of a computer disk in the upper right corner of the screen if a saved game is present on the game disk. If you want to resume playing your saved game, type “CONT” (press <kbd>C</kbd> <kbd>O</kbd> <kbd>N</kbd> <kbd>T</kbd> in sequence) for “CONTinue.” Your saved game will be loaded, then erased from the disk. The screen appearance will be exactly as it was when the game was saved, including the “scoreboard” in the center of the screen. Press <kbd>ESC</kbd> to begin play. (You may also resume play at the point you left off immediately after saving a game by typing “CONT” while the demo program is running — if you change your mind, for example — but you will then have no game saved).</p>
+        <aside class="note"><h4>Important note</h4><p>You may save only one game at a time. Your saved game can be stored on the disk indefinitely, but it will be erased from the disk when it is continued. When a game is saved, it replaces any earlier saved game which might be on the game disk. You cannot save a game while using the backup copy of Rescue Raiders which is recorded on the “flip” side of the game disk.</p></aside>
+        <p>When you win a battle, you will receive a message, then a short history of one of the cities involved in the liberation of France and the Low Countries will be displayed. This material “scrolls” horizontally across the bottom of the screen. The city histories are capsule descriptions of some of the most interesting places in the world: we hope you will be informed and entertained by them, and we recommend you read them. It may happen, however, that after you have fought your way through the first three or four battles several times, you may not wish to reread the histories. In this case you can skip over this material by pressing <kbd>ESC</kbd> when it begins to scroll.</p>
+        <p>To help you start playing quickly, we have included a reference card with this Training Guide. The reference card summarizes the joystick and keyboard commands recognized by Rescue Raiders.</p>
+        <p>The rest is up to you. You must discover the nature of the obstacles and defenses the enemy will throw in your path, then devise the tactics and strategy necessary to overcome them.</p>
+        <p>You may feel that this Training Guide does not provide all the information you need to win Rescue Raiders. If you feel this way, you are right. We have deliberately omitted certain facts and details which would make victory easier.</p>
+        <p><em>Good Luck!!</em></p>
+      </section>
+
+      <section id="reference" aria-labelledby="reference-title">
+        <h2 id="reference-title">Quick reference</h2>
+        <h3>Helicopter control summary</h3>
+        <figure class="illustration joystick-figure"><img src="images/joystick.jpg" alt="Comic-book illustration of a two-button joystick: Button 1 is at the upper left and Button 0 at the lower left, with the stick on the right." loading="lazy" width="1378" height="1141"></figure>
+        <div class="table-scroll" role="region" aria-label="Scrollable reference table" tabindex="0"><table><caption>Joystick controls</caption><thead><tr><th scope="col">Joystick operation</th><th scope="col">Chopper status</th><th scope="col">Resultant action</th><th scope="col">Special instructions</th></tr></thead><tbody>
+          <tr><td>Button 0</td><td>Airborne</td><td>Machine gun fires</td><td>Only 50 rounds to a fully loaded magazine</td></tr>
+          <tr><td>Button 1</td><td>Airborne</td><td>Bombs dropped</td><td>—</td></tr>
+          <tr><td>Button 1</td><td>Grounded</td><td>Men are disembarked</td><td>—</td></tr>
+          <tr><td>Buttons 0 and 1</td><td>Airborne</td><td>Missile fired at nearest enemy in front of chopper</td><td>Press both buttons</td></tr>
+          <tr><td>—</td><td>On launching pad</td><td>Refuelling or repair</td><td>Takes place after landing on pad</td></tr>
+          <tr><td>—</td><td>Lands in front of a group of friendly infantry</td><td>Men are embarked</td><td>Maximum load is 5 men</td></tr>
+        </tbody></table></div>
+        <p>Helicopter weapons will fire only while helicopter is airborne.<br>A “two-button” joystick (like the Kraft Model 820) is required.</p>
+        <h3>To save a game in progress</h3>
+        <ol><li>Press <kbd>ESC</kbd>.</li><li>Type “SAVE” (without quotes).</li><li>Wait for disk drive to stop and demo program to begin.</li></ol>
+        <h3>To restore a saved game</h3>
+        <ol><li>Load game and wait for demo program to begin.</li><li>Type “CONT” (without quotes).</li><li>When disk drive stops and game screen appears, press <kbd>ESC</kbd>.</li></ol>
+        <h3>Keyboard</h3>
+        <div class="table-scroll" role="region" aria-label="Scrollable reference table" tabindex="0"><table class="controls"><caption>Keyboard commands</caption><thead><tr><th scope="col">Key</th><th scope="col">Command</th></tr></thead><tbody>
+          <tr><td><kbd>H</kbd></td><td>Purchase spare Helicopter.</td></tr><tr><td><kbd>T</kbd></td><td>Purchase and deploy Tank.</td></tr><tr><td><kbd>M</kbd></td><td>Hire and deploy squad of five Men.</td></tr><tr><td><kbd>E</kbd></td><td>Hire and deploy squad of two Engineers.</td></tr><tr><td><kbd>A</kbd></td><td>Purchase and deploy Anti-Aircraft Missile Carrier.</td></tr><tr><td><kbd>D</kbd></td><td>Purchase and deploy Demolition Team Vehicle.</td></tr><tr><td><kbd>C</kbd></td><td>Display Computer Status Report.</td></tr><tr><td><kbd>ESC</kbd></td><td>Display score and freeze game.</td></tr><tr><td><kbd>1</kbd>–<kbd>9</kbd></td><td>Adjust information display speed.</td></tr><tr><td><kbd>Space Bar</kbd></td><td>Drop paratroopers.</td></tr><tr><td><kbd>CTRL</kbd> + <kbd>R</kbd></td><td>To reset game.</td></tr>
+        </tbody></table></div>
+      </section>
+
+      <section id="publication" aria-labelledby="publication-title">
+        <h2 id="publication-title">Credits</h2>
+        <p><strong>Rescue Raiders</strong><br><em>A Strategic War Simulation Game</em><br>Second Edition</p>
+        <dl class="credits">
+          <div><dt>Programmed by</dt><dd>Arthur Britto II and Greg Hale</dd></div>
+          <div><dt>Game text and Training Guide</dt><dd>G. Daniel Hackett</dd></div>
+          <div><dt>Strategic design</dt><dd>G. Daniel Hackett<br>Norman A. Sirotek<br>Arthur Britto II</dd></div>
+          <div><dt>Graphics design</dt><dd>Rick Austin</dd></div>
+          <div><dt>Graphics digitizing</dt><dd>Arthur Britto II</dd></div>
+          <div><dt>Published by</dt><dd>Sir-Tech Software, Inc.<br>6 Main Street<br>Ogdensburg, New York 13669</dd></div>
+        </dl>
+      </section>
+
+    </main>
+  </div>
+
+  <footer><p>Rescue Raiders © 1984 Arthur Britto II and Greg Hale.<br>Published by Sir-Tech Software, Inc. All rights reserved.</p><a href="#top">Back to top ↑</a></footer>
+  <script>
+    (() => {
+      const contents = document.querySelector('.contents');
+      const mobile = window.matchMedia('(max-width: 760px)');
+      const setContents = () => { contents.open = !mobile.matches; };
+      setContents();
+      mobile.addEventListener('change', setContents);
+      const links = [...contents.querySelectorAll('a[href^="#"]')];
+      links.forEach(link => link.addEventListener('click', () => {
+        if (mobile.matches) contents.open = false;
+      }));
+      const sections = [...document.querySelectorAll('main > section')];
+      const progress = document.querySelector('.reading-progress');
+      let pending = false;
+      const update = () => {
+        const extent = document.documentElement.scrollHeight - window.innerHeight;
+        progress.style.width = `${extent > 0 ? Math.min(100, Math.max(0, window.scrollY / extent * 100)) : 0}%`;
+        const current = sections.reduce((id, section) => section.getBoundingClientRect().top <= 160 ? section.id : id, '');
+        links.forEach(link => {
+          if (link.hash === `#${current}`) link.setAttribute('aria-current', 'location');
+          else link.removeAttribute('aria-current');
+        });
+        pending = false;
+      };
+      const scheduleUpdate = () => {
+        if (!pending) { pending = true; window.requestAnimationFrame(update); }
+      };
+      window.addEventListener('scroll', scheduleUpdate, { passive: true });
+      window.addEventListener('resize', scheduleUpdate);
+      window.addEventListener('load', scheduleUpdate);
+      update();
+    })();
+  </script>
+</body>
+</html>
